@@ -1,0 +1,8 @@
+{
+  "name": "Eagle Business Technology - Retail AI Platform",
+  "description": "A comprehensive business technology suite for retail, supermarkets, and hospitality, powered by Gemini and Veo AI for smart signage, visual editing, and business optimization.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
