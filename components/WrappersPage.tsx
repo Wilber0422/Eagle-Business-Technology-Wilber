@@ -13,13 +13,14 @@ const WrappersPage: React.FC = () => {
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div className="flex flex-col gap-6 text-left">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900/30 w-fit">
-                <span className="text-primary-light font-bold text-[10px] uppercase tracking-wider">New Generation Wrappers</span>
+                <span className="text-primary-light font-bold text-[10px] uppercase tracking-wider">Fully integrated weigh-wrap-label system</span>
               </div>
               <h1 className="text-slate-900 dark:text-white font-display text-5xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight">
-                Efficiency,<br /><span className="text-primary-light">Wrapped.</span>
+                Wrapped,<br /><span className="text-primary-light">AW-5600ATII.</span>
               </h1>
               <p className="text-slate-500 dark:text-slate-400 text-lg md:text-xl font-normal leading-relaxed max-w-xl">
-                Integrated Weighing, Labeling & Packaging. Streamline your food processing operations with Eagle’s advanced wrapper solutions designed for speed and precision.
+                Multi-Labeling System
+                Integrated with optional POP and Bottom Labeler, performs all the labeling in one process.
               </p>
               <div className="flex flex-wrap gap-4 pt-4">
                 <button className="flex items-center justify-center rounded-lg h-12 px-8 bg-primary-light text-white text-base font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-500/20 hover:-translate-y-0.5">
@@ -32,16 +33,16 @@ const WrappersPage: React.FC = () => {
             </div>
             <div className="relative">
               <div className="relative w-full aspect-[1.2/1] rounded-3xl overflow-hidden shadow-2xl bg-white dark:bg-slate-800 flex items-center justify-center p-12">
-                <img 
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUMb5PCl_strj3MzJcq1U3Dbhxhqen4uexuUN60k0PS9rvZesDDROjwsiqiwh968HxWM-NTEtOht2K9wxqGTg2CDLgvcUK0GtqvL5qYHMm8kik0KyoXIwnZW9jh5OWTRGJlh0Uocich3LmwmWT8ynRjVWmV-12h95ShNOwnJwbw1zmWinLuYwsJnhxzmCk-0j_X0r6SaLfeH9kpYliLReCa4FIAyxw45drmhpYuxzAPhU6sS91rZkV7ObVWu99ly-TXtfsLl7aHGrW" 
-                  className="w-full h-full object-contain" 
-                  alt="Wrapper Machine" 
+                <img
+                  src="../IMG/aw5600-2_WP02_01.png"
+                  className="w-full h-full object-contain"
+                  alt="Wrapper Machine"
                 />
                 <div className="absolute bottom-4 left-4 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md px-4 py-3 rounded-xl border border-slate-100 dark:border-slate-700 flex items-center gap-3 shadow-lg">
                   <span className="material-symbols-outlined text-green-500">verified</span>
                   <div>
-                    <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">High Speed</p>
-                    <p className="text-xs font-bold text-slate-900 dark:text-white">Up to 35 ppm</p>
+                    <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Financing</p>
+                    <p className="text-xs font-bold text-slate-900 dark:text-white">$799</p>
                   </div>
                 </div>
               </div>
@@ -58,10 +59,10 @@ const WrappersPage: React.FC = () => {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {[
-            { icon: 'bolt', title: 'Maximum Efficiency', desc: 'High-speed processing up to 35ppm reduces operational bottlenecks and increases throughput.' },
-            { icon: 'savings', title: 'Cost Savings', desc: 'Advanced film pre-stretch technology lowers material costs by up to 30% per package.' },
-            { icon: 'stars', title: 'Professional Look', desc: 'Consistent, tight, and glossy wraps ensure premium shelf appeal for your products.' },
-            { icon: 'eco', title: 'Sustainability', desc: 'Eco-friendly materials compatibility and reduced plastic waste generation.' }
+            { icon: 'bolt', title: 'Optional POP Labeler', desc: 'Prints and applies a POP label simultaneously with the main. price label.' },
+            { icon: 'savings', title: 'Optional Bottom Labeler', desc: 'Prints and applies an additional label onto the Bottom Labeler bottom of the package.' },
+            { icon: 'stars', title: 'Small foot print', desc: 'AW-5600AT requires a small area for installation.' },
+            { icon: 'eco', title: 'Labeling options', desc: 'AW-5600AT can be equipped with several labeler options. Twin labeler POP labeler Bottom labeler .' }
           ].map((item, idx) => (
             <div key={idx} className="bg-slate-50 dark:bg-slate-900 p-8 rounded-2xl border border-slate-100 dark:border-slate-800 hover:border-primary-light/30 transition-all">
               <div className="w-10 h-10 bg-blue-100 dark:bg-blue-900/40 rounded-lg flex items-center justify-center mb-6 text-primary-light">
@@ -83,13 +84,13 @@ const WrappersPage: React.FC = () => {
               <p className="text-slate-500 dark:text-slate-400">Choose the right automation level for your business needs.</p>
             </div>
             <div className="flex p-1 bg-white dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700 shadow-sm">
-              <button 
+              <button
                 onClick={() => setActiveTab('automatic')}
                 className={`px-6 py-2 text-xs font-bold rounded-md transition-all ${activeTab === 'automatic' ? 'bg-primary-light text-white shadow-md' : 'text-slate-500'}`}
               >
                 Automatic Systems
               </button>
-              <button 
+              <button
                 onClick={() => setActiveTab('manual')}
                 className={`px-6 py-2 text-xs font-bold rounded-md transition-all ${activeTab === 'manual' ? 'bg-primary-light text-white shadow-md' : 'text-slate-500'}`}
               >
@@ -101,32 +102,32 @@ const WrappersPage: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             {activeTab === 'automatic' ? (
               [
-                { 
+                {
                   tag: 'Best Seller',
                   id: Page.Aw5600,
-                  title: 'AW 5600 AT POP', 
+                  title: 'AW 5600 AT POP',
                   img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCUMb5PCl_strj3MzJcq1U3Dbhxhqen4uexuUN60k0PS9rvZesDDROjwsiqiwh968HxWM-NTEtOht2K9wxqGTg2CDLgvcUK0GtqvL5qYHMm8kik0KyoXIwnZW9jh5OWTRGJlh0Uocich3LmwmWT8ynRjVWmV-12h95ShNOwnJwbw1zmWinLuYwsJnhxzmCk-0j_X0r6SaLfeH9kpYliLReCa4FIAyxw45drmhpYuxzAPhU6sS91rZkV7ObVWu99ly-TXtfsLl7aHGrW',
                   desc: 'High-speed automatic weigh-wrap-labeler designed for maximum throughput in busy supermarkets.',
                   features: ['35 packs per minute', 'Auto-tray sizing', 'Integrated POP labeling']
                 },
-                { 
+                {
                   id: Page.Aw5600Fx,
-                  title: 'AW 5600 FX', 
-                  img: 'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=2070&auto=format&fit=crop',
+                  title: 'AW 5600 FX',
+                  img: '../img/aw5600fx_WP02_01.png',
                   desc: 'Flexible automatic wrapper optimized for handling varying tray sizes and fragile items.',
                   features: ['Compact footprint', 'Fragile item mode', 'Multi-film loader']
                 },
-                { 
+                {
                   tag: 'AI Powered',
                   id: Page.AwAiPop,
-                  title: 'AW-Ai-Pop', 
+                  title: 'AW-Ai-Pop',
                   img: 'https://images.unsplash.com/photo-1565793298595-6a879b1d9492?q=80&w=2071&auto=format&fit=crop',
                   desc: 'The smartest basic model of the 5600 series with 30 packs/minute and rotational labeler arm.',
                   features: ['30 packs per minute', 'Linerless label support', 'Compact footprint']
                 }
               ].map((model, idx) => (
-                <div 
-                  key={idx} 
+                <div
+                  key={idx}
                   onClick={() => model.id ? window.location.hash = model.id : null}
                   className={`bg-white dark:bg-slate-900 rounded-2xl overflow-hidden shadow-sm border border-slate-100 dark:border-slate-800 flex flex-col group ${model.id ? 'cursor-pointer hover:shadow-md' : ''}`}
                 >
@@ -157,16 +158,16 @@ const WrappersPage: React.FC = () => {
               ))
             ) : (
               [
-                { 
+                {
                   id: Page.HandWrapper,
-                  title: 'Hand Wrapper', 
+                  title: 'Hand Wrapper',
                   img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAnrG9L6-L9e-h6U-e-l-j-o-m-r-n-b-c-d-e-f-g-h-i-j-k-l-m-n-o-p-q-r-s-t-u-v-w-x-y-z', // Placeholder for Hand Wrapper
                   desc: 'A Hand Wrapper tabletop weigh-seal-label system that improves productivity and operational efficiency of sales counters.',
                   features: ['Tabletop Design', 'Integrated Labeling', 'Efficient Workflow']
                 }
               ].map((model, idx) => (
-                <div 
-                  key={idx} 
+                <div
+                  key={idx}
                   onClick={() => model.id ? window.location.hash = model.id : null}
                   className={`bg-white dark:bg-slate-900 rounded-2xl overflow-hidden shadow-sm border border-slate-100 dark:border-slate-800 flex flex-col group ${model.id ? 'cursor-pointer hover:shadow-md' : ''}`}
                 >
@@ -241,16 +242,17 @@ const WrappersPage: React.FC = () => {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="flex flex-col gap-8">
               <div>
-                <span className="text-primary-light font-bold text-xs uppercase tracking-widest block mb-2">Technical Excellence</span>
-                <h2 className="text-slate-900 dark:text-white text-3xl md:text-5xl font-display font-bold leading-tight">Engineered for Precision</h2>
-                <p className="text-slate-500 dark:text-slate-400 mt-4 text-lg">Our machines are packed with proprietary sensors and mechanics designed to save you money and headaches.</p>
+                <span className="text-primary-light font-bold text-xs uppercase tracking-widest block mb-2">Wrapping</span>
+                <h2 className="text-slate-900 dark:text-white text-3xl md:text-5xl font-display font-bold leading-tight">Super Stretch Technology</h2>
+                <p className="text-slate-500 dark:text-slate-400 mt-4 text-lg">DIGI's unique super-stretch technology allows dynamic film savings. AW-5600AT automatically determines the optimum wrapping conditions required to wrap the package.</p>
               </div>
-              
+
               <div className="space-y-8">
                 {[
-                  { icon: 'straighten', title: 'Load Height Sensors', desc: 'Automatically detects the height of the product tray, adjusting the wrapping arm in real-time. This prevents crushing of delicate items.' },
-                  { icon: 'layers', title: 'Film Pre-Stretch Technology', desc: 'Our patented roller system stretches the film by up to 50% before application, drastically reducing film consumption.' },
-                  { icon: 'label', title: 'Linerless Labeling', desc: 'Eliminate label backing waste. Our systems support variable length linerless labels for more information on the pack.' }
+                  { icon: 'straighten', title: 'Accurate Process Control', desc: 'Automatically determines the optimum wrapping conditions by adjusting the degree of film stretching, depending on commodity size fed into the machine.' },
+                  { icon: 'layers', title: 'Easy Film Change', desc: 'Film loading is done from the front of the machine with ease so film waste is very minimal. You can smoothly return to wrapping operation after only a minimum of down time.' },
+                  { icon: 'layers', title: 'Operator Screen', desc: 'Industry\'s First 15" Full Color Touch Screen Introducing our new extra large full color touch screen. Label print content can be previewed on the display, helping to prevent labeling errors.' },
+                  { icon: 'layers', title: 'Multi-Language Operator Interface', desc: 'Operator screen can be changed to a variety of languages, including Spanish, Japanese, Korean, and Chinese.' },
                 ].map((tech, idx) => (
                   <div key={idx} className="flex gap-6">
                     <div className="w-10 h-10 shrink-0 bg-blue-50 dark:bg-blue-900/20 rounded-xl flex items-center justify-center text-primary-light">
@@ -264,11 +266,11 @@ const WrappersPage: React.FC = () => {
                 ))}
               </div>
             </div>
-            
+
             <div className="relative group">
               <div className="absolute -inset-4 bg-primary-light/10 blur-3xl rounded-full opacity-50 group-hover:opacity-100 transition-opacity"></div>
               <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-slate-200 dark:border-slate-800">
-                <img src="https://images.unsplash.com/photo-1565439380698-95c7ad9745db?q=80&w=2070&auto=format&fit=crop" className="w-full h-full object-cover" alt="Technical detail" />
+                <img src="../IMG/aw5600-2_WP02_01.png" className="w-full h-full object-cover" alt="Technical detail" />
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 p-6 bg-slate-900/80 backdrop-blur-lg rounded-2xl border border-white/20 text-white shadow-2xl">
                   <div className="flex justify-between items-center mb-4">
                     <span className="text-[10px] font-bold tracking-widest text-slate-400">SYSTEM STATUS</span>
@@ -301,8 +303,11 @@ const WrappersPage: React.FC = () => {
       {/* CTA Section */}
       <section className="py-24 bg-primary-light">
         <div className="max-w-[1440px] mx-auto px-6 md:px-10 text-center text-white">
-          <h2 className="text-4xl md:text-5xl font-display font-bold mb-6">Ready to Optimize Your Line?</h2>
-          <p className="text-xl text-white/80 max-w-2xl mx-auto mb-12">Get a free consultation with our packaging engineers. We'll calculate your potential savings and recommend the perfect model for your volume.</p>
+          <h2 className="text-4xl md:text-5xl font-display font-bold mb-6">The cost of new equipment goes beyond the sticker price and may also include shipping, taxes and loan closing expenses. 100% financing means no up fronts & the rate is credit driven.</h2>
+          <p className="text-xl text-white/80 max-w-2xl mx-auto mb-12">- Equipment cost includes 5% broker fee and escrow fee. <br></br>
+            - Application and Invoice per transaction <br></br>
+            - Last three months Bank Statements per transaction <br></br>
+            - Credit 680 and above, nothing under 620. Rates determined by credit worthiness. </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <button className="bg-white text-primary-light hover:bg-slate-50 px-10 py-4 rounded-lg font-bold transition-all shadow-xl shadow-black/10">
               Request a Quote
