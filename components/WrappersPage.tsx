@@ -34,9 +34,9 @@ const WrappersPage: React.FC = () => {
             <div className="relative">
               <div className="relative w-full aspect-[1.2/1] rounded-3xl overflow-hidden shadow-2xl bg-white dark:bg-slate-800 flex items-center justify-center p-12">
                 <img
-                  src="../IMG/aw5600-2_WP02_01.png"
+                  src="../IMG/Wrapped AW-5600ATII.png"
                   className="w-full h-full object-contain"
-                  alt="Wrapper Machine"
+                  alt="Wrapper AW-5600ATII"
                 />
                 <div className="absolute bottom-4 left-4 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md px-4 py-3 rounded-xl border border-slate-100 dark:border-slate-700 flex items-center gap-3 shadow-lg">
                   <span className="material-symbols-outlined text-green-500">verified</span>
