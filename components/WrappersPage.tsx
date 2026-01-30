@@ -34,7 +34,7 @@ const WrappersPage: React.FC = () => {
             <div className="relative">
               <div className="relative w-full aspect-[1.2/1] rounded-3xl overflow-hidden shadow-2xl bg-white dark:bg-slate-800 flex items-center justify-center p-12">
                 <img
-                  src="../IMG/Wrapped AW-5600ATII.png"
+                  src="Wrapped AW-5600ATII.png"
                   className="w-full h-full object-contain"
                   alt="Wrapper AW-5600ATII"
                 />
