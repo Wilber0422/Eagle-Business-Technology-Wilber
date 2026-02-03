@@ -58,10 +58,10 @@ const WrappersPage: React.FC = () => {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {[
-            { icon: 'bolt', title: 'Maximum Efficiency', desc: 'Prints and applies a POP label simultaneously with the main. price label.' },
-            { icon: 'savings', title: 'Cost Savings', desc: 'Prints and applies an additional label onto the Bottom Labeler bottom of the package.' },
-            { icon: 'stars', title: 'Professional Look', desc: 'AW-5600AT requires a small area for installation.' },
-            { icon: 'eco', title: 'Sustainability', desc: 'AW-5600AT can be equipped with several labeler options. Twin labeler POP labeler Bottom labeler .' }
+            { icon: 'bolt', title: 'Maximum Efficiency', desc: 'High-speed processing up to 35ppm reduces operational bottlenecks and increases throughput.' },
+            { icon: 'savings', title: 'Cost Savings', desc: 'Advanced film pre-stretch technology lowers material costs by up to 30% per package.' },
+            { icon: 'stars', title: 'Professional Look', desc: 'Consistent, tight, and glossy wraps ensure premium shelf appeal for your products.' },
+            { icon: 'eco', title: 'Sustainability', desc: 'Eco-friendly materials compatibility and reduced plastic waste generation.' }
           ].map((item, idx) => (
             <div key={idx} className="bg-slate-50 dark:bg-slate-900 p-8 rounded-2xl border border-slate-100 dark:border-slate-800 hover:border-primary-light/30 transition-all">
               <div className="w-10 h-10 bg-blue-100 dark:bg-blue-900/40 rounded-lg flex items-center justify-center mb-6 text-primary-light">
@@ -241,17 +241,16 @@ const WrappersPage: React.FC = () => {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="flex flex-col gap-8">
               <div>
-                <span className="text-primary-light font-bold text-xs uppercase tracking-widest block mb-2">Wrapping</span>
-                <h2 className="text-slate-900 dark:text-white text-3xl md:text-5xl font-display font-bold leading-tight">Super Stretch Technology</h2>
-                <p className="text-slate-500 dark:text-slate-400 mt-4 text-lg">DIGI's unique super-stretch technology allows dynamic film savings. AW-5600AT automatically determines the optimum wrapping conditions required to wrap the package.</p>
+                <span className="text-primary-light font-bold text-xs uppercase tracking-widest block mb-2">Technical Excellence</span>
+                <h2 className="text-slate-900 dark:text-white text-3xl md:text-5xl font-display font-bold leading-tight">Engineered for Precision</h2>
+                <p className="text-slate-500 dark:text-slate-400 mt-4 text-lg">Our machines are packed with proprietary sensors and mechanics designed to save you money and headaches.</p>
               </div>
 
               <div className="space-y-8">
                 {[
-                  { icon: 'straighten', title: 'Accurate Process Control', desc: 'Automatically determines the optimum wrapping conditions by adjusting the degree of film stretching, depending on commodity size fed into the machine.' },
-                  { icon: 'layers', title: 'Easy Film Change', desc: 'Film loading is done from the front of the machine with ease so film waste is very minimal. You can smoothly return to wrapping operation after only a minimum of down time.' },
-                  { icon: 'layers', title: 'Operator Screen', desc: 'Industry\'s First 15" Full Color Touch Screen Introducing our new extra large full color touch screen. Label print content can be previewed on the display, helping to prevent labeling errors.' },
-                  { icon: 'layers', title: 'Multi-Language Operator Interface', desc: 'Operator screen can be changed to a variety of languages, including Spanish, Japanese, Korean, and Chinese.' },
+                  { icon: 'straighten', title: 'Load Height Sensors', desc: 'Automatically detects the height of the product tray, adjusting the wrapping arm in real-time. This prevents crushing of delicate items.' },
+                  { icon: 'layers', title: 'Film Pre-Stretch Technology', desc: 'Our patented roller system stretches the film by up to 50% before application, drastically reducing film consumption.' },
+                  { icon: 'layers', title: 'Linerless Labeling', desc: 'Eliminate label backing waste. Our systems support variable length linerless labels for more information on the pack.' }
                 ].map((tech, idx) => (
                   <div key={idx} className="flex gap-6">
                     <div className="w-10 h-10 shrink-0 bg-blue-50 dark:bg-blue-900/20 rounded-xl flex items-center justify-center text-primary-light">
