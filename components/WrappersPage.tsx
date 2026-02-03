@@ -301,11 +301,8 @@ const WrappersPage: React.FC = () => {
       {/* CTA Section */}
       <section className="py-24 bg-primary-light">
         <div className="max-w-[1440px] mx-auto px-6 md:px-10 text-center text-white">
-          <h2 className="text-4xl md:text-5xl font-display font-bold mb-6">The cost of new equipment goes beyond the sticker price and may also include shipping, taxes and loan closing expenses. 100% financing means no up fronts & the rate is credit driven.</h2>
-          <p className="text-xl text-white/80 max-w-2xl mx-auto mb-12">- Equipment cost includes 5% broker fee and escrow fee. <br></br>
-            - Application and Invoice per transaction <br></br>
-            - Last three months Bank Statements per transaction <br></br>
-            - Credit 680 and above, nothing under 620. Rates determined by credit worthiness. </p>
+          <h2 className="text-4xl md:text-5xl font-display font-bold mb-6">Ready to Optimize Your Line?</h2>
+          <p className="text-xl text-white/80 max-w-2xl mx-auto mb-12">Get a free consultation with our packaging engineers. We'll calculate your potential savings and recommend the perfect model for your volume.</p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <button className="bg-white text-primary-light hover:bg-slate-50 px-10 py-4 rounded-lg font-bold transition-all shadow-xl shadow-black/10">
               Request a Quote
