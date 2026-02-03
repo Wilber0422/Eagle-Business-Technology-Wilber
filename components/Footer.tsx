@@ -7,7 +7,7 @@ const Footer: React.FC = () => {
     <footer className="w-full bg-gradient-to-b from-primary-light to-primary text-white pt-16 pb-10">
       <div className="px-6 md:px-10 lg:px-20 max-w-[1440px] mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 mb-16">
-          
+
           {/* About Us */}
           <div className="lg:col-span-1.5 flex flex-col gap-6">
             <h4 className="text-xl font-display font-bold uppercase tracking-tight">About us</h4>
@@ -46,11 +46,11 @@ const Footer: React.FC = () => {
             <h4 className="text-xl font-display font-bold uppercase tracking-tight mb-6">Follow Us!</h4>
             <ul className="flex flex-col gap-4 text-sm font-medium">
               <li className="flex items-center gap-3">
-                <span className="material-symbols-outlined text-accent">facebook</span>
-                <a 
-                  className="hover:text-white/70 transition-colors" 
-                  href="https://www.facebook.com/Eaglebusinesst" 
-                  target="_blank" 
+                <span className="material-symbols-outlined text-accent">book</span>
+                <a
+                  className="hover:text-white/70 transition-colors"
+                  href="https://www.facebook.com/Eaglebusinesst"
+                  target="_blank"
                   rel="noopener noreferrer"
                 >
                   Facebook
@@ -58,10 +58,10 @@ const Footer: React.FC = () => {
               </li>
               <li className="flex items-center gap-3">
                 <span className="material-symbols-outlined text-accent">photo_camera</span>
-                <a 
-                  className="hover:text-white/70 transition-colors" 
-                  href="https://www.instagram.com/eaglebusinesstechnology/" 
-                  target="_blank" 
+                <a
+                  className="hover:text-white/70 transition-colors"
+                  href="https://www.instagram.com/eaglebusinesstechnology/"
+                  target="_blank"
                   rel="noopener noreferrer"
                 >
                   Instagram
@@ -73,8 +73,8 @@ const Footer: React.FC = () => {
               </li>
               <li className="flex items-center gap-3">
                 <span className="material-symbols-outlined text-accent">bar_chart</span>
-                <a 
-                  className="hover:text-white/70 transition-colors" 
+                <a
+                  className="hover:text-white/70 transition-colors"
                   href="https://www.zoho.com/books/"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -86,7 +86,7 @@ const Footer: React.FC = () => {
 
             <div className="mt-10">
               <h4 className="text-xl font-display font-bold uppercase tracking-tight mb-4">Support</h4>
-              <a 
+              <a
                 href="https://www.zoho.com/es-xl/assist/join/"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -113,8 +113,7 @@ const Footer: React.FC = () => {
               <div className="flex items-start gap-4">
                 <span className="material-symbols-outlined text-accent text-2xl">location_on</span>
                 <span className="leading-relaxed">
-                  3190 South State Road 7 Suite 5<br />
-                  Miramar FL 33023
+                  3190 South State Road 7 Suite 5 Miramar FL 33023
                 </span>
               </div>
             </div>
