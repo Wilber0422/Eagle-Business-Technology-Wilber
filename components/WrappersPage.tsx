@@ -13,14 +13,13 @@ const WrappersPage: React.FC = () => {
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div className="flex flex-col gap-6 text-left">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900/30 w-fit">
-                <span className="text-primary-light font-bold text-[10px] uppercase tracking-wider">Fully integrated weigh-wrap-label system</span>
+                <span className="text-primary-light font-bold text-[10px] uppercase tracking-wider">New Generation Wrappers</span>
               </div>
               <h1 className="text-slate-900 dark:text-white font-display text-5xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight">
-                Wrapped,<br /><span className="text-primary-light">AW-5600ATII.</span>
+                Efficiency,<br /><span className="text-primary-light">Wrapped.</span>
               </h1>
               <p className="text-slate-500 dark:text-slate-400 text-lg md:text-xl font-normal leading-relaxed max-w-xl">
-                Multi-Labeling System
-                Integrated with optional POP and Bottom Labeler, performs all the labeling in one process.
+                Integrated Weighing, Labeling & Packaging. Streamline your food processing operations with Eagle’s advanced wrapper solutions designed for speed and precision.
               </p>
               <div className="flex flex-wrap gap-4 pt-4">
                 <button className="flex items-center justify-center rounded-lg h-12 px-8 bg-primary-light text-white text-base font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-500/20 hover:-translate-y-0.5">
@@ -34,7 +33,7 @@ const WrappersPage: React.FC = () => {
             <div className="relative">
               <div className="relative w-full aspect-[1.2/1] rounded-3xl overflow-hidden shadow-2xl bg-white dark:bg-slate-800 flex items-center justify-center p-12">
                 <img
-                  src="../img/wrapped-aw-5600atii.png"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUMb5PCl_strj3MzJcq1U3Dbhxhqen4uexuUN60k0PS9rvZesDDROjwsiqiwh968HxWM-NTEtOht2K9wxqGTg2CDLgvcUK0GtqvL5qYHMm8kik0KyoXIwnZW9jh5OWTRGJlh0Uocich3LmwmWT8ynRjVWmV-12h95ShNOwnJwbw1zmWinLuYwsJnhxzmCk-0j_X0r6SaLfeH9kpYliLReCa4FIAyxw45drmhpYuxzAPhU6sS91rZkV7ObVWu99ly-TXtfsLl7aHGrW"
                   className="w-full h-full object-contain"
                   alt="Wrapper AW-5600ATII"
                 />
@@ -59,10 +58,10 @@ const WrappersPage: React.FC = () => {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {[
-            { icon: 'bolt', title: 'Optional POP Labeler', desc: 'Prints and applies a POP label simultaneously with the main. price label.' },
-            { icon: 'savings', title: 'Optional Bottom Labeler', desc: 'Prints and applies an additional label onto the Bottom Labeler bottom of the package.' },
-            { icon: 'stars', title: 'Small foot print', desc: 'AW-5600AT requires a small area for installation.' },
-            { icon: 'eco', title: 'Labeling options', desc: 'AW-5600AT can be equipped with several labeler options. Twin labeler POP labeler Bottom labeler .' }
+            { icon: 'bolt', title: 'Maximum Efficiency', desc: 'Prints and applies a POP label simultaneously with the main. price label.' },
+            { icon: 'savings', title: 'Cost Savings', desc: 'Prints and applies an additional label onto the Bottom Labeler bottom of the package.' },
+            { icon: 'stars', title: 'Professional Look', desc: 'AW-5600AT requires a small area for installation.' },
+            { icon: 'eco', title: 'Sustainability', desc: 'AW-5600AT can be equipped with several labeler options. Twin labeler POP labeler Bottom labeler .' }
           ].map((item, idx) => (
             <div key={idx} className="bg-slate-50 dark:bg-slate-900 p-8 rounded-2xl border border-slate-100 dark:border-slate-800 hover:border-primary-light/30 transition-all">
               <div className="w-10 h-10 bg-blue-100 dark:bg-blue-900/40 rounded-lg flex items-center justify-center mb-6 text-primary-light">
