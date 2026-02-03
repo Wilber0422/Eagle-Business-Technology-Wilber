@@ -105,14 +105,14 @@ const WrappersPage: React.FC = () => {
                   tag: 'Best Seller',
                   id: Page.Aw5600,
                   title: 'AW 5600 AT POP',
-                  img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCUMb5PCl_strj3MzJcq1U3Dbhxhqen4uexuUN60k0PS9rvZesDDROjwsiqiwh968HxWM-NTEtOht2K9wxqGTg2CDLgvcUK0GtqvL5qYHMm8kik0KyoXIwnZW9jh5OWTRGJlh0Uocich3LmwmWT8ynRjVWmV-12h95ShNOwnJwbw1zmWinLuYwsJnhxzmCk-0j_X0r6SaLfeH9kpYliLReCa4FIAyxw45drmhpYuxzAPhU6sS91rZkV7ObVWu99ly-TXtfsLl7aHGrW',
+                  img: 'https://www.digisystem.com/es/products/PRD00009/product_file/file/aw5600_WP02_01.png',
                   desc: 'High-speed automatic weigh-wrap-labeler designed for maximum throughput in busy supermarkets.',
                   features: ['35 packs per minute', 'Auto-tray sizing', 'Integrated POP labeling']
                 },
                 {
                   id: Page.Aw5600Fx,
                   title: 'AW 5600 FX',
-                  img: '../img/aw5600fx_WP02_01.png',
+                  img: 'https://www.digisystem.com/es/products/PRD00315/product_file/file/aw5600fx_WP02_01.png',
                   desc: 'Flexible automatic wrapper optimized for handling varying tray sizes and fragile items.',
                   features: ['Compact footprint', 'Fragile item mode', 'Multi-film loader']
                 },
@@ -218,9 +218,9 @@ const WrappersPage: React.FC = () => {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {[
-            { title: 'Fresh Meats', icon: 'restaurant', img: 'https://images.unsplash.com/photo-1607623814075-e51df1bdc822?q=80&w=2070&auto=format&fit=crop' },
+            { title: 'Fresh Meats', icon: 'restaurant', img: 'https://media.istockphoto.com/id/1212824120/photo/assortment-of-meat-and-seafood.jpg?s=612x612&w=0&k=20&c=U_wNgPDs2CeWuOPEj0Hts1btABGM3gL4ftjficNvJZM=' },
             { title: 'Fruits & Veg', icon: 'nutrition', img: 'https://images.unsplash.com/photo-1610348725531-843dff563e2c?q=80&w=2070&auto=format&fit=crop' },
-            { title: 'Fish & Seafood', icon: 'set_meal', img: 'https://images.unsplash.com/photo-1534604973900-c41ab4c3c3c0?q=80&w=2024&auto=format&fit=crop' },
+            { title: 'Fish & Seafood', icon: 'set_meal', img: 'https://nutritionsource.hsph.harvard.edu/wp-content/uploads/2024/11/AdobeStock_368767489.jpeg' },
             { title: 'Cheeses', icon: 'lunch_dining', img: 'https://images.unsplash.com/photo-1485955900006-10f4d324d411?q=80&w=2072&auto=format&fit=crop' }
           ].map((app, idx) => (
             <div key={idx} className="relative h-[400px] rounded-2xl overflow-hidden group shadow-lg cursor-pointer">
@@ -268,7 +268,7 @@ const WrappersPage: React.FC = () => {
             <div className="relative group">
               <div className="absolute -inset-4 bg-primary-light/10 blur-3xl rounded-full opacity-50 group-hover:opacity-100 transition-opacity"></div>
               <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-slate-200 dark:border-slate-800">
-                <img src="../IMG/aw5600-2_WP02_01.png" className="w-full h-full object-cover" alt="Technical detail" />
+                <img src="https://www.methodsmachine.com/wp-content/uploads/Medical-Machining.jpeg" className="w-full h-full object-cover" alt="Technical detail" />
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 p-6 bg-slate-900/80 backdrop-blur-lg rounded-2xl border border-white/20 text-white shadow-2xl">
                   <div className="flex justify-between items-center mb-4">
                     <span className="text-[10px] font-bold tracking-widest text-slate-400">SYSTEM STATUS</span>
