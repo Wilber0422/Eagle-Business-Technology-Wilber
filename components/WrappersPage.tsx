@@ -40,8 +40,8 @@ const WrappersPage: React.FC = () => {
                 <div className="absolute bottom-4 left-4 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md px-4 py-3 rounded-xl border border-slate-100 dark:border-slate-700 flex items-center gap-3 shadow-lg">
                   <span className="material-symbols-outlined text-green-500">verified</span>
                   <div>
-                    <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Financing</p>
-                    <p className="text-xs font-bold text-slate-900 dark:text-white">$799</p>
+                    <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">High Speed</p>
+                    <p className="text-xs font-bold text-slate-900 dark:text-white">Up to 35 ppm</p>
                   </div>
                 </div>
               </div>

@@ -122,7 +122,7 @@ const Footer: React.FC = () => {
         </div>
 
         <div className="border-t border-white/20 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white/60">
-          <p>© 2023 Eagle Business Technology. All rights reserved.</p>
+          <p>© 2026 Eagle Business Technology. All rights reserved.</p>
           <div className="flex gap-6">
             <a href={`#${Page.Terms}`} className="hover:text-white transition-colors">Privacy Policy</a>
             <a href={`#${Page.Terms}`} className="hover:text-white transition-colors">Terms of Use</a>
