@@ -20,13 +20,13 @@ const AW5600Page: React.FC = () => {
 
       <section className="px-6 md:px-10 lg:px-20 pb-24 max-w-[1440px] mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-24 items-start">
-          
+
           {/* Product Image Section */}
           <div className="relative group">
             <div className="bg-slate-50 dark:bg-slate-900/50 rounded-2xl overflow-hidden border border-slate-100 dark:border-slate-800 p-8 flex items-center justify-center">
-              <img 
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUMb5PCl_strj3MzJcq1U3Dbhxhqen4uexuUN60k0PS9rvZesDDROjwsiqiwh968HxWM-NTEtOht2K9wxqGTg2CDLgvcUK0GtqvL5qYHMm8kik0KyoXIwnZW9jh5OWTRGJlh0Uocich3LmwmWT8ynRjVWmV-12h95ShNOwnJwbw1zmWinLuYwsJnhxzmCk-0j_X0r6SaLfeH9kpYliLReCa4FIAyxw45drmhpYuxzAPhU6sS91rZkV7ObVWu99ly-TXtfsLl7aHGrW" 
-                alt="AW 5600 AT POP" 
+              <img
+                src="https://www.digisystem.com/es/products/PRD00009/product_file/file/aw5600_WP02_01.png"
+                alt="AW 5600 AT POP"
                 className="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-105"
               />
               <button className="absolute top-6 right-6 p-2 bg-white dark:bg-slate-800 rounded-full shadow-lg border border-slate-100 dark:border-slate-700 text-slate-400 hover:text-primary transition-colors">
@@ -48,27 +48,27 @@ const AW5600Page: React.FC = () => {
             <div className="flex flex-col gap-6 pt-6">
               <div className="flex items-center gap-4">
                 <div className="flex border border-slate-200 dark:border-slate-800 rounded-lg h-14 overflow-hidden">
-                   <button 
+                  <button
                     onClick={() => setQuantity(Math.max(1, quantity - 1))}
                     className="w-12 h-full flex items-center justify-center text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors"
-                   >
-                     <span className="material-symbols-outlined text-sm">remove</span>
-                   </button>
-                   <input 
-                    type="number" 
+                  >
+                    <span className="material-symbols-outlined text-sm">remove</span>
+                  </button>
+                  <input
+                    type="number"
                     value={quantity}
                     onChange={(e) => setQuantity(parseInt(e.target.value) || 1)}
                     className="w-16 h-full text-center bg-transparent border-none text-slate-900 dark:text-white font-bold focus:ring-0"
-                   />
-                   <button 
+                  />
+                  <button
                     onClick={() => setQuantity(quantity + 1)}
                     className="w-12 h-full flex items-center justify-center text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors"
-                   >
-                     <span className="material-symbols-outlined text-sm">add</span>
-                   </button>
+                  >
+                    <span className="material-symbols-outlined text-sm">add</span>
+                  </button>
                 </div>
-                
-                <button 
+
+                <button
                   className="flex-grow h-14 bg-[#0069B5] text-white font-bold rounded-full shadow-xl shadow-blue-500/20 hover:bg-blue-700 transition-all uppercase tracking-widest text-xs"
                 >
                   Add to Quote
@@ -133,7 +133,7 @@ const AW5600Page: React.FC = () => {
       <section className="py-24 px-6 text-center">
         <h3 className="text-2xl font-display font-bold text-slate-900 dark:text-white mb-6">Interested in this system?</h3>
         <p className="text-slate-500 mb-10">Speak with our product experts for a personalized configuration and price estimate.</p>
-        <button 
+        <button
           onClick={() => window.location.hash = Page.Contact}
           className="bg-primary text-white px-12 py-4 rounded-xl font-bold shadow-xl shadow-primary/20 hover:-translate-y-1 transition-all"
         >

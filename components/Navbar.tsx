@@ -41,13 +41,13 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
 
         <nav className="hidden lg:flex items-center gap-8">
           <button onClick={() => navigate(Page.Home)} className={`text-sm font-medium transition-colors ${currentPage === Page.Home ? 'text-primary' : 'text-slate-600 dark:text-slate-300 hover:text-primary'}`}>Home</button>
-          
+
           {/* Solutions Dropdown with Hover Bridge */}
           <div className="relative group h-full">
             <button className="flex items-center gap-1 py-4 text-sm font-medium text-slate-600 dark:text-slate-300 group-hover:text-primary transition-colors">
               Solutions <span className="material-symbols-outlined text-sm transition-transform group-hover:rotate-180">expand_more</span>
             </button>
-            
+
             {/* Mega Menu Dropdown Container with Hover Trigger Padding */}
             <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 translate-y-2 group-hover:translate-y-0 z-50">
               <div className="w-[640px] bg-white dark:bg-slate-900 shadow-2xl shadow-slate-200/50 dark:shadow-black/80 rounded-2xl p-6 border border-slate-100 dark:border-slate-800">
@@ -58,11 +58,11 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
                       <span className="material-symbols-outlined text-[14px]">auto_awesome</span> AI Power Tools
                     </button>
                   </div>
-                  
+
                   {solutions.map((sol) => (
-                    <button 
-                      key={sol.id} 
-                      onClick={() => navigate(sol.id)} 
+                    <button
+                      key={sol.id}
+                      onClick={() => navigate(sol.id)}
                       className="flex items-start gap-4 p-3 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-all text-left group/item"
                     >
                       <div className={`size-10 rounded-lg ${sol.bg} flex items-center justify-center shrink-0 group-hover/item:scale-110 transition-transform`}>
@@ -74,7 +74,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
                       </div>
                     </button>
                   ))}
-                  
+
                   <div className="col-span-2 mt-4 pt-4 border-t border-slate-50 dark:border-slate-800/50">
                     <div className="bg-slate-50 dark:bg-slate-800/30 rounded-xl p-4 flex items-center justify-between">
                       <div className="flex items-center gap-3">
@@ -90,7 +90,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
           </div>
 
           <button onClick={() => navigate(Page.About)} className={`text-sm font-medium transition-colors ${currentPage === Page.About ? 'text-primary' : 'text-slate-600 dark:text-slate-300 hover:text-primary'}`}>About Us</button>
-          
+
           <button onClick={() => navigate(Page.Contact)} className={`text-sm font-medium transition-colors ${currentPage === Page.Contact ? 'text-primary' : 'text-slate-600 dark:text-slate-300 hover:text-primary'}`}>Contact</button>
 
           {/* Legal Dropdown with Hover Transition */}
@@ -106,7 +106,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
             </div>
           </div>
 
-          <a 
+          <a
             href={consultationUrl}
             target="_blank"
             rel="noopener noreferrer"
@@ -131,14 +131,14 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
       {isMenuOpen && (
         <div className="lg:hidden bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800 p-6 flex flex-col gap-4 max-h-[80vh] overflow-y-auto">
           <button onClick={() => navigate(Page.Home)} className="text-left font-bold py-2 border-b border-slate-50 dark:border-slate-800">Home</button>
-          
+
           <div className="flex flex-col gap-3 py-2">
             <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Solutions</span>
             <div className="grid grid-cols-1 gap-2">
               {solutions.map((sol) => (
-                <button 
-                  key={sol.id} 
-                  onClick={() => navigate(sol.id)} 
+                <button
+                  key={sol.id}
+                  onClick={() => navigate(sol.id)}
                   className="flex items-center gap-3 p-2 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800"
                 >
                   <span className={`material-symbols-outlined text-sm ${sol.color}`}>{sol.icon}</span>
@@ -153,7 +153,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
           <button onClick={() => navigate(Page.AiStudio)} className="text-left font-bold py-2 text-blue-500 flex items-center gap-2">
             <span className="material-symbols-outlined">auto_awesome</span> AI Studio
           </button>
-          
+
           <a href={consultationUrl} target="_blank" rel="noopener noreferrer" className="mt-4 w-full py-4 bg-primary text-white text-center font-bold rounded-xl shadow-lg">
             Free Consultation
           </a>
