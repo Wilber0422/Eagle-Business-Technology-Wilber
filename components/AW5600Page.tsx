@@ -41,7 +41,8 @@ const AW5600Page: React.FC = () => {
               <span className="text-rose-500 font-bold text-xs uppercase tracking-[0.2em] mb-4 block">Fully integrated weigh-wrap-label system </span>
               <h1 className="text-4xl md:text-5xl font-display font-bold text-slate-900 dark:text-white mb-6">AW 5600 AT POP</h1>
               <p className="text-slate-600 dark:text-slate-400 text-lg leading-relaxed font-light">
-                Multi-Labeling System Integrated with optional POP and Bottom Labeler, performs all the labeling in one process. The cost of new equipment goes beyond the sticker price and may also include shipping, taxes and loan closing expenses. 100% financing means no up fronts & the rate is credit driven.
+                Multi-Labeling System Integrated with optional POP and Bottom Labeler, performs all the labeling in one process. The cost of new equipment goes beyond the sticker price and may also include shipping, taxes and loan closing expenses. 100% financing means no up fronts & the rate is credit driven. <br />
+                - Equipment cost includes 5% broker fee and escrow fee. <br /> - Application and Invoice per transaction <br /> -Last three months Bank Statements per transaction. <br /> -Credit 680 and above, nothing under 620. Rates determined by credit worthiness.
               </p>
             </div>
 
