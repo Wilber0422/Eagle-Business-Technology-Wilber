@@ -25,7 +25,7 @@ const AW5600Page: React.FC = () => {
           <div className="relative group">
             <div className="bg-slate-50 dark:bg-slate-900/50 rounded-2xl overflow-hidden border border-slate-100 dark:border-slate-800 p-8 flex items-center justify-center">
               <img
-                src="https://www.digisystem.com/es/products/PRD00009/product_file/file/aw5600_WP02_01.png"
+                src="https://www.digisystem.com/es/products/PRD00348/product_file/file/aw5600-2_WP02_01.png"
                 alt="AW 5600 AT POP"
                 className="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-105"
               />
@@ -38,10 +38,10 @@ const AW5600Page: React.FC = () => {
           {/* Product Details Section */}
           <div className="space-y-8 pt-4">
             <div>
-              <span className="text-rose-500 font-bold text-xs uppercase tracking-[0.2em] mb-4 block">Wrappers</span>
+              <span className="text-rose-500 font-bold text-xs uppercase tracking-[0.2em] mb-4 block">Fully integrated weigh-wrap-label system </span>
               <h1 className="text-4xl md:text-5xl font-display font-bold text-slate-900 dark:text-white mb-6">AW 5600 AT POP</h1>
               <p className="text-slate-600 dark:text-slate-400 text-lg leading-relaxed font-light">
-                AW 5600 AT POP is a high-performance automatic weigh-wrap-label system that’s reliable, productive, and easy to operate. Efficient use of energy and consumables helps to minimize both cost and the machine’s ecological footprint.
+                Multi-Labeling System Integrated with optional POP and Bottom Labeler, performs all the labeling in one process.
               </p>
             </div>
 
