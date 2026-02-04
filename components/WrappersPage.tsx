@@ -104,8 +104,8 @@ const WrappersPage: React.FC = () => {
                 {
                   tag: 'Best Seller',
                   id: Page.Aw5600,
-                  title: 'AW 5600 AT POP',
-                  img: 'https://www.digisystem.com/es/products/PRD00009/product_file/file/aw5600_WP02_01.png',
+                  title: 'AW-5600ATII',
+                  img: 'https://www.digisystem.com/es/products/PRD00348/product_file/file/aw5600-2_WP02_01.png',
                   desc: 'High-speed automatic weigh-wrap-labeler designed for maximum throughput in busy supermarkets.',
                   features: ['35 packs per minute', 'Auto-tray sizing', 'Integrated POP labeling']
                 },
