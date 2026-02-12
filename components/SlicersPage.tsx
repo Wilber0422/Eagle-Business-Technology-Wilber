@@ -29,10 +29,10 @@ const SlicersPage: React.FC = () => {
             </div>
             <div className="relative">
               <div className="relative w-full aspect-square rounded-3xl overflow-hidden bg-slate-50 dark:bg-slate-900 flex items-center justify-center p-8">
-                <img 
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAQCzoU0M1XgX_uzRSz6JM90efQ4RwiP52JvNVex4FZOJzJkSuIaedCKKRBnz8T3yw0ksIe6G6gZD2fJIzdjh7y_WnyCTLgN05RxwbupoFxIkQ5GC1j2O8_9euB-RQHnZeIwhn4KKdmUNwo9m5AdG8yLARrYh6NSENYcUo4C3AgryuPixB9EU9tc2xDtVTsZ3NTCBi_QDrROJvpwrcO418TzQPcKQivRRajwJWyN8zZsY-3wI5ckDPnc4VPlIA6_gGNSYEbGFutC5s" 
-                  className="w-full h-full object-contain mix-blend-multiply dark:mix-blend-normal" 
-                  alt="Kolossal Slicer" 
+                <img
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAQCzoU0M1XgX_uzRSz6JM90efQ4RwiP52JvNVex4FZOJzJkSuIaedCKKRBnz8T3yw0ksIe6G6gZD2fJIzdjh7y_WnyCTLgN05RxwbupoFxIkQ5GC1j2O8_9euB-RQHnZeIwhn4KKdmUNwo9m5AdG8yLARrYh6NSENYcUo4C3AgryuPixB9EU9tc2xDtVTsZ3NTCBi_QDrROJvpwrcO418TzQPcKQivRRajwJWyN8zZsY-3wI5ckDPnc4VPlIA6_gGNSYEbGFutC5s"
+                  className="w-full h-full object-contain mix-blend-multiply dark:mix-blend-normal"
+                  alt="Kolossal Slicer"
                 />
               </div>
             </div>
@@ -46,7 +46,7 @@ const SlicersPage: React.FC = () => {
           <h2 className="text-3xl md:text-4xl font-display font-bold text-slate-900 dark:text-white mb-4">Engineered for Excellence</h2>
           <p className="text-slate-500 dark:text-slate-400">The Kolossal line stands apart with its robust construction and obsessive attention to detail, ensuring reliable performance in the most demanding environments.</p>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-[1440px] mx-auto">
           {[
             { icon: 'settings', title: 'Gear-Driven Mechanism', desc: 'Guarantees constant blade speed for precise cuts every time, eliminating slippage common in belt-driven models.' },
@@ -72,7 +72,7 @@ const SlicersPage: React.FC = () => {
               <h2 className="text-3xl md:text-4xl font-display font-bold text-slate-900 dark:text-white mb-6">Choosing the Right Slicer</h2>
               <p className="text-slate-500 dark:text-slate-400 leading-relaxed">Not all slicers are created equal. Select the right tool for your produce to minimize waste and maximize presentation.</p>
             </div>
-            
+
             <div className="space-y-6">
               <div className="bg-slate-50 dark:bg-slate-900 p-8 rounded-2xl border border-slate-100 dark:border-slate-800">
                 <div className="flex items-center gap-3 mb-4 text-primary-light">
@@ -142,27 +142,48 @@ const SlicersPage: React.FC = () => {
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-display font-bold text-slate-900 dark:text-white mb-4">Featured Models</h2>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { 
+              {
                 tag: 'Best Seller',
-                title: 'Gravinox 350', 
+                title: 'Gravinox 350',
                 subtitle: 'Heavy Duty Gravity Slicer',
                 img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCAQCzoU0M1XgX_uzRSz6JM90efQ4RwiP52JvNVex4FZOJzJkSuIaedCKKRBnz8T3yw0ksIe6G6gZD2fJIzdjh7y_WnyCTLgN05RxwbupoFxIkQ5GC1j2O8_9euB-RQHnZeIwhn4KKdmUNwo9m5AdG8yLARrYh6NSENYcUo4C3AgryuPixB9EU9tc2xDtVTsZ3NTCBi_QDrROJvpwrcO418TzQPcKQivRRajwJWyN8zZsY-3wI5ckDPnc4VPlIA6_gGNSYEbGFutC5s',
                 specs: { 'Blade Diameter': '350 mm', 'Drive': 'Gear Box', 'Material': 'Stainless Steel' }
               },
-              { 
-                title: 'Major Slice 350 / 350V', 
+              {
+                title: 'Major Slice 350 / 350V',
                 subtitle: 'Versatile Professional Slicer',
                 img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCAQCzoU0M1XgX_uzRSz6JM90efQ4RwiP52JvNVex4FZOJzJkSuIaedCKKRBnz8T3yw0ksIe6G6gZD2fJIzdjh7y_WnyCTLgN05RxwbupoFxIkQ5GC1j2O8_9euB-RQHnZeIwhn4KKdmUNwo9m5AdG8yLARrYh6NSENYcUo4C3AgryuPixB9EU9tc2xDtVTsZ3NTCBi_QDrROJvpwrcO418TzQPcKQivRRajwJWyN8zZsY-3wI5ckDPnc4VPlIA6_gGNSYEbGFutC5s',
                 specs: { 'Blade Diameter': '350 mm', 'Operation': 'Vertical or Gravity', 'Best For': 'Mixed Deli Use' }
               },
-              { 
-                title: 'Major Slicer 300', 
+              {
+                title: 'Major Slicer 300',
                 subtitle: 'Compact Efficiency',
                 img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCAQCzoU0M1XgX_uzRSz6JM90efQ4RwiP52JvNVex4FZOJzJkSuIaedCKKRBnz8T3yw0ksIe6G6gZD2fJIzdjh7y_WnyCTLgN05RxwbupoFxIkQ5GC1j2O8_9euB-RQHnZeIwhn4KKdmUNwo9m5AdG8yLARrYh6NSENYcUo4C3AgryuPixB9EU9tc2xDtVTsZ3NTCBi_QDrROJvpwrcO418TzQPcKQivRRajwJWyN8zZsY-3wI5ckDPnc4VPlIA6_gGNSYEbGFutC5s',
                 specs: { 'Blade Diameter': '300 mm', 'Footprint': 'Compact Design', 'Ideal For': 'Small Kitchens' }
+              },
+              {
+                tag: 'Best Seller',
+                title: 'Gravinox 350',
+                subtitle: 'Heavy Duty Gravity Slicer',
+                img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCAQCzoU0M1XgX_uzRSz6JM90efQ4RwiP52JvNVex4FZOJzJkSuIaedCKKRBnz8T3yw0ksIe6G6gZD2fJIzdjh7y_WnyCTLgN05RxwbupoFxIkQ5GC1j2O8_9euB-RQHnZeIwhn4KKdmUNwo9m5AdG8yLARrYh6NSENYcUo4C3AgryuPixB9EU9tc2xDtVTsZ3NTCBi_QDrROJvpwrcO418TzQPcKQivRRajwJWyN8zZsY-3wI5ckDPnc4VPlIA6_gGNSYEbGFutC5s',
+                specs: { 'Blade Diameter': '350 mm', 'Drive': 'Gear Box', 'Material': 'Stainless Steel' }
+              },
+              {
+                tag: 'Best Seller',
+                title: 'Gravinox 350',
+                subtitle: 'Heavy Duty Gravity Slicer',
+                img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCAQCzoU0M1XgX_uzRSz6JM90efQ4RwiP52JvNVex4FZOJzJkSuIaedCKKRBnz8T3yw0ksIe6G6gZD2fJIzdjh7y_WnyCTLgN05RxwbupoFxIkQ5GC1j2O8_9euB-RQHnZeIwhn4KKdmUNwo9m5AdG8yLARrYh6NSENYcUo4C3AgryuPixB9EU9tc2xDtVTsZ3NTCBi_QDrROJvpwrcO418TzQPcKQivRRajwJWyN8zZsY-3wI5ckDPnc4VPlIA6_gGNSYEbGFutC5s',
+                specs: { 'Blade Diameter': '350 mm', 'Drive': 'Gear Box', 'Material': 'Stainless Steel' }
+              },
+              {
+                tag: 'Best Seller',
+                title: 'Gravinox 350',
+                subtitle: 'Heavy Duty Gravity Slicer',
+                img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCAQCzoU0M1XgX_uzRSz6JM90efQ4RwiP52JvNVex4FZOJzJkSuIaedCKKRBnz8T3yw0ksIe6G6gZD2fJIzdjh7y_WnyCTLgN05RxwbupoFxIkQ5GC1j2O8_9euB-RQHnZeIwhn4KKdmUNwo9m5AdG8yLARrYh6NSENYcUo4C3AgryuPixB9EU9tc2xDtVTsZ3NTCBi_QDrROJvpwrcO418TzQPcKQivRRajwJWyN8zZsY-3wI5ckDPnc4VPlIA6_gGNSYEbGFutC5s',
+                specs: { 'Blade Diameter': '350 mm', 'Drive': 'Gear Box', 'Material': 'Stainless Steel' }
               }
             ].map((model, idx) => (
               <div key={idx} className="bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-100 dark:border-slate-800 flex flex-col group">
@@ -179,7 +200,7 @@ const SlicersPage: React.FC = () => {
                     <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-1 font-display">{model.title}</h3>
                     <p className="text-xs text-slate-500 dark:text-slate-400 font-medium">{model.subtitle}</p>
                   </div>
-                  
+
                   <div className="space-y-3 mb-8">
                     {Object.entries(model.specs).map(([label, val]) => (
                       <div key={label} className="flex justify-between items-center text-xs border-b border-slate-50 dark:border-slate-800 pb-2">
@@ -203,7 +224,7 @@ const SlicersPage: React.FC = () => {
       <section className="py-24 px-6 md:px-10 max-w-[1440px] mx-auto">
         <div className="bg-slate-900 rounded-[40px] overflow-hidden p-10 md:p-20 relative">
           <div className="absolute top-0 right-0 w-1/2 h-full opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-blue-500 to-transparent"></div>
-          
+
           <div className="grid lg:grid-cols-2 gap-16 items-center relative z-10">
             <div className="space-y-10">
               <div>
@@ -213,7 +234,7 @@ const SlicersPage: React.FC = () => {
                   Don't settle for standard silver. We offer extensive customization options including specific colors for knobs, plastic parts, and even full machine body painting.
                 </p>
               </div>
-              
+
               <div className="flex flex-wrap gap-4">
                 {[
                   { name: 'Ferrari Red', color: '#ff0000' },
@@ -235,13 +256,13 @@ const SlicersPage: React.FC = () => {
                 Inquire About Customization
               </button>
             </div>
-            
+
             <div className="relative">
               <div className="aspect-[4/3] rounded-3xl overflow-hidden bg-white/5 backdrop-blur-sm border border-white/10 p-8 flex items-center justify-center">
-                <img 
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAQCzoU0M1XgX_uzRSz6JM90efQ4RwiP52JvNVex4FZOJzJkSuIaedCKKRBnz8T3yw0ksIe6G6gZD2fJIzdjh7y_WnyCTLgN05RxwbupoFxIkQ5GC1j2O8_9euB-RQHnZeIwhn4KKdmUNwo9m5AdG8yLARrYh6NSENYcUo4C3AgryuPixB9EU9tc2xDtVTsZ3NTCBi_QDrROJvpwrcO418TzQPcKQivRRajwJWyN8zZsY-3wI5ckDPnc4VPlIA6_gGNSYEbGFutC5s" 
-                  className="w-full h-full object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)] brightness-75 sepia-[0.3] hue-rotate-[320deg] saturate-[3]" 
-                  alt="Custom Slicer" 
+                <img
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAQCzoU0M1XgX_uzRSz6JM90efQ4RwiP52JvNVex4FZOJzJkSuIaedCKKRBnz8T3yw0ksIe6G6gZD2fJIzdjh7y_WnyCTLgN05RxwbupoFxIkQ5GC1j2O8_9euB-RQHnZeIwhn4KKdmUNwo9m5AdG8yLARrYh6NSENYcUo4C3AgryuPixB9EU9tc2xDtVTsZ3NTCBi_QDrROJvpwrcO418TzQPcKQivRRajwJWyN8zZsY-3wI5ckDPnc4VPlIA6_gGNSYEbGFutC5s"
+                  className="w-full h-full object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)] brightness-75 sepia-[0.3] hue-rotate-[320deg] saturate-[3]"
+                  alt="Custom Slicer"
                 />
               </div>
             </div>
@@ -262,18 +283,18 @@ const SlicersPage: React.FC = () => {
           </button>
         </div>
       </section>
-      
+
       <div className="py-12 px-6 border-t border-slate-50 dark:border-slate-900 dark:bg-slate-950">
         <div className="max-w-[1440px] mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="flex items-center gap-3">
-             <div className="size-8 bg-primary rounded flex items-center justify-center"><span className="material-symbols-outlined text-white text-lg">owl</span></div>
-             <span className="font-bold text-slate-900 dark:text-white font-display">Eagle Business Technology</span>
+            <div className="size-8 bg-primary rounded flex items-center justify-center"><span className="material-symbols-outlined text-white text-lg">owl</span></div>
+            <span className="font-bold text-slate-900 dark:text-white font-display">Eagle Business Technology</span>
           </div>
           <div className="flex gap-8 text-[10px] font-bold text-slate-400 uppercase tracking-widest">
             <span>© 2023 Eagle Business Technology. All rights reserved.</span>
             <div className="flex gap-4">
-               <span className="material-symbols-outlined cursor-pointer hover:text-primary transition-colors">mail</span>
-               <span className="material-symbols-outlined cursor-pointer hover:text-primary transition-colors">language</span>
+              <span className="material-symbols-outlined cursor-pointer hover:text-primary transition-colors">mail</span>
+              <span className="material-symbols-outlined cursor-pointer hover:text-primary transition-colors">language</span>
             </div>
           </div>
         </div>
