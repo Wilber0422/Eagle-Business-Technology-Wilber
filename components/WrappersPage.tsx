@@ -104,7 +104,7 @@ const WrappersPage: React.FC = () => {
                 {
                   tag: 'Best Seller',
                   id: Page.Aw5600,
-                  title: 'AW-5600ATII',
+                  title: 'AW-5600 AT POP',
                   img: 'https://www.digisystem.com/es/products/PRD00348/product_file/file/aw5600-2_WP02_01.png',
                   desc: 'High-speed automatic weigh-wrap-labeler designed for maximum throughput in busy supermarkets.',
                   features: ['35 packs per minute', 'Auto-tray sizing', 'Integrated POP labeling']
@@ -120,7 +120,7 @@ const WrappersPage: React.FC = () => {
                   tag: 'AI Powered',
                   id: Page.AwAiPop,
                   title: 'AW-Ai-Pop',
-                  img: 'https://images.unsplash.com/photo-1565793298595-6a879b1d9492?q=80&w=2071&auto=format&fit=crop',
+                  img: '',
                   desc: 'The smartest basic model of the 5600 series with 30 packs/minute and rotational labeler arm.',
                   features: ['30 packs per minute', 'Linerless label support', 'Compact footprint']
                 }
