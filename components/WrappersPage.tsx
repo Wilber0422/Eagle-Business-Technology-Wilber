@@ -118,7 +118,6 @@ const WrappersPage: React.FC = () => {
                   features: ['35 packs per minute', 'Auto-tray sizing', 'Integrated POP labeling']
                 },
                 {
-                  tag: 'AI Powered',
                   id: Page.AwAiPop,
                   title: 'Hand Wrapper',
                   img: 'https://eaglebst.com/wp-content/uploads/2022/12/Hand-Wrapper.png',
