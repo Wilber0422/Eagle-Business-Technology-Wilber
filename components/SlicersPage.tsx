@@ -101,7 +101,7 @@ const SlicersPage: React.FC = () => {
           <div className="space-y-8">
             <div className="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-100 dark:border-slate-800 shadow-sm flex flex-col md:flex-row gap-6 group hover:shadow-lg transition-all">
               <div className="w-full md:w-48 h-32 rounded-xl overflow-hidden shrink-0">
-                <img src="https://images.unsplash.com/photo-1607623814075-e51df1bdc822?q=80&w=2070&auto=format&fit=crop" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Vertical Slicing" />
+                <img src="https://www.bizerba.com/.imaging/focalpoint/1200x1200/dam/jcr:a26f03c3-6bfb-4d3a-927d-f00706cefe3d/slicing-meat-hotpot-worker_20231215154154_1200_px.webp" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Vertical Slicing" />
               </div>
               <div className="flex-grow">
                 <div className="flex justify-between items-start mb-2">
