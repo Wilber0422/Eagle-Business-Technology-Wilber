@@ -9,24 +9,24 @@ const ScalesPage: React.FC = () => {
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
           <div className="flex flex-col gap-6 lg:w-1/2">
             <h1 className="text-slate-900 dark:text-white text-5xl md:text-6xl font-display font-bold leading-tight tracking-tight">
-              SCALESPAGE. <span className="text-primary-light">The Heart of Your Business.</span>
+              Industrial <span className="text-primary-light">Weighing Scales and Systems Integration.</span>
             </h1>
             <p className="text-slate-500 dark:text-slate-400 text-lg font-normal leading-relaxed max-w-xl">
-              Optimize operations, control inventory, and enhance customer experience with our unified POS ecosystems tailored for your growth. Experience the future of transaction management.
+              Integrate your scales directly with your PC-based POS system! With the advanced PC capabilities of BRAND scales, you can elevate and optimize your business productivity and revenue. The scales below offer fast and accurate label printing and precise weight measurements, amongst other advanced features and functions, making them some of the best scales in their class!
             </p>
             <div className="flex flex-wrap gap-4 pt-4">
               <button className="flex items-center justify-center rounded-lg h-12 px-8 bg-primary-light text-white text-base font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-500/20 hover:-translate-y-0.5">
-                Request a Demo
+                Explore Models
               </button>
               <button className="flex items-center justify-center rounded-lg h-12 px-8 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white text-base font-bold hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors shadow-sm">
-                View Hardware
+                View Specs
               </button>
             </div>
           </div>
           <div className="lg:w-1/2 w-full">
             <div className="relative w-full aspect-[16/10] rounded-3xl shadow-2xl overflow-hidden bg-slate-100 dark:bg-slate-900">
               <img
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_PwX44F4Suuon7slQMCoO-bqkfzkLzz0vJvtvu2AfpC1s9Hqlbpl0gt_TziJOhCOswYQfK-NWi_SgN7EuD9xT-R9RgfaXMqvzEqEE2nhu3TOaclfnnY4Qz8pirqheaAqBxVLNK1q_HtPm4wZxQt7Ucl_upT_3hh8Sp9orYBxDRU_PMhY3jIw2WCftNXz6_4gc5DZUuq-KyA-1Oizddb9I5fgOJTEgGn0CcxNadzXjYSJEnIR0hN8oG-keDijwBAvN5PyBzToT0bOo"
+                src="https://eaglebst.com/wp-content/uploads/2023/03/digital-scales-b-11.jpg"
                 alt="POS Terminal"
                 className="w-full h-full object-cover"
               />
