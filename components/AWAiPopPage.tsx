@@ -25,7 +25,7 @@ const AWAiPopPage: React.FC = () => {
           <div className="relative group">
             <div className="bg-slate-50 dark:bg-slate-900/50 rounded-2xl overflow-hidden border border-slate-100 dark:border-slate-800 p-8 flex items-center justify-center min-h-[500px]">
               <img
-                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070&auto=format&fit=crop"
+                src="https://eaglebst.com/wp-content/uploads/2022/12/AW-Ai-Pop.png"
                 alt="AW-Ai-Pop"
                 className="w-full h-auto max-h-[600px] object-contain transition-transform duration-700 group-hover:scale-105"
               />
@@ -39,7 +39,7 @@ const AWAiPopPage: React.FC = () => {
           <div className="space-y-8 pt-4">
             <div>
               <span className="text-rose-500 font-bold text-xs uppercase tracking-[0.2em] mb-4 block">Wrappers</span>
-              <h1 className="text-4xl md:text-5xl font-display font-bold text-slate-900 dark:text-white mb-6">AW-Ai-Pop</h1>
+              <h1 className="text-4xl md:text-5xl font-display font-bold text-slate-900 dark:text-white mb-6">AW-Ai-Pop Ishida</h1>
               <p className="text-slate-600 dark:text-slate-400 text-lg leading-relaxed font-light">
                 AW-Ai-Pop Ishida is the basic model of the 5600 series, providing an impressive 30 packages/minute throughput in a reduced-cost design. Its compact form retains the full-spec 300dpi high-resolution printer and extra-large full-color touchscreen display that are standard with the 5600 series. The newly developed rotational labeler arm allows fully automatic application of linerless labels. Variations include models with manual or automatic label application.
               </p>
