@@ -12,7 +12,7 @@ const ScalesPage: React.FC = () => {
               Industrial Weighing <span className="text-primary-light"> Scales and Systems Integration.</span>
             </h1>
             <p className="text-slate-500 dark:text-slate-400 text-lg font-normal leading-relaxed max-w-xl">
-              Integrate your scales directly with your PC-based POS system! With the advanced PC capabilities of BRAND scales, you can elevate and optimize your business productivity and revenue. The scales below offer fast and accurate label printing and precise weight measurements, amongst other advanced features and functions, making them some of the best scales in their class!
+              Integrate your scales directly with your PC-based POS system! With the advanced PC capabilities of BRAND scales, you can elevate and optimize your business productivity and revenue. The scales below offer fast and accurate label printing and precise weight measurements.
             </p>
             <div className="flex flex-wrap gap-4 pt-4">
               <button className="flex items-center justify-center rounded-lg h-12 px-8 bg-primary-light text-white text-base font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-500/20 hover:-translate-y-0.5">
@@ -46,7 +46,7 @@ const ScalesPage: React.FC = () => {
             {[
               { icon: 'trending_up', title: 'Certified Accuracy', desc: 'Equipment calibrated and ready to comply with commercial and safety regulations.' },
               { icon: 'inventory_2', title: 'Industrial Resistance', desc: 'Designed with high-quality materials (SS304/316) to withstand corrosive or intensive cleaning environments.' },
-              { icon: 'mood', title: 'Specialized Technical Support', desc: 'After-sales service, calibration and preventive maintenance to ensure your investment performs at its best.' },
+              { icon: 'mood', title: 'Technical Support', desc: 'After-sales service, calibration and preventive maintenance to ensure your investment performs at its best.' },
               { icon: 'payments', title: 'Advanced Technology', desc: 'Smart indicators with touch screens, USB/Bluetooth connectivity and database management.' }
             ].map((feat, idx) => (
               <div key={idx} className="bg-white dark:bg-slate-900 p-8 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-800 transition-all hover:shadow-md">
@@ -65,11 +65,11 @@ const ScalesPage: React.FC = () => {
       <section className="py-20 px-6 md:px-10 border-b border-slate-100 dark:border-slate-800">
         <div className="max-w-[1440px] mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-slate-900 dark:text-white text-2xl font-bold font-display">More than just weight: Digital Integration</h2>
-            <p className="text-slate-400 text-sm mt-2">Our scales do not operate in isolation. We offer complete integration with ERP systems and management software using industrial protocols (Modbus, EtherNet/IP, Profinet).</p>
+            <h2 className="text-slate-900 dark:text-white text-2xl font-bold font-display">Product Categories</h2>
+            <p className="text-slate-400 text-sm mt-2">Our scales do not operate in isolation. We offer complete integration with ERP systems and management software using industrial protocols.</p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-5 gap-8 items-center justify-items-center opacity-60">
-            {['Platform and Floor', 'Table and Counter', 'Dynamic and Weighing Belts', 'Tanks and Silos', 'Forklifts and Pallet Trucks'].map(brand => (
+            {['Platform and Floor', 'Table and Counter', 'Weighing Belts', 'Tanks and Silos', 'Lift'].map(brand => (
               <div key={brand} className="flex flex-col items-center gap-2 grayscale hover:grayscale-0 transition-all cursor-pointer">
                 <span className="text-2xl font-black font-display tracking-tight text-slate-800 dark:text-slate-200">{brand}</span>
               </div>
