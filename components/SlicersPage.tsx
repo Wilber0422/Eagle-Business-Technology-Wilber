@@ -147,43 +147,40 @@ const SlicersPage: React.FC = () => {
             {[
               {
                 tag: 'Best Seller',
-                title: 'Gravinox 350',
+                title: 'Digi SM-5300 X',
                 subtitle: 'Heavy Duty Gravity Slicer',
                 img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCAQCzoU0M1XgX_uzRSz6JM90efQ4RwiP52JvNVex4FZOJzJkSuIaedCKKRBnz8T3yw0ksIe6G6gZD2fJIzdjh7y_WnyCTLgN05RxwbupoFxIkQ5GC1j2O8_9euB-RQHnZeIwhn4KKdmUNwo9m5AdG8yLARrYh6NSENYcUo4C3AgryuPixB9EU9tc2xDtVTsZ3NTCBi_QDrROJvpwrcO418TzQPcKQivRRajwJWyN8zZsY-3wI5ckDPnc4VPlIA6_gGNSYEbGFutC5s',
                 specs: { 'Blade Diameter': '350 mm', 'Drive': 'Gear Box', 'Material': 'Stainless Steel' }
               },
               {
-                title: 'Major Slice 350 / 350V',
+                title: 'Digi SM-5300X B',
                 subtitle: 'Versatile Professional Slicer',
                 img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCAQCzoU0M1XgX_uzRSz6JM90efQ4RwiP52JvNVex4FZOJzJkSuIaedCKKRBnz8T3yw0ksIe6G6gZD2fJIzdjh7y_WnyCTLgN05RxwbupoFxIkQ5GC1j2O8_9euB-RQHnZeIwhn4KKdmUNwo9m5AdG8yLARrYh6NSENYcUo4C3AgryuPixB9EU9tc2xDtVTsZ3NTCBi_QDrROJvpwrcO418TzQPcKQivRRajwJWyN8zZsY-3wI5ckDPnc4VPlIA6_gGNSYEbGFutC5s',
                 specs: { 'Blade Diameter': '350 mm', 'Operation': 'Vertical or Gravity', 'Best For': 'Mixed Deli Use' }
               },
               {
-                title: 'Major Slicer 300',
+                title: 'Dibal 545 B',
                 subtitle: 'Compact Efficiency',
                 img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCAQCzoU0M1XgX_uzRSz6JM90efQ4RwiP52JvNVex4FZOJzJkSuIaedCKKRBnz8T3yw0ksIe6G6gZD2fJIzdjh7y_WnyCTLgN05RxwbupoFxIkQ5GC1j2O8_9euB-RQHnZeIwhn4KKdmUNwo9m5AdG8yLARrYh6NSENYcUo4C3AgryuPixB9EU9tc2xDtVTsZ3NTCBi_QDrROJvpwrcO418TzQPcKQivRRajwJWyN8zZsY-3wI5ckDPnc4VPlIA6_gGNSYEbGFutC5s',
                 specs: { 'Blade Diameter': '300 mm', 'Footprint': 'Compact Design', 'Ideal For': 'Small Kitchens' }
               },
               {
-                tag: 'Best Seller',
-                title: 'Gravinox 350',
-                subtitle: 'Heavy Duty Gravity Slicer',
+                title: 'Dibal 955 H',
+                subtitle: 'Versatile Professional Slicer',
                 img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCAQCzoU0M1XgX_uzRSz6JM90efQ4RwiP52JvNVex4FZOJzJkSuIaedCKKRBnz8T3yw0ksIe6G6gZD2fJIzdjh7y_WnyCTLgN05RxwbupoFxIkQ5GC1j2O8_9euB-RQHnZeIwhn4KKdmUNwo9m5AdG8yLARrYh6NSENYcUo4C3AgryuPixB9EU9tc2xDtVTsZ3NTCBi_QDrROJvpwrcO418TzQPcKQivRRajwJWyN8zZsY-3wI5ckDPnc4VPlIA6_gGNSYEbGFutC5s',
-                specs: { 'Blade Diameter': '350 mm', 'Drive': 'Gear Box', 'Material': 'Stainless Steel' }
+                specs: { 'Blade Diameter': '350 mm', 'Operation': 'Vertical or Gravity', 'Best For': 'Mixed Deli Use' }
               },
               {
-                tag: 'Best Seller',
-                title: 'Gravinox 350',
-                subtitle: 'Heavy Duty Gravity Slicer',
+                title: 'Dibal 955 B',
+                subtitle: 'Versatile Professional Slicer',
                 img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCAQCzoU0M1XgX_uzRSz6JM90efQ4RwiP52JvNVex4FZOJzJkSuIaedCKKRBnz8T3yw0ksIe6G6gZD2fJIzdjh7y_WnyCTLgN05RxwbupoFxIkQ5GC1j2O8_9euB-RQHnZeIwhn4KKdmUNwo9m5AdG8yLARrYh6NSENYcUo4C3AgryuPixB9EU9tc2xDtVTsZ3NTCBi_QDrROJvpwrcO418TzQPcKQivRRajwJWyN8zZsY-3wI5ckDPnc4VPlIA6_gGNSYEbGFutC5s',
-                specs: { 'Blade Diameter': '350 mm', 'Drive': 'Gear Box', 'Material': 'Stainless Steel' }
+                specs: { 'Blade Diameter': '350 mm', 'Operation': 'Vertical or Gravity', 'Best For': 'Mixed Deli Use' }
               },
               {
-                tag: 'Best Seller',
-                title: 'Gravinox 350',
-                subtitle: 'Heavy Duty Gravity Slicer',
+                title: 'Dibal LP500',
+                subtitle: 'Versatile Professional Slicer',
                 img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCAQCzoU0M1XgX_uzRSz6JM90efQ4RwiP52JvNVex4FZOJzJkSuIaedCKKRBnz8T3yw0ksIe6G6gZD2fJIzdjh7y_WnyCTLgN05RxwbupoFxIkQ5GC1j2O8_9euB-RQHnZeIwhn4KKdmUNwo9m5AdG8yLARrYh6NSENYcUo4C3AgryuPixB9EU9tc2xDtVTsZ3NTCBi_QDrROJvpwrcO418TzQPcKQivRRajwJWyN8zZsY-3wI5ckDPnc4VPlIA6_gGNSYEbGFutC5s',
-                specs: { 'Blade Diameter': '350 mm', 'Drive': 'Gear Box', 'Material': 'Stainless Steel' }
+                specs: { 'Blade Diameter': '350 mm', 'Operation': 'Vertical or Gravity', 'Best For': 'Mixed Deli Use' }
               }
             ].map((model, idx) => (
               <div key={idx} className="bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-100 dark:border-slate-800 flex flex-col group">
