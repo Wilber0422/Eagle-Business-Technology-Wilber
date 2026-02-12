@@ -25,9 +25,9 @@ const PosPage: React.FC = () => {
           </div>
           <div className="lg:w-1/2 w-full">
             <div className="relative w-full aspect-[16/10] rounded-3xl shadow-2xl overflow-hidden bg-slate-100 dark:bg-slate-900">
-              <img 
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_PwX44F4Suuon7slQMCoO-bqkfzkLzz0vJvtvu2AfpC1s9Hqlbpl0gt_TziJOhCOswYQfK-NWi_SgN7EuD9xT-R9RgfaXMqvzEqEE2nhu3TOaclfnnY4Qz8pirqheaAqBxVLNK1q_HtPm4wZxQt7Ucl_upT_3hh8Sp9orYBxDRU_PMhY3jIw2WCftNXz6_4gc5DZUuq-KyA-1Oizddb9I5fgOJTEgGn0CcxNadzXjYSJEnIR0hN8oG-keDijwBAvN5PyBzToT0bOo" 
-                alt="POS Terminal" 
+              <img
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_PwX44F4Suuon7slQMCoO-bqkfzkLzz0vJvtvu2AfpC1s9Hqlbpl0gt_TziJOhCOswYQfK-NWi_SgN7EuD9xT-R9RgfaXMqvzEqEE2nhu3TOaclfnnY4Qz8pirqheaAqBxVLNK1q_HtPm4wZxQt7Ucl_upT_3hh8Sp9orYBxDRU_PMhY3jIw2WCftNXz6_4gc5DZUuq-KyA-1Oizddb9I5fgOJTEgGn0CcxNadzXjYSJEnIR0hN8oG-keDijwBAvN5PyBzToT0bOo"
+                alt="POS Terminal"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -184,8 +184,8 @@ const PosPage: React.FC = () => {
             {[
               { title: 'Card Processors', desc: 'EMV & NFC Enabled', img: 'https://images.unsplash.com/photo-1556742044-3c52d6e88c62?q=80&w=2070&auto=format&fit=crop' },
               { title: 'Barcode Scanners', desc: 'Wireless & USB', img: 'https://images.unsplash.com/photo-1605371924599-2d0365da1ae0?q=80&w=2070&auto=format&fit=crop' },
-              { title: 'Receipt Printers', desc: 'Thermal & Impact', icon: 'print' },
-              { title: 'Cash Drawers', desc: 'Heavy Duty Steel', icon: 'point_of_sale' }
+              { title: 'Quantic Food Truck', desc: 'Thermal & Impact', icon: 'print' },
+              { title: 'Quantic Restaurant', desc: 'Heavy Duty Steel', icon: 'point_of_sale' }
             ].map((hw, idx) => (
               <div key={idx} className="bg-white dark:bg-slate-900 rounded-2xl overflow-hidden shadow-sm border border-slate-100 dark:border-slate-800 transition-all hover:-translate-y-1">
                 <div className="aspect-[4/3] bg-slate-100 dark:bg-slate-800 flex items-center justify-center overflow-hidden">
@@ -220,7 +220,7 @@ const PosPage: React.FC = () => {
           </div>
         </div>
       </section>
-      
+
       <div className="py-6 text-center text-xs text-slate-400 border-t border-slate-50 dark:border-slate-900">
         © 2023 Eagle Business Technology. All rights reserved.
       </div>
