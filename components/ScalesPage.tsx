@@ -69,7 +69,7 @@ const ScalesPage: React.FC = () => {
             <p className="text-slate-400 text-sm mt-2">Our scales do not operate in isolation. We offer complete integration with ERP systems and management software using industrial protocols.</p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-5 gap-8 items-center justify-items-center opacity-60">
-            {['Platform and Floor', 'Table and Counter', 'Weighing Belts', 'Tanks and Silos', 'Lift'].map(brand => (
+            {['Platform and Floor', 'Table and Counter', 'Lift', 'Tanks and Silos', 'Weighing Belts'].map(brand => (
               <div key={brand} className="flex flex-col items-center gap-2 grayscale hover:grayscale-0 transition-all cursor-pointer">
                 <span className="text-2xl font-black font-display tracking-tight text-slate-800 dark:text-slate-200">{brand}</span>
               </div>
@@ -82,8 +82,8 @@ const ScalesPage: React.FC = () => {
       <section className="py-24 px-6 md:px-10 max-w-[1440px] mx-auto">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
           <div className="flex flex-col gap-2">
-            <span className="text-primary-light font-bold text-xs uppercase tracking-widest">Tailored Solutions</span>
-            <h2 className="text-slate-900 dark:text-white text-3xl md:text-4xl font-display font-bold">Built for Your Industry</h2>
+            <span className="text-primary-light font-bold text-xs uppercase tracking-widest">Scales Solutions</span>
+            <h2 className="text-slate-900 dark:text-white text-3xl md:text-4xl font-display font-bold">Systems Integration</h2>
           </div>
           <div className="flex p-1 bg-slate-100 dark:bg-slate-800 rounded-lg w-fit">
             <button className="px-4 py-1.5 text-xs font-bold rounded-md bg-white dark:bg-slate-700 text-primary-light shadow-sm">Retail</button>
