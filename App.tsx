@@ -19,6 +19,7 @@ import AW5600Page from './components/AW5600Page';
 import AW5600FXPage from './components/AW5600FXPage';
 import AWAiPopPage from './components/AWAiPopPage';
 import HandWrapperPage from './components/HandWrapperPage';
+import ScalesPage from './components/ScalesPage';
 
 const App: React.FC = () => {
   const [currentPage, setCurrentPage] = useState<Page>(Page.Home);
@@ -57,6 +58,7 @@ const App: React.FC = () => {
       case Page.Aw5600: return <AW5600Page />;
       case Page.Aw5600Fx: return <AW5600FXPage />;
       case Page.AwAiPop: return <AWAiPopPage />;
+      case Page.Scales: return <ScalesPage />;
       case Page.HandWrapper: return <HandWrapperPage />;
       default: return <LandingPage onNavigate={setCurrentPage} />;
     }

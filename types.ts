@@ -15,7 +15,8 @@ export enum Page {
   Aw5600 = 'aw5600',
   Aw5600Fx = 'aw5600fx',
   AwAiPop = 'aw-ai-pop',
-  HandWrapper = 'hand-wrapper'
+  HandWrapper = 'hand-wrapper',
+  Scales = 'scales'
 }
 
 export enum ImageSize {

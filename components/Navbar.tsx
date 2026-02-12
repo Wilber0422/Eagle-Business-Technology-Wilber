@@ -18,7 +18,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
 
   const solutions = [
     { id: Page.Wrappers, title: 'Wrappers', icon: 'inventory_2', color: 'text-rose-500', bg: 'bg-rose-50 dark:bg-rose-900/20', desc: 'Automated food packaging & labeling.' },
-    { id: Page.Wrappers, title: 'Scales', icon: 'inventory_3', color: 'text-rose-500', bg: 'bg-rose-50 dark:bg-rose-900/20', desc: 'The standard of accuracy.' },
+    { id: Page.Scales, title: 'Scales', icon: 'inventory', color: 'text-rose-500', bg: 'bg-rose-50 dark:bg-rose-900/20', desc: 'The standard of accuracy.' },
     { id: Page.Pos, title: 'POS Systems', icon: 'point_of_sale', color: 'text-blue-500', bg: 'bg-blue-50 dark:bg-blue-900/20', desc: 'Unified transaction & inventory management.' },
     { id: Page.Esl, title: 'Shelf Labels', icon: 'sell', color: 'text-emerald-500', bg: 'bg-emerald-50 dark:bg-emerald-900/20', desc: 'Dynamic digital pricing at the shelf edge.' },
     { id: Page.Signage, title: 'Digital Signage', icon: 'smart_display', color: 'text-amber-500', bg: 'bg-amber-50 dark:bg-amber-900/20', desc: 'Engaging dynamic screens for retail.' },
