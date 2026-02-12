@@ -25,7 +25,7 @@ const AW5600FXPage: React.FC = () => {
           <div className="relative group">
             <div className="bg-slate-50 dark:bg-slate-900/50 rounded-2xl overflow-hidden border border-slate-100 dark:border-slate-800 p-8 flex items-center justify-center min-h-[500px]">
               <img
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJvJZhrteigDo85bO1yzSuDU8VBimb9IKS9tmCv01jzkvRlkS-OM7jZ1sMU7JrL5PnAmMF5WbtDm2yzf2-CE6ZnSFem_pqK0gdV4aSHeygY84qVApK2K6_Pf9Lf7C_sFARKQmOLnLm-HViLdDoysbhW6Gn1xzLg9eINAOwgU_arsDUFwM-EvYDHsSjMQiUkNecWlc9Ae2uSJeZk7v5iPn0QiskOgvlvnTHrNmo33AbeYdEz6o3VbCsAG1zb94SPQiP_ZulErynzssL"
+                src="https://eaglebst.com/wp-content/uploads/2022/12/Hand-Wrapper.png"
                 alt="Hand Wrapper"
                 className="w-full h-auto max-h-[600px] object-contain transition-transform duration-700 group-hover:scale-105"
               />
