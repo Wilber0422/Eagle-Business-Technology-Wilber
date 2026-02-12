@@ -142,7 +142,7 @@ const ScalesPage: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Food Trucks */}
           <div className="relative h-[300px] rounded-2xl overflow-hidden group shadow-lg">
-            <img src="https://images.unsplash.com/photo-1565123409695-7b5ef63a2efb?q=80&w=2070&auto=format&fit=crop" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Food Trucks" />
+            <img src="" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Food Trucks" />
             <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent"></div>
             <div className="absolute bottom-0 left-0 p-8 text-white w-full">
               <span className="material-symbols-outlined mb-4 p-2 bg-white/20 backdrop-blur-md rounded-lg">local_shipping</span>
@@ -157,7 +157,7 @@ const ScalesPage: React.FC = () => {
 
           {/* Supermarkets */}
           <div className="relative h-[300px] rounded-2xl overflow-hidden group shadow-lg">
-            <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=2074&auto=format&fit=crop" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Supermarkets" />
+            <img src="" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Supermarkets" />
             <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent"></div>
             <div className="absolute bottom-0 left-0 p-8 text-white w-full">
               <span className="material-symbols-outlined mb-4 p-2 bg-white/20 backdrop-blur-md rounded-lg">shopping_cart</span>
@@ -169,38 +169,6 @@ const ScalesPage: React.FC = () => {
                 <li className="flex items-center gap-2"><span className="material-symbols-outlined text-[14px] text-green-400">check_circle</span> Shelf Label Printing</li>
               </ul>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Complete Your Setup */}
-      <section className="py-24 bg-slate-50 dark:bg-slate-950">
-        <div className="max-w-[1440px] mx-auto px-6 md:px-10">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-slate-900 dark:text-white text-3xl md:text-4xl font-display font-bold mb-4">Complete Your Setup</h2>
-            <p className="text-slate-500 dark:text-slate-400">Essential hardware accessories designed to work seamlessly with your POS system.</p>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              { title: 'Card Processors', desc: 'EMV & NFC Enabled', img: 'https://images.unsplash.com/photo-1556742044-3c52d6e88c62?q=80&w=2070&auto=format&fit=crop' },
-              { title: 'Barcode Scanners', desc: 'Wireless & USB', img: 'https://images.unsplash.com/photo-1605371924599-2d0365da1ae0?q=80&w=2070&auto=format&fit=crop' },
-              { title: 'Quantic Food Truck', desc: 'Thermal & Impact', icon: 'print' },
-              { title: 'Quantic Restaurant', desc: 'Heavy Duty Steel', icon: 'point_of_sale' }
-            ].map((hw, idx) => (
-              <div key={idx} className="bg-white dark:bg-slate-900 rounded-2xl overflow-hidden shadow-sm border border-slate-100 dark:border-slate-800 transition-all hover:-translate-y-1">
-                <div className="aspect-[4/3] bg-slate-100 dark:bg-slate-800 flex items-center justify-center overflow-hidden">
-                  {hw.img ? (
-                    <img src={hw.img} alt={hw.title} className="w-full h-full object-cover" />
-                  ) : (
-                    <span className="material-symbols-outlined text-6xl text-slate-300 dark:text-slate-700">{hw.icon}</span>
-                  )}
-                </div>
-                <div className="p-6">
-                  <h4 className="font-bold text-slate-900 dark:text-white mb-1 font-display">{hw.title}</h4>
-                  <p className="text-xs text-slate-500 dark:text-slate-400 font-medium">{hw.desc}</p>
-                </div>
-              </div>
-            ))}
           </div>
         </div>
       </section>
