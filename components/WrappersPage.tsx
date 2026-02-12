@@ -102,6 +102,14 @@ const WrappersPage: React.FC = () => {
             {activeTab === 'automatic' ? (
               [
                 {
+                  tag: 'AI Powered',
+                  id: Page.AwAiPop,
+                  title: 'AW-Ai-Pop Ishida',
+                  img: 'https://eaglebst.com/wp-content/uploads/2022/12/AW-Ai-Pop.png',
+                  desc: 'The smartest basic model of the 5600 series with 30 packs/minute and rotational labeler arm.',
+                  features: ['30 packs per minute', 'Linerless label support', 'Compact footprint']
+                },
+                {
                   tag: 'Best Seller',
                   id: Page.Aw5600,
                   title: 'AW-5600 AT POP',
@@ -110,17 +118,10 @@ const WrappersPage: React.FC = () => {
                   features: ['35 packs per minute', 'Auto-tray sizing', 'Integrated POP labeling']
                 },
                 {
-                  id: Page.Aw5600Fx,
-                  title: 'AW 5600 FX',
-                  img: 'https://www.digisystem.com/es/products/PRD00315/product_file/file/aw5600fx_WP02_01.png',
-                  desc: 'Flexible automatic wrapper optimized for handling varying tray sizes and fragile items.',
-                  features: ['Compact footprint', 'Fragile item mode', 'Multi-film loader']
-                },
-                {
                   tag: 'AI Powered',
                   id: Page.AwAiPop,
-                  title: 'AW-Ai-Pop',
-                  img: '',
+                  title: 'Hand Wrapper',
+                  img: 'https://eaglebst.com/wp-content/uploads/2022/12/Hand-Wrapper.png',
                   desc: 'The smartest basic model of the 5600 series with 30 packs/minute and rotational labeler arm.',
                   features: ['30 packs per minute', 'Linerless label support', 'Compact footprint']
                 }
