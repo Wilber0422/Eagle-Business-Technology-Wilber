@@ -118,7 +118,7 @@ const WrappersPage: React.FC = () => {
                   features: ['35 packs per minute', 'Auto-tray sizing', 'Integrated POP labeling']
                 },
                 {
-                  id: Page.AwAiPop,
+                  id: Page.Aw5600Fx,
                   title: 'Hand Wrapper',
                   img: 'https://eaglebst.com/wp-content/uploads/2022/12/Hand-Wrapper.png',
                   desc: 'The smartest basic model of the 5600 series with 30 packs/minute and rotational labeler arm.',

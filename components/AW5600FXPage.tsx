@@ -14,19 +14,19 @@ const AW5600FXPage: React.FC = () => {
           <span className="text-slate-300">/</span>
           <button onClick={() => window.location.hash = Page.Wrappers} className="hover:text-primary-light transition-colors">Wrappers</button>
           <span className="text-slate-300">/</span>
-          <span className="text-slate-600 dark:text-slate-300">AW 5600 FX</span>
+          <span className="text-slate-600 dark:text-slate-300">Hand Wrapper</span>
         </div>
       </nav>
 
       <section className="px-6 md:px-10 lg:px-20 pb-24 max-w-[1440px] mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-24 items-start">
-          
+
           {/* Product Image Section */}
           <div className="relative group">
             <div className="bg-slate-50 dark:bg-slate-900/50 rounded-2xl overflow-hidden border border-slate-100 dark:border-slate-800 p-8 flex items-center justify-center min-h-[500px]">
-              <img 
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJvJZhrteigDo85bO1yzSuDU8VBimb9IKS9tmCv01jzkvRlkS-OM7jZ1sMU7JrL5PnAmMF5WbtDm2yzf2-CE6ZnSFem_pqK0gdV4aSHeygY84qVApK2K6_Pf9Lf7C_sFARKQmOLnLm-HViLdDoysbhW6Gn1xzLg9eINAOwgU_arsDUFwM-EvYDHsSjMQiUkNecWlc9Ae2uSJeZk7v5iPn0QiskOgvlvnTHrNmo33AbeYdEz6o3VbCsAG1zb94SPQiP_ZulErynzssL" 
-                alt="AW 5600 FX" 
+              <img
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJvJZhrteigDo85bO1yzSuDU8VBimb9IKS9tmCv01jzkvRlkS-OM7jZ1sMU7JrL5PnAmMF5WbtDm2yzf2-CE6ZnSFem_pqK0gdV4aSHeygY84qVApK2K6_Pf9Lf7C_sFARKQmOLnLm-HViLdDoysbhW6Gn1xzLg9eINAOwgU_arsDUFwM-EvYDHsSjMQiUkNecWlc9Ae2uSJeZk7v5iPn0QiskOgvlvnTHrNmo33AbeYdEz6o3VbCsAG1zb94SPQiP_ZulErynzssL"
+                alt="Hand Wrapper"
                 className="w-full h-auto max-h-[600px] object-contain transition-transform duration-700 group-hover:scale-105"
               />
               <button className="absolute top-6 right-6 p-2 bg-white dark:bg-slate-800 rounded-full shadow-lg border border-slate-100 dark:border-slate-700 text-slate-400 hover:text-primary transition-colors">
@@ -39,36 +39,36 @@ const AW5600FXPage: React.FC = () => {
           <div className="space-y-8 pt-4">
             <div>
               <span className="text-rose-500 font-bold text-xs uppercase tracking-[0.2em] mb-4 block">Wrappers</span>
-              <h1 className="text-4xl md:text-5xl font-display font-bold text-slate-900 dark:text-white mb-6">AW 5600 FX</h1>
+              <h1 className="text-4xl md:text-5xl font-display font-bold text-slate-900 dark:text-white mb-6">Hand Wrapper</h1>
               <p className="text-slate-600 dark:text-slate-400 text-lg leading-relaxed font-light">
-                Flexibility is supreme in the latest generation of DIGI’s integrated semi-automatic weigh-wrap-labelers. Able to work with fragile trays, irregular shapes, and even items without trays, the AW 5600 FX packs even more efficiency and usability into its small footprint. DIGI’s popular pick-pack system is complemented by new hardware enhancements such as a larger impulse heat sealer and double the air supply. The result is a durable, attractive package.
+                Flexibility is supreme in the latest generation of DIGI’s integrated semi-automatic weigh-wrap-labelers. Able to work with fragile trays, irregular shapes, and even items without trays, the Hand Wrapper packs even more efficiency and usability into its small footprint. DIGI’s popular pick-pack system is complemented by new hardware enhancements such as a larger impulse heat sealer and double the air supply. The result is a durable, attractive package.
               </p>
             </div>
 
             <div className="flex flex-col gap-6 pt-6">
               <div className="flex items-center gap-4">
                 <div className="flex border border-slate-200 dark:border-slate-800 rounded-lg h-14 overflow-hidden">
-                   <button 
+                  <button
                     onClick={() => setQuantity(Math.max(1, quantity - 1))}
                     className="w-12 h-full flex items-center justify-center text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors"
-                   >
-                     <span className="material-symbols-outlined text-sm">remove</span>
-                   </button>
-                   <input 
-                    type="number" 
+                  >
+                    <span className="material-symbols-outlined text-sm">remove</span>
+                  </button>
+                  <input
+                    type="number"
                     value={quantity}
                     onChange={(e) => setQuantity(parseInt(e.target.value) || 1)}
                     className="w-16 h-full text-center bg-transparent border-none text-slate-900 dark:text-white font-bold focus:ring-0"
-                   />
-                   <button 
+                  />
+                  <button
                     onClick={() => setQuantity(quantity + 1)}
                     className="w-12 h-full flex items-center justify-center text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors"
-                   >
-                     <span className="material-symbols-outlined text-sm">add</span>
-                   </button>
+                  >
+                    <span className="material-symbols-outlined text-sm">add</span>
+                  </button>
                 </div>
-                
-                <button 
+
+                <button
                   className="flex-grow h-14 bg-[#0069B5] text-white font-bold rounded-full shadow-xl shadow-blue-500/20 hover:bg-blue-700 transition-all uppercase tracking-widest text-xs"
                 >
                   Add to Quote
@@ -110,7 +110,7 @@ const AW5600FXPage: React.FC = () => {
       <section className="bg-slate-50 dark:bg-slate-900/30 py-24">
         <div className="px-6 md:px-10 lg:px-20 max-w-[1440px] mx-auto">
           <div className="max-w-3xl">
-            <h2 className="text-3xl font-display font-bold text-slate-900 dark:text-white mb-12">AW 5600 FX Specifications</h2>
+            <h2 className="text-3xl font-display font-bold text-slate-900 dark:text-white mb-12">Hand Wrapper Specifications</h2>
             <div className="space-y-4">
               {[
                 { label: 'Weighing Capacity', value: '15kg (Multi-interval)' },
@@ -133,8 +133,8 @@ const AW5600FXPage: React.FC = () => {
       {/* Related CTA */}
       <section className="py-24 px-6 text-center">
         <h3 className="text-2xl font-display font-bold text-slate-900 dark:text-white mb-6">Need a Demonstration?</h3>
-        <p className="text-slate-500 mb-10">Discover how the AW 5600 FX can handle your most challenging product shapes.</p>
-        <button 
+        <p className="text-slate-500 mb-10">Discover how the Hand Wrapper can handle your most challenging product shapes.</p>
+        <button
           onClick={() => window.location.hash = Page.Contact}
           className="bg-primary text-white px-12 py-4 rounded-xl font-bold shadow-xl shadow-primary/20 hover:-translate-y-1 transition-all"
         >
