@@ -19,10 +19,10 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
   const solutions = [
     { id: Page.Wrappers, title: 'Wrappers', icon: 'inventory_2', color: 'text-rose-500', bg: 'bg-rose-50 dark:bg-rose-900/20', desc: 'Automated food packaging & labeling.' },
     { id: Page.Scales, title: 'Scales', icon: 'inventory', color: 'text-rose-500', bg: 'bg-rose-50 dark:bg-rose-900/20', desc: 'The standard of accuracy.' },
-    { id: Page.Pos, title: 'POS Systems', icon: 'point_of_sale', color: 'text-blue-500', bg: 'bg-blue-50 dark:bg-blue-900/20', desc: 'Unified transaction & inventory management.' },
-    { id: Page.Esl, title: 'Shelf Labels', icon: 'sell', color: 'text-emerald-500', bg: 'bg-emerald-50 dark:bg-emerald-900/20', desc: 'Dynamic digital pricing at the shelf edge.' },
-    { id: Page.Signage, title: 'Digital Signage', icon: 'smart_display', color: 'text-amber-500', bg: 'bg-amber-50 dark:bg-amber-900/20', desc: 'Engaging dynamic screens for retail.' },
-    { id: Page.Voice, title: 'Voice Solutions', icon: 'call', color: 'text-indigo-500', bg: 'bg-indigo-50 dark:bg-indigo-900/20', desc: 'Enterprise VoIP & Hospitality PBX.' },
+    { id: Page.Pos, title: 'POS', icon: 'point_of_sale', color: 'text-blue-500', bg: 'bg-blue-50 dark:bg-blue-900/20', desc: 'Unified transaction & inventory management.' },
+    { id: Page.Esl, title: 'SIM POS', icon: 'sell', color: 'text-emerald-500', bg: 'bg-emerald-50 dark:bg-emerald-900/20', desc: 'Dynamic digital pricing at the shelf edge.' },
+    { id: Page.Signage, title: 'Business software solutions', icon: 'smart_display', color: 'text-amber-500', bg: 'bg-amber-50 dark:bg-amber-900/20', desc: 'Engaging dynamic screens for retail.' },
+    { id: Page.Voice, title: 'Store Solutions', icon: 'call', color: 'text-indigo-500', bg: 'bg-indigo-50 dark:bg-indigo-900/20', desc: 'Enterprise VoIP & Hospitality PBX.' },
     { id: Page.Slicers, title: 'Slicers', icon: 'content_cut', color: 'text-slate-600', bg: 'bg-slate-100 dark:bg-slate-800', desc: 'Precision Kolossal slicing machinery.' },
     { id: Page.Wifi, title: 'Wi-Fi Marketing', icon: 'wifi', color: 'text-sky-500', bg: 'bg-sky-50 dark:bg-sky-900/20', desc: 'Turn guest Wi-Fi into customer data.' }
   ];
