@@ -9,7 +9,7 @@ const ScalesPage: React.FC = () => {
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
           <div className="flex flex-col gap-6 lg:w-1/2">
             <h1 className="text-slate-900 dark:text-white text-5xl md:text-6xl font-display font-bold leading-tight tracking-tight">
-              Industrial <span className="text-primary-light">Weighing Scales and Systems Integration.</span>
+              Industrial Weighing<span className="text-primary-light">Scales and Systems Integration.</span>
             </h1>
             <p className="text-slate-500 dark:text-slate-400 text-lg font-normal leading-relaxed max-w-xl">
               Integrate your scales directly with your PC-based POS system! With the advanced PC capabilities of BRAND scales, you can elevate and optimize your business productivity and revenue. The scales below offer fast and accurate label printing and precise weight measurements, amongst other advanced features and functions, making them some of the best scales in their class!
@@ -39,15 +39,15 @@ const ScalesPage: React.FC = () => {
       <section className="py-24 bg-slate-50 dark:bg-slate-900/50">
         <div className="max-w-[1440px] mx-auto px-6 md:px-10">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-slate-900 dark:text-white text-3xl md:text-4xl font-display font-bold mb-4">Transforming Business Operations</h2>
-            <p className="text-slate-500 dark:text-slate-400">Our POS solutions go beyond processing payments to become the central nervous system of your business.</p>
+            <h2 className="text-slate-900 dark:text-white text-3xl md:text-4xl font-display font-bold mb-4">High-Precision Industrial and Commercial Weighing Solutions</h2>
+            <p className="text-slate-500 dark:text-slate-400">We offer robust, integrated weighing systems that optimize accuracy, operational efficiency, and data control in your business.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { icon: 'trending_up', title: 'Optimize Operations', desc: 'Streamline daily tasks, automate reporting, and reduce manual entry errors significantly.' },
-              { icon: 'inventory_2', title: 'Inventory Control', desc: 'Real-time tracking, low-stock alerts, and automated reordering to keep shelves stocked.' },
-              { icon: 'mood', title: 'Enhance CX', desc: 'Build loyalty with integrated CRM, personalized offers, and lightning-fast checkouts.' },
-              { icon: 'payments', title: 'Unified Payments', desc: 'Accept all payment types—chip, swipe, tap, and mobile wallets—securely and quickly.' }
+              { icon: 'trending_up', title: 'Certified Accuracy', desc: 'Equipment calibrated and ready to comply with commercial and safety regulations.' },
+              { icon: 'inventory_2', title: 'Industrial Resistance', desc: 'Designed with high-quality materials (SS304/316) to withstand corrosive or intensive cleaning environments.' },
+              { icon: 'mood', title: 'Specialized Technical Support', desc: 'After-sales service, calibration and preventive maintenance to ensure your investment performs at its best.' },
+              { icon: 'payments', title: 'Advanced Technology', desc: 'Smart indicators with touch screens, USB/Bluetooth connectivity and database management.' }
             ].map((feat, idx) => (
               <div key={idx} className="bg-white dark:bg-slate-900 p-8 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-800 transition-all hover:shadow-md">
                 <div className="w-12 h-12 bg-blue-50 dark:bg-blue-900/20 rounded-xl flex items-center justify-center mb-6 text-primary-light">
@@ -65,11 +65,11 @@ const ScalesPage: React.FC = () => {
       <section className="py-20 px-6 md:px-10 border-b border-slate-100 dark:border-slate-800">
         <div className="max-w-[1440px] mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-slate-900 dark:text-white text-2xl font-bold font-display">Trusted Platforms & Partners</h2>
-            <p className="text-slate-400 text-sm mt-2">We partner with industry leaders to bring you the best technology.</p>
+            <h2 className="text-slate-900 dark:text-white text-2xl font-bold font-display">More than just weight: Digital Integration</h2>
+            <p className="text-slate-400 text-sm mt-2">Our scales do not operate in isolation. We offer complete integration with ERP systems and management software using industrial protocols (Modbus, EtherNet/IP, Profinet).</p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-5 gap-8 items-center justify-items-center opacity-60">
-            {['Clover', 'OVVI', 'HioPOS', 'Quantic', 'Harbortouch'].map(brand => (
+            {['Platform and Floor', 'Table and Counter', 'Dynamic and Weighing Belts', 'Tanks and Silos', 'Forklifts and Pallet Trucks'].map(brand => (
               <div key={brand} className="flex flex-col items-center gap-2 grayscale hover:grayscale-0 transition-all cursor-pointer">
                 <span className="text-2xl font-black font-display tracking-tight text-slate-800 dark:text-slate-200">{brand}</span>
               </div>
