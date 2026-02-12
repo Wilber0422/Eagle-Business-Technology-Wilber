@@ -9,7 +9,7 @@ const ScalesPage: React.FC = () => {
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
           <div className="flex flex-col gap-6 lg:w-1/2">
             <h1 className="text-slate-900 dark:text-white text-5xl md:text-6xl font-display font-bold leading-tight tracking-tight">
-              Industrial Weighing<span className="text-primary-light">Scales and Systems Integration.</span>
+              Industrial Weighing <span className="text-primary-light"> Scales and Systems Integration.</span>
             </h1>
             <p className="text-slate-500 dark:text-slate-400 text-lg font-normal leading-relaxed max-w-xl">
               Integrate your scales directly with your PC-based POS system! With the advanced PC capabilities of BRAND scales, you can elevate and optimize your business productivity and revenue. The scales below offer fast and accurate label printing and precise weight measurements, amongst other advanced features and functions, making them some of the best scales in their class!
