@@ -146,40 +146,28 @@ const SlicersPage: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                title: 'Digi SM-5300X B',
+                title: 'Gravinox 350',
                 subtitle: 'Versatile Professional Slicer',
-                img: 'https://eaglebst.com/wp-content/uploads/2022/12/SM5300-X-B.png',
+                img: 'https://eaglebst.com/wp-content/uploads/2022/12/GRAVINOX-350.png',
                 specs: { 'Blade Diameter': '350 mm', 'Operation': 'Vertical or Gravity', 'Best For': 'Mixed Deli Use' }
               },
               {
                 tag: 'Best Seller',
-                title: 'SM5300-X-H',
+                title: 'MAJOR SLICE 350',
                 subtitle: 'Heavy Duty Gravity Slicer',
-                img: 'https://eaglebst.com/wp-content/uploads/2022/12/SM5300-X-H.png',
+                img: 'https://eaglebst.com/wp-content/uploads/2022/12/GRAVINOX-350-1.png',
                 specs: { 'Blade Diameter': '350 mm', 'Drive': 'Gear Box', 'Material': 'Stainless Steel' }
               },
               {
-                title: 'Ishia Uni-3',
+                title: 'Major Slice 350V',
                 subtitle: 'Compact Efficiency',
-                img: 'https://eaglebst.com/wp-content/uploads/2022/12/Ishida-Uni-3-Series.png',
+                img: 'https://eaglebst.com/wp-content/uploads/2022/12/MAJOR-SLICE-350-VERTICAL.png',
                 specs: { 'Blade Diameter': '300 mm', 'Footprint': 'Compact Design', 'Ideal For': 'Small Kitchens' }
               },
               {
-                title: 'Ishida Uni 7 Series',
+                title: 'Major Slicer 300',
                 subtitle: 'Versatile Professional Slicer',
-                img: 'https://eaglebst.com/wp-content/uploads/2022/12/Ishida-Uni-7-Series.png',
-                specs: { 'Blade Diameter': '350 mm', 'Operation': 'Vertical or Gravity', 'Best For': 'Mixed Deli Use' }
-              },
-              {
-                title: 'Dibal 955 B',
-                subtitle: 'Versatile Professional Slicer',
-                img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCAQCzoU0M1XgX_uzRSz6JM90efQ4RwiP52JvNVex4FZOJzJkSuIaedCKKRBnz8T3yw0ksIe6G6gZD2fJIzdjh7y_WnyCTLgN05RxwbupoFxIkQ5GC1j2O8_9euB-RQHnZeIwhn4KKdmUNwo9m5AdG8yLARrYh6NSENYcUo4C3AgryuPixB9EU9tc2xDtVTsZ3NTCBi_QDrROJvpwrcO418TzQPcKQivRRajwJWyN8zZsY-3wI5ckDPnc4VPlIA6_gGNSYEbGFutC5s',
-                specs: { 'Blade Diameter': '350 mm', 'Operation': 'Vertical or Gravity', 'Best For': 'Mixed Deli Use' }
-              },
-              {
-                title: 'Dibal LP500',
-                subtitle: 'Versatile Professional Slicer',
-                img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCAQCzoU0M1XgX_uzRSz6JM90efQ4RwiP52JvNVex4FZOJzJkSuIaedCKKRBnz8T3yw0ksIe6G6gZD2fJIzdjh7y_WnyCTLgN05RxwbupoFxIkQ5GC1j2O8_9euB-RQHnZeIwhn4KKdmUNwo9m5AdG8yLARrYh6NSENYcUo4C3AgryuPixB9EU9tc2xDtVTsZ3NTCBi_QDrROJvpwrcO418TzQPcKQivRRajwJWyN8zZsY-3wI5ckDPnc4VPlIA6_gGNSYEbGFutC5s',
+                img: 'https://eaglebst.com/wp-content/uploads/2022/12/MAJO-SLICE-300.png',
                 specs: { 'Blade Diameter': '350 mm', 'Operation': 'Vertical or Gravity', 'Best For': 'Mixed Deli Use' }
               }
             ].map((model, idx) => (
