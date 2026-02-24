@@ -19,7 +19,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ onNavigate }) => {
                 <span className="flex h-2 w-2 rounded-full bg-secondary"></span>
                 <span className="text-slate-600 dark:text-slate-400 font-bold text-xs uppercase tracking-wide">Eagle Business Technology</span>
               </div>
-              <h1 className="text-slate-900 dark:text-white font-display text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.05] tracking-tight">
+              <h1 className="text-slate-900 dark:text-white font-display text-4xl md:text-4xl lg:text-5xl font-bold leading-[1.05] tracking-tight">
                 Leading Provider of <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Business Technologies</span>
               </h1>
               <p className="text-slate-600 dark:text-slate-400 text-lg md:text-xl font-normal leading-relaxed max-w-xl">
@@ -27,10 +27,10 @@ const LandingPage: React.FC<LandingPageProps> = ({ onNavigate }) => {
               </p>
               <div className="flex flex-wrap gap-4 pt-4">
                 <button onClick={() => onNavigate(Page.AiStudio)} className="flex items-center justify-center gap-2 rounded-full h-12 px-8 bg-primary text-white text-base font-semibold hover:bg-primary-dark transition-all shadow-xl shadow-primary/20 hover:-translate-y-1">
-                  <span className="material-symbols-outlined text-[20px]">auto_awesome</span> Open AI Studio
+                  Explore More Solutions
                 </button>
                 <button onClick={() => { window.location.hash = 'solutions'; }} className="flex items-center justify-center rounded-full h-12 px-8 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 text-base font-semibold hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors shadow-sm">
-                  View Solutions
+                  <span className="material-symbols-outlined text-[20px]">auto_awesome</span> Open AI Studio
                 </button>
               </div>
             </div>
@@ -99,8 +99,8 @@ const LandingPage: React.FC<LandingPageProps> = ({ onNavigate }) => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
+              { id: Page.Wrappers, title: 'Wrappers', icon: 'inventory_2', desc: 'Automated wrapping machinery to preserve freshness and improve presentation.' },
               { id: Page.Pos, title: 'POS Systems', icon: 'point_of_sale', desc: 'Fast, reliable, and intuitive Point of Sale systems designed for efficiency.' },
-              { id: Page.Wrappers, title: 'Wrapping Solutions', icon: 'inventory_2', desc: 'Automated wrapping machinery to preserve freshness and improve presentation.' },
               { id: Page.Esl, title: 'Shelf Labels', icon: 'sell', desc: 'Automated price updates and inventory management directly at the shelf.' },
               { id: Page.Signage, title: 'Digital Signage', icon: 'smart_display', desc: 'Dynamic communication screens to engage customers and modernize layout.' },
               { id: Page.Voice, title: 'Voice Solutions', icon: 'call', desc: 'Enterprise-grade PBX and communication tools for seamless operations.' },
@@ -121,7 +121,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ onNavigate }) => {
       </section>
 
       {/* Improved Our Customers Section (Reference Match) */}
-      <section className="w-full py-24 relative overflow-hidden bg-gradient-to-r from-[#5cb7e5] to-[#71c8f1] dark:from-[#214b63] dark:to-[#2b6a8a]">
+      <section className="w-full py-20 relative overflow-hidden bg-gradient-to-r from-[#5cb7e5] to-[#71c8f1] dark:from-[#214b63] dark:to-[#2b6a8a]">
         <div className="absolute inset-0 opacity-10 pointer-events-none">
           <svg className="absolute bottom-0 w-full h-auto" viewBox="0 0 1440 320" fill="white">
             <path d="M0,224L48,213.3C96,203,192,181,288,181.3C384,181,480,203,576,224C672,245,768,267,864,250.7C960,235,1056,181,1152,165.3C1248,149,1344,171,1392,181.3L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
@@ -129,42 +129,40 @@ const LandingPage: React.FC<LandingPageProps> = ({ onNavigate }) => {
         </div>
 
         <div className="px-6 md:px-10 lg:px-20 max-w-[1440px] mx-auto text-center relative z-10">
-          <h2 className="text-white font-display text-4xl md:text-5xl lg:text-6xl font-bold mb-20 drop-shadow-sm">Our Customers</h2>
+          <h2 className="text-white font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-12 drop-shadow-sm">Our Customers</h2>
 
-          <div className="relative group">
+          <div className="relative group max-w-6xl mx-auto">
             <button className="absolute -left-4 md:-left-12 top-1/2 -translate-y-1/2 z-10 flex items-center justify-center p-2 rounded-full text-white/80 hover:text-white transition-all">
-              <span className="material-symbols-outlined text-5xl md:text-6xl font-light">chevron_left</span>
+              <span className="material-symbols-outlined text-4xl md:text-5xl font-light">chevron_left</span>
             </button>
             <button className="absolute -right-4 md:-right-12 top-1/2 -translate-y-1/2 z-10 flex items-center justify-center p-2 rounded-full text-white/80 hover:text-white transition-all">
-              <span className="material-symbols-outlined text-5xl md:text-6xl font-light">chevron_right</span>
+              <span className="material-symbols-outlined text-4xl md:text-5xl font-light">chevron_right</span>
             </button>
 
-            <div className="flex items-center justify-center gap-4 md:gap-6 overflow-x-auto no-scrollbar pb-12">
-              <div className="bg-white rounded-[2rem] p-8 md:p-12 shadow-[0_20px_40px_rgba(0,0,0,0.1)] hover:shadow-[0_25px_50px_rgba(0,0,0,0.15)] hover:-translate-y-2 transition-all flex items-center justify-center min-w-[200px] md:min-w-[260px] aspect-square">
-                <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=200&auto=format&fit=crop" alt="Sarah's Tent" className="max-w-[85%] max-h-[85%] object-contain" />
-              </div>
-              <div className="bg-white rounded-[2rem] p-8 md:p-12 shadow-[0_20px_40px_rgba(0,0,0,0.1)] hover:shadow-[0_25px_50px_rgba(0,0,0,0.15)] hover:-translate-y-2 transition-all flex items-center justify-center min-w-[200px] md:min-w-[260px] aspect-square">
-                <img src="https://images.unsplash.com/photo-1610348725531-843dff563e2c?q=80&w=200&auto=format&fit=crop" alt="Latin Fresh" className="max-w-[85%] max-h-[85%] object-contain" />
-              </div>
-              <div className="bg-white rounded-[2rem] p-8 md:p-12 shadow-[0_20px_40px_rgba(0,0,0,0.1)] hover:shadow-[0_25px_50px_rgba(0,0,0,0.15)] hover:-translate-y-2 transition-all flex items-center justify-center min-w-[200px] md:min-w-[260px] aspect-square">
-                <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?q=80&w=200&auto=format&fit=crop" alt="Luciano Books" className="max-w-[85%] max-h-[85%] object-contain" />
-              </div>
-              <div className="bg-white rounded-[2rem] p-8 md:p-12 shadow-[0_20px_40px_rgba(0,0,0,0.1)] hover:shadow-[0_25px_50px_rgba(0,0,0,0.15)] hover:-translate-y-2 transition-all flex items-center justify-center min-w-[200px] md:min-w-[260px] aspect-square relative">
-                <img src="https://images.unsplash.com/photo-1506484334402-40f215d7ff41?q=80&w=200&auto=format&fit=crop" alt="Costco" className="max-w-[85%] max-h-[85%] object-contain" />
-                <div className="absolute top-4 right-4 bg-[#e60023] text-white flex items-center gap-1.5 px-3 py-1.5 rounded-full shadow-md">
-                  <span className="material-symbols-outlined text-[14px] fill-current">push_pin</span>
-                  <span className="text-[10px] font-bold tracking-tight">Guardar</span>
+            <div className="flex items-center justify-start md:justify-center gap-4 md:gap-5 overflow-x-auto no-scrollbar pb-8 snap-x snap-mandatory">
+              {[
+                { src: "https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=200&auto=format&fit=crop", alt: "Sarah's Tent" },
+                { src: "https://images.unsplash.com/photo-1610348725531-843dff563e2c?q=80&w=200&auto=format&fit=crop", alt: "Latin Fresh" },
+                { src: "https://images.unsplash.com/photo-1512820790803-83ca734da794?q=80&w=200&auto=format&fit=crop", alt: "Luciano Books" },
+                { src: "https://eaglebst.com/wp-content/uploads/2023/017.jpg", alt: "Costco", pin: true },
+                { src: "https://images.unsplash.com/photo-1534723452862-4c874018d66d?q=80&w=200&auto=format&fit=crop", alt: "El Fuerte" }
+              ].map((customer, idx) => (
+                <div key={idx} className="bg-white rounded-3xl p-6 md:p-8 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all flex items-center justify-center min-w-[160px] md:min-w-[210px] aspect-square snap-center relative">
+                  <img src={customer.src} alt={customer.alt} className="max-w-[80%] max-h-[80%] object-contain" />
+                  {customer.pin && (
+                    <div className="absolute top-3 right-3 bg-[#e60023] text-white flex items-center gap-1 px-2 py-1 rounded-full shadow-sm">
+                      <span className="material-symbols-outlined text-[12px] fill-current">push_pin</span>
+                      <span className="text-[9px] font-bold">Guardar</span>
+                    </div>
+                  )}
                 </div>
-              </div>
-              <div className="bg-white rounded-[2rem] p-8 md:p-12 shadow-[0_20px_40px_rgba(0,0,0,0.1)] hover:shadow-[0_25px_50px_rgba(0,0,0,0.15)] hover:-translate-y-2 transition-all flex items-center justify-center min-w-[200px] md:min-w-[260px] aspect-square">
-                <img src="https://images.unsplash.com/photo-1534723452862-4c874018d66d?q=80&w=200&auto=format&fit=crop" alt="El Fuerte" className="max-w-[85%] max-h-[85%] object-contain" />
-              </div>
+              ))}
             </div>
           </div>
 
-          <div className="flex justify-center gap-3 mt-4">
-            {[...Array(12)].map((_, i) => (
-              <div key={i} className={`h-2 rounded-full transition-all duration-300 ${i === 1 ? 'bg-white w-4' : 'bg-white/30 w-2'}`}></div>
+          <div className="flex justify-center gap-2 mt-2">
+            {[...Array(5)].map((_, i) => (
+              <div key={i} className={`h-1.5 rounded-full transition-all duration-300 ${i === 1 ? 'bg-white w-6' : 'bg-white/30 w-1.5'}`}></div>
             ))}
           </div>
         </div>

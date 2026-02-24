@@ -95,7 +95,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
           <button onClick={() => navigate(Page.Contact)} className={`text-sm font-medium transition-colors ${currentPage === Page.Contact ? 'text-primary' : 'text-slate-600 dark:text-slate-300 hover:text-primary'}`}>Contact</button>
 
           {/* Legal Dropdown with Hover Transition */}
-          <div className="relative group h-full">
+          {/* <div className="relative group h-full">
             <button className={`flex items-center gap-1 py-4 text-sm font-medium transition-colors ${currentPage === Page.Terms ? 'text-primary' : 'text-slate-600 dark:text-slate-300 group-hover:text-primary'}`}>
               Legal <span className="material-symbols-outlined text-sm transition-transform group-hover:rotate-180">expand_more</span>
             </button>
@@ -105,7 +105,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
                 <button onClick={() => navigate(Page.Terms)} className="block w-full text-left px-4 py-2 text-sm text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-primary transition-colors">Privacy Policy</button>
               </div>
             </div>
-          </div>
+          </div> */}
 
           <a
             href={consultationUrl}
@@ -113,12 +113,12 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
             rel="noopener noreferrer"
             className="px-5 py-2 rounded-full bg-slate-900 text-white dark:bg-white dark:text-slate-900 text-xs font-bold hover:scale-105 transition-all shadow-lg"
           >
-            Free Consultation
+            Get a Quote
           </a>
 
-          <button onClick={() => navigate(Page.AiStudio)} className={`flex items-center gap-2 text-sm font-bold transition-colors ${currentPage === Page.AiStudio ? 'text-blue-500' : 'text-slate-600 dark:text-slate-300 hover:text-blue-500'}`}>
+          {/* <button onClick={() => navigate(Page.AiStudio)} className={`flex items-center gap-2 text-sm font-bold transition-colors ${currentPage === Page.AiStudio ? 'text-blue-500' : 'text-slate-600 dark:text-slate-300 hover:text-blue-500'}`}>
             <span className="material-symbols-outlined text-[18px]">auto_awesome</span> AI Studio
-          </button>
+          </button> */}
         </nav>
 
         <div className="flex items-center gap-4">
