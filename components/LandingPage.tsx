@@ -17,10 +17,10 @@ const LandingPage: React.FC<LandingPageProps> = ({ onNavigate }) => {
             <div className="flex flex-col gap-6 text-left">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm w-fit">
                 <span className="flex h-2 w-2 rounded-full bg-secondary"></span>
-                <span className="text-slate-600 dark:text-slate-400 font-bold text-xs uppercase tracking-wide">Leading Provider of Business Technologies</span>
+                <span className="text-slate-600 dark:text-slate-400 font-bold text-xs uppercase tracking-wide">Eagle Business Technology</span>
               </div>
               <h1 className="text-slate-900 dark:text-white font-display text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.05] tracking-tight">
-                Transforming Retail with <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Smart Tech</span>
+                Leading Provider of <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Business Technologies</span>
               </h1>
               <p className="text-slate-600 dark:text-slate-400 text-lg md:text-xl font-normal leading-relaxed max-w-xl">
                 Eagle Business Technology specializes in modern, efficient, and profitable technological solutions. We are your one-stop-shop for retail innovation.
@@ -130,7 +130,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ onNavigate }) => {
 
         <div className="px-6 md:px-10 lg:px-20 max-w-[1440px] mx-auto text-center relative z-10">
           <h2 className="text-white font-display text-4xl md:text-5xl lg:text-6xl font-bold mb-20 drop-shadow-sm">Our Customers</h2>
-          
+
           <div className="relative group">
             <button className="absolute -left-4 md:-left-12 top-1/2 -translate-y-1/2 z-10 flex items-center justify-center p-2 rounded-full text-white/80 hover:text-white transition-all">
               <span className="material-symbols-outlined text-5xl md:text-6xl font-light">chevron_left</span>
@@ -138,7 +138,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ onNavigate }) => {
             <button className="absolute -right-4 md:-right-12 top-1/2 -translate-y-1/2 z-10 flex items-center justify-center p-2 rounded-full text-white/80 hover:text-white transition-all">
               <span className="material-symbols-outlined text-5xl md:text-6xl font-light">chevron_right</span>
             </button>
-            
+
             <div className="flex items-center justify-center gap-4 md:gap-6 overflow-x-auto no-scrollbar pb-12">
               <div className="bg-white rounded-[2rem] p-8 md:p-12 shadow-[0_20px_40px_rgba(0,0,0,0.1)] hover:shadow-[0_25px_50px_rgba(0,0,0,0.15)] hover:-translate-y-2 transition-all flex items-center justify-center min-w-[200px] md:min-w-[260px] aspect-square">
                 <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=200&auto=format&fit=crop" alt="Sarah's Tent" className="max-w-[85%] max-h-[85%] object-contain" />
@@ -152,8 +152,8 @@ const LandingPage: React.FC<LandingPageProps> = ({ onNavigate }) => {
               <div className="bg-white rounded-[2rem] p-8 md:p-12 shadow-[0_20px_40px_rgba(0,0,0,0.1)] hover:shadow-[0_25px_50px_rgba(0,0,0,0.15)] hover:-translate-y-2 transition-all flex items-center justify-center min-w-[200px] md:min-w-[260px] aspect-square relative">
                 <img src="https://images.unsplash.com/photo-1506484334402-40f215d7ff41?q=80&w=200&auto=format&fit=crop" alt="Costco" className="max-w-[85%] max-h-[85%] object-contain" />
                 <div className="absolute top-4 right-4 bg-[#e60023] text-white flex items-center gap-1.5 px-3 py-1.5 rounded-full shadow-md">
-                   <span className="material-symbols-outlined text-[14px] fill-current">push_pin</span>
-                   <span className="text-[10px] font-bold tracking-tight">Guardar</span>
+                  <span className="material-symbols-outlined text-[14px] fill-current">push_pin</span>
+                  <span className="text-[10px] font-bold tracking-tight">Guardar</span>
                 </div>
               </div>
               <div className="bg-white rounded-[2rem] p-8 md:p-12 shadow-[0_20px_40px_rgba(0,0,0,0.1)] hover:shadow-[0_25px_50px_rgba(0,0,0,0.15)] hover:-translate-y-2 transition-all flex items-center justify-center min-w-[200px] md:min-w-[260px] aspect-square">
@@ -161,7 +161,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ onNavigate }) => {
               </div>
             </div>
           </div>
-          
+
           <div className="flex justify-center gap-3 mt-4">
             {[...Array(12)].map((_, i) => (
               <div key={i} className={`h-2 rounded-full transition-all duration-300 ${i === 1 ? 'bg-white w-4' : 'bg-white/30 w-2'}`}></div>
