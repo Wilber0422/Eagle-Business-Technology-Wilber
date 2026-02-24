@@ -151,9 +151,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
 
           <button onClick={() => navigate(Page.About)} className="text-left font-medium py-2">About Us</button>
           <button onClick={() => navigate(Page.Contact)} className="text-left font-medium py-2">Contact</button>
-          <button onClick={() => navigate(Page.AiStudio)} className="text-left font-bold py-2 text-blue-500 flex items-center gap-2">
-            <span className="material-symbols-outlined">auto_awesome</span> AI Studio
-          </button>
+
 
           <a href={consultationUrl} target="_blank" rel="noopener noreferrer" className="mt-4 w-full py-4 bg-primary text-white text-center font-bold rounded-xl shadow-lg">
             Free Consultation
