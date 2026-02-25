@@ -22,9 +22,9 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
     { id: Page.Pos, title: 'POS', icon: 'point_of_sale', color: 'text-blue-500', bg: 'bg-blue-50 dark:bg-blue-900/20', desc: 'Unified transaction & inventory management.' },
     { id: Page.Esl, title: 'SIM POS', icon: 'sell', color: 'text-emerald-500', bg: 'bg-emerald-50 dark:bg-emerald-900/20', desc: 'Dynamic digital pricing at the shelf edge.' },
     { id: Page.Signage, title: 'Business software solutions', icon: 'smart_display', color: 'text-amber-500', bg: 'bg-amber-50 dark:bg-amber-900/20', desc: 'Engaging dynamic screens for retail.' },
-    { id: Page.Voice, title: 'Store Solutions', icon: 'call', color: 'text-indigo-500', bg: 'bg-indigo-50 dark:bg-indigo-900/20', desc: 'Enterprise VoIP & Hospitality PBX.' },
-    { id: Page.Slicers, title: 'Slicers', icon: 'content_cut', color: 'text-slate-600', bg: 'bg-slate-100 dark:bg-slate-800', desc: 'Precision Kolossal slicing machinery.' },
-    { id: Page.Wifi, title: 'Wi-Fi Marketing', icon: 'wifi', color: 'text-sky-500', bg: 'bg-sky-50 dark:bg-sky-900/20', desc: 'Turn guest Wi-Fi into customer data.' }
+    { id: Page.Wifi, title: 'Meat Prosesing Equipment ', icon: 'wifi', color: 'text-sky-500', bg: 'bg-sky-50 dark:bg-sky-900/20', desc: 'Turn guest Wi-Fi into customer data.' },
+    { id: Page.Slicers, title: 'Food Equipment', icon: 'content_cut', color: 'text-slate-600', bg: 'bg-slate-100 dark:bg-slate-800', desc: 'Precision Kolossal slicing machinery.' },
+    { id: Page.Voice, title: 'Store Solutions', icon: 'call', color: 'text-indigo-500', bg: 'bg-indigo-50 dark:bg-indigo-900/20', desc: 'Enterprise VoIP & Hospitality PBX.' }
   ];
 
   return (

@@ -142,11 +142,11 @@ const ScalesPage: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Food Trucks */}
           <div className="relative h-[300px] rounded-2xl overflow-hidden group shadow-lg">
-            <img src="" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Food Trucks" />
+            <img src="https://www.reycotel.com/637-thickbox_default/balanza-dibal-d-955-autoservicio.jpg" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Food Trucks" />
             <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent"></div>
             <div className="absolute bottom-0 left-0 p-8 text-white w-full">
               <span className="material-symbols-outlined mb-4 p-2 bg-white/20 backdrop-blur-md rounded-lg">local_shipping</span>
-              <h3 className="text-2xl font-display font-bold mb-2">Dibal LP500</h3>
+              <h3 className="text-2xl font-display font-bold mb-2">Dibal 955 B</h3>
               <p className="text-slate-200 text-sm mb-4">Compact hardware and robust offline mode.</p>
               <ul className="text-xs space-y-2 opacity-80 flex gap-6">
                 <li className="flex items-center gap-2"><span className="material-symbols-outlined text-[14px] text-green-400">check_circle</span> Quick Modifier Select</li>
@@ -157,16 +157,61 @@ const ScalesPage: React.FC = () => {
 
           {/* Supermarkets */}
           <div className="relative h-[300px] rounded-2xl overflow-hidden group shadow-lg">
-            <img src="" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Supermarkets" />
+            <img src="https://www.dibal.com/media/uploads/productos/D-900_P_ETIQ_10-7_.png" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Supermarkets" />
             <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent"></div>
             <div className="absolute bottom-0 left-0 p-8 text-white w-full">
               <span className="material-symbols-outlined mb-4 p-2 bg-white/20 backdrop-blur-md rounded-lg">shopping_cart</span>
-              <h3 className="text-2xl font-display font-bold mb-2">Supermarkets</h3>
+              <h3 className="text-2xl font-display font-bold mb-2">Dibal 955 H</h3>
               <p className="text-slate-200 text-sm mb-4">Scale integration and high-volume scanning support.</p>
               <ul className="text-xs space-y-2 opacity-80 flex gap-6 flex-wrap">
                 <li className="flex items-center gap-2"><span className="material-symbols-outlined text-[14px] text-green-400">check_circle</span> Scale Integration</li>
                 <li className="flex items-center gap-2"><span className="material-symbols-outlined text-[14px] text-green-400">check_circle</span> EBT/WIC Support</li>
                 <li className="flex items-center gap-2"><span className="material-symbols-outlined text-[14px] text-green-400">check_circle</span> Shelf Label Printing</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+          {/* Retail */}
+          <div className="relative h-[400px] rounded-2xl overflow-hidden group shadow-lg">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTb-3DW_rL0wuFFRT7jGV1_m9nI-EpDEemIuQ&s" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Retail" />
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent"></div>
+            <div className="absolute bottom-0 left-0 p-8 text-white w-full">
+              <span className="material-symbols-outlined mb-4 p-2 bg-white/20 backdrop-blur-md rounded-lg">shopping_bag</span>
+              <h3 className="text-2xl font-display font-bold mb-3">Dibal 545 B</h3>
+              <p className="text-slate-200 text-sm mb-4 leading-relaxed">Advanced inventory matrix, barcode generation, and customer loyalty profiles.</p>
+              <ul className="text-xs space-y-2 opacity-80">
+                <li className="flex items-center gap-2"><span className="material-symbols-outlined text-[14px] text-green-400">check_circle</span> Multi-location sync</li>
+                <li className="flex items-center gap-2"><span className="material-symbols-outlined text-[14px] text-green-400">check_circle</span> E-commerce integration</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="relative h-[400px] rounded-2xl overflow-hidden group shadow-lg">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_3X2iZf2UeqSaGONRLVmMu-oyXhWBYh9k5A&s" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Retail" />
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent"></div>
+            <div className="absolute bottom-0 left-0 p-8 text-white w-full">
+              <span className="material-symbols-outlined mb-4 p-2 bg-white/20 backdrop-blur-md rounded-lg">shopping_bag</span>
+              <h3 className="text-2xl font-display font-bold mb-3">Dibal LP500</h3>
+              <p className="text-slate-200 text-sm mb-4 leading-relaxed">Advanced inventory matrix, barcode generation, and customer loyalty profiles.</p>
+              <ul className="text-xs space-y-2 opacity-80">
+                <li className="flex items-center gap-2"><span className="material-symbols-outlined text-[14px] text-green-400">check_circle</span> Multi-location sync</li>
+                <li className="flex items-center gap-2"><span className="material-symbols-outlined text-[14px] text-green-400">check_circle</span> E-commerce integration</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="relative h-[400px] rounded-2xl overflow-hidden group shadow-lg">
+            <img src="" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Retail" />
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent"></div>
+            <div className="absolute bottom-0 left-0 p-8 text-white w-full">
+              <span className="material-symbols-outlined mb-4 p-2 bg-white/20 backdrop-blur-md rounded-lg">shopping_bag</span>
+              <h3 className="text-2xl font-display font-bold mb-3"></h3>
+              <p className="text-slate-200 text-sm mb-4 leading-relaxed">Advanced inventory matrix, barcode generation, and customer loyalty profiles.</p>
+              <ul className="text-xs space-y-2 opacity-80">
+                <li className="flex items-center gap-2"><span className="material-symbols-outlined text-[14px] text-green-400">check_circle</span> Multi-location sync</li>
+                <li className="flex items-center gap-2"><span className="material-symbols-outlined text-[14px] text-green-400">check_circle</span> E-commerce integration</li>
               </ul>
             </div>
           </div>

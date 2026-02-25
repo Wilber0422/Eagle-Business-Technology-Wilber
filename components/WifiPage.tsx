@@ -30,18 +30,18 @@ const WifiPage: React.FC = () => {
             </div>
             <div className="relative">
               <div className="relative w-full aspect-[1.1/1] rounded-3xl overflow-hidden shadow-2xl bg-white dark:bg-slate-800">
-                <img 
-                  src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=2070&auto=format&fit=crop" 
-                  className="w-full h-full object-cover" 
-                  alt="Person using smartphone with WiFi" 
+                <img
+                  src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=2070&auto=format&fit=crop"
+                  className="w-full h-full object-cover"
+                  alt="Person using smartphone with WiFi"
                 />
                 <div className="absolute inset-0 bg-gradient-to-tr from-slate-900/40 via-transparent to-transparent"></div>
-                
+
                 {/* Visual Overlays matching the mockup */}
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white/90">
                   <span className="material-symbols-outlined text-8xl md:text-9xl opacity-80">wifi</span>
                 </div>
-                
+
                 <div className="absolute bottom-8 left-8 right-8 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md px-6 py-4 rounded-2xl border border-white/20 shadow-2xl flex items-center gap-4">
                   <div className="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center text-white shrink-0">
                     <span className="material-symbols-outlined">check</span>
@@ -125,26 +125,33 @@ const WifiPage: React.FC = () => {
       </section>
 
       {/* Integrations Section */}
-      <section className="py-24 bg-slate-50 dark:bg-slate-950">
-        <div className="max-w-[1440px] mx-auto px-6 md:px-10 text-center">
-          <span className="text-primary-light font-bold text-xs uppercase tracking-widest block mb-4">Powerful Connections</span>
-          <h2 className="text-slate-900 dark:text-white text-3xl md:text-4xl font-display font-bold mb-6">Integrates with tools you love</h2>
-          <p className="text-slate-500 dark:text-slate-400 mb-16 max-w-xl mx-auto">Sync data seamlessly with your existing marketing stack.</p>
-          
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
-            {[
-              { name: 'Mailchimp', icon: 'mail' },
-              { name: 'Constant Contact', icon: 'contact_mail' },
-              { name: 'Zapier', icon: 'bolt' },
-              { name: 'Twilio', icon: 'chat' },
-              { name: 'ActiveCampaign', icon: 'campaign' }
-            ].map((brand, i) => (
-              <div key={i} className="bg-white dark:bg-slate-900 p-8 rounded-xl border border-slate-100 dark:border-slate-800 shadow-sm flex flex-col items-center gap-4 group hover:border-primary-light/50 transition-colors">
-                <span className="material-symbols-outlined text-3xl text-slate-300 group-hover:text-primary-light transition-colors">{brand.icon}</span>
-                <span className="text-xs font-bold text-slate-600 dark:text-slate-400 uppercase tracking-tight">{brand.name}</span>
-              </div>
-            ))}
+      <section className="py-24 px-6 md:px-10 max-w-[1440px] mx-auto">
+        <div className="flex justify-between items-end mb-12">
+          <div>
+            <h2 className="text-slate-900 dark:text-white text-3xl font-display font-bold mb-2">Esl electronic shelf label</h2>
+            <p className="text-slate-500 dark:text-slate-400">Our ESLs are used in industries such as food retail, mobile shops, point-of-sale, <br /> home appliances, pharmacy, warehouse, industry, and room signage.</p>
           </div>
+          <button className="text-primary-light font-bold text-sm hover:underline">See all products</button>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {[
+            { title: 'Mancony Slicer', img: 'https://www.manconi.com/wp-content/uploads/2024/12/Kolossal-330-IK-US_Fronte.png', icon: 'storefront' },
+            { title: 'Major Slicer', img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRXEavDcbVAyd1qCGEipubZU-2qb7GkOayaQ&s', icon: 'medication' },
+            { title: 'Chp cutter', img: 'https://phoenixfoodequipment.com/cdn/shop/products/LEM-1561-Table-Top-Meat-Saw-2_1000x1000.jpg?v=1644988575', icon: 'inventory' },
+            { title: 'Meat Swa', img: 'https://www.webstaurantstore.com/images/products/large/530702/2679671.jpg', icon: 'devices' },
+            { title: 'Stuffer', img: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=1000&auto=format&fit=crop', icon: 'inventory' },
+            { title: 'Meat griender', img: 'https://upload.wikimedia.org/wikipedia/commons/5/54/22_HFG.jpg', icon: 'inventory' }
+          ].map((app, idx) => (
+            <div key={idx} className="relative h-[360px] rounded-2xl overflow-hidden group shadow-lg cursor-pointer">
+              <img src={app.img} alt={app.title} className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/20 to-transparent"></div>
+              <div className="absolute bottom-6 left-6 text-white">
+                <span className="material-symbols-outlined text-primary-light mb-2">{app.icon}</span>
+                <h3 className="text-xl font-bold font-display">{app.title}</h3>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -174,43 +181,43 @@ const WifiPage: React.FC = () => {
                 Explore the Ecosystem
               </button>
             </div>
-            
+
             <div className="relative">
               <div className="aspect-square md:aspect-video rounded-3xl bg-gradient-to-br from-blue-600 to-indigo-900 p-8 md:p-12 flex items-center justify-center relative overflow-hidden">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white/10 to-transparent"></div>
-                
+
                 {/* Visual Diagram matching mockup */}
                 <div className="flex items-center justify-between w-full max-w-sm relative">
-                   <div className="flex flex-col items-center gap-3 z-10">
-                     <div className="size-16 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center border border-white/20">
-                       <span className="material-symbols-outlined text-white text-3xl">wifi</span>
-                     </div>
-                     <span className="text-[10px] font-bold text-white/60 tracking-widest uppercase">WI-FI</span>
-                   </div>
-                   
-                   <div className="h-px bg-white/20 flex-grow mx-4 relative">
-                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-2 rounded-full bg-white animate-pulse"></div>
-                   </div>
+                  <div className="flex flex-col items-center gap-3 z-10">
+                    <div className="size-16 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center border border-white/20">
+                      <span className="material-symbols-outlined text-white text-3xl">wifi</span>
+                    </div>
+                    <span className="text-[10px] font-bold text-white/60 tracking-widest uppercase">WI-FI</span>
+                  </div>
 
-                   <div className="flex flex-col items-center gap-3 z-10">
-                     <div className="size-20 rounded-full bg-primary-light flex items-center justify-center border-4 border-white/20 shadow-2xl">
-                       <span className="material-symbols-outlined text-white text-4xl">hub</span>
-                     </div>
-                     <span className="text-[10px] font-bold text-white tracking-widest uppercase">EAGLE CORE</span>
-                   </div>
+                  <div className="h-px bg-white/20 flex-grow mx-4 relative">
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-2 rounded-full bg-white animate-pulse"></div>
+                  </div>
 
-                   <div className="h-px bg-white/20 flex-grow mx-4 relative">
-                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-2 rounded-full bg-white animate-pulse delay-150"></div>
-                   </div>
+                  <div className="flex flex-col items-center gap-3 z-10">
+                    <div className="size-20 rounded-full bg-primary-light flex items-center justify-center border-4 border-white/20 shadow-2xl">
+                      <span className="material-symbols-outlined text-white text-4xl">hub</span>
+                    </div>
+                    <span className="text-[10px] font-bold text-white tracking-widest uppercase">EAGLE CORE</span>
+                  </div>
 
-                   <div className="flex flex-col gap-4 z-10">
-                     <div className="size-12 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center border border-white/20">
-                       <span className="material-symbols-outlined text-white text-xl">smart_display</span>
-                     </div>
-                     <div className="size-12 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center border border-white/20">
-                       <span className="material-symbols-outlined text-white text-xl">sell</span>
-                     </div>
-                   </div>
+                  <div className="h-px bg-white/20 flex-grow mx-4 relative">
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-2 rounded-full bg-white animate-pulse delay-150"></div>
+                  </div>
+
+                  <div className="flex flex-col gap-4 z-10">
+                    <div className="size-12 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center border border-white/20">
+                      <span className="material-symbols-outlined text-white text-xl">smart_display</span>
+                    </div>
+                    <div className="size-12 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center border border-white/20">
+                      <span className="material-symbols-outlined text-white text-xl">sell</span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -233,7 +240,7 @@ const WifiPage: React.FC = () => {
           </div>
         </div>
       </section>
-      
+
       <div className="py-8 text-center text-[10px] text-slate-400 uppercase tracking-widest border-t border-slate-100 dark:border-slate-800 dark:bg-slate-950">
         © 2023 Eagle Business Technology. All rights reserved.
       </div>

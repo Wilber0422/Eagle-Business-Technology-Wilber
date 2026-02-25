@@ -146,30 +146,79 @@ const SlicersPage: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                title: 'Gravinox 350',
+                title: 'Meat Saw',
                 subtitle: 'Versatile Professional Slicer',
-                img: 'https://eaglebst.com/wp-content/uploads/2022/12/GRAVINOX-350.png',
+                img: '',
                 specs: { 'Blade Diameter': '350 mm', 'Operation': 'Vertical or Gravity', 'Best For': 'Mixed Deli Use' }
               },
               {
-                tag: 'Best Seller',
+                tag: 'Chop cutter',
                 title: 'MAJOR SLICE 350',
                 subtitle: 'Heavy Duty Gravity Slicer',
-                img: 'https://eaglebst.com/wp-content/uploads/2022/12/GRAVINOX-350-1.png',
+                img: '',
                 specs: { 'Blade Diameter': '350 mm', 'Drive': 'Gear Box', 'Material': 'Stainless Steel' }
               },
               {
-                title: 'Major Slice 350V',
+                title: 'Dicer',
                 subtitle: 'Compact Efficiency',
-                img: 'https://eaglebst.com/wp-content/uploads/2022/12/MAJOR-SLICE-350-VERTICAL.png',
+                img: '',
                 specs: { 'Blade Diameter': '300 mm', 'Footprint': 'Compact Design', 'Ideal For': 'Small Kitchens' }
               },
               {
-                title: 'Major Slicer 300',
+                title: 'Vacuum machine',
                 subtitle: 'Versatile Professional Slicer',
-                img: 'https://eaglebst.com/wp-content/uploads/2022/12/MAJO-SLICE-300.png',
+                img: '',
+                specs: { 'Blade Diameter': '350 mm', 'Operation': 'Vertical or Gravity', 'Best For': 'Mixed Deli Use' }
+              },
+              {
+                title: 'Patty formers',
+                subtitle: 'Versatile Professional Slicer',
+                img: '',
+                specs: { 'Blade Diameter': '350 mm', 'Operation': 'Vertical or Gravity', 'Best For': 'Mixed Deli Use' }
+              },
+              {
+                title: 'Stuffer',
+                subtitle: 'Versatile Professional Slicer',
+                img: '',
+                specs: { 'Blade Diameter': '350 mm', 'Operation': 'Vertical or Gravity', 'Best For': 'Mixed Deli Use' }
+              },
+              {
+                title: 'Meat Slicer',
+                subtitle: 'Versatile Professional Slicer',
+                img: '',
+                specs: { 'Blade Diameter': '350 mm', 'Operation': 'Vertical or Gravity', 'Best For': 'Mixed Deli Use' }
+              },
+              {
+                title: 'Slicer',
+                subtitle: 'Versatile Professional Slicer',
+                img: '',
+                specs: { 'Blade Diameter': '350 mm', 'Operation': 'Vertical or Gravity', 'Best For': 'Mixed Deli Use' }
+              },
+              {
+                title: 'Tenderizer and strip cutter ICP',
+                subtitle: 'Versatile Professional Slicer',
+                img: '',
+                specs: { 'Blade Diameter': '350 mm', 'Operation': 'Vertical or Gravity', 'Best For': 'Mixed Deli Use' }
+              },
+              {
+                title: 'LEONARDO',
+                subtitle: 'Versatile Professional Slicer',
+                img: '',
+                specs: { 'Blade Diameter': '350 mm', 'Operation': 'Vertical or Gravity', 'Best For': 'Mixed Deli Use' }
+              },
+              {
+                title: 'Food Display',
+                subtitle: 'Versatile Professional Slicer',
+                img: '',
+                specs: { 'Blade Diameter': '350 mm', 'Operation': 'Vertical or Gravity', 'Best For': 'Mixed Deli Use' }
+              },
+              {
+                title: 'Chicken master',
+                subtitle: 'Versatile Professional Slicer',
+                img: '',
                 specs: { 'Blade Diameter': '350 mm', 'Operation': 'Vertical or Gravity', 'Best For': 'Mixed Deli Use' }
               }
+
             ].map((model, idx) => (
               <div key={idx} className="bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-100 dark:border-slate-800 flex flex-col group">
                 <div className="aspect-square bg-slate-50 dark:bg-slate-800 p-8 flex items-center justify-center relative">
