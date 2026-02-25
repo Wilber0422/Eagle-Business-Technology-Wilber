@@ -26,11 +26,8 @@ const LandingPage: React.FC<LandingPageProps> = ({ onNavigate }) => {
                 Eagle Business Technology specializes in modern, efficient, and profitable technological solutions. We are your one-stop-shop for retail innovation.
               </p>
               <div className="flex flex-wrap gap-4 pt-4">
-                <button onClick={() => onNavigate(Page.AiStudio)} className="flex items-center justify-center gap-2 rounded-full h-12 px-8 bg-primary text-white text-base font-semibold hover:bg-primary-dark transition-all shadow-xl shadow-primary/20 hover:-translate-y-1">
+                <button onClick={() => onNavigate(Page.About)} className="flex items-center justify-center gap-2 rounded-full h-12 px-8 bg-primary text-white text-base font-semibold hover:bg-primary-dark transition-all shadow-xl shadow-primary/20 hover:-translate-y-1">
                   Explore More Solutions
-                </button>
-                <button onClick={() => { window.location.hash = 'solutions'; }} className="flex items-center justify-center rounded-full h-12 px-8 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 text-base font-semibold hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors shadow-sm">
-                  <span className="material-symbols-outlined text-[20px]">auto_awesome</span> Open AI Studio
                 </button>
               </div>
             </div>

@@ -146,7 +146,7 @@ const ScalesPage: React.FC = () => {
             <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent"></div>
             <div className="absolute bottom-0 left-0 p-8 text-white w-full">
               <span className="material-symbols-outlined mb-4 p-2 bg-white/20 backdrop-blur-md rounded-lg">local_shipping</span>
-              <h3 className="text-2xl font-display font-bold mb-2">Food Trucks</h3>
+              <h3 className="text-2xl font-display font-bold mb-2">Dibal LP500</h3>
               <p className="text-slate-200 text-sm mb-4">Compact hardware and robust offline mode.</p>
               <ul className="text-xs space-y-2 opacity-80 flex gap-6">
                 <li className="flex items-center gap-2"><span className="material-symbols-outlined text-[14px] text-green-400">check_circle</span> Quick Modifier Select</li>
