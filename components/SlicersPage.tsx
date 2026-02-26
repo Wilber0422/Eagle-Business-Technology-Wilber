@@ -167,55 +167,55 @@ const SlicersPage: React.FC = () => {
               {
                 title: 'Vacuum machine',
                 subtitle: 'Versatile Professional Slicer',
-                img: '',
+                img: ' ',
                 specs: { 'Blade Diameter': '350 mm', 'Operation': 'Vertical or Gravity', 'Best For': 'Mixed Deli Use' }
               },
               {
                 title: 'Patty formers',
                 subtitle: 'Versatile Professional Slicer',
-                img: '',
+                img: ' ',
                 specs: { 'Blade Diameter': '350 mm', 'Operation': 'Vertical or Gravity', 'Best For': 'Mixed Deli Use' }
               },
               {
                 title: 'Stuffer',
                 subtitle: 'Versatile Professional Slicer',
-                img: '',
+                img: ' ',
                 specs: { 'Blade Diameter': '350 mm', 'Operation': 'Vertical or Gravity', 'Best For': 'Mixed Deli Use' }
               },
               {
                 title: 'Meat Slicer',
                 subtitle: 'Versatile Professional Slicer',
-                img: '',
+                img: ' ',
                 specs: { 'Blade Diameter': '350 mm', 'Operation': 'Vertical or Gravity', 'Best For': 'Mixed Deli Use' }
               },
               {
                 title: 'Slicer',
                 subtitle: 'Versatile Professional Slicer',
-                img: '',
+                img: ' ',
                 specs: { 'Blade Diameter': '350 mm', 'Operation': 'Vertical or Gravity', 'Best For': 'Mixed Deli Use' }
               },
               {
                 title: 'Tenderizer and strip cutter ICP',
                 subtitle: 'Versatile Professional Slicer',
-                img: '',
+                img: ' ',
                 specs: { 'Blade Diameter': '350 mm', 'Operation': 'Vertical or Gravity', 'Best For': 'Mixed Deli Use' }
               },
               {
                 title: 'LEONARDO',
                 subtitle: 'Versatile Professional Slicer',
-                img: '',
+                img: ' ',
                 specs: { 'Blade Diameter': '350 mm', 'Operation': 'Vertical or Gravity', 'Best For': 'Mixed Deli Use' }
               },
               {
                 title: 'Food Display',
                 subtitle: 'Versatile Professional Slicer',
-                img: '',
+                img: ' ',
                 specs: { 'Blade Diameter': '350 mm', 'Operation': 'Vertical or Gravity', 'Best For': 'Mixed Deli Use' }
               },
               {
                 title: 'Chicken master',
                 subtitle: 'Versatile Professional Slicer',
-                img: '',
+                img: ' ',
                 specs: { 'Blade Diameter': '350 mm', 'Operation': 'Vertical or Gravity', 'Best For': 'Mixed Deli Use' }
               }
 

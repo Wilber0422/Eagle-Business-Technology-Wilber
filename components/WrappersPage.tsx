@@ -33,7 +33,7 @@ const WrappersPage: React.FC = () => {
             <div className="relative">
               <div className="relative w-full aspect-[1.2/1] rounded-3xl overflow-hidden shadow-2xl bg-white dark:bg-slate-800 flex items-center justify-center p-12">
                 <img
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUMb5PCl_strj3MzJcq1U3Dbhxhqen4uexuUN60k0PS9rvZesDDROjwsiqiwh968HxWM-NTEtOht2K9wxqGTg2CDLgvcUK0GtqvL5qYHMm8kik0KyoXIwnZW9jh5OWTRGJlh0Uocich3LmwmWT8ynRjVWmV-12h95ShNOwnJwbw1zmWinLuYwsJnhxzmCk-0j_X0r6SaLfeH9kpYliLReCa4FIAyxw45drmhpYuxzAPhU6sS91rZkV7ObVWu99ly-TXtfsLl7aHGrW"
+                  src="https://eaglebst.com/wp-content/uploads/2023/03/Wrapper-34.jpg"
                   className="w-full h-full object-contain"
                   alt="Wrapper AW-5600ATII"
                 />
