@@ -60,7 +60,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ onNavigate }) => {
               </div>
               <div className="relative z-10">
                 <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-6 text-primary">
-                  <span className="material-symbols-outlined text-2xl">rocket_launch</span>
+                  <img src="/mision.png" />
                 </div>
                 <h3 className="text-2xl font-display font-bold text-slate-900 dark:text-white mb-4">Our Mission</h3>
                 <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
@@ -74,7 +74,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ onNavigate }) => {
               </div>
               <div className="relative z-10">
                 <div className="w-12 h-12 bg-secondary/10 rounded-xl flex items-center justify-center mb-6 text-secondary">
-                  <span className="material-symbols-outlined text-2xl">visibility</span>
+                  <img src="/vision.png" />
                 </div>
                 <h3 className="text-2xl font-display font-bold text-slate-900 dark:text-white mb-4">Our Vision</h3>
                 <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
