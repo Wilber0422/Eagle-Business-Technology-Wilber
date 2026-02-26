@@ -34,7 +34,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ onNavigate }) => {
             <div className="relative lg:h-full flex items-center justify-center">
               <div className="absolute w-[110%] h-[110%] bg-gradient-to-br from-primary/10 to-secondary/10 blur-[80px] rounded-full -z-10"></div>
               <div className="relative w-full rounded-2xl overflow-hidden shadow-2xl shadow-slate-900/10 border-4 border-white dark:border-slate-800 bg-white dark:bg-slate-900">
-                <div className="aspect-[4/3] bg-cover bg-center transition-transform duration-700 hover:scale-105" style={{ backgroundImage: "url('https://lh3.googleusercontent.com/aida-public/AB6AXuDJvJZhrteigDo85bO1yzSuDU8VBimb9IKS9tmCv01jzkvRlkS-OM7jZ1sMU7JrL5PnAmMF5WbtDm2yzf2-CE6ZnSFem_pqK0gdV4aSHeygY84qVApK2K6_Pf9Lf7C_sFARKQmOLnLm-HViLdDoysbhW6Gn1xzLg9eINAOwgU_arsDUFwM-EvYDHsSjMQiUkNecWlc9Ae2uSJeZk7v5iPn0QiskOgvlvnTHrNmo33AbeYdEz6o3VbCsAG1zb94SPQiP_ZulErynzssL')" }}></div>
+                <div className="aspect-[4/3] bg-cover bg-center transition-transform duration-700 hover:scale-105" style={{ backgroundImage: "url('https://eaglebst.com/wp-content/uploads/2023/01/lamp-post-new.jpeg')" }}></div>
                 <div className="absolute bottom-6 right-6 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md p-4 rounded-xl shadow-lg border border-slate-100 dark:border-slate-800 flex items-center gap-4">
                   <div className="h-12 w-12 bg-green-50 dark:bg-green-900/20 rounded-full flex items-center justify-center text-green-600">
                     <span className="material-symbols-outlined text-2xl">trending_up</span>
