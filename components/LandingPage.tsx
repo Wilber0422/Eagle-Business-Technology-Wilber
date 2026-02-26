@@ -1,5 +1,6 @@
+'use client';
 
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Page } from '../types';
 
 interface LandingPageProps {
@@ -7,6 +8,39 @@ interface LandingPageProps {
 }
 
 const LandingPage: React.FC<LandingPageProps> = ({ onNavigate }) => {
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  const originalCustomers = [
+    { src: "https://eaglebst.com/wp-content/uploads/2023/01/1.jpg", alt: "Sarah's Tent" },
+    { src: "https://eaglebst.com/wp-content/uploads/2023/01/2.jpg", alt: "Super Economico" },
+    { src: "https://eaglebst.com/wp-content/uploads/2023/01/3.jpg", alt: "Luciano Books" },
+    { src: "https://eaglebst.com/wp-content/uploads/2023/01/4.jpg", alt: "El machetazo" },
+    { src: "https://eaglebst.com/wp-content/uploads/2023/01/5.jpg", alt: "B" },
+    { src: "https://eaglebst.com/wp-content/uploads/2023/01/6.jpg", alt: "Latin Fresh" },
+    { src: "https://eaglebst.com/wp-content/uploads/2023/01/7.jpg", alt: "Costco", pin: true },
+    { src: "https://eaglebst.com/wp-content/uploads/2023/01/8.jpg", alt: "Cale" },
+    { src: "https://eaglebst.com/wp-content/uploads/2023/01/9.jpg", alt: "Bravo" },
+    { src: "https://eaglebst.com/wp-content/uploads/2023/01/10.jpg", alt: "La placita" },
+    { src: "https://eaglebst.com/wp-content/uploads/2023/01/11.jpg", alt: "El Fuerte" }
+  ];
+
+  useEffect(() => {
+    const scrollContainer = scrollRef.current;
+    if (!scrollContainer) return;
+
+    const customers = [...originalCustomers, ...originalCustomers];
+
+    const autoScroll = setInterval(() => {
+      if (scrollContainer.scrollLeft >= scrollContainer.scrollWidth / 2) {
+        scrollContainer.scrollTo({ left: 0, behavior: 'auto' });
+      } else {
+        scrollContainer.scrollBy({ left: 1, behavior: 'auto' });
+      }
+    }, 1);
+
+    return () => clearInterval(autoScroll);
+  }, []);
+
   return (
     <div>
       {/* Hero Section */}
@@ -136,7 +170,10 @@ const LandingPage: React.FC<LandingPageProps> = ({ onNavigate }) => {
               <span className="material-symbols-outlined text-4xl md:text-5xl font-light">chevron_right</span>
             </button>
 
-            <div className="flex items-center justify-start md:justify-center gap-4 md:gap-5 overflow-x-auto no-scrollbar pb-8 snap-x snap-mandatory">
+            <div
+              ref={scrollRef}
+              className="flex items-center justify-start gap-4 md:gap-5 overflow-x-auto pb-8 [&::-webkit-scrollbar]:hidden [scrollbar-width:none] [-ms-overflow-style:none]"
+            >
               {[
                 { src: "https://eaglebst.com/wp-content/uploads/2023/01/1.jpg", alt: "Sarah's Tent" },
                 { src: "https://eaglebst.com/wp-content/uploads/2023/01/2.jpg", alt: "Super Economico" },
@@ -150,7 +187,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ onNavigate }) => {
                 { src: "https://eaglebst.com/wp-content/uploads/2023/01/10.jpg", alt: "La placita" },
                 { src: "https://eaglebst.com/wp-content/uploads/2023/01/11.jpg", alt: "El Fuerte" }
               ].map((customer, idx) => (
-                <div key={idx} className="bg-white rounded-3xl p-6 md:p-8 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all flex items-center justify-center min-w-[160px] md:min-w-[210px] aspect-square snap-center relative">
+                <div key={idx} className="bg-white rounded-3xl p-6 md:p-8 shadow-lg min-w-[160px] md:min-w-[210px] aspect-square flex items-center justify-center relative flex-shrink-0">
                   <img src={customer.src} alt={customer.alt} className="max-w-[80%] max-h-[80%] object-contain" />
                   {customer.pin && (
                     <div className="absolute top-3 right-3 bg-[#e60023] text-white flex items-center gap-1 px-2 py-1 rounded-full shadow-sm">
