@@ -138,11 +138,17 @@ const LandingPage: React.FC<LandingPageProps> = ({ onNavigate }) => {
 
             <div className="flex items-center justify-start md:justify-center gap-4 md:gap-5 overflow-x-auto no-scrollbar pb-8 snap-x snap-mandatory">
               {[
-                { src: "https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=200&auto=format&fit=crop", alt: "Sarah's Tent" },
-                { src: "https://images.unsplash.com/photo-1610348725531-843dff563e2c?q=80&w=200&auto=format&fit=crop", alt: "Latin Fresh" },
-                { src: "https://images.unsplash.com/photo-1512820790803-83ca734da794?q=80&w=200&auto=format&fit=crop", alt: "Luciano Books" },
-                { src: "https://eaglebst.com/wp-content/uploads/2023/017.jpg", alt: "Costco", pin: true },
-                { src: "https://images.unsplash.com/photo-1534723452862-4c874018d66d?q=80&w=200&auto=format&fit=crop", alt: "El Fuerte" }
+                { src: "https://eaglebst.com/wp-content/uploads/2023/01/1.jpg", alt: "Sarah's Tent" },
+                { src: "https://eaglebst.com/wp-content/uploads/2023/01/2.jpg", alt: "Super Economico" },
+                { src: "https://eaglebst.com/wp-content/uploads/2023/01/3.jpg", alt: "Luciano Books" },
+                { src: "https://eaglebst.com/wp-content/uploads/2023/01/4.jpg", alt: "El machetazo" },
+                { src: "https://eaglebst.com/wp-content/uploads/2023/01/5.jpg", alt: "B" },
+                { src: "https://eaglebst.com/wp-content/uploads/2023/01/6.jpg", alt: "Latin Fresh" },
+                { src: "https://eaglebst.com/wp-content/uploads/2023/01/7.jpg", alt: "Costco", pin: true },
+                { src: "https://eaglebst.com/wp-content/uploads/2023/01/8.jpg", alt: "Cale" },
+                { src: "https://eaglebst.com/wp-content/uploads/2023/01/9.jpg", alt: "Bravo" },
+                { src: "https://eaglebst.com/wp-content/uploads/2023/01/10.jpg", alt: "La placita" },
+                { src: "https://eaglebst.com/wp-content/uploads/2023/01/11.jpg", alt: "El Fuerte" }
               ].map((customer, idx) => (
                 <div key={idx} className="bg-white rounded-3xl p-6 md:p-8 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all flex items-center justify-center min-w-[160px] md:min-w-[210px] aspect-square snap-center relative">
                   <img src={customer.src} alt={customer.alt} className="max-w-[80%] max-h-[80%] object-contain" />
