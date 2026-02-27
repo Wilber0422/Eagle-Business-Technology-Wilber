@@ -24,24 +24,34 @@ const LandingPage: React.FC<LandingPageProps> = ({ onNavigate }) => {
     { src: "https://eaglebst.com/wp-content/uploads/2023/01/11.jpg", alt: "El Fuerte" }
   ];
 
+  const customersToRender = [...originalCustomers, ...originalCustomers];
+
   useEffect(() => {
     const scrollContainer = scrollRef.current;
     if (!scrollContainer) return;
 
-    const customers = [...originalCustomers, ...originalCustomers];
+    const scroll = () => {
+      if (!scrollContainer) return;
 
-    const autoScroll = setInterval(() => {
       if (scrollContainer.scrollLeft >= scrollContainer.scrollWidth / 2) {
-        scrollContainer.scrollTo({ left: 0, behavior: 'auto' });
+        scrollContainer.scrollLeft = 0;
       } else {
-        scrollContainer.scrollBy({ left: 1, behavior: 'auto' });
+        scrollContainer.scrollLeft += 1;
       }
-    }, 1);
+    };
 
-    return () => clearInterval(autoScroll);
+    let animationFrameId: number;
+    const animate = () => {
+      scroll();
+      animationFrameId = requestAnimationFrame(animate);
+    };
+
+    animationFrameId = requestAnimationFrame(animate);
+    return () => cancelAnimationFrame(animationFrameId);
   }, []);
 
   return (
+
     <div>
       {/* Hero Section */}
       <section className="relative w-full pt-20 pb-20 lg:pt-32 lg:pb-32 overflow-hidden bg-slate-50 dark:bg-slate-950">
@@ -130,18 +140,27 @@ const LandingPage: React.FC<LandingPageProps> = ({ onNavigate }) => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { id: Page.Wrappers, title: 'Wrappers', icon: 'inventory_2', desc: 'Automated wrapping machinery to preserve freshness and improve presentation.' },
-              { id: Page.Pos, title: 'POS Systems', icon: 'point_of_sale', desc: 'Fast, reliable, and intuitive Point of Sale systems designed for efficiency.' },
-              { id: Page.Esl, title: 'Shelf Labels', icon: 'sell', desc: 'Automated price updates and inventory management directly at the shelf.' },
-              { id: Page.Signage, title: 'Digital Signage', icon: 'smart_display', desc: 'Dynamic communication screens to engage customers and modernize layout.' },
-              { id: Page.Voice, title: 'Voice Solutions', icon: 'call', desc: 'Enterprise-grade PBX and communication tools for seamless operations.' },
-              { id: Page.Slicers, title: 'Slicers', icon: 'content_cut', desc: 'High-performance commercial slicers that offer safety and precision.' },
-              { id: Page.Wifi, title: 'Marketing Wi-Fi', icon: 'wifi', desc: 'Turn guest Wi-Fi into a powerful marketing tool to drive loyalty.' },
-              { id: Page.AiStudio, title: 'Store AI', icon: 'psychology', desc: 'Advanced AI solutions for loss prevention and customer flow analysis.' }
+              { id: Page.Wrappers, title: 'Wrappers', icon: '/icono-wrappers.png', color: 'text-rose-500', bg: 'bg-rose-50 dark:bg-rose-900/20', desc: 'Automated wrapping machinery to preserve freshness and improve presentation.' },
+              { id: Page.Scales, title: 'Scales', icon: '/icono-shelf.png', color: 'text-rose-500', bg: 'bg-rose-50 dark:bg-rose-900/20', desc: 'Advanced AI solutions for loss prevention and customer flow analysis.' },
+              { id: Page.Pos, title: 'POS', icon: '/icono-pos.png', color: 'text-blue-500', bg: 'bg-blue-50 dark:bg-blue-900/20', desc: 'Fast, reliable, and intuitive Point of Sale systems designed for efficiency.' },
+              { id: Page.Esl, title: 'SIM POS', icon: '/icono-digital.png', color: 'text-emerald-500', bg: 'bg-emerald-50 dark:bg-emerald-900/20', desc: 'Automated price updates and inventory management directly at the shelf.' },
+              { id: Page.Signage, title: 'Business software solutions', icon: '/icono-slicers.png', color: 'text-amber-500', bg: 'bg-amber-50 dark:bg-amber-900/20', desc: 'Dynamic communication screens to engage customers and modernize layout.' },
+              { id: Page.Wifi, title: 'Meat Prosesing Equipment ', icon: '/icono-marketing.png', color: 'text-sky-500', bg: 'bg-sky-50 dark:bg-sky-900/20', desc: 'Turn guest Wi-Fi into a powerful marketing tool to drive loyalty.' },
+              { id: Page.Slicers, title: 'Food Equipment', icon: '/icono-store.png', color: 'text-slate-600', bg: 'bg-slate-100 dark:bg-slate-800', desc: 'High-performance commercial slicers that offer safety and precisio.' },
+              { id: Page.Voice, title: 'Store Solutions', icon: '/icono-voice.png', color: 'text-indigo-500', bg: 'bg-indigo-50 dark:bg-indigo-900/20', desc: 'Enterprise-grade PBX and communication tools for seamless operations.' }
             ].map((sol) => (
-              <div key={sol.id} onClick={() => onNavigate(sol.id)} className="group bg-white dark:bg-slate-900 rounded-2xl p-6 shadow-sm hover:shadow-xl hover:shadow-primary/5 border border-slate-100 dark:border-slate-800 transition-all duration-300 hover:-translate-y-1 cursor-pointer">
-                <div className="w-12 h-12 bg-blue-50 dark:bg-blue-900/20 rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors duration-300 text-primary">
-                  <span className="material-symbols-outlined text-2xl">{sol.icon}</span>
+              <div
+                key={sol.id}
+                onClick={() => onNavigate(sol.id)}
+                className="group bg-white dark:bg-slate-900 rounded-2xl p-6 shadow-sm hover:shadow-xl hover:shadow-primary/5 border border-slate-100 dark:border-slate-800 transition-all duration-300 hover:-translate-y-1 cursor-pointer"
+              >
+                {/* Contenedor del Icono/Imagen */}
+                <div className="w-12 h-12 bg-blue-50 dark:bg-blue-900/20 rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary transition-colors duration-300">
+                  <img
+                    src={sol.icon}
+                    alt={sol.title}
+                    className="w-7 h-7 object-contain group-hover:brightness-0 group-hover:invert transition-all duration-300"
+                  />
                 </div>
                 <h4 className="text-lg font-bold text-slate-900 dark:text-white mb-3 font-display">{sol.title}</h4>
                 <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">{sol.desc}</p>
@@ -164,47 +183,43 @@ const LandingPage: React.FC<LandingPageProps> = ({ onNavigate }) => {
 
           <div className="relative group max-w-6xl mx-auto">
             <button className="absolute -left-4 md:-left-12 top-1/2 -translate-y-1/2 z-10 flex items-center justify-center p-2 rounded-full text-white/80 hover:text-white transition-all">
-              <span className="material-symbols-outlined text-4xl md:text-5xl font-light">chevron_left</span>
+              <span className="material-symbols-outlined text-4xl md:text-5xl font-light"></span>
             </button>
             <button className="absolute -right-4 md:-right-12 top-1/2 -translate-y-1/2 z-10 flex items-center justify-center p-2 rounded-full text-white/80 hover:text-white transition-all">
-              <span className="material-symbols-outlined text-4xl md:text-5xl font-light">chevron_right</span>
+              <span className="material-symbols-outlined text-4xl md:text-5xl font-light"></span>
             </button>
 
-            <div
-              ref={scrollRef}
-              className="flex items-center justify-start gap-4 md:gap-5 overflow-x-auto pb-8 [&::-webkit-scrollbar]:hidden [scrollbar-width:none] [-ms-overflow-style:none]"
-            >
-              {[
-                { src: "https://eaglebst.com/wp-content/uploads/2023/01/1.jpg", alt: "Sarah's Tent" },
-                { src: "https://eaglebst.com/wp-content/uploads/2023/01/2.jpg", alt: "Super Economico" },
-                { src: "https://eaglebst.com/wp-content/uploads/2023/01/3.jpg", alt: "Luciano Books" },
-                { src: "https://eaglebst.com/wp-content/uploads/2023/01/4.jpg", alt: "El machetazo" },
-                { src: "https://eaglebst.com/wp-content/uploads/2023/01/5.jpg", alt: "B" },
-                { src: "https://eaglebst.com/wp-content/uploads/2023/01/6.jpg", alt: "Latin Fresh" },
-                { src: "https://eaglebst.com/wp-content/uploads/2023/01/7.jpg", alt: "Costco", pin: true },
-                { src: "https://eaglebst.com/wp-content/uploads/2023/01/8.jpg", alt: "Cale" },
-                { src: "https://eaglebst.com/wp-content/uploads/2023/01/9.jpg", alt: "Bravo" },
-                { src: "https://eaglebst.com/wp-content/uploads/2023/01/10.jpg", alt: "La placita" },
-                { src: "https://eaglebst.com/wp-content/uploads/2023/01/11.jpg", alt: "El Fuerte" }
-              ].map((customer, idx) => (
-                <div key={idx} className="bg-white rounded-3xl p-6 md:p-8 shadow-lg min-w-[160px] md:min-w-[210px] aspect-square flex items-center justify-center relative flex-shrink-0">
-                  <img src={customer.src} alt={customer.alt} className="max-w-[80%] max-h-[80%] object-contain" />
-                  {customer.pin && (
-                    <div className="absolute top-3 right-3 bg-[#e60023] text-white flex items-center gap-1 px-2 py-1 rounded-full shadow-sm">
-                      <span className="material-symbols-outlined text-[12px] fill-current">push_pin</span>
-                      <span className="text-[9px] font-bold">Guardar</span>
-                    </div>
-                  )}
-                </div>
-              ))}
+
+            {/* Carrusel */}
+            <div >
+              <div
+                ref={scrollRef}
+                className="flex overflow-x-hidden whitespace-nowrap py-4"
+                style={{ WebkitOverflowScrolling: 'touch' }}
+              >
+                {customersToRender.map((customer, index) => (
+                  <div
+                    key={index}
+                    className="flex-shrink-0 mx-4 p-6 w-64 h-32 flex items-center justify-center bg-white border border-gray-200 rounded-xl shadow-md transform hover:scale-105 transition-transform duration-300"
+                    style={{ width: '200px' }} // Ajusta el ancho según necesites
+                  >
+                    <img
+                      src={customer.src}
+                      alt={customer.alt}
+                      // className="grayscale hover:grayscale-0 transition-all duration-300 max-h-16 object-contain"
+                      className="max-h-full max-w-full object-contain"
+                    />
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
 
-          <div className="flex justify-center gap-2 mt-2">
+          {/* <div className="flex justify-center gap-2 mt-2">
             {[...Array(5)].map((_, i) => (
               <div key={i} className={`h-1.5 rounded-full transition-all duration-300 ${i === 1 ? 'bg-white w-6' : 'bg-white/30 w-1.5'}`}></div>
             ))}
-          </div>
+          </div> */}
         </div>
       </section>
 
@@ -215,7 +230,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ onNavigate }) => {
           <h2 className="text-4xl md:text-5xl font-display font-bold mb-6 tracking-tight">Ready to modernize your retail business?</h2>
           <p className="text-xl text-slate-300 mb-12 max-w-2xl mx-auto font-light">Join the future of retail with Eagle Business Technology. Contact us today for a free consultation.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white/10 hover:bg-white/20 border border-white/20 text-white px-10 py-5 rounded-full font-bold text-lg transition-all backdrop-blur-sm">
+            <button onClick={() => onNavigate(Page.Contact)} className="bg-white/10 hover:bg-white/20 border border-white/20 text-white px-10 py-5 rounded-full font-bold text-lg transition-all backdrop-blur-sm">
               Soporte Técnico Remoto
             </button>
           </div>
