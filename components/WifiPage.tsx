@@ -11,27 +11,27 @@ const WifiPage: React.FC = () => {
             <div className="flex flex-col gap-6 text-left">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-900/30 w-fit">
                 <span className="material-symbols-outlined text-primary-light text-sm">campaign</span>
-                <span className="text-primary-light font-bold text-[10px] uppercase tracking-wider">High-quality cutters</span>
+                <span className="text-primary-light font-bold text-[10px] uppercase tracking-wider">Top of the Range</span>
               </div>
-              <h1 className="text-slate-900 dark:text-white font-display text-5xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight">
-                The performance of these cutters <br /><span className="text-primary-light">is exceptional.</span>
+              <h1 className="text-slate-900 dark:text-white font-display text-5xl md:text-6xl lg:text-6xl font-bold leading-tight tracking-tight">
+                Culinary Excellence Redefined: <span className="text-primary-light">Premium Food Equipment.</span>
               </h1>
               <p className="text-slate-500 dark:text-slate-400 text-lg font-normal leading-relaxed max-w-xl">
-                Line Kolossal is the top of the range among commercial meat slicers produced by Manconi and it perfectly expresses the dualism tradition-innovation, which is necessary to be always contemporary: the strength coming from a long experience and the ability to look forward.
+                Discover the gold standard in professional machinery with our curated selection. From gear-driven precision to superior hygiene, we provide perfectly balanced solutions for the modern food industry.
               </p>
               <div className="flex flex-wrap gap-4 pt-4">
                 <button className="flex items-center justify-center rounded-lg h-12 px-8 bg-primary-light text-white text-base font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-500/20 hover:-translate-y-0.5">
-                  Request Consultation <span className="material-symbols-outlined ml-2 text-sm">arrow_forward</span>
+                  Request a Demo <span className="material-symbols-outlined ml-2 text-sm">arrow_forward</span>
                 </button>
                 <button className="flex items-center justify-center rounded-lg h-12 px-8 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white text-base font-bold hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors shadow-sm">
-                  View Demo
+                  Download Brochure
                 </button>
               </div>
             </div>
             <div className="relative">
               <div className="relative w-full aspect-[1.1/1] rounded-3xl overflow-hidden shadow-2xl bg-white dark:bg-slate-800">
                 <img
-                  src="/slicer.webp"
+                  src="https://nmgprod.s3.amazonaws.com/media/files/d1/b1/d1b1268a9f21f16238c819c2574946e8/cover_image_1692816609.jpeg.960x540_q85_crop_upscale.jpg"
                   className="w-full h-full object-cover"
                   alt="Person using smartphone with WiFi"
                 />
@@ -58,25 +58,25 @@ const WifiPage: React.FC = () => {
       </section>
 
       {/* Description Section */}
-      <section className="py-24 px-6 md:px-10 max-w-4xl mx-auto text-center">
-        <h2 className="text-slate-900 dark:text-white text-3xl md:text-4xl font-display font-bold mb-6">How to choose your meat slicer</h2>
+      {/* <section className="py-24 px-6 md:px-10 max-w-4xl mx-auto text-center">
+        <h2 className="text-slate-900 dark:text-white text-3xl md:text-4xl font-display font-bold mb-6">Engineered for Excellence: Kolossal Food Equipment Line</h2>
         <p className="text-slate-500 dark:text-slate-400 text-lg leading-relaxed">
-          The slicers of the range include machines with different features to meet the needs of different activities. You can choose among different size of the blade: <span className="text-primary-light font-bold">from 250 to 330 mm</span>, according to the dimension of the product you have to slice.
+          The Kolossal line stands apart with its robust construction and obsessive attention to  <span className="text-primary-light font-bold">detail</span>, ensuring reliable performance across our entire range of kitchen solutions for the most demanding food service environments.
         </p>
-      </section>
+      </section> */}
 
       {/* How It Works */}
       <section className="py-24 bg-white dark:bg-slate-900/50">
         <div className="max-w-[1440px] mx-auto px-6 md:px-10">
           <div className="text-center mb-16">
-            <h2 className="text-slate-900 dark:text-white text-3xl md:text-4xl font-display font-bold mb-4">Customize your commercial meat slicer</h2>
-            <p className="text-slate-500 dark:text-slate-400">All the Kolossal line models can be customized as far as color is concerned.</p>
+            <h2 className="text-slate-900 dark:text-white text-3xl md:text-4xl font-display font-bold mb-4">Engineered for Excellence: Kolossal Food <br /> Equipment Line</h2>
+            <p className="text-slate-500 dark:text-slate-400">The Kolossal line stands apart with its robust construction and obsessive attention to detail, ensuring reliable <br /> performance across our entire range of kitchen solutions for the most demanding food service environments.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { num: '01', icon: 'wifi', title: 'Personalize', desc: 'You can choose your favorite color for the knobs and other plastic parts.' },
-              { num: '02', icon: 'person_add', title: 'Quality', desc: 'resistant to moisture and corrosion.' },
-              { num: '03', icon: 'send', title: 'Engage', desc: 'A painted slicer is a valuable addition to your shop, restaurant, or supermarket.' }
+              { num: '01', icon: 'wifi', title: 'Gear-Driven Mechanism', desc: 'Guarantees constant blade speed for precise cuts every time, eliminating slippage common in belt-driven models.' },
+              { num: '02', icon: 'person_add', title: 'Premium Materials', desc: 'Constructed from high-quality anodized aluminum and stainless steel components for maximum hygiene and durability.' },
+              { num: '03', icon: 'send', title: 'Balanced Design', desc: 'Ergonomically designed to reduce operator fatigue, ensure stability during operation, and simplify cleaning procedures.' }
             ].map((step, idx) => (
               <div key={idx} className="bg-slate-50 dark:bg-slate-800 p-10 rounded-2xl relative border border-slate-100 dark:border-slate-700 group hover:bg-white dark:hover:bg-slate-700 transition-all hover:shadow-xl hover:-translate-y-1">
                 <span className="absolute top-6 right-8 text-6xl font-black text-slate-200 dark:text-slate-700 group-hover:text-primary-light/10 transition-colors font-display">{step.num}</span>
@@ -92,7 +92,7 @@ const WifiPage: React.FC = () => {
       </section>
 
       {/* Why Choose Our Solution */}
-      <section className="py-24 px-6 md:px-10 max-w-[1440px] mx-auto">
+      {/* <section className="py-24 px-6 md:px-10 max-w-[1440px] mx-auto">
         <div className="grid lg:grid-cols-2 gap-20 items-center">
           <div className="space-y-12">
             <div>
@@ -122,13 +122,13 @@ const WifiPage: React.FC = () => {
             <div className="absolute inset-0 bg-primary-light/10 mix-blend-multiply"></div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Integrations Section */}
       <section className="py-24 px-6 md:px-10 max-w-[1440px] mx-auto">
         <div className="flex justify-between items-end mb-12">
           <div>
-            <h2 className="text-slate-900 dark:text-white text-3xl font-display font-bold mb-2">Eagle slicers solutions</h2>
+            <h2 className="text-slate-900 dark:text-white text-3xl font-display font-bold mb-2">Featured Models</h2>
             <p className="text-slate-500 dark:text-slate-400">Vertical slicers with a TC plate are recommended for slicing meat, <br /> while for cold  cuts and sausages you can choose either gravity or vertical models.</p>
           </div>
           <button className="text-primary-light font-bold text-sm hover:underline">See all products</button>
@@ -136,15 +136,10 @@ const WifiPage: React.FC = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {[
-            { title: 'Bizerba GSP Hi Manual Slicer', img: '/bizerba-gsp.jpeg', icon: 'storefront' },
-            { title: 'Bizerba Manual gravity slicer GSP H', img: '/bizerba-gsp-h.jpeg', icon: 'medication' },
-            { title: 'Bizerba Professional meat tenderizer', img: '/bizerba-professional.png', icon: 'inventory' },
-            { title: 'Bizerba vsp-us', img: '/bizerba-vsp-us.jpeg', icon: 'devices' },
-            { title: 'Icone-700', img: '/icone-700.png', icon: 'inventory' },
-            { title: 'Idrochef 316 touch', img: 'Idrochef-316-touch.jpeg', icon: 'inventory' },
-            { title: 'PHX 60', img: 'phx-60.png', icon: 'inventory' },
-            { title: 'SX 350', img: 'sx-350.png', icon: 'inventory' },
-            { title: 'SX-400', img: 'sx-400.png', icon: 'inventory' }
+            { title: 'Chicken Master', img: '/chicken-master.jpeg', icon: 'storefront' },
+            { title: 'Chicken Master 20', img: '/chicken-master-20.jpeg', icon: 'medication' },
+            { title: 'Formula Grill', img: '/formula-grill.png', icon: 'inventory' },
+            { title: 'Kebab VE2', img: '/kebabve2.jpeg', icon: 'devices' }
           ].map((app, idx) => (
             <div key={idx} className="relative h-[360px] rounded-2xl overflow-hidden group shadow-lg cursor-pointer">
               <img src={app.img} alt={app.title} className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
@@ -159,7 +154,7 @@ const WifiPage: React.FC = () => {
       </section>
 
       {/* Ecosystem Section - Better Together */}
-      <section className="py-24 px-6 md:px-10 max-w-[1440px] mx-auto">
+      {/* <section className="py-24 px-6 md:px-10 max-w-[1440px] mx-auto">
         <div className="bg-slate-900 rounded-[40px] overflow-hidden p-10 md:p-20 relative">
           <div className="grid lg:grid-cols-2 gap-16 items-center relative z-10">
             <div className="space-y-8">
@@ -189,7 +184,6 @@ const WifiPage: React.FC = () => {
               <div className="aspect-square md:aspect-video rounded-3xl bg-gradient-to-br from-blue-600 to-indigo-900 p-8 md:p-12 flex items-center justify-center relative overflow-hidden">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white/10 to-transparent"></div>
 
-                {/* Visual Diagram matching mockup */}
                 <div className="flex items-center justify-between w-full max-w-sm relative">
                   <div className="flex flex-col items-center gap-3 z-10">
                     <div className="size-16 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center border border-white/20">
@@ -226,7 +220,7 @@ const WifiPage: React.FC = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Final CTA Section */}
       <section className="py-24 bg-white dark:bg-slate-900 text-center">
