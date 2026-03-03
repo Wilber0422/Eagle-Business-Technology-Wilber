@@ -67,7 +67,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ onNavigate }) => {
                 Leading Provider of <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Business Technologies</span>
               </h1>
               <p className="text-slate-600 dark:text-slate-400 text-lg md:text-xl font-normal leading-relaxed max-w-xl">
-                Eagle Business Technology specializes in modern, efficient, and profitable technological solutions. We are your one-stop-shop for retail innovation.
+                Eagle Business Technology provides a flexible platform to promote your products and get them in front of your customers for purchase.
               </p>
               <div className="flex flex-wrap gap-4 pt-4">
                 <button onClick={() => onNavigate(Page.About)} className="flex items-center justify-center gap-2 rounded-full h-12 px-8 bg-primary text-white text-base font-semibold hover:bg-primary-dark transition-all shadow-xl shadow-primary/20 hover:-translate-y-1">

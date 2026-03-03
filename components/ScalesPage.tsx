@@ -203,11 +203,11 @@ const ScalesPage: React.FC = () => {
           </div>
 
           <div className="relative h-[400px] rounded-2xl overflow-hidden group shadow-lg">
-            <img src="" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Retail" />
+            <img src="/ishida-uni-10.jpeg" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Retail" />
             <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent"></div>
             <div className="absolute bottom-0 left-0 p-8 text-white w-full">
               <span className="material-symbols-outlined mb-4 p-2 bg-white/20 backdrop-blur-md rounded-lg">shopping_bag</span>
-              <h3 className="text-2xl font-display font-bold mb-3"></h3>
+              <h3 className="text-2xl font-display font-bold mb-3">Ishida Uni 10 Series</h3>
               <p className="text-slate-200 text-sm mb-4 leading-relaxed">Advanced inventory matrix, barcode generation, and customer loyalty profiles.</p>
               <ul className="text-xs space-y-2 opacity-80">
                 <li className="flex items-center gap-2"><span className="material-symbols-outlined text-[14px] text-green-400">check_circle</span> Multi-location sync</li>
@@ -228,7 +228,7 @@ const ScalesPage: React.FC = () => {
               Get Free Consultation
             </button>
             <button className="bg-white dark:bg-slate-900 text-slate-900 dark:text-white border border-slate-200 dark:border-slate-800 px-10 py-4 rounded-lg font-bold hover:bg-slate-50 transition-all flex items-center justify-center gap-2">
-              <span className="material-symbols-outlined text-sm">call</span> Call (555) 123-4567
+              <span className="material-symbols-outlined text-sm">call</span> Call (954)-400-1777
             </button>
           </div>
         </div>

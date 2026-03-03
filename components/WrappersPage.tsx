@@ -123,6 +123,27 @@ const WrappersPage: React.FC = () => {
                   img: 'https://eaglebst.com/wp-content/uploads/2022/12/Hand-Wrapper.png',
                   desc: 'The smartest basic model of the 5600 series with 30 packs/minute and rotational labeler arm.',
                   features: ['30 packs per minute', 'Linerless label support', 'Compact footprint']
+                },
+                {
+                  id: Page.Aw5600Fx,
+                  title: 'Linea 470 H50',
+                  img: '/linea-470-h50.jpg',
+                  desc: 'The smartest basic model of the 5600 series with 30 packs/minute and rotational labeler arm.',
+                  features: ['30 packs per minute', 'Linerless label support', 'Compact footprint']
+                },
+                {
+                  id: Page.Aw5600Fx,
+                  title: 'SG2',
+                  img: '/sg2.jpeg',
+                  desc: 'The smartest basic model of the 5600 series with 30 packs/minute and rotational labeler arm.',
+                  features: ['30 packs per minute', 'Linerless label support', 'Compact footprint']
+                },
+                {
+                  id: Page.Aw5600Fx,
+                  title: 'Ishida WM Micro',
+                  img: '/wm-micro.png',
+                  desc: 'The smartest basic model of the 5600 series with 30 packs/minute and rotational labeler arm.',
+                  features: ['30 packs per minute', 'Linerless label support', 'Compact footprint']
                 }
               ].map((model, idx) => (
                 <div

@@ -12,7 +12,7 @@ const PosPage: React.FC = () => {
               More Than Just a Register. <span className="text-primary-light">The Heart of Your Business.</span>
             </h1>
             <p className="text-slate-500 dark:text-slate-400 text-lg font-normal leading-relaxed max-w-xl">
-              Optimize operations, control inventory, and enhance customer experience with our unified POS ecosystems tailored for your growth. Experience the future of transaction management.
+              Utilize one of Eagle Business Technology’s Point-of-Sale solutions to streamline operations at your business. We offer a range of POS solutions to address any number of your business needs.
             </p>
             <div className="flex flex-wrap gap-4 pt-4">
               <button className="flex items-center justify-center rounded-lg h-12 px-8 bg-primary-light text-white text-base font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-500/20 hover:-translate-y-0.5">
@@ -95,12 +95,12 @@ const PosPage: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
           {/* Retail */}
           <div className="relative h-[400px] rounded-2xl overflow-hidden group shadow-lg">
-            <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=2070&auto=format&fit=crop" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Retail" />
+            <img src="/quantic-retail.png" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Retail" />
             <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent"></div>
             <div className="absolute bottom-0 left-0 p-8 text-white w-full">
               <span className="material-symbols-outlined mb-4 p-2 bg-white/20 backdrop-blur-md rounded-lg">shopping_bag</span>
-              <h3 className="text-2xl font-display font-bold mb-3">Retail Stores</h3>
-              <p className="text-slate-200 text-sm mb-4 leading-relaxed">Advanced inventory matrix, barcode generation, and customer loyalty profiles.</p>
+              <h3 className="text-2xl font-display font-bold mb-3">Quantic Retail</h3>
+              <p className="text-slate-200 text-sm mb-4 leading-relaxed">Run a Successful Wine and Liquor Store.</p>
               <ul className="text-xs space-y-2 opacity-80">
                 <li className="flex items-center gap-2"><span className="material-symbols-outlined text-[14px] text-green-400">check_circle</span> Multi-location sync</li>
                 <li className="flex items-center gap-2"><span className="material-symbols-outlined text-[14px] text-green-400">check_circle</span> E-commerce integration</li>
@@ -115,7 +115,7 @@ const PosPage: React.FC = () => {
             <div className="absolute bottom-0 left-0 p-8 text-white w-full">
               <span className="material-symbols-outlined mb-4 p-2 bg-white/20 backdrop-blur-md rounded-lg">restaurant</span>
               <h3 className="text-2xl font-display font-bold mb-3">Quantic Restaurant</h3>
-              <p className="text-slate-200 text-sm mb-4 leading-relaxed">Table mapping, tableside ordering, and Kitchen Display Systems (KDS).</p>
+              <p className="text-slate-200 text-sm mb-4 leading-relaxed">TGive your customers the fastest service with Quantic POS.</p>
               <ul className="text-xs space-y-2 opacity-80">
                 <li className="flex items-center gap-2"><span className="material-symbols-outlined text-[14px] text-green-400">check_circle</span> Split check functionality</li>
                 <li className="flex items-center gap-2"><span className="material-symbols-outlined text-[14px] text-green-400">check_circle</span> Ingredient tracking</li>
@@ -174,7 +174,7 @@ const PosPage: React.FC = () => {
       </section>
 
       {/* Complete Your Setup */}
-      <section className="py-24 bg-slate-50 dark:bg-slate-950">
+      {/* <section className="py-24 bg-slate-50 dark:bg-slate-950">
         <div className="max-w-[1440px] mx-auto px-6 md:px-10">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-slate-900 dark:text-white text-3xl md:text-4xl font-display font-bold mb-4">Complete Your Setup</h2>
@@ -203,7 +203,7 @@ const PosPage: React.FC = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Final CTA */}
       <section className="py-24 bg-white dark:bg-slate-950 border-t border-slate-100 dark:border-slate-800">
@@ -215,7 +215,7 @@ const PosPage: React.FC = () => {
               Get Free Consultation
             </button>
             <button className="bg-white dark:bg-slate-900 text-slate-900 dark:text-white border border-slate-200 dark:border-slate-800 px-10 py-4 rounded-lg font-bold hover:bg-slate-50 transition-all flex items-center justify-center gap-2">
-              <span className="material-symbols-outlined text-sm">call</span> Call (555) 123-4567
+              <span className="material-symbols-outlined text-sm">call</span> Call (954) 400-1777
             </button>
           </div>
         </div>

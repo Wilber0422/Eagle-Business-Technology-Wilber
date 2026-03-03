@@ -23,9 +23,9 @@ const AboutPage: React.FC = () => {
           <div className="order-2 lg:order-1">
             <div className="relative">
               <div className="absolute -inset-4 bg-primary-light/10 blur-3xl rounded-full"></div>
-              <img 
-                src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop" 
-                alt="Our Team Collaborating" 
+              <img
+                src="https://eaglebst.com/wp-content/uploads/2023/01/New-Pic-1.jpeg"
+                alt="Our Team Collaborating"
                 className="relative rounded-3xl shadow-2xl border-8 border-white dark:border-slate-900"
               />
             </div>
@@ -103,13 +103,13 @@ const AboutPage: React.FC = () => {
               Let's build the future of your retail operation together. Contact our expert team for a personalized consultation.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <button 
+              <button
                 onClick={() => window.location.hash = 'contact'}
                 className="bg-primary-light hover:bg-blue-600 text-white font-bold py-4 px-10 rounded-xl shadow-xl shadow-primary-light/20 transition-all"
               >
                 Get Started Today
               </button>
-              <button 
+              <button
                 onClick={() => window.location.hash = 'solutions'}
                 className="bg-white/10 hover:bg-white/20 border border-white/20 text-white font-bold py-4 px-10 rounded-xl backdrop-blur-sm transition-all"
               >

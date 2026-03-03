@@ -12,11 +12,11 @@ const SlicersPage: React.FC = () => {
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-blue-50 dark:bg-blue-900/20 w-fit">
                 <span className="text-primary-light font-bold text-[10px] uppercase tracking-wider">Top of the Range</span>
               </div>
-              <h1 className="text-slate-900 dark:text-white font-display text-5xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight">
-                Precision Slicing Redefined: <span className="text-primary-light">The Kolossal Line</span>
+              <h1 className="text-slate-900 dark:text-white font-display text-5xl md:text-6xl lg:text-6xl font-bold leading-tight tracking-tight">
+                Culinary Excellence Redefined: <span className="text-primary-light">Premium Food Equipment</span>
               </h1>
               <p className="text-slate-500 dark:text-slate-400 text-lg font-normal leading-relaxed max-w-xl">
-                Experience the gold standard in slicing machinery with the Manconi Kolossal range. Gear-driven precision, superior hygiene, and a perfectly balanced design for the modern professional.
+                Discover the gold standard in professional machinery with our curated selection. From gear-driven precision to superior hygiene, we provide perfectly balanced solutions for the modern food industry.
               </p>
               <div className="flex flex-wrap gap-4 pt-4">
                 <button className="flex items-center justify-center rounded-lg h-12 px-8 bg-primary-light text-white text-base font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-500/20 hover:-translate-y-0.5">
@@ -43,8 +43,8 @@ const SlicersPage: React.FC = () => {
       {/* Engineered for Excellence */}
       <section className="py-24 bg-white dark:bg-slate-950 text-center px-6">
         <div className="max-w-4xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-slate-900 dark:text-white mb-4">Engineered for Excellence</h2>
-          <p className="text-slate-500 dark:text-slate-400">The Kolossal line stands apart with its robust construction and obsessive attention to detail, ensuring reliable performance in the most demanding environments.</p>
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-slate-900 dark:text-white mb-4">Engineered for Excellence: Kolossal Food Equipment Line</h2>
+          <p className="text-slate-500 dark:text-slate-400">The Kolossal line stands apart with its robust construction and obsessive attention to detail, ensuring reliable performance across our entire range of kitchen solutions for the most demanding food service environments.</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-[1440px] mx-auto">
@@ -65,7 +65,7 @@ const SlicersPage: React.FC = () => {
       </section>
 
       {/* Choosing the Right Slicer */}
-      <section className="py-24 px-6 md:px-10 max-w-[1440px] mx-auto">
+      {/* <section className="py-24 px-6 md:px-10 max-w-[1440px] mx-auto">
         <div className="grid lg:grid-cols-2 gap-20 items-start">
           <div className="space-y-12">
             <div>
@@ -134,7 +134,7 @@ const SlicersPage: React.FC = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Featured Models */}
       <section className="py-24 bg-slate-50 dark:bg-slate-900/50">
@@ -146,79 +146,30 @@ const SlicersPage: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                title: 'Meat Saw',
+                title: 'Chicken Master',
                 subtitle: 'Versatile Professional Slicer',
-                img: '',
+                img: '/chicken-master.jpeg',
                 specs: { 'Blade Diameter': '350 mm', 'Operation': 'Vertical or Gravity', 'Best For': 'Mixed Deli Use' }
               },
               {
                 tag: 'Chop cutter',
-                title: 'MAJOR SLICE 350',
+                title: 'Chicken Master 20',
                 subtitle: 'Heavy Duty Gravity Slicer',
-                img: '',
+                img: '/chicken-master-20.jpeg',
                 specs: { 'Blade Diameter': '350 mm', 'Drive': 'Gear Box', 'Material': 'Stainless Steel' }
               },
               {
-                title: 'Dicer',
+                title: 'Formula Grill',
                 subtitle: 'Compact Efficiency',
-                img: '',
+                img: '/formula-grill.png',
                 specs: { 'Blade Diameter': '300 mm', 'Footprint': 'Compact Design', 'Ideal For': 'Small Kitchens' }
               },
               {
-                title: 'Vacuum machine',
+                title: 'Kebab VE2',
                 subtitle: 'Versatile Professional Slicer',
-                img: ' ',
-                specs: { 'Blade Diameter': '350 mm', 'Operation': 'Vertical or Gravity', 'Best For': 'Mixed Deli Use' }
-              },
-              {
-                title: 'Patty formers',
-                subtitle: 'Versatile Professional Slicer',
-                img: ' ',
-                specs: { 'Blade Diameter': '350 mm', 'Operation': 'Vertical or Gravity', 'Best For': 'Mixed Deli Use' }
-              },
-              {
-                title: 'Stuffer',
-                subtitle: 'Versatile Professional Slicer',
-                img: ' ',
-                specs: { 'Blade Diameter': '350 mm', 'Operation': 'Vertical or Gravity', 'Best For': 'Mixed Deli Use' }
-              },
-              {
-                title: 'Meat Slicer',
-                subtitle: 'Versatile Professional Slicer',
-                img: ' ',
-                specs: { 'Blade Diameter': '350 mm', 'Operation': 'Vertical or Gravity', 'Best For': 'Mixed Deli Use' }
-              },
-              {
-                title: 'Slicer',
-                subtitle: 'Versatile Professional Slicer',
-                img: ' ',
-                specs: { 'Blade Diameter': '350 mm', 'Operation': 'Vertical or Gravity', 'Best For': 'Mixed Deli Use' }
-              },
-              {
-                title: 'Tenderizer and strip cutter ICP',
-                subtitle: 'Versatile Professional Slicer',
-                img: ' ',
-                specs: { 'Blade Diameter': '350 mm', 'Operation': 'Vertical or Gravity', 'Best For': 'Mixed Deli Use' }
-              },
-              {
-                title: 'LEONARDO',
-                subtitle: 'Versatile Professional Slicer',
-                img: ' ',
-                specs: { 'Blade Diameter': '350 mm', 'Operation': 'Vertical or Gravity', 'Best For': 'Mixed Deli Use' }
-              },
-              {
-                title: 'Food Display',
-                subtitle: 'Versatile Professional Slicer',
-                img: ' ',
-                specs: { 'Blade Diameter': '350 mm', 'Operation': 'Vertical or Gravity', 'Best For': 'Mixed Deli Use' }
-              },
-              {
-                title: 'Chicken master',
-                subtitle: 'Versatile Professional Slicer',
-                img: ' ',
+                img: '/kebabve2.jpeg',
                 specs: { 'Blade Diameter': '350 mm', 'Operation': 'Vertical or Gravity', 'Best For': 'Mixed Deli Use' }
               }
-
             ].map((model, idx) => (
               <div key={idx} className="bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-100 dark:border-slate-800 flex flex-col group">
                 <div className="aspect-square bg-slate-50 dark:bg-slate-800 p-8 flex items-center justify-center relative">
@@ -255,7 +206,7 @@ const SlicersPage: React.FC = () => {
       </section>
 
       {/* Brand Customization */}
-      <section className="py-24 px-6 md:px-10 max-w-[1440px] mx-auto">
+      {/* <section className="py-24 px-6 md:px-10 max-w-[1440px] mx-auto">
         <div className="bg-slate-900 rounded-[40px] overflow-hidden p-10 md:p-20 relative">
           <div className="absolute top-0 right-0 w-1/2 h-full opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-blue-500 to-transparent"></div>
 
@@ -302,7 +253,7 @@ const SlicersPage: React.FC = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Ready to Upgrade Section */}
       <section className="py-24 text-center px-6">
