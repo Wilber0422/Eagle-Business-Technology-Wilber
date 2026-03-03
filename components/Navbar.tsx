@@ -20,11 +20,11 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
     { id: Page.Wrappers, title: 'Wrappers', icon: '/icono-wrappers.png', color: 'text-rose-500', bg: 'bg-rose-50 dark:bg-rose-900/20', desc: 'Automated wrapping machinery to preserve freshness and improve presentation.' },
     { id: Page.Scales, title: 'Scales', icon: '/icono-shelf.png', color: 'text-rose-500', bg: 'bg-rose-50 dark:bg-rose-900/20', desc: 'Advanced AI solutions for loss prevention and customer flow analysis.' },
     { id: Page.Pos, title: 'POS', icon: '/icono-pos.png', color: 'text-blue-500', bg: 'bg-blue-50 dark:bg-blue-900/20', desc: 'Fast, reliable, and intuitive Point of Sale systems designed for efficiency.' },
-    { id: Page.Esl, title: 'SIM POS', icon: '/icono-digital.png', color: 'text-emerald-500', bg: 'bg-emerald-50 dark:bg-emerald-900/20', desc: 'Automated price updates and inventory management directly at the shelf.' },
-    { id: Page.Signage, title: 'Business software solutions', icon: '/icono-slicers.png', color: 'text-amber-500', bg: 'bg-amber-50 dark:bg-amber-900/20', desc: 'Dynamic communication screens to engage customers and modernize layout.' },
-    { id: Page.Wifi, title: 'Food Equipment', icon: '/icono-marketing.png', color: 'text-sky-500', bg: 'bg-sky-50 dark:bg-sky-900/20', desc: 'Turn guest Wi-Fi into a powerful marketing tool to drive loyalty.' },
+    { id: Page.PosSIM, title: 'SIM POS', icon: '/icono-digital.png', color: 'text-emerald-500', bg: 'bg-emerald-50 dark:bg-emerald-900/20', desc: 'Automated price updates and inventory management directly at the shelf.' },
+    { id: Page.Business, title: 'Business software solutions', icon: '/icono-slicers.png', color: 'text-amber-500', bg: 'bg-amber-50 dark:bg-amber-900/20', desc: 'Dynamic communication screens to engage customers and modernize layout.' },
+    { id: Page.Food, title: 'Food Equipment', icon: '/icono-marketing.png', color: 'text-sky-500', bg: 'bg-sky-50 dark:bg-sky-900/20', desc: 'Turn guest Wi-Fi into a powerful marketing tool to drive loyalty.' },
     { id: Page.Slicers, title: 'Slicers', icon: '/icono-store.png', color: 'text-slate-600', bg: 'bg-slate-100 dark:bg-slate-800', desc: 'High-performance commercial slicers that offer safety and precisio.' },
-    { id: Page.Voice, title: 'Store Solutions', icon: '/icono-voice.png', color: 'text-indigo-500', bg: 'bg-indigo-50 dark:bg-indigo-900/20', desc: 'Enterprise-grade PBX and communication tools for seamless operations.' }
+    { id: Page.Store, title: 'Store Solutions', icon: '/icono-voice.png', color: 'text-indigo-500', bg: 'bg-indigo-50 dark:bg-indigo-900/20', desc: 'Enterprise-grade PBX and communication tools for seamless operations.' }
   ];
 
   return (
@@ -55,7 +55,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
                 <div className="grid grid-cols-2 gap-x-8 gap-y-2">
                   <div className="col-span-2 mb-4 flex items-center justify-between">
                     <span className="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em]">Retail & Hospitality Solutions</span>
-                    <button onClick={() => navigate(Page.AiStudio)} className="text-[10px] font-bold text-primary-light flex items-center gap-1 hover:underline">
+                    <button onClick={() => navigate(Page.About)} className="text-[10px] font-bold text-primary-light flex items-center gap-1 hover:underline">
                       <span className="material-symbols-outlined text-[14px]">auto_awesome</span> AI Power Tools
                     </button>
                   </div>
@@ -155,9 +155,9 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
 
           <button onClick={() => navigate(Page.About)} className="text-left font-medium py-2">About Us</button>
           <button onClick={() => navigate(Page.Contact)} className="text-left font-medium py-2">Contact</button>
-          <button onClick={() => navigate(Page.AiStudio)} className="text-left font-bold py-2 text-blue-500 flex items-center gap-2">
+          {/* <button onClick={() => navigate(Page.AiStudio)} className="text-left font-bold py-2 text-blue-500 flex items-center gap-2">
             <span className="material-symbols-outlined">auto_awesome</span> AI Studio
-          </button>
+          </button> */}
 
           <a href={consultationUrl} target="_blank" rel="noopener noreferrer" className="mt-4 w-full py-4 bg-primary text-white text-center font-bold rounded-xl shadow-lg">
             Free Consultation

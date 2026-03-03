@@ -29,21 +29,21 @@ const EslPage: React.FC = () => {
             </div>
             <div className="relative">
               <div className="relative w-full aspect-[16/10] rounded-3xl overflow-hidden shadow-2xl border border-slate-100 dark:border-slate-800 bg-slate-900">
-                <img 
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAoPes31RlN3MxwTvDsheTfe-fw4d53xhlGFvjhIENsAANz8dSWhOkxGq5H67jI3HMWX7kAkAXQlvxHBMl6YovcIoM8o4fRE4SOWNjt6tp2a-DX2gz9TV52Qfk6xQcMobougEiFyaLp1UHh3XJs9Wk0tvBLEQj718FBSof911uK1YuIBgp8RluJvTrZ7RlCVuTvOmWZF9Gyf2qPkNC3s6GperfBB0m8IjJVsCViyB-_4-7gVBOvtlnRr18XX24kJFX61PNtD05Yuec" 
-                  className="w-full h-full object-cover opacity-90" 
-                  alt="ESL Close up" 
+                <img
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAoPes31RlN3MxwTvDsheTfe-fw4d53xhlGFvjhIENsAANz8dSWhOkxGq5H67jI3HMWX7kAkAXQlvxHBMl6YovcIoM8o4fRE4SOWNjt6tp2a-DX2gz9TV52Qfk6xQcMobougEiFyaLp1UHh3XJs9Wk0tvBLEQj718FBSof911uK1YuIBgp8RluJvTrZ7RlCVuTvOmWZF9Gyf2qPkNC3s6GperfBB0m8IjJVsCViyB-_4-7gVBOvtlnRr18XX24kJFX61PNtD05Yuec"
+                  className="w-full h-full object-cover opacity-90"
+                  alt="ESL Close up"
                 />
                 <div className="absolute bottom-6 left-6 right-6 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md px-6 py-3 rounded-xl border border-white/20 flex items-center justify-center gap-4 shadow-xl">
-                   <div className="flex items-center gap-2">
-                     <span className="flex h-2 w-2 rounded-full bg-green-500"></span>
-                     <span className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Status: Connected</span>
-                   </div>
-                   <div className="w-px h-4 bg-slate-200 dark:bg-slate-700"></div>
-                   <div className="flex items-center gap-2">
-                     <span className="material-symbols-outlined text-sm text-primary-light">signal_cellular_alt</span>
-                     <span className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Signal: Strong</span>
-                   </div>
+                  <div className="flex items-center gap-2">
+                    <span className="flex h-2 w-2 rounded-full bg-green-500"></span>
+                    <span className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Status: Connected</span>
+                  </div>
+                  <div className="w-px h-4 bg-slate-200 dark:bg-slate-700"></div>
+                  <div className="flex items-center gap-2">
+                    <span className="material-symbols-outlined text-sm text-primary-light">signal_cellular_alt</span>
+                    <span className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Signal: Strong</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -108,11 +108,11 @@ const EslPage: React.FC = () => {
             <h2 className="text-slate-900 dark:text-white text-3xl md:text-4xl font-display font-bold mb-4">How Eagle ESL Works</h2>
             <p className="text-slate-500 dark:text-slate-400 max-w-2xl mx-auto">A robust ecosystem designed for reliability and speed.</p>
           </div>
-          
+
           <div className="flex flex-col md:flex-row items-center justify-between gap-12 max-w-5xl mx-auto relative">
             {/* Steps line */}
             <div className="hidden md:block absolute top-1/2 left-0 w-full h-0.5 border-t-2 border-dashed border-slate-200 dark:border-slate-700 -translate-y-1/2 z-0"></div>
-            
+
             {[
               { step: 1, icon: 'dns', title: 'Central Server', desc: 'Price changes are initiated from your HQ or store ERP system.' },
               { step: 2, icon: 'router', title: 'Wireless Gateway', desc: 'Data is broadcast securely via sub-1GHz frequency to the store floor.' },
@@ -145,7 +145,7 @@ const EslPage: React.FC = () => {
                 Calculate your ROI <span className="material-symbols-outlined">arrow_forward</span>
               </button>
             </div>
-            
+
             <div className="rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700">
               <table className="w-full text-left text-sm">
                 <thead className="bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white">
@@ -184,7 +184,7 @@ const EslPage: React.FC = () => {
           </div>
           <button className="text-primary-light font-bold text-sm hover:underline">View All Industries</button>
         </div>
-        
+
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {[
             { title: 'Grocery & Retail', img: 'https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=1000&auto=format&fit=crop', icon: 'storefront' },

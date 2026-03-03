@@ -5,7 +5,7 @@ import { Page } from '../types';
 const TermsPage: React.FC = () => {
   const [activeSection, setActiveSection] = useState('intro');
   const [showPrivacy, setShowPrivacy] = useState(false);
-  
+
   const sections = [
     { id: 'intro', label: 'Introduction' },
     { id: 'copyrights', label: 'Copyrights' },
@@ -40,7 +40,7 @@ const TermsPage: React.FC = () => {
     };
 
     const observer = new IntersectionObserver(handleIntersect, observerOptions);
-    
+
     // Observe all sections
     const contentSections = document.querySelectorAll('section[id]');
     contentSections.forEach((section) => observer.observe(section));
@@ -68,16 +68,16 @@ const TermsPage: React.FC = () => {
   return (
     <div className="bg-[#f8fafc] dark:bg-slate-950 min-h-screen text-slate-700 dark:text-slate-400 font-sans pb-20">
       <div className="max-w-[1280px] mx-auto px-6 py-12">
-        
+
         {/* Legal Toggle */}
         <div className="flex bg-slate-100 dark:bg-slate-900 p-1 rounded-xl w-fit mb-12">
-          <button 
+          <button
             onClick={() => setShowPrivacy(false)}
             className={`px-6 py-2 text-sm font-bold rounded-lg transition-all ${!showPrivacy ? 'bg-white dark:bg-slate-800 shadow-sm text-primary' : 'text-slate-500 hover:text-slate-700'}`}
           >
             Terms of Use
           </button>
-          <button 
+          <button
             onClick={() => setShowPrivacy(true)}
             className={`px-6 py-2 text-sm font-bold rounded-lg transition-all ${showPrivacy ? 'bg-white dark:bg-slate-800 shadow-sm text-primary' : 'text-slate-500 hover:text-slate-700'}`}
           >
@@ -108,11 +108,10 @@ const TermsPage: React.FC = () => {
                       key={item.id}
                       href={`#${item.id}`}
                       onClick={(e) => scrollToSection(e, item.id)}
-                      className={`px-4 py-2 text-sm font-medium rounded-lg transition-all border-l-4 ${
-                        activeSection === item.id 
-                        ? 'bg-blue-50 dark:bg-primary/10 text-primary dark:text-blue-400 border-primary' 
-                        : 'text-slate-500 dark:text-slate-500 border-transparent hover:text-primary hover:bg-slate-100 dark:hover:bg-slate-900'
-                      }`}
+                      className={`px-4 py-2 text-sm font-medium rounded-lg transition-all border-l-4 ${activeSection === item.id
+                          ? 'bg-blue-50 dark:bg-primary/10 text-primary dark:text-blue-400 border-primary'
+                          : 'text-slate-500 dark:text-slate-500 border-transparent hover:text-primary hover:bg-slate-100 dark:hover:bg-slate-900'
+                        }`}
                     >
                       {item.label}
                     </a>
@@ -308,7 +307,7 @@ const TermsPage: React.FC = () => {
             </div>
             <span className="font-bold text-slate-900 dark:text-white text-sm uppercase tracking-widest">Eagle Business Tech</span>
           </div>
-          
+
           <div className="flex gap-8 text-xs font-medium text-slate-400">
             <button onClick={() => setShowPrivacy(true)} className="hover:text-primary transition-colors">Privacy Policy</button>
             <button onClick={() => window.location.hash = Page.Contact} className="hover:text-primary transition-colors">Contact Us</button>

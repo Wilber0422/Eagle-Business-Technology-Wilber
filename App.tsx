@@ -3,23 +3,24 @@ import React, { useState, useEffect } from 'react';
 import { Page } from './types';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import LandingPage from './components/LandingPage';
-import PosPage from './components/PosPage';
-import WrappersPage from './components/WrappersPage';
-import EslPage from './components/EslPage';
-import VoicePage from './components/VoicePage';
-import SignagePage from './components/SignagePage';
-import WifiPage from './components/WifiPage';
-import SlicersPage from './components/SlicersPage';
-import AiStudio from './components/AiStudio';
-import TermsPage from './components/TermsPage';
-import AboutPage from './components/AboutPage';
-import ContactPage from './components/ContactPage';
+import Home from './components/Home';
+import PosPage from './components/Pos';
+import Wrappers from './components/Wrappers';
+import PosSIM from './components/PosSIM';
+import Store from './components/Store';
+import Business from './components/Business';
+import Food from './components/Food';
+import Slicers from './components/Slicers';
+// import AiStudio from './components/AiStudio';
+import Terms from './components/Terms';
+import About from './components/About';
+import Contact from './components/Contact';
 import AW5600Page from './components/AW5600Page';
 import AW5600FXPage from './components/AW5600FXPage';
 import AWAiPopPage from './components/AWAiPopPage';
 import HandWrapperPage from './components/HandWrapperPage';
-import ScalesPage from './components/ScalesPage';
+import Scales from './components/Scales';
+import Pos from './components/Pos';
 
 const App: React.FC = () => {
   const [currentPage, setCurrentPage] = useState<Page>(Page.Home);
@@ -43,24 +44,24 @@ const App: React.FC = () => {
 
   const renderPage = () => {
     switch (currentPage) {
-      case Page.Home: return <LandingPage onNavigate={setCurrentPage} />;
-      case Page.Pos: return <PosPage />;
-      case Page.Wrappers: return <WrappersPage />;
-      case Page.Esl: return <EslPage />;
-      case Page.Voice: return <VoicePage />;
-      case Page.Signage: return <SignagePage />;
-      case Page.Wifi: return <WifiPage />;
-      case Page.Slicers: return <SlicersPage />;
-      case Page.AiStudio: return <AiStudio />;
-      case Page.Terms: return <TermsPage />;
-      case Page.About: return <AboutPage />;
-      case Page.Contact: return <ContactPage />;
+      case Page.Home: return <Home onNavigate={setCurrentPage} />;
+      case Page.Pos: return <Pos />;
+      case Page.Wrappers: return <Wrappers />;
+      case Page.PosSIM: return <PosSIM />;
+      case Page.Store: return <Store />;
+      case Page.Business: return <Business />;
+      case Page.Food: return <Food />;
+      case Page.Slicers: return <Slicers />;
+      // case Page.AiStudio: return <AiStudio />;
+      case Page.Terms: return <Terms />;
+      case Page.About: return <About />;
+      case Page.Contact: return <Contact />;
       case Page.Aw5600: return <AW5600Page />;
       case Page.Aw5600Fx: return <AW5600FXPage />;
       case Page.AwAiPop: return <AWAiPopPage />;
-      case Page.Scales: return <ScalesPage />;
+      case Page.Scales: return <Scales />;
       case Page.HandWrapper: return <HandWrapperPage />;
-      default: return <LandingPage onNavigate={setCurrentPage} />;
+      default: return <Home onNavigate={setCurrentPage} />;
     }
   };
 
