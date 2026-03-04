@@ -7,14 +7,14 @@ const SignagePage: React.FC = () => {
       {/* Hero Section */}
       <section className="relative w-full min-h-[600px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img 
-            src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop" 
+          <img
+            src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop"
             className="w-full h-full object-cover"
             alt="Digital Signage Hero"
           />
           <div className="absolute inset-0 bg-slate-900/70 backdrop-blur-[2px]"></div>
         </div>
-        
+
         <div className="px-6 md:px-10 lg:px-20 max-w-[1440px] mx-auto relative z-10 text-center text-white">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold leading-tight tracking-tight mb-6">
             Transform Your Space with<br /><span className="text-primary-light">Dynamic Digital Signage</span>
@@ -39,7 +39,7 @@ const SignagePage: React.FC = () => {
           <h2 className="text-slate-900 dark:text-white text-3xl md:text-4xl font-display font-bold mb-4">Versatile Hardware Technologies</h2>
           <p className="text-slate-500 dark:text-slate-400">From massive video walls to intimate projection mapping, we have the hardware to match your vision.</p>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {[
             {
@@ -92,7 +92,7 @@ const SignagePage: React.FC = () => {
                   Experience PowerPoint-like ease of use. Our intuitive CMS features drag-and-drop functionality, allowing you to customize templates and schedule content effortlessly without technical expertise.
                 </p>
               </div>
-              
+
               <ul className="space-y-4">
                 {[
                   { icon: 'check_circle', text: 'Drag & Drop Interface' },
@@ -105,24 +105,24 @@ const SignagePage: React.FC = () => {
                   </li>
                 ))}
               </ul>
-              
+
               <button className="flex items-center justify-center rounded-lg h-12 px-8 bg-primary-light text-white text-base font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-500/20">
                 Explore Software
               </button>
             </div>
-            
+
             <div className="relative">
-               <div className="rounded-[40px] bg-white dark:bg-slate-800 p-4 shadow-2xl border border-slate-100 dark:border-slate-700">
-                  <img 
-                    src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop" 
-                    className="rounded-[32px] w-full" 
-                    alt="CMS Interface Mockup" 
-                  />
-                  <div className="absolute bottom-10 -right-4 bg-white dark:bg-slate-900 p-4 rounded-xl shadow-xl border border-slate-100 dark:border-slate-800 hidden md:flex items-center gap-3">
-                    <span className="flex h-3 w-3 rounded-full bg-green-500 animate-pulse"></span>
-                    <span className="text-xs font-bold text-slate-600 dark:text-slate-300">Now Playing: Summer Promo</span>
-                  </div>
-               </div>
+              <div className="rounded-[40px] bg-white dark:bg-slate-800 p-4 shadow-2xl border border-slate-100 dark:border-slate-700">
+                <img
+                  src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop"
+                  className="rounded-[32px] w-full"
+                  alt="CMS Interface Mockup"
+                />
+                <div className="absolute bottom-10 -right-4 bg-white dark:bg-slate-900 p-4 rounded-xl shadow-xl border border-slate-100 dark:border-slate-800 hidden md:flex items-center gap-3">
+                  <span className="flex h-3 w-3 rounded-full bg-green-500 animate-pulse"></span>
+                  <span className="text-xs font-bold text-slate-600 dark:text-slate-300">Now Playing: Summer Promo</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -134,9 +134,9 @@ const SignagePage: React.FC = () => {
           <div className="grid lg:grid-cols-2 gap-20 items-center">
             <div className="relative">
               <div className="aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl relative group">
-                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=2070&auto=format&fit=crop" className="w-full h-full object-cover" alt="Retail Interaction" />
+                <img src="" className="w-full h-full object-cover" alt="Retail Interaction" />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 to-transparent"></div>
-                
+
                 <div className="absolute bottom-8 left-8 flex items-center gap-4 bg-white/10 backdrop-blur-xl border border-white/20 p-4 rounded-2xl text-white">
                   <div className="size-12 bg-primary-light rounded-full flex items-center justify-center animate-bounce">
                     <span className="material-symbols-outlined">touch_app</span>
@@ -148,7 +148,7 @@ const SignagePage: React.FC = () => {
                 </div>
               </div>
             </div>
-            
+
             <div className="text-white space-y-8">
               <div>
                 <div className="flex items-center gap-2 mb-4 text-primary-light">
@@ -160,7 +160,7 @@ const SignagePage: React.FC = () => {
                   Create memorable in-store experiences with our IoT Digital Signage. When a customer lifts a product, sensors trigger the display to instantly show specific commercials, detailed specs, or comparison data.
                 </p>
               </div>
-              
+
               <div className="grid sm:grid-cols-2 gap-6">
                 {[
                   { icon: 'sensors', title: 'Smart Sensors', desc: 'Detect movement instantly' },
@@ -184,7 +184,7 @@ const SignagePage: React.FC = () => {
           <h2 className="text-slate-900 dark:text-white text-3xl md:text-4xl font-display font-bold mb-4">Implementation Strategy</h2>
           <p className="text-slate-500 dark:text-slate-400">Maximizing the impact of digital signage requires more than just hardware. It requires strategy.</p>
         </div>
-        
+
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {[
             { icon: 'visibility', title: 'Placement', desc: 'Position screens at eye level in high-dwell areas like checkout lines and waiting areas.' },
@@ -222,8 +222,8 @@ const SignagePage: React.FC = () => {
 
       <div className="py-8 text-center text-xs text-slate-400 dark:bg-slate-950 border-t border-slate-100 dark:border-slate-800">
         <div className="flex items-center justify-center gap-2 mb-4">
-           <div className="size-6 bg-primary rounded flex items-center justify-center"><span className="material-symbols-outlined text-white text-xs">owl</span></div>
-           <span className="font-bold text-slate-900 dark:text-white">Eagle Business Technology</span>
+          <div className="size-6 bg-primary rounded flex items-center justify-center"><span className="material-symbols-outlined text-white text-xs">owl</span></div>
+          <span className="font-bold text-slate-900 dark:text-white">Eagle Business Technology</span>
         </div>
         <p>© 2023 Eagle Business Technology. All rights reserved.</p>
       </div>
