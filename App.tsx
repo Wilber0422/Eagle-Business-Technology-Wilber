@@ -15,12 +15,14 @@ import Slicers from './components/Slicers';
 import Terms from './components/Terms';
 import About from './components/About';
 import Contact from './components/Contact';
-import AW5600Page from './components/AW5600Page';
-import AW5600FXPage from './components/AW5600FXPage';
-import AWAiPopPage from './components/AWAiPopPage';
-import HandWrapperPage from './components/HandWrapperPage';
+import AW5600 from './components/AW5600';
+import HandWrapper from './components/HandWrapper';
+import AWAiPop from './components/AWAiPop';
+import Linea470 from './components/Linea470';
 import Scales from './components/Scales';
 import Pos from './components/Pos';
+import Sg2 from './components/Sg2';
+import Ishidawm from './components/Ishidawm';
 
 const App: React.FC = () => {
   const [currentPage, setCurrentPage] = useState<Page>(Page.Home);
@@ -56,11 +58,13 @@ const App: React.FC = () => {
       case Page.Terms: return <Terms />;
       case Page.About: return <About />;
       case Page.Contact: return <Contact />;
-      case Page.Aw5600: return <AW5600Page />;
-      case Page.Aw5600Fx: return <AW5600FXPage />;
-      case Page.AwAiPop: return <AWAiPopPage />;
+      case Page.AW5600: return <AW5600 />;
+      case Page.HandWrapper: return <HandWrapper />;
+      case Page.AWAiPop: return <AWAiPop />;
       case Page.Scales: return <Scales />;
-      case Page.HandWrapper: return <HandWrapperPage />;
+      case Page.Linea470: return <Linea470 />;
+      case Page.Sg2: return <Sg2 />;
+      case Page.Ishidawm: return <Ishidawm />;
       default: return <Home onNavigate={setCurrentPage} />;
     }
   };

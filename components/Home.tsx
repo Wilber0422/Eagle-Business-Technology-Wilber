@@ -19,7 +19,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ onNavigate }) => {
     { src: "https://eaglebst.com/wp-content/uploads/2023/01/6.jpg", alt: "Latin Fresh" },
     { src: "https://eaglebst.com/wp-content/uploads/2023/01/7.jpg", alt: "Costco", pin: true },
     { src: "https://eaglebst.com/wp-content/uploads/2023/01/8.jpg", alt: "Cale" },
-    { src: "https://eaglebst.com/wp-content/uploads/2023/01/9.jpg", alt: "Bravo" },
+    { src: "/logo-bravo.png", alt: "Bravo" },
     { src: "https://eaglebst.com/wp-content/uploads/2023/01/10.jpg", alt: "La placita" },
     { src: "https://eaglebst.com/wp-content/uploads/2023/01/11.jpg", alt: "El Fuerte" }
   ];
@@ -64,13 +64,13 @@ const LandingPage: React.FC<LandingPageProps> = ({ onNavigate }) => {
                 <span className="text-slate-600 dark:text-slate-400 font-bold text-xs uppercase tracking-wide">Eagle Business Technology</span>
               </div>
               <h1 className="text-slate-900 dark:text-white font-display text-4xl md:text-4xl lg:text-5xl font-bold leading-[1.05] tracking-tight">
-                Leading Provider of <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Business Technologies</span>
+                Leading Provider of <span className="text-primary-light bg-clip-text bg-gradient-to-r from-primary to-secondary">Business Technologies</span>
               </h1>
               <p className="text-slate-600 dark:text-slate-400 text-lg md:text-xl font-normal leading-relaxed max-w-xl">
                 Eagle Business Technology provides a flexible platform to promote your products and get them in front of your customers for purchase.
               </p>
               <div className="flex flex-wrap gap-4 pt-4">
-                <button onClick={() => onNavigate(Page.About)} className="flex items-center justify-center gap-2 rounded-full h-12 px-8 bg-primary text-white text-base font-semibold hover:bg-primary-dark transition-all shadow-xl shadow-primary/20 hover:-translate-y-1">
+                <button onClick={() => onNavigate(Page.About)} className="flex items-center justify-center gap-2 rounded-full h-12 px-8 bg-primary-light text-white text-base font-semibold hover:bg-primary-dark transition-all shadow-xl shadow-primary/20 hover:-translate-y-1">
                   Explore More Solutions
                 </button>
               </div>
@@ -231,7 +231,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ onNavigate }) => {
           <p className="text-xl text-slate-300 mb-12 max-w-2xl mx-auto font-light">Join the future of retail with Eagle Business Technology. Contact us today for a free consultation.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button onClick={() => onNavigate(Page.Contact)} className="bg-white/10 hover:bg-white/20 border border-white/20 text-white px-10 py-5 rounded-full font-bold text-lg transition-all backdrop-blur-sm">
-              Soporte Técnico Remoto
+              Remote Technical Support
             </button>
           </div>
         </div>

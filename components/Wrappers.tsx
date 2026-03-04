@@ -103,7 +103,7 @@ const WrappersPage: React.FC = () => {
               [
                 {
                   tag: 'AI Powered',
-                  id: Page.AwAiPop,
+                  id: Page.AWAiPop,
                   title: 'AW-Ai-Pop Ishida',
                   img: 'https://eaglebst.com/wp-content/uploads/2022/12/AW-Ai-Pop.png',
                   desc: 'The smartest basic model of the 5600 series with 30 packs/minute and rotational labeler arm.',
@@ -111,35 +111,35 @@ const WrappersPage: React.FC = () => {
                 },
                 {
                   tag: 'Best Seller',
-                  id: Page.Aw5600,
+                  id: Page.AW5600,
                   title: 'AW-5600 AT POP',
                   img: 'https://www.digisystem.com/es/products/PRD00348/product_file/file/aw5600-2_WP02_01.png',
                   desc: 'High-speed automatic weigh-wrap-labeler designed for maximum throughput in busy supermarkets.',
                   features: ['35 packs per minute', 'Auto-tray sizing', 'Integrated POP labeling']
                 },
                 {
-                  id: Page.Aw5600Fx,
+                  id: Page.HandWrapper,
                   title: 'Hand Wrapper',
                   img: 'https://eaglebst.com/wp-content/uploads/2022/12/Hand-Wrapper.png',
                   desc: 'The smartest basic model of the 5600 series with 30 packs/minute and rotational labeler arm.',
                   features: ['30 packs per minute', 'Linerless label support', 'Compact footprint']
                 },
                 {
-                  id: Page.Aw5600Fx,
+                  id: Page.Linea470,
                   title: 'Linea 470 H50',
                   img: '/linea-470-h50.jpg',
                   desc: 'The smartest basic model of the 5600 series with 30 packs/minute and rotational labeler arm.',
                   features: ['30 packs per minute', 'Linerless label support', 'Compact footprint']
                 },
                 {
-                  id: Page.Aw5600Fx,
+                  id: Page.Sg2,
                   title: 'SG2',
                   img: '/sg2.jpeg',
                   desc: 'The smartest basic model of the 5600 series with 30 packs/minute and rotational labeler arm.',
                   features: ['30 packs per minute', 'Linerless label support', 'Compact footprint']
                 },
                 {
-                  id: Page.Aw5600Fx,
+                  id: Page.Ishidawm,
                   title: 'Ishida WM Micro',
                   img: '/wm-micro.png',
                   desc: 'The smartest basic model of the 5600 series with 30 packs/minute and rotational labeler arm.',

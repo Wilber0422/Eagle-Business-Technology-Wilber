@@ -12,11 +12,13 @@ export enum Page {
   Terms = 'erms',
   About = 'about',
   Contact = 'contact',
-  Aw5600 = 'aw5600',
-  Aw5600Fx = 'aw5600fx',
-  AwAiPop = 'aw-ai-pop',
-  HandWrapper = 'hand-wrapper',
-  Scales = 'scales'
+  AW5600 = 'aw5600',
+  HandWrapper = 'handwrapper',
+  AWAiPop = 'awaipop',
+  Linea470 = 'linea470',
+  Scales = 'scales',
+  Sg2 = 'Sg2',
+  Ishidawm = 'Ishidawm'
 }
 
 export enum ImageSize {

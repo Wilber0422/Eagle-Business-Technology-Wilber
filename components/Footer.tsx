@@ -20,12 +20,12 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-xl font-display font-bold uppercase tracking-tight mb-6">Solutions</h4>
             <ul className="flex flex-col gap-4 text-sm font-medium">
-              <li><a className="hover:text-white/70 transition-colors" href={`#${Page.Pos}`}>Point of Sales (POS)</a></li>
-              <li><a className="hover:text-white/70 transition-colors" href={`#${Page.Signage}`}>Digital Signage</a></li>
-              <li><a className="hover:text-white/70 transition-colors" href={`#${Page.Wifi}`}>Wi-Fi Marketing</a></li>
-              <li><a className="hover:text-white/70 transition-colors" href={`#${Page.Esl}`}>Scale Solutions</a></li>
-              <li><a className="hover:text-white/70 transition-colors" href={`#${Page.Slicers}`}>Slicer Solutions</a></li>
-              <li><a className="hover:text-white/70 transition-colors" href={`#${Page.Wrappers}`}>Wrapper Solutions</a></li>
+              <li><a className="hover:text-white/70 transition-colors" href={`#${Page.Wrappers}`}>Wrappers</a></li>
+              <li><a className="hover:text-white/70 transition-colors" href={`#${Page.Scales}`}>Scales</a></li>
+              <li><a className="hover:text-white/70 transition-colors" href={`#${Page.Pos}`}>POS</a></li>
+              <li><a className="hover:text-white/70 transition-colors" href={`#${Page.PosSIM}`}>SIM POS</a></li>
+              <li><a className="hover:text-white/70 transition-colors" href={`#${Page.Business}`}>Business software solutions</a></li>
+              <li><a className="hover:text-white/70 transition-colors" href={`#${Page.Slicers}`}>Slicers</a></li>
             </ul>
           </div>
 
@@ -33,11 +33,10 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-xl font-display font-bold uppercase tracking-tight mb-6">Quick Links</h4>
             <ul className="flex flex-col gap-4 text-sm font-medium">
-              <li><a className="hover:text-white/70 transition-colors" href={`#${Page.Home}`}>About Us</a></li>
-              <li><a className="hover:text-white/70 transition-colors" href="#solutions">Services</a></li>
-              <li><a className="hover:text-white/70 transition-colors" href="https://outlook.office365.com/book/EagleBusiness@eaglebst.com/?ismsaljsauthenabled=true" target="_blank" rel="noopener noreferrer">Free Consultation</a></li>
-              <li><a className="hover:text-white/70 transition-colors" href={`#${Page.Terms}`}>Terms of Use</a></li>
+              <li><a className="hover:text-white/70 transition-colors" href={`#${Page.Home}`}>Home</a></li>
+              <li><a className="hover:text-white/70 transition-colors" href={`#${Page.About}`}>About us</a></li>
               <li><a className="hover:text-white/70 transition-colors" href={`#${Page.Contact}`}>Contact Us</a></li>
+              <li><a className="hover:text-white/70 transition-colors" href="https://outlook.office365.com/book/EagleBusiness@eaglebst.com/?ismsaljsauthenabled=true" target="_blank" rel="noopener noreferrer">Get a Qoute</a></li>
             </ul>
           </div>
 
