@@ -42,11 +42,10 @@ const HandWrapperPage: React.FC = () => {
               <h1 className="text-4xl md:text-5xl font-display font-bold text-slate-900 dark:text-white mb-6">Linea 470 H50</h1>
               <div className="space-y-4">
                 <p className="text-slate-600 dark:text-slate-400 text-lg leading-relaxed font-light">
-                  A Hand Wrapper tabletop weigh-seal-label system that improves productivity and operational efficiency of sales counters.
-                </p>
-                <p className="text-slate-600 dark:text-slate-400 text-base leading-relaxed font-light border-l-2 border-primary-light pl-6 py-2 bg-slate-50 dark:bg-slate-900/40 italic">
+                  This component is a precision profile designed for linear transport and guidance systems, manufactured to high-strength industrial standards. Its optimized structural design allows for seamless integration into machinery requiring robust support and precise alignment in automation processes.                </p>
+                {/* <p className="text-slate-600 dark:text-slate-400 text-base leading-relaxed font-light border-l-2 border-primary-light pl-6 py-2 bg-slate-50 dark:bg-slate-900/40 italic">
                   "Our wrapping machines are fully integrated weighing, labeling, and wrapping systems designed for operational convenience and environmental sustainability. We offer machines that provide consistent and quick wrapping services."
-                </p>
+                </p> */}
               </div>
             </div>
 
@@ -94,7 +93,7 @@ const HandWrapperPage: React.FC = () => {
                   <div className="size-10 bg-blue-50 dark:bg-blue-900/20 rounded-xl flex items-center justify-center text-primary-light">
                     <span className="material-symbols-outlined">table_chart</span>
                   </div>
-                  <span className="text-xs font-bold text-slate-700 dark:text-slate-300">Tabletop Unit</span>
+                  <span className="text-xs font-bold text-slate-700 dark:text-slate-300">High Precision Geometry</span>
                 </div>
               </div>
               <div className="space-y-3">
@@ -103,7 +102,7 @@ const HandWrapperPage: React.FC = () => {
                   <div className="size-10 bg-green-50 dark:bg-green-900/20 rounded-xl flex items-center justify-center text-green-600">
                     <span className="material-symbols-outlined">eco</span>
                   </div>
-                  <span className="text-xs font-bold text-slate-700 dark:text-slate-300">Eco-Friendly</span>
+                  <span className="text-xs font-bold text-slate-700 dark:text-slate-300">Versatile Design</span>
                 </div>
               </div>
             </div>
@@ -118,12 +117,10 @@ const HandWrapperPage: React.FC = () => {
             <h2 className="text-3xl font-display font-bold text-slate-900 dark:text-white mb-12">Hand Wrapper Specifications</h2>
             <div className="space-y-4">
               {[
-                { label: 'System Type', value: 'Tabletop Weigh-Seal-Label' },
-                { label: 'Integrated Components', value: 'Scale, Sealer, Printer' },
-                { label: 'User Interface', value: 'LCD / Touchscreen Display' },
-                { label: 'Ideal Environment', value: 'Sales Counters, Delis, Small Retail' },
-                { label: 'Sealing Method', value: 'Manual Heat Seal Bar' },
-                { label: 'Weighing Precision', value: 'Multi-interval high precision' }
+                { label: 'Product Code9', value: '1410V336.16' },
+                { label: 'Design Series', value: '470 Series' },
+                { label: 'Nominal Height', value: 'H50 (50 mm)' },
+                { label: 'Compatibility', value: 'Designed for VK Series structural support and guidance systems' },
               ].map((spec, i) => (
                 <div key={i} className="flex justify-between py-4 border-b border-slate-200 dark:border-slate-800 text-sm">
                   <span className="text-slate-400 font-medium">{spec.label}</span>

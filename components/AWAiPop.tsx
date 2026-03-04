@@ -41,7 +41,7 @@ const AWAiPopPage: React.FC = () => {
               <span className="text-rose-500 font-bold text-xs uppercase tracking-[0.2em] mb-4 block">Wrappers</span>
               <h1 className="text-4xl md:text-5xl font-display font-bold text-slate-900 dark:text-white mb-6">AW-Ai-Pop Ishida</h1>
               <p className="text-slate-600 dark:text-slate-400 text-lg leading-relaxed font-light">
-                AW-Ai-Pop Ishida is the basic model of the 5600 series, providing an impressive 30 packages/minute throughput in a reduced-cost design. Its compact form retains the full-spec 300dpi high-resolution printer and extra-large full-color touchscreen display that are standard with the 5600 series. The newly developed rotational labeler arm allows fully automatic application of linerless labels. Variations include models with manual or automatic label application.
+                The WM-AI-P revolutionizes workflow by integrating an intelligent printer capable of automatically applying promotional secondary labels. This system eliminates the need for manual label application, transforming a tedious routine into an efficient process that maintains the smooth flow of automated production. Thanks to its advanced technology, it allows for printing attractive graphics and high-quality logos directly onto custom labels, reducing the need to maintain large inventories of pre-printed labels.
               </p>
             </div>
 
@@ -89,7 +89,7 @@ const AWAiPopPage: React.FC = () => {
                   <div className="size-10 bg-blue-50 dark:bg-blue-900/20 rounded-xl flex items-center justify-center text-primary-light">
                     <span className="material-symbols-outlined">print</span>
                   </div>
-                  <span className="text-xs font-bold text-slate-700 dark:text-slate-300">300 DPI Quality</span>
+                  <span className="text-xs font-bold text-slate-700 dark:text-slate-300">Automatic double labeling</span>
                 </div>
               </div>
               <div className="space-y-3">
@@ -98,7 +98,7 @@ const AWAiPopPage: React.FC = () => {
                   <div className="size-10 bg-green-50 dark:bg-green-900/20 rounded-xl flex items-center justify-center text-green-600">
                     <span className="material-symbols-outlined">label_important</span>
                   </div>
-                  <span className="text-xs font-bold text-slate-700 dark:text-slate-300">Linerless Labels</span>
+                  <span className="text-xs font-bold text-slate-700 dark:text-slate-300">Precision Robotic Applicator</span>
                 </div>
               </div>
             </div>
@@ -113,13 +113,11 @@ const AWAiPopPage: React.FC = () => {
             <h2 className="text-3xl font-display font-bold text-slate-900 dark:text-white mb-12">AW-Ai-Pop Ishida Specifications</h2>
             <div className="space-y-4">
               {[
-                { label: 'Maximum Throughput', value: '30 packages / minute' },
-                { label: 'Printer Resolution', value: '300 dpi High Resolution' },
-                { label: 'Interface', value: 'Full-color Touchscreen' },
-                { label: 'Label Application', value: 'Rotational Labeler Arm' },
-                { label: 'Label Compatibility', value: 'Linerless Support' },
-                { label: 'Variants', value: 'Manual or Automatic Labeling' },
-                { label: 'Design Type', value: 'Compact & Cost-Efficient' }
+                { label: 'Printing System', value: 'Smart Printer with support for promotional graphics and logos.' },
+                { label: 'Application Type', value: 'Robotic arm with location storage for precise positioning.' },
+                { label: 'Interface Control', value: 'Adjust label rotation and position using a touchscreen for maximum visual impact.' },
+                { label: 'Design Flexibility', value: 'Fully configurable layout and application angles' },
+                { label: 'Promotional Feature', value: 'Automatic application of secondary labels for special offers or organic products' }
               ].map((spec, i) => (
                 <div key={i} className="flex justify-between py-4 border-b border-slate-200 dark:border-slate-800 text-sm">
                   <span className="text-slate-400 font-medium">{spec.label}</span>
