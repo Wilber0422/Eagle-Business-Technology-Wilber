@@ -141,11 +141,11 @@ const LandingPage: React.FC<LandingPageProps> = ({ onNavigate }) => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               { id: Page.Wrappers, title: 'Wrappers', icon: '/icono-wrappers.png', color: 'text-rose-500', bg: 'bg-rose-50 dark:bg-rose-900/20', desc: 'Automated wrapping machinery to preserve freshness and improve presentation.' },
-              { id: Page.Scales, title: 'Scales', icon: '/icono-digital.png', color: 'text-rose-500', bg: 'bg-rose-50 dark:bg-rose-900/20', desc: 'Advanced AI solutions for loss prevention and customer flow analysis.' },
+              { id: Page.Scales, title: 'Scales', icon: '/icono-scale.png', color: 'text-rose-500', bg: 'bg-rose-50 dark:bg-rose-900/20', desc: 'Advanced AI solutions for loss prevention and customer flow analysis.' },
               { id: Page.Pos, title: 'POS', icon: '/icono-pos.png', color: 'text-blue-500', bg: 'bg-blue-50 dark:bg-blue-900/20', desc: 'Fast, reliable, and intuitive Point of Sale systems designed for efficiency.' },
               { id: Page.PosSIM, title: 'SIM POS', icon: '/icono-pos.png', color: 'text-emerald-500', bg: 'bg-emerald-50 dark:bg-emerald-900/20', desc: 'Automated price updates and inventory management directly at the shelf.' },
-              { id: Page.Business, title: 'Business software solutions', icon: '/icono-voice.png', color: 'text-amber-500', bg: 'bg-amber-50 dark:bg-amber-900/20', desc: 'Dynamic communication screens to engage customers and modernize layout.' },
-              { id: Page.Food, title: 'Food Equipment', icon: '/icono-shelf.png', color: 'text-sky-500', bg: 'bg-sky-50 dark:bg-sky-900/20', desc: 'Turn guest Wi-Fi into a powerful marketing tool to drive loyalty.' },
+              { id: Page.Business, title: 'Business software solutions', icon: '/icono-business.png', color: 'text-amber-500', bg: 'bg-amber-50 dark:bg-amber-900/20', desc: 'Dynamic communication screens to engage customers and modernize layout.' },
+              { id: Page.Food, title: 'Food Equipment', icon: '/icono-food.png', color: 'text-sky-500', bg: 'bg-sky-50 dark:bg-sky-900/20', desc: 'Turn guest Wi-Fi into a powerful marketing tool to drive loyalty.' },
               { id: Page.Slicers, title: 'Slicers', icon: '/icono-slicers.png', color: 'text-slate-600', bg: 'bg-slate-100 dark:bg-slate-800', desc: 'High-performance commercial slicers that offer safety and precisio.' },
               { id: Page.Store, title: 'Store Solutions', icon: '/icono-store.png', color: 'text-indigo-500', bg: 'bg-indigo-50 dark:bg-indigo-900/20', desc: 'Enterprise-grade PBX and communication tools for seamless operations.' }
             ].map((sol) => (

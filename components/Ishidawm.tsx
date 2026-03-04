@@ -41,8 +41,7 @@ const AW5600Page: React.FC = () => {
               <span className="text-rose-500 font-bold text-xs uppercase tracking-[0.2em] mb-4 block">Wrappers</span>
               <h1 className="text-4xl md:text-5xl font-display font-bold text-slate-900 dark:text-white mb-6">Ishidawm</h1>
               <p className="text-slate-600 dark:text-slate-400 text-lg leading-relaxed font-light">
-                Multi-Labeling System Integrated with optional POP and Bottom Labeler, performs all the labeling in one process. The cost of new equipment goes beyond the sticker price and may also include shipping, taxes and loan closing expenses. 100% financing means no up fronts & the rate is credit driven. <br />
-                - Equipment cost includes 5% broker fee and escrow fee. <br /> - Application and Invoice per transaction <br /> - Last three months Bank Statements per transaction. <br /> -Credit 680 and above, nothing under 620. Rates determined by credit worthiness.
+                The WM-MICRO is a fully automatic, all-in-one solution that integrates weighing, packing, and labeling into an extremely compact design. Specifically designed to optimize limited space in back-office areas, this machine reduces repetitive operator work and ensures high-quality packaging for a wide variety of trays, including large and tall sizes.
               </p>
             </div>
 
@@ -90,7 +89,7 @@ const AW5600Page: React.FC = () => {
                   <div className="size-10 bg-green-50 dark:bg-green-900/20 rounded-xl flex items-center justify-center text-green-600">
                     <span className="material-symbols-outlined">eco</span>
                   </div>
-                  <span className="text-xs font-bold text-slate-700 dark:text-slate-300">Energy Efficient</span>
+                  <span className="text-xs font-bold text-slate-700 dark:text-slate-300">Ultra Compact Design</span>
                 </div>
               </div>
               <div className="space-y-3">
@@ -99,7 +98,7 @@ const AW5600Page: React.FC = () => {
                   <div className="size-10 bg-blue-50 dark:bg-blue-900/20 rounded-xl flex items-center justify-center text-primary-light">
                     <span className="material-symbols-outlined">bolt</span>
                   </div>
-                  <span className="text-xs font-bold text-slate-700 dark:text-slate-300">High Volume</span>
+                  <span className="text-xs font-bold text-slate-700 dark:text-slate-300">Intuitive Interface</span>
                 </div>
               </div>
             </div>
@@ -114,11 +113,12 @@ const AW5600Page: React.FC = () => {
             <h2 className="text-3xl font-display font-bold text-slate-900 dark:text-white mb-12">Technical Specifications</h2>
             <div className="space-y-4">
               {[
-                { label: 'Weight Range', value: 'Up to 15 kg / 30 lbs' },
-                { label: 'Slicing Speed', value: '35 packs per minute' },
-                { label: 'Label Application', value: 'Automatic Top & Bottom' },
-                { label: 'Connectivity', value: 'Ethernet, Cloud Sync' },
-                { label: 'Film Type', value: 'Stretch Film (PVC or PO)' }
+                { label: 'Printing System', value: '3-inch print head with a high-quality resolution of 12 dots/mm.' },
+                { label: 'Control Screen', value: '12.1-inch touch panel.' },
+                { label: 'Label Versatility', value: 'Compatible with linerless (without backing) label models for a more environmentally friendly operation.' },
+                { label: 'Noise Level', value: 'Certified quiet operation at 73 dB or less.' },
+                { label: 'Equipment Weight', value: 'Approximately 128.5 kg to 129.8 kg, depending on the labeling configuration.' },
+                { label: 'Temperature Range', value: 'Optimal operating temperature between 5°C and 35°C.' }
               ].map((spec, i) => (
                 <div key={i} className="flex justify-between py-4 border-b border-slate-200 dark:border-slate-800 text-sm">
                   <span className="text-slate-400 font-medium">{spec.label}</span>

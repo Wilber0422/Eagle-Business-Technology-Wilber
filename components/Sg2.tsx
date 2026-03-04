@@ -41,8 +41,7 @@ const AW5600Page: React.FC = () => {
               <span className="text-rose-500 font-bold text-xs uppercase tracking-[0.2em] mb-4 block">Wrappers</span>
               <h1 className="text-4xl md:text-5xl font-display font-bold text-slate-900 dark:text-white mb-6">SG2</h1>
               <p className="text-slate-600 dark:text-slate-400 text-lg leading-relaxed font-light">
-                Multi-Labeling System Integrated with optional POP and Bottom Labeler, performs all the labeling in one process. The cost of new equipment goes beyond the sticker price and may also include shipping, taxes and loan closing expenses. 100% financing means no up fronts & the rate is credit driven. <br />
-                - Equipment cost includes 5% broker fee and escrow fee. <br /> - Application and Invoice per transaction <br /> - Last three months Bank Statements per transaction. <br /> -Credit 680 and above, nothing under 620. Rates determined by credit worthiness.
+                This component is a technical sliding guide designed for linear conveyor systems, specifically optimized to provide low-friction support. Its profile is made of high-density materials that ensure long-lasting durability in continuous-use industrial environments, facilitating the smooth movement of goods or mechanical parts.
               </p>
             </div>
 
@@ -90,7 +89,7 @@ const AW5600Page: React.FC = () => {
                   <div className="size-10 bg-green-50 dark:bg-green-900/20 rounded-xl flex items-center justify-center text-green-600">
                     <span className="material-symbols-outlined">eco</span>
                   </div>
-                  <span className="text-xs font-bold text-slate-700 dark:text-slate-300">Energy Efficient</span>
+                  <span className="text-xs font-bold text-slate-700 dark:text-slate-300">Optimized Sliding Profile</span>
                 </div>
               </div>
               <div className="space-y-3">
@@ -99,7 +98,7 @@ const AW5600Page: React.FC = () => {
                   <div className="size-10 bg-blue-50 dark:bg-blue-900/20 rounded-xl flex items-center justify-center text-primary-light">
                     <span className="material-symbols-outlined">bolt</span>
                   </div>
-                  <span className="text-xs font-bold text-slate-700 dark:text-slate-300">High Volume</span>
+                  <span className="text-xs font-bold text-slate-700 dark:text-slate-300">Heavy Duty Construction</span>
                 </div>
               </div>
             </div>
@@ -114,11 +113,10 @@ const AW5600Page: React.FC = () => {
             <h2 className="text-3xl font-display font-bold text-slate-900 dark:text-white mb-12">Technical Specifications</h2>
             <div className="space-y-4">
               {[
-                { label: 'Weight Range', value: 'Up to 15 kg / 30 lbs' },
-                { label: 'Slicing Speed', value: '35 packs per minute' },
-                { label: 'Label Application', value: 'Automatic Top & Bottom' },
-                { label: 'Connectivity', value: 'Ethernet, Cloud Sync' },
-                { label: 'Film Type', value: 'Stretch Film (PVC or PO)' }
+                { label: 'Product Code', value: '1410V019' },
+                { label: 'Model', value: 'SG2' },
+                { label: 'Application', value: 'Side or bottom support guide for belt and conveyor systems' },
+                { label: 'Technical Standards', value: 'Complies with the design tolerances indicated in the engineering drawing for the SG series.' }
               ].map((spec, i) => (
                 <div key={i} className="flex justify-between py-4 border-b border-slate-200 dark:border-slate-800 text-sm">
                   <span className="text-slate-400 font-medium">{spec.label}</span>
