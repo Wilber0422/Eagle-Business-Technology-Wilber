@@ -221,9 +221,9 @@ const EslPage: React.FC = () => {
         </div>
       </section>
 
-      <div className="py-8 text-center text-xs text-slate-500 dark:bg-slate-950 border-t border-slate-50 dark:border-slate-900">
+      {/* <div className="py-8 text-center text-xs text-slate-500 dark:bg-slate-950 border-t border-slate-50 dark:border-slate-900">
         © 2023 Eagle Business Technology. All rights reserved.
-      </div>
+      </div> */}
     </div>
   );
 };

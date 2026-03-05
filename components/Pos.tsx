@@ -100,10 +100,10 @@ const PosPage: React.FC = () => {
             <div className="absolute bottom-0 left-0 p-8 text-white w-full">
               <span className="material-symbols-outlined mb-4 p-2 bg-white/20 backdrop-blur-md rounded-lg">shopping_bag</span>
               <h3 className="text-2xl font-display font-bold mb-3">Quantic Retail</h3>
-              <p className="text-slate-200 text-sm mb-4 leading-relaxed">Run a Successful Wine and Liquor Store.</p>
+              <p className="text-slate-200 text-sm mb-4 leading-relaxed">Robust point-of-sale platform designed to optimize business operations and provide total control of retail stores.</p>
               <ul className="text-xs space-y-2 opacity-80">
-                <li className="flex items-center gap-2"><span className="material-symbols-outlined text-[14px] text-green-400">check_circle</span> Multi-location sync</li>
-                <li className="flex items-center gap-2"><span className="material-symbols-outlined text-[14px] text-green-400">check_circle</span> E-commerce integration</li>
+                <li className="flex items-center gap-2"><span className="material-symbols-outlined text-[14px] text-green-400">check_circle</span>Inventory Management</li>
+                <li className="flex items-center gap-2"><span className="material-symbols-outlined text-[14px] text-green-400">check_circle</span>Customer Loyalty</li>
               </ul>
             </div>
           </div>
@@ -115,48 +115,48 @@ const PosPage: React.FC = () => {
             <div className="absolute bottom-0 left-0 p-8 text-white w-full">
               <span className="material-symbols-outlined mb-4 p-2 bg-white/20 backdrop-blur-md rounded-lg">restaurant</span>
               <h3 className="text-2xl font-display font-bold mb-3">Quantic Restaurant</h3>
-              <p className="text-slate-200 text-sm mb-4 leading-relaxed">TGive your customers the fastest service with Quantic POS.</p>
+              <p className="text-slate-200 text-sm mb-4 leading-relaxed">Comprehensive management software designed to optimize operational efficiency and improve the customer experience in restaurants.</p>
               <ul className="text-xs space-y-2 opacity-80">
-                <li className="flex items-center gap-2"><span className="material-symbols-outlined text-[14px] text-green-400">check_circle</span> Split check functionality</li>
-                <li className="flex items-center gap-2"><span className="material-symbols-outlined text-[14px] text-green-400">check_circle</span> Ingredient tracking</li>
+                <li className="flex items-center gap-2"><span className="material-symbols-outlined text-[14px] text-green-400">check_circle</span>Dynamic Table Management</li>
+                <li className="flex items-center gap-2"><span className="material-symbols-outlined text-[14px] text-green-400">check_circle</span>Analysis and Reports</li>
               </ul>
             </div>
           </div>
 
-          {/* Liquor Stores */}
+          {/* Food Trucks */}
           <div className="relative h-[400px] rounded-2xl overflow-hidden group shadow-lg">
-            <img src="https://images.unsplash.com/photo-1562601579-579bc89ff71c?q=80&w=2070&auto=format&fit=crop" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Liquor" />
+            <img src="https://eaglebst.com/wp-content/uploads/2024/06/Fotos-Food-Truck-16.png" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Liquor" />
             <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent"></div>
             <div className="absolute bottom-0 left-0 p-8 text-white w-full">
               <span className="material-symbols-outlined mb-4 p-2 bg-white/20 backdrop-blur-md rounded-lg">wine_bar</span>
-              <h3 className="text-2xl font-display font-bold mb-3">Liquor Stores</h3>
-              <p className="text-slate-200 text-sm mb-4 leading-relaxed">Built-in age verification, heavy inventory management, and case breaking.</p>
+              <h3 className="text-2xl font-display font-bold mb-3">Quantic Food Truck</h3>
+              <p className="text-slate-200 text-sm mb-4 leading-relaxed">Comprehensive point-of-sale solution designed to streamline service in fast food and mobile environments.</p>
               <ul className="text-xs space-y-2 opacity-80">
-                <li className="flex items-center gap-2"><span className="material-symbols-outlined text-[14px] text-green-400">check_circle</span> ID Scanning</li>
-                <li className="flex items-center gap-2"><span className="material-symbols-outlined text-[14px] text-green-400">check_circle</span> Mix & Match pricing</li>
+                <li className="flex items-center gap-2"><span className="material-symbols-outlined text-[14px] text-green-400">check_circle</span>Order Management</li>
+                <li className="flex items-center gap-2"><span className="material-symbols-outlined text-[14px] text-green-400">check_circle</span>Inventory</li>
               </ul>
             </div>
           </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {/* Food Trucks */}
-          <div className="relative h-[300px] rounded-2xl overflow-hidden group shadow-lg">
-            <img src="https://eaglebst.com/wp-content/uploads/2024/06/Fotos-Food-Truck-16.png" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Food Trucks" />
+          {/* Liquor Stores */}
+          {/* <div className="relative h-[300px] rounded-2xl overflow-hidden group shadow-lg">
+            <img src="https://images.unsplash.com/photo-1562601579-579bc89ff71c?q=80&w=2070&auto=format&fit=crop" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Food Trucks" />
             <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent"></div>
             <div className="absolute bottom-0 left-0 p-8 text-white w-full">
               <span className="material-symbols-outlined mb-4 p-2 bg-white/20 backdrop-blur-md rounded-lg">local_shipping</span>
-              <h3 className="text-2xl font-display font-bold mb-2">Quantic Food Truck</h3>
-              <p className="text-slate-200 text-sm mb-4">Compact hardware and robust offline mode.</p>
+              <h3 className="text-2xl font-display font-bold mb-2">Liquor Stores</h3>
+              <p className="text-slate-200 text-sm mb-4">Built-in age verification, heavy inventory management, and case breaking.</p>
               <ul className="text-xs space-y-2 opacity-80 flex gap-6">
-                <li className="flex items-center gap-2"><span className="material-symbols-outlined text-[14px] text-green-400">check_circle</span> Quick Modifier Select</li>
-                <li className="flex items-center gap-2"><span className="material-symbols-outlined text-[14px] text-green-400">check_circle</span> Digital Receipts</li>
+                <li className="flex items-center gap-2"><span className="material-symbols-outlined text-[14px] text-green-400">check_circle</span>ID Scanning</li>
+                <li className="flex items-center gap-2"><span className="material-symbols-outlined text-[14px] text-green-400">check_circle</span>Mix & Match pricing</li>
               </ul>
             </div>
-          </div>
+          </div> */}
 
           {/* Supermarkets */}
-          <div className="relative h-[300px] rounded-2xl overflow-hidden group shadow-lg">
+          {/* <div className="relative h-[300px] rounded-2xl overflow-hidden group shadow-lg">
             <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=2074&auto=format&fit=crop" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Supermarkets" />
             <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent"></div>
             <div className="absolute bottom-0 left-0 p-8 text-white w-full">
@@ -169,7 +169,7 @@ const PosPage: React.FC = () => {
                 <li className="flex items-center gap-2"><span className="material-symbols-outlined text-[14px] text-green-400">check_circle</span> Shelf Label Printing</li>
               </ul>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
 
@@ -220,10 +220,6 @@ const PosPage: React.FC = () => {
           </div>
         </div>
       </section>
-
-      <div className="py-6 text-center text-xs text-slate-400 border-t border-slate-50 dark:border-slate-900">
-        © 2023 Eagle Business Technology. All rights reserved.
-      </div>
     </div>
   );
 };

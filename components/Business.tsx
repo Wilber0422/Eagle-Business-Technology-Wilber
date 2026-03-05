@@ -220,12 +220,8 @@ const SignagePage: React.FC = () => {
         </div>
       </section>
 
-      <div className="py-8 text-center text-xs text-slate-400 dark:bg-slate-950 border-t border-slate-100 dark:border-slate-800">
-        <div className="flex items-center justify-center gap-2 mb-4">
-          <div className="size-6 bg-primary rounded flex items-center justify-center"><span className="material-symbols-outlined text-white text-xs">owl</span></div>
-          <span className="font-bold text-slate-900 dark:text-white">Eagle Business Technology</span>
-        </div>
-        <p>© 2023 Eagle Business Technology. All rights reserved.</p>
+      <div className="py-8 text-center text-xs text-slate-500 dark:bg-slate-950 border-t border-slate-50 dark:border-slate-900">
+        © 2023 Eagle Business Technology. All rights reserved.
       </div>
     </div>
   );

@@ -99,11 +99,11 @@ const ScalesPage: React.FC = () => {
             <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent"></div>
             <div className="absolute bottom-0 left-0 p-8 text-white w-full">
               <span className="material-symbols-outlined mb-4 p-2 bg-white/20 backdrop-blur-md rounded-lg">shopping_bag</span>
-              <h3 className="text-2xl font-display font-bold mb-3">Digi SM 5300X B</h3>
-              <p className="text-slate-200 text-sm mb-4 leading-relaxed">Advanced inventory matrix, barcode generation, and customer loyalty profiles.</p>
+              <h3 className="text-2xl font-display font-bold mb-3">Digi SM 5300X B CON</h3>
+              <p className="text-slate-200 text-sm mb-4 leading-relaxed">PC-based weighing system with 10.1-inch high-resolution capacitive touchscreen.</p>
               <ul className="text-xs space-y-2 opacity-80">
-                <li className="flex items-center gap-2"><span className="material-symbols-outlined text-[14px] text-green-400">check_circle</span> Multi-location sync</li>
-                <li className="flex items-center gap-2"><span className="material-symbols-outlined text-[14px] text-green-400">check_circle</span> E-commerce integration</li>
+                <li className="flex items-center gap-2"><span className="material-symbols-outlined text-[14px] text-green-400">check_circle</span>Linerless Printer</li>
+                <li className="flex items-center gap-2"><span className="material-symbols-outlined text-[14px] text-green-400">check_circle</span>Smart Management</li>
               </ul>
             </div>
           </div>
@@ -115,10 +115,10 @@ const ScalesPage: React.FC = () => {
             <div className="absolute bottom-0 left-0 p-8 text-white w-full">
               <span className="material-symbols-outlined mb-4 p-2 bg-white/20 backdrop-blur-md rounded-lg">restaurant</span>
               <h3 className="text-2xl font-display font-bold mb-3">Digi SM 5300X H</h3>
-              <p className="text-slate-200 text-sm mb-4 leading-relaxed">Table mapping, tableside ordering, and Kitchen Display Systems (KDS).</p>
+              <p className="text-slate-200 text-sm mb-4 leading-relaxed">TIntuitive, feature-oriented user interface with video playback capability for in-store promotions.</p>
               <ul className="text-xs space-y-2 opacity-80">
-                <li className="flex items-center gap-2"><span className="material-symbols-outlined text-[14px] text-green-400">check_circle</span> Split check functionality</li>
-                <li className="flex items-center gap-2"><span className="material-symbols-outlined text-[14px] text-green-400">check_circle</span> Ingredient tracking</li>
+                <li className="flex items-center gap-2"><span className="material-symbols-outlined text-[14px] text-green-400">check_circle</span>High Quality Printing</li>
+                <li className="flex items-center gap-2"><span className="material-symbols-outlined text-[14px] text-green-400">check_circle</span>Queue Management</li>
               </ul>
             </div>
           </div>
@@ -130,10 +130,10 @@ const ScalesPage: React.FC = () => {
             <div className="absolute bottom-0 left-0 p-8 text-white w-full">
               <span className="material-symbols-outlined mb-4 p-2 bg-white/20 backdrop-blur-md rounded-lg">wine_bar</span>
               <h3 className="text-2xl font-display font-bold mb-3">Ishia Uni-3</h3>
-              <p className="text-slate-200 text-sm mb-4 leading-relaxed">Built-in age verification, heavy inventory management, and case breaking.</p>
+              <p className="text-slate-200 text-sm mb-4 leading-relaxed">Price computing scale with premium labeling features, high-speed printing, and greater flexibility at a lower cost.</p>
               <ul className="text-xs space-y-2 opacity-80">
-                <li className="flex items-center gap-2"><span className="material-symbols-outlined text-[14px] text-green-400">check_circle</span> ID Scanning</li>
-                <li className="flex items-center gap-2"><span className="material-symbols-outlined text-[14px] text-green-400">check_circle</span> Mix & Match pricing</li>
+                <li className="flex items-center gap-2"><span className="material-symbols-outlined text-[14px] text-green-400">check_circle</span>Versatile Connectivity</li>
+                <li className="flex items-center gap-2"><span className="material-symbols-outlined text-[14px] text-green-400">check_circle</span>Adaptive Configuration</li>
               </ul>
             </div>
           </div>
@@ -147,10 +147,10 @@ const ScalesPage: React.FC = () => {
             <div className="absolute bottom-0 left-0 p-8 text-white w-full">
               <span className="material-symbols-outlined mb-4 p-2 bg-white/20 backdrop-blur-md rounded-lg">local_shipping</span>
               <h3 className="text-2xl font-display font-bold mb-2">Dibal 955 B</h3>
-              <p className="text-slate-200 text-sm mb-4">Compact hardware and robust offline mode.</p>
+              <p className="text-slate-200 text-sm mb-4">Weighing and labeling scale with dual 12.1-inch touch screens, designed for an intuitive and modern user experience.</p>
               <ul className="text-xs space-y-2 opacity-80 flex gap-6">
-                <li className="flex items-center gap-2"><span className="material-symbols-outlined text-[14px] text-green-400">check_circle</span> Quick Modifier Select</li>
-                <li className="flex items-center gap-2"><span className="material-symbols-outlined text-[14px] text-green-400">check_circle</span> Digital Receipts</li>
+                <li className="flex items-center gap-2"><span className="material-symbols-outlined text-[14px] text-green-400">check_circle</span>Superior Performance</li>
+                <li className="flex items-center gap-2"><span className="material-symbols-outlined text-[14px] text-green-400">check_circle</span>Versatile Printing</li>
               </ul>
             </div>
           </div>
@@ -162,11 +162,10 @@ const ScalesPage: React.FC = () => {
             <div className="absolute bottom-0 left-0 p-8 text-white w-full">
               <span className="material-symbols-outlined mb-4 p-2 bg-white/20 backdrop-blur-md rounded-lg">shopping_cart</span>
               <h3 className="text-2xl font-display font-bold mb-2">Dibal 955 H</h3>
-              <p className="text-slate-200 text-sm mb-4">Scale integration and high-volume scanning support.</p>
+              <p className="text-slate-200 text-sm mb-4">High-performance PC scale with ultra-stylish design, capacitive touch screen and advanced technology for modern retail.</p>
               <ul className="text-xs space-y-2 opacity-80 flex gap-6 flex-wrap">
-                <li className="flex items-center gap-2"><span className="material-symbols-outlined text-[14px] text-green-400">check_circle</span> Scale Integration</li>
-                <li className="flex items-center gap-2"><span className="material-symbols-outlined text-[14px] text-green-400">check_circle</span> EBT/WIC Support</li>
-                <li className="flex items-center gap-2"><span className="material-symbols-outlined text-[14px] text-green-400">check_circle</span> Shelf Label Printing</li>
+                <li className="flex items-center gap-2"><span className="material-symbols-outlined text-[14px] text-green-400">check_circle</span>Linerless Technology</li>
+                <li className="flex items-center gap-2"><span className="material-symbols-outlined text-[14px] text-green-400">check_circle</span>Smart Management</li>
               </ul>
             </div>
           </div>
@@ -180,10 +179,10 @@ const ScalesPage: React.FC = () => {
             <div className="absolute bottom-0 left-0 p-8 text-white w-full">
               <span className="material-symbols-outlined mb-4 p-2 bg-white/20 backdrop-blur-md rounded-lg">shopping_bag</span>
               <h3 className="text-2xl font-display font-bold mb-3">Dibal 545 B</h3>
-              <p className="text-slate-200 text-sm mb-4 leading-relaxed">Advanced inventory matrix, barcode generation, and customer loyalty profiles.</p>
+              <p className="text-slate-200 text-sm mb-4 leading-relaxed">State-of-the-art electronic scale with 10.1-inch touchscreen and PC architecture for efficient business management.</p>
               <ul className="text-xs space-y-2 opacity-80">
-                <li className="flex items-center gap-2"><span className="material-symbols-outlined text-[14px] text-green-400">check_circle</span> Multi-location sync</li>
-                <li className="flex items-center gap-2"><span className="material-symbols-outlined text-[14px] text-green-400">check_circle</span> E-commerce integration</li>
+                <li className="flex items-center gap-2"><span className="material-symbols-outlined text-[14px] text-green-400">check_circle</span>Printing Versatility</li>
+                <li className="flex items-center gap-2"><span className="material-symbols-outlined text-[14px] text-green-400">check_circle</span>Power and Connectivity</li>
               </ul>
             </div>
           </div>
@@ -194,10 +193,10 @@ const ScalesPage: React.FC = () => {
             <div className="absolute bottom-0 left-0 p-8 text-white w-full">
               <span className="material-symbols-outlined mb-4 p-2 bg-white/20 backdrop-blur-md rounded-lg">shopping_bag</span>
               <h3 className="text-2xl font-display font-bold mb-3">Dibal LP500</h3>
-              <p className="text-slate-200 text-sm mb-4 leading-relaxed">Advanced inventory matrix, barcode generation, and customer loyalty profiles.</p>
+              <p className="text-slate-200 text-sm mb-4 leading-relaxed">Versatile labeling scale with 10.1-inch touchscreen, designed to offer high speed and accuracy in weighing.</p>
               <ul className="text-xs space-y-2 opacity-80">
-                <li className="flex items-center gap-2"><span className="material-symbols-outlined text-[14px] text-green-400">check_circle</span> Multi-location sync</li>
-                <li className="flex items-center gap-2"><span className="material-symbols-outlined text-[14px] text-green-400">check_circle</span> E-commerce integration</li>
+                <li className="flex items-center gap-2"><span className="material-symbols-outlined text-[14px] text-green-400">check_circle</span>High Resolution Printing</li>
+                <li className="flex items-center gap-2"><span className="material-symbols-outlined text-[14px] text-green-400">check_circle</span>Complete Connectivity</li>
               </ul>
             </div>
           </div>
@@ -208,10 +207,10 @@ const ScalesPage: React.FC = () => {
             <div className="absolute bottom-0 left-0 p-8 text-white w-full">
               <span className="material-symbols-outlined mb-4 p-2 bg-white/20 backdrop-blur-md rounded-lg">shopping_bag</span>
               <h3 className="text-2xl font-display font-bold mb-3">Ishida Uni 10 Series</h3>
-              <p className="text-slate-200 text-sm mb-4 leading-relaxed">Advanced inventory matrix, barcode generation, and customer loyalty profiles.</p>
+              <p className="text-slate-200 text-sm mb-4 leading-relaxed">Price computing scale with intuitive touch screen and compact design that optimizes counter space.</p>
               <ul className="text-xs space-y-2 opacity-80">
-                <li className="flex items-center gap-2"><span className="material-symbols-outlined text-[14px] text-green-400">check_circle</span> Multi-location sync</li>
-                <li className="flex items-center gap-2"><span className="material-symbols-outlined text-[14px] text-green-400">check_circle</span> E-commerce integration</li>
+                <li className="flex items-center gap-2"><span className="material-symbols-outlined text-[14px] text-green-400">check_circle</span>Color Touchscreen</li>
+                <li className="flex items-center gap-2"><span className="material-symbols-outlined text-[14px] text-green-400">check_circle</span>Efficient Data Management</li>
               </ul>
             </div>
           </div>
@@ -233,10 +232,6 @@ const ScalesPage: React.FC = () => {
           </div>
         </div>
       </section>
-
-      <div className="py-6 text-center text-xs text-slate-400 border-t border-slate-50 dark:border-slate-900">
-        © 2023 Eagle Business Technology. All rights reserved.
-      </div>
     </div>
   );
 };

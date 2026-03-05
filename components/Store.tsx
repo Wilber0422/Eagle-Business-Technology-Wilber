@@ -158,7 +158,7 @@ const VoicePage: React.FC = () => {
           </div>
           <div className="relative">
             <div className="rounded-3xl overflow-hidden shadow-2xl">
-              <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=2070&auto=format&fit=crop" className="w-full" alt="Hotel Reception" />
+              <img src="/wifi-m.png" className="w-full" alt="Hotel Reception" />
             </div>
           </div>
         </div>
@@ -239,14 +239,6 @@ const VoicePage: React.FC = () => {
           </div>
         </div>
       </section>
-
-      <div className="py-8 text-center border-t border-slate-50 dark:border-slate-900 dark:bg-slate-950">
-        <div className="flex items-center justify-center gap-2 mb-4">
-          <div className="size-6 bg-primary rounded flex items-center justify-center"><span className="material-symbols-outlined text-white text-xs">owl</span></div>
-          <span className="font-bold text-slate-900 dark:text-white">Eagle Business Technology</span>
-        </div>
-        <p className="text-[10px] text-slate-400">© 2023 Eagle Business Technology. All rights reserved.</p>
-      </div>
     </div>
   );
 };

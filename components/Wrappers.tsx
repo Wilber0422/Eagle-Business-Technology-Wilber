@@ -106,44 +106,44 @@ const WrappersPage: React.FC = () => {
                   id: Page.AWAiPop,
                   title: 'AW-Ai-Pop Ishida',
                   img: 'https://eaglebst.com/wp-content/uploads/2022/12/AW-Ai-Pop.png',
-                  desc: 'The smartest basic model of the 5600 series with 30 packs/minute and rotational labeler arm.',
-                  features: ['30 packs per minute', 'Linerless label support', 'Compact footprint']
+                  desc: 'The WM-AI-P revolutionizes workflow by integrating an intelligent printer capable of automatically applying promotional secondary labels.',
+                  features: ['Automatic double labeling', 'Precision Robotic Applicator']
                 },
                 {
                   tag: 'Best Seller',
                   id: Page.AW5600,
                   title: 'AW-5600 AT POP',
                   img: 'https://www.digisystem.com/es/products/PRD00348/product_file/file/aw5600-2_WP02_01.png',
-                  desc: 'High-speed automatic weigh-wrap-labeler designed for maximum throughput in busy supermarkets.',
-                  features: ['35 packs per minute', 'Auto-tray sizing', 'Integrated POP labeling']
+                  desc: 'The AW-5600AT is a weighing, packaging, and labeling solution designed to maximize efficiency in confined spaces thanks to its small footprint design.',
+                  features: ['Integrated Multi-Labeling System', 'Intelligent Process Control']
                 },
                 {
                   id: Page.HandWrapper,
                   title: 'Hand Wrapper',
                   img: 'https://eaglebst.com/wp-content/uploads/2022/12/Hand-Wrapper.png',
-                  desc: 'The smartest basic model of the 5600 series with 30 packs/minute and rotational labeler arm.',
-                  features: ['30 packs per minute', 'Linerless label support', 'Compact footprint']
+                  desc: 'Flexibility is supreme in the latest generation of DIGI’s integrated semi-automatic weigh-wrap-labelers.',
+                  features: ['Irregular Shapes', 'Pick-Pack System']
                 },
                 {
                   id: Page.Linea470,
                   title: 'Linea 470 H50',
                   img: '/linea-470-h50.jpg',
-                  desc: 'The smartest basic model of the 5600 series with 30 packs/minute and rotational labeler arm.',
-                  features: ['30 packs per minute', 'Linerless label support', 'Compact footprint']
+                  desc: 'This component is a precision profile designed for linear transport and guidance systems, manufactured to high-strength industrial standards.',
+                  features: ['High Precision Geometry', 'Versatile Design']
                 },
                 {
                   id: Page.Sg2,
                   title: 'SG2',
                   img: '/sg2.jpeg',
-                  desc: 'The smartest basic model of the 5600 series with 30 packs/minute and rotational labeler arm.',
-                  features: ['30 packs per minute', 'Linerless label support', 'Compact footprint']
+                  desc: 'This component is a technical sliding guide designed for linear conveyor systems, specifically optimized to provide low-friction support.',
+                  features: ['Optimized Sliding Profile', 'Heavy Duty Construction']
                 },
                 {
                   id: Page.Ishidawm,
                   title: 'Ishida WM Micro',
                   img: '/wm-micro.png',
-                  desc: 'The smartest basic model of the 5600 series with 30 packs/minute and rotational labeler arm.',
-                  features: ['30 packs per minute', 'Linerless label support', 'Compact footprint']
+                  desc: 'The WM-MICRO is a fully automatic, all-in-one solution that integrates weighing, packing, and labeling into an extremely compact design.',
+                  features: ['Ultra Compact Design', 'Intuitive Interface']
                 }
               ].map((model, idx) => (
                 <div
@@ -242,7 +242,7 @@ const WrappersPage: React.FC = () => {
             { title: 'Fresh Meats', icon: 'restaurant', img: 'https://media.istockphoto.com/id/1212824120/photo/assortment-of-meat-and-seafood.jpg?s=612x612&w=0&k=20&c=U_wNgPDs2CeWuOPEj0Hts1btABGM3gL4ftjficNvJZM=' },
             { title: 'Fruits & Veg', icon: 'nutrition', img: 'https://images.unsplash.com/photo-1610348725531-843dff563e2c?q=80&w=2070&auto=format&fit=crop' },
             { title: 'Fish & Seafood', icon: 'set_meal', img: 'https://nutritionsource.hsph.harvard.edu/wp-content/uploads/2024/11/AdobeStock_368767489.jpeg' },
-            { title: 'Cheeses', icon: 'lunch_dining', img: 'https://images.unsplash.com/photo-1485955900006-10f4d324d411?q=80&w=2072&auto=format&fit=crop' }
+            { title: 'Cheeses', icon: 'lunch_dining', img: 'https://mcd-landings-q-static.appmcdonalds.com/uploads-quality/featured_Tile_Mobile_ad909f4648.jpg' }
           ].map((app, idx) => (
             <div key={idx} className="relative h-[400px] rounded-2xl overflow-hidden group shadow-lg cursor-pointer">
               <img src={app.img} alt={app.title} className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />

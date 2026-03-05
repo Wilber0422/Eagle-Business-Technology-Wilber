@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
           <div className="lg:col-span-1.5 flex flex-col gap-6">
             <h4 className="text-xl font-display font-bold uppercase tracking-tight">About us</h4>
             <p className="text-white/80 leading-relaxed text-sm">
-              Eagle Business Technology specializes in providing modern, efficient, and profitable technological solutions for business retailers worldwide. We have the solutions to support your retail operation from technology hardware and software, and supplies for your retail store: Scales, Slicers, Wrappers, Point of Sale, Self-Checkout, Business Solutions, Wi-Fi Marketing, Electronic Self-Signage and supplies.
+              Eagle Business Technology specializes in providing modern, efficient, and profitable technological solutions for business retailers worldwide. We have the solutions to support your retail operation from technology hardware and software, and supplies for your retail store: Wrappers, Scales, Point of Sale, Business Solutions, Food Equipament, Slicers, Store solutions and supplies.
             </p>
           </div>
 
@@ -25,7 +25,9 @@ const Footer: React.FC = () => {
               <li><a className="hover:text-white/70 transition-colors" href={`#${Page.Pos}`}>POS</a></li>
               <li><a className="hover:text-white/70 transition-colors" href={`#${Page.PosSIM}`}>SIM POS</a></li>
               <li><a className="hover:text-white/70 transition-colors" href={`#${Page.Business}`}>Business software solutions</a></li>
+              <li><a className="hover:text-white/70 transition-colors" href={`#${Page.Food}`}>Food equipament</a></li>
               <li><a className="hover:text-white/70 transition-colors" href={`#${Page.Slicers}`}>Slicers</a></li>
+              <li><a className="hover:text-white/70 transition-colors" href={`#${Page.Store}`}>Store Solutions</a></li>
             </ul>
           </div>
 

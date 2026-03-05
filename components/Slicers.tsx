@@ -147,59 +147,95 @@ const SlicersPage: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                title: 'Bizerba GSP Hi Manual Slicer',
-                subtitle: 'Versatile Professional Slicer',
+                title: 'Bizerba GSP H',
+                subtitle: 'Manual gravity slicer with Ceraclean® coating for smooth gliding and maximum hygiene.',
                 img: '/bizerba-gsp.jpeg',
-                specs: { 'Blade Diameter': '350 mm', 'Operation': 'Vertical or Gravity', 'Best For': 'Mixed Deli Use' }
+                specs: {
+                  'Certified ': 'Dirt-repellent surface, easy deep cleaning.',
+                  'Total Security': 'Automatic stop when guard opens.',
+                  'Precision Cutting': 'Precise adjustment for perfect slices.'
+                }
               },
               {
                 tag: 'Chop cutter',
                 title: 'Bizerba Manual gravity slicer GSP H',
-                subtitle: 'Heavy Duty Gravity Slicer',
+                subtitle: 'Premium range manual gravity slicer that sets global standards in ergonomics, hygiene and safety for cutting various products.',
                 img: '/bizerba-gsp-h.jpeg',
-                specs: { 'Blade Diameter': '350 mm', 'Drive': 'Gear Box', 'Material': 'Stainless Steel' }
+                specs: {
+                  'Ergonomic Design': 'Inclined carriage facilitates effortless slicing.',
+                  'Simplified Hygiene': 'Drainage system enables quick cleaning.',
+                  'Safety and Versatility': 'Motor and safety status indicator.'
+                }
               },
               {
                 title: 'Bizerba Professional meat tenderizer',
-                subtitle: 'Compact Efficiency',
+                subtitle: 'Professional high-performance equipment designed to transform difficult cuts into tender, high-value commercial products with total precision.',
                 img: '/bizerba-professional.png',
-                specs: { 'Blade Diameter': '300 mm', 'Footprint': 'Compact Design', 'Ideal For': 'Small Kitchens' }
+                specs: {
+                  'Functional Duality:': 'Switchable attachments for uniform strips.',
+                  'Hygiene and Durability': 'Durable, easy-clean stainless steel construction.',
+                  'Product Optimization': 'Enhanced texture, faster marinating, cooking.'
+                }
               },
               {
-                title: 'devices Bizerba vsp-us',
-                subtitle: 'Versatile Professional Slicer',
+                title: 'Bizerba VSP Manual',
+                subtitle: 'Premium vertical slicer designed for retail and food service environments that demand high performance, rigorous hygiene and superior precision.',
                 img: '/bizerba-vsp-us.jpeg',
-                specs: { 'Blade Diameter': '350 mm', 'Operation': 'Vertical or Gravity', 'Best For': 'Mixed Deli Use' }
+                specs: {
+                  'Emotion Technology': 'Intelligent drive saves energy, noise.',
+                  'Hygiene and Maintenance': 'Tool-free disassembly, dishwasher-safe design.',
+                  'SmarterSlicing': 'Intelligent assistance ensures operator safety.'
+                }
               },
               {
-                title: 'Icone- 700',
-                subtitle: '',
+                title: 'Icone 700',
+                subtitle: 'High-performance chop slicers designed for intensive use, capable of processing bone-in meats, sausages, and fish with total precision.',
                 img: '/icone-700.png',
-                specs: { 'Blade Diameter': '350 mm', 'Operation': 'Vertical or Gravity', 'Best For': 'Mixed Deli Use' }
+                specs: {
+                  'Hydraulic Advance System': 'Reliable power in cold, humid.',
+                  'Customizable Cut': 'Adjustable thickness, versatile feeding options.',
+                  'Hygiene and Durability': '304 stainless, high-pressure, automatic return.'
+                }
               },
               {
                 title: 'Idrochef 316 touch',
-                subtitle: '',
+                subtitle: 'Professional immersion circulator for sous vide cooking that guarantees absolute thermal precision and high-quality culinary results.',
                 img: '/Idrochef-316-touch.jpeg',
-                specs: { 'Blade Diameter': '350 mm', 'Operation': 'Vertical or Gravity', 'Best For': 'Mixed Deli Use' }
+                specs: {
+                  'Precision Control': '3.5-inch touchscreen, precise temperature control.',
+                  'Great Operational Capacity': 'High-volume cooking, 70-liter capacity.',
+                  'Smart Management': 'Wi-Fi control, cloud data traceability.'
+                }
               },
               {
                 title: 'PHX 60',
-                subtitle: '',
+                subtitle: 'High-performance vertical hydraulic sausage stuffers, manufactured entirely in stainless steel to guarantee durability and maximum hygiene.',
                 img: '/phx-60.png',
-                specs: { 'Blade Diameter': '350 mm', 'Operation': 'Vertical or Gravity', 'Best For': 'Mixed Deli Use' }
+                specs: {
+                  'Precision and Control': 'Flexible speed, automatic mass decompression.',
+                  'Robust Construction': '100% stainless, IP65, closed hydraulic.',
+                  'Operational Efficiency': 'Mobile with quick piston return.'
+                }
               },
               {
                 title: 'SX 350',
-                subtitle: '',
+                subtitle: 'Professional band saws made entirely of stainless steel, designed to offer precise cuts and maximum hygiene in demanding environments.',
                 img: '/sx-350.png',
-                specs: { 'Blade Diameter': '350 mm', 'Operation': 'Vertical or Gravity', 'Best For': 'Mixed Deli Use' }
+                specs: {
+                  'High Rigidity Construction': 'Thick 18/10 stainless, stable, durable.',
+                  'Simplified Maintenance': 'Automatic tensioners, mobile cart, deep cleaning.',
+                  'Protection and Security': 'IP65 protection, water-resistant electricals.'
+                }
               },
               {
                 title: 'SX-400',
-                subtitle: '',
+                subtitle: 'High-end industrial band saw, designed to offer maximum safety and superior performance in cutting meats and frozen products.',
                 img: '/sx-400.png',
-                specs: { 'Blade Diameter': '350 mm', 'Operation': 'Vertical or Gravity', 'Best For': 'Mixed Deli Use' }
+                specs: {
+                  'Ergonomic and Robust Design': '304 stainless, sliding table, precise handling.',
+                  'Efficient Maintenance': 'Tilting table, automatic tensioners, quick cleaning.',
+                  'Industrial Protection': 'Fully sealed, water-resistant electrical components.'
+                }
               }
             ].map((model, idx) => (
               <div key={idx} className="bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-100 dark:border-slate-800 flex flex-col group">
@@ -226,62 +262,12 @@ const SlicersPage: React.FC = () => {
                     ))}
                   </div>
 
-                  <button className="w-full py-3 bg-white dark:bg-slate-800 border border-primary-light text-primary-light text-sm font-bold rounded-lg hover:bg-primary-light hover:text-white transition-all">
+                  {/* <button className="w-full py-3 bg-white dark:bg-slate-800 border border-primary-light text-primary-light text-sm font-bold rounded-lg hover:bg-primary-light hover:text-white transition-all">
                     View Specs
-                  </button>
+                  </button> */}
                 </div>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Brand Customization */}
-      <section className="py-24 px-6 md:px-10 max-w-[1440px] mx-auto">
-        <div className="bg-slate-900 rounded-[40px] overflow-hidden p-10 md:p-20 relative">
-          <div className="absolute top-0 right-0 w-1/2 h-full opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-blue-500 to-transparent"></div>
-
-          <div className="grid lg:grid-cols-2 gap-16 items-center relative z-10">
-            <div className="space-y-10">
-              <div>
-                <span className="inline-block px-3 py-1 rounded-md bg-white/10 text-white text-[10px] font-bold uppercase tracking-widest border border-white/10 mb-6">Make it Yours</span>
-                <h2 className="text-4xl md:text-5xl font-display font-bold text-white leading-tight">Customized to Match Your Brand</h2>
-                <p className="text-slate-400 text-lg leading-relaxed mt-6">
-                  Don't settle for standard silver. We offer extensive customization options including specific colors for knobs, plastic parts, and even full machine body painting.
-                </p>
-              </div>
-
-              <div className="flex flex-wrap gap-4">
-                {[
-                  { name: 'Ferrari Red', color: '#ff0000' },
-                  { name: 'Matte Black', color: '#1a1a1a' },
-                  { name: 'Eagle Blue', color: '#0f4c81' }
-                ].map(item => (
-                  <div key={item.name} className="flex items-center gap-3 bg-white/5 border border-white/10 px-4 py-2 rounded-full cursor-pointer hover:bg-white/10 transition-colors">
-                    <div className="size-4 rounded-full border border-white/20" style={{ backgroundColor: item.color }}></div>
-                    <span className="text-xs font-bold text-white">{item.name}</span>
-                  </div>
-                ))}
-                <div className="flex items-center gap-3 bg-white/5 border border-white/10 px-4 py-2 rounded-full cursor-pointer hover:bg-white/10 transition-colors">
-                  <span className="material-symbols-outlined text-white text-sm">palette</span>
-                  <span className="text-xs font-bold text-white">Custom RAL</span>
-                </div>
-              </div>
-
-              <button className="h-12 px-8 bg-white text-slate-900 font-bold rounded-lg hover:bg-slate-100 transition-colors shadow-xl">
-                Inquire About Customization
-              </button>
-            </div>
-
-            <div className="relative">
-              <div className="aspect-[4/3] rounded-3xl overflow-hidden bg-white/5 backdrop-blur-sm border border-white/10 p-8 flex items-center justify-center">
-                <img
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAQCzoU0M1XgX_uzRSz6JM90efQ4RwiP52JvNVex4FZOJzJkSuIaedCKKRBnz8T3yw0ksIe6G6gZD2fJIzdjh7y_WnyCTLgN05RxwbupoFxIkQ5GC1j2O8_9euB-RQHnZeIwhn4KKdmUNwo9m5AdG8yLARrYh6NSENYcUo4C3AgryuPixB9EU9tc2xDtVTsZ3NTCBi_QDrROJvpwrcO418TzQPcKQivRRajwJWyN8zZsY-3wI5ckDPnc4VPlIA6_gGNSYEbGFutC5s"
-                  className="w-full h-full object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)] brightness-75 sepia-[0.3] hue-rotate-[320deg] saturate-[3]"
-                  alt="Custom Slicer"
-                />
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -299,22 +285,6 @@ const SlicersPage: React.FC = () => {
           </button>
         </div>
       </section>
-
-      <div className="py-12 px-6 border-t border-slate-50 dark:border-slate-900 dark:bg-slate-950">
-        <div className="max-w-[1440px] mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
-          <div className="flex items-center gap-3">
-            <div className="size-8 bg-primary rounded flex items-center justify-center"><span className="material-symbols-outlined text-white text-lg">owl</span></div>
-            <span className="font-bold text-slate-900 dark:text-white font-display">Eagle Business Technology</span>
-          </div>
-          <div className="flex gap-8 text-[10px] font-bold text-slate-400 uppercase tracking-widest">
-            <span>© 2023 Eagle Business Technology. All rights reserved.</span>
-            <div className="flex gap-4">
-              <span className="material-symbols-outlined cursor-pointer hover:text-primary transition-colors">mail</span>
-              <span className="material-symbols-outlined cursor-pointer hover:text-primary transition-colors">language</span>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   );
 };

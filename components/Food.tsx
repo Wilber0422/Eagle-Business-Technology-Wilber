@@ -237,10 +237,6 @@ const WifiPage: React.FC = () => {
           </div>
         </div>
       </section>
-
-      <div className="py-8 text-center text-[10px] text-slate-400 uppercase tracking-widest border-t border-slate-100 dark:border-slate-800 dark:bg-slate-950">
-        © 2023 Eagle Business Technology. All rights reserved.
-      </div>
     </div>
   );
 };

@@ -31,13 +31,22 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
     <header className="sticky top-0 z-50 w-full glass-effect border-b border-slate-100 dark:border-slate-800 transition-all duration-300">
       <div className="flex items-center justify-between px-6 lg:px-10 py-4 max-w-[1440px] mx-auto">
         <div className="flex items-center gap-3 group cursor-pointer" onClick={() => navigate(Page.Home)}>
-          <div className="relative flex items-center justify-center size-12 rounded-lg shadow-lg shadow-primary/20 group-hover:scale-105 transition-transform duration-300">
-            <img src="/logo2.png" />
+          <div className="relative flex items-center justify-center h-16 w-auto px-10 rounded-lg shadow-lg shadow-primary/0 group-hover:scale-105 transition-transform duration-300">
+            <img
+              src="/logo-vertical.png"
+              alt="Eagle Business Logo"
+              className="h-full w-auto object-contain"
+            />
           </div>
-          <div>
-            <h2 className="text-xl font-display font-bold tracking-tight text-slate-900 dark:text-white leading-none">Eagle Business</h2>
-            <span className="text-xs font-bold text-primary uppercase tracking-widest">Technology</span>
-          </div>
+
+          {/* <div>
+            <h2 className="text-xl font-display font-bold tracking-tight text-slate-900 dark:text-white leading-none">
+              Eagle Business
+            </h2>
+            <span className="text-xs font-bold text-primary uppercase tracking-widest">
+              Technology
+            </span>
+          </div> */}
         </div>
 
         <nav className="hidden lg:flex items-center gap-8">
