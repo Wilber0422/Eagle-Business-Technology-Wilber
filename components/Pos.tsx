@@ -68,10 +68,12 @@ const PosPage: React.FC = () => {
             <h2 className="text-slate-900 dark:text-white text-2xl font-bold font-display">Trusted Platforms & Partners</h2>
             <p className="text-slate-400 text-sm mt-2">We partner with industry leaders to bring you the best technology.</p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-8 items-center justify-items-center opacity-60">
-            {['Clover', 'OVVI', 'HioPOS', 'Quantic', 'Harbortouch'].map(brand => (
+          <div className="flex justify-center items-center w-full opacity-60">
+            {['Quantic'].map(brand => (
               <div key={brand} className="flex flex-col items-center gap-2 grayscale hover:grayscale-0 transition-all cursor-pointer">
-                <span className="text-2xl font-black font-display tracking-tight text-slate-800 dark:text-slate-200">{brand}</span>
+                <span className="text-2xl font-black font-display tracking-tight text-slate-800 dark:text-slate-200">
+                  {brand}
+                </span>
               </div>
             ))}
           </div>

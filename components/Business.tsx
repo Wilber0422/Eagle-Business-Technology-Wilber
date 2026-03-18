@@ -17,10 +17,10 @@ const SignagePage: React.FC = () => {
 
         <div className="px-6 md:px-10 lg:px-20 max-w-[1440px] mx-auto relative z-10 text-center text-white">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold leading-tight tracking-tight mb-6">
-            Transform Your Space with<br /><span className="text-primary-light">Dynamic Digital Signage</span>
+            SIM Business Suite: <br /><span className="text-primary-light">High-Level Business <br /> Management</span>
           </h1>
           <p className="text-slate-200 text-lg md:text-xl font-normal leading-relaxed max-w-2xl mx-auto mb-10">
-            Enhance customer communication and drive sales with our cutting-edge visual solutions tailored for retail and hospitality environments.
+            A centralized solution that allows companies to manage purchasing, inventory, logistics, and sales analytics from a unified system, creating a solid foundation for growth.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <button className="flex items-center justify-center rounded-lg h-12 px-8 bg-primary-light text-white text-base font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-500/20 hover:-translate-y-0.5">
@@ -43,20 +43,20 @@ const SignagePage: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {[
             {
-              title: 'LED Video Walls',
-              desc: 'Seamless, high-impact visuals designed for large spaces and high foot traffic areas. Perfect for flagship stores and lobbies.',
+              title: 'Operational Visibility',
+              desc: 'Get clear data on whats happening in real time with your inventories and purchases.',
               icon: 'grid_view',
               img: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=2070&auto=format&fit=crop'
             },
             {
-              title: 'LCD Monitors',
-              desc: 'Crystal clear displays for targeted messaging. Ideal for menu boards, wayfinding, and point-of-sale promotions.',
+              title: 'Inventory Control',
+              desc: 'Track product movement, improve stock accuracy, and reduce shortages.',
               icon: 'monitor',
               img: 'https://images.unsplash.com/photo-1593305841991-05c297ba4575?q=80&w=1957&auto=format&fit=crop'
             },
             {
-              title: 'Projections',
-              desc: 'Versatile projection mapping for any surface. Turn walls, floors, or products into dynamic canvases for storytelling.',
+              title: 'Scalability',
+              desc: 'Build a technological base ready to expand to multiple locations.',
               icon: 'videocam',
               img: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=2070&auto=format&fit=crop'
             }
@@ -87,7 +87,7 @@ const SignagePage: React.FC = () => {
                   <span className="material-symbols-outlined text-sm">developer_board</span>
                   <span className="text-[10px] font-bold uppercase tracking-widest">CMS Software</span>
                 </div>
-                <h2 className="text-4xl md:text-5xl font-display font-bold text-slate-900 dark:text-white leading-tight">Content Management Made Simple</h2>
+                <h2 className="text-4xl md:text-5xl font-display font-bold text-slate-900 dark:text-white leading-tight">Modules and Operational Areas</h2>
                 <p className="text-slate-500 dark:text-slate-400 mt-6 text-lg leading-relaxed">
                   Experience PowerPoint-like ease of use. Our intuitive CMS features drag-and-drop functionality, allowing you to customize templates and schedule content effortlessly without technical expertise.
                 </p>
@@ -95,9 +95,11 @@ const SignagePage: React.FC = () => {
 
               <ul className="space-y-4">
                 {[
-                  { icon: 'check_circle', text: 'Drag & Drop Interface' },
-                  { icon: 'check_circle', text: 'Pre-designed Templates' },
-                  { icon: 'check_circle', text: 'Remote Scheduling' }
+                  { icon: 'check_circle', text: 'SIMerp' },
+                  { icon: 'check_circle', text: 'Sales and Distribution' },
+                  { icon: 'check_circle', text: 'SIMecommerce' },
+                  { icon: 'check_circle', text: 'SIMapp' },
+                  { icon: 'check_circle', text: 'Advanced Reporting' }
                 ].map((item, i) => (
                   <li key={i} className="flex items-center gap-3 text-sm font-bold text-slate-700 dark:text-slate-300">
                     <span className="material-symbols-outlined text-green-500">{item.icon}</span>
@@ -155,7 +157,7 @@ const SignagePage: React.FC = () => {
                   <span className="material-symbols-outlined text-sm">hub</span>
                   <span className="text-[10px] font-bold uppercase tracking-widest">IoT Innovation</span>
                 </div>
-                <h2 className="text-4xl md:text-5xl font-display font-bold leading-tight">Lift & Learn Interactive Experience</h2>
+                <h2 className="text-4xl md:text-5xl font-display font-bold leading-tight">Application Sectors</h2>
                 <p className="text-slate-400 mt-6 text-lg leading-relaxed">
                   Create memorable in-store experiences with our IoT Digital Signage. When a customer lifts a product, sensors trigger the display to instantly show specific commercials, detailed specs, or comparison data.
                 </p>
@@ -163,8 +165,8 @@ const SignagePage: React.FC = () => {
 
               <div className="grid sm:grid-cols-2 gap-6">
                 {[
-                  { icon: 'sensors', title: 'Smart Sensors', desc: 'Detect movement instantly' },
-                  { icon: 'leaderboard', title: 'Engagement Data', desc: 'Track customer interest' }
+                  { icon: 'sensors', title: 'Retail', desc: 'Supermarkets, grocery stores and liquor stores.' },
+                  { icon: 'leaderboard', title: 'Distribution', desc: 'Operations focused on wholesale sales.' }
                 ].map((item, i) => (
                   <div key={i} className="bg-white/5 border border-white/10 p-6 rounded-2xl">
                     <span className="material-symbols-outlined text-primary-light mb-2">{item.icon}</span>
@@ -181,16 +183,16 @@ const SignagePage: React.FC = () => {
       {/* Implementation Strategy */}
       <section className="py-24 px-6 md:px-10 max-w-[1440px] mx-auto text-center">
         <div className="max-w-3xl mx-auto mb-16">
-          <h2 className="text-slate-900 dark:text-white text-3xl md:text-4xl font-display font-bold mb-4">Implementation Strategy</h2>
+          <h2 className="text-slate-900 dark:text-white text-3xl md:text-4xl font-display font-bold mb-4">The Eagle Approach</h2>
           <p className="text-slate-500 dark:text-slate-400">Maximizing the impact of digital signage requires more than just hardware. It requires strategy.</p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {[
-            { icon: 'visibility', title: 'Placement', desc: 'Position screens at eye level in high-dwell areas like checkout lines and waiting areas.' },
-            { icon: 'loop', title: 'Content Loop', desc: 'Keep messages concise. A 10-15 second loop ensures your message is seen without boring the viewer.' },
-            { icon: 'ads_click', title: 'Clear CTA', desc: 'Always tell the customer what to do next. "Ask for a demo" or "Scan for 10% off".' },
-            { icon: 'update', title: 'Freshness', desc: 'Update content regularly to keep returning customers engaged and prevent display blindness.' }
+            { icon: 'visibility', title: 'Operational Review', desc: 'We analyze your current workflow.' },
+            { icon: 'loop', title: 'Gap Identification', desc: 'We detected flaws in inventory, purchasing, and reporting.' },
+            { icon: 'ads_click', title: 'Definition of Scope', desc: 'We select SIM modules that align with your sales model.' },
+            { icon: 'update', title: 'Planning and Data', desc: 'We structure the migration of data, users, and integrations.' }
           ].map((item, idx) => (
             <div key={idx} className="bg-white dark:bg-slate-900 p-8 rounded-2xl border border-slate-100 dark:border-slate-800 text-left hover:shadow-lg transition-all">
               <div className="w-10 h-10 bg-blue-50 dark:bg-blue-900/40 rounded-lg flex items-center justify-center mb-6 text-primary-light">
