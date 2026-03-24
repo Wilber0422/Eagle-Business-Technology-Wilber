@@ -36,8 +36,8 @@ const WifiPage: React.FC = () => {
 
                 {/* Botón de Descarga Actualizado */}
                 <a
-                  href=""
-                  download=""
+                  href="/brochure.pdf"
+                  download="brochure.pdf"
                   className="flex items-center justify-center rounded-lg h-12 px-8 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white text-base font-bold hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors shadow-sm"
                 >
                   Download Brochure
