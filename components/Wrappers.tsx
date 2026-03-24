@@ -181,7 +181,7 @@ const WrappersPage: React.FC = () => {
                 {
                   id: Page.HandWrapper,
                   title: 'Hand Wrapper',
-                  img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAnrG9L6-L9e-h6U-e-l-j-o-m-r-n-b-c-d-e-f-g-h-i-j-k-l-m-n-o-p-q-r-s-t-u-v-w-x-y-z', // Placeholder for Hand Wrapper
+                  img: 'https://eaglebst.com/wp-content/uploads/2022/12/Hand-Wrapper.png', // Placeholder for Hand Wrapper
                   desc: 'A Hand Wrapper tabletop weigh-seal-label system that improves productivity and operational efficiency of sales counters.',
                   features: ['Tabletop Design', 'Integrated Labeling', 'Efficient Workflow']
                 }

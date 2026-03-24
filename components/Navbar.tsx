@@ -155,7 +155,11 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
                   onClick={() => navigate(sol.id)}
                   className="flex items-center gap-3 p-2 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800"
                 >
-                  <span className={`material-symbols-outlined text-sm ${sol.color}`}>{sol.icon}</span>
+                  <img
+                    src={sol.icon}
+                    alt=""
+                    className="w-5 h-5 object-contain"
+                  />
                   <span className="text-sm font-medium">{sol.title}</span>
                 </button>
               ))}
