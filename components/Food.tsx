@@ -1,7 +1,14 @@
-
-import React from 'react';
+import React, { useRef } from 'react';
 
 const WifiPage: React.FC = () => {
+  // Referencia para la sección de Featured Models
+  const modelsSectionRef = useRef<HTMLDivElement>(null);
+
+  // Función para realizar el scroll suave
+  const scrollToModels = () => {
+    modelsSectionRef.current?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <div className="bg-slate-50 dark:bg-slate-950 min-h-screen">
       {/* Hero Section */}
@@ -20,12 +27,21 @@ const WifiPage: React.FC = () => {
                 Discover the gold standard in professional machinery with our curated selection. From gear-driven precision to superior hygiene, we provide perfectly balanced solutions for the modern food industry.
               </p>
               <div className="flex flex-wrap gap-4 pt-4">
-                <button className="flex items-center justify-center rounded-lg h-12 px-8 bg-primary-light text-white text-base font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-500/20 hover:-translate-y-0.5">
-                  Request a Demo <span className="material-symbols-outlined ml-2 text-sm">arrow_forward</span>
+                <button
+                  onClick={scrollToModels}
+                  className="flex items-center justify-center rounded-lg h-12 px-8 bg-primary-light text-white text-base font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-500/20 hover:-translate-y-0.5"
+                >
+                  Explore Models <span className="material-symbols-outlined ml-2 text-sm">arrow_forward</span>
                 </button>
-                <button className="flex items-center justify-center rounded-lg h-12 px-8 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white text-base font-bold hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors shadow-sm">
+
+                {/* Botón de Descarga Actualizado */}
+                <a
+                  href=""
+                  download=""
+                  className="flex items-center justify-center rounded-lg h-12 px-8 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white text-base font-bold hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors shadow-sm"
+                >
                   Download Brochure
-                </button>
+                </a>
               </div>
             </div>
             <div className="relative">
@@ -37,7 +53,6 @@ const WifiPage: React.FC = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-tr from-slate-900/40 via-transparent to-transparent"></div>
 
-                {/* Visual Overlays matching the mockup */}
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white/90">
                   <span className="material-symbols-outlined text-8xl md:text-9xl opacity-80"></span>
                 </div>
@@ -56,14 +71,6 @@ const WifiPage: React.FC = () => {
           </div>
         </div>
       </section>
-
-      {/* Description Section */}
-      {/* <section className="py-24 px-6 md:px-10 max-w-4xl mx-auto text-center">
-        <h2 className="text-slate-900 dark:text-white text-3xl md:text-4xl font-display font-bold mb-6">Engineered for Excellence: Kolossal Food Equipment Line</h2>
-        <p className="text-slate-500 dark:text-slate-400 text-lg leading-relaxed">
-          The Kolossal line stands apart with its robust construction and obsessive attention to  <span className="text-primary-light font-bold">detail</span>, ensuring reliable performance across our entire range of kitchen solutions for the most demanding food service environments.
-        </p>
-      </section> */}
 
       {/* How It Works */}
       <section className="py-24 bg-white dark:bg-slate-900/50">
@@ -91,45 +98,12 @@ const WifiPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Why Choose Our Solution */}
-      {/* <section className="py-24 px-6 md:px-10 max-w-[1440px] mx-auto">
-        <div className="grid lg:grid-cols-2 gap-20 items-center">
-          <div className="space-y-12">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-display font-bold text-slate-900 dark:text-white mb-6">Why Choose Our Solution?</h2>
-              <p className="text-slate-500 dark:text-slate-400 leading-relaxed"> The exceptional performance of these slicers rely on the top-quality materials and the state-of-the-art slicing mechanism, which is realized in most of the models with gear-driven transmission, the best available on the market.</p>
-            </div>
-            <div className="space-y-8">
-              {[
-                { icon: 'schedule', title: 'Superior Cutting Precision', desc: 'Thanks to the gear transmission system, the blade maintains a constant speed even with dense sausages.' },
-                { icon: 'database', title: 'Industrial Grade Durability', desc: 'Built with high-strength materials, our machines are designed for continuous heavy-duty work.' },
-                { icon: 'sync', title: 'Energy Efficiency and Power', desc: 'The state-of-the-art mechanism optimizes the motors power directly towards the cutting.' }
-              ].map((item, idx) => (
-                <div key={idx} className="flex gap-6 items-start">
-                  <div className="w-12 h-12 shrink-0 bg-blue-50 dark:bg-blue-900/20 rounded-xl flex items-center justify-center text-primary-light">
-                    <span className="material-symbols-outlined text-2xl">{item.icon}</span>
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-slate-900 dark:text-white mb-2 font-display">{item.title}</h4>
-                    <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">{item.desc}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-          <div className="rounded-3xl overflow-hidden shadow-2xl relative">
-            <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?q=80&w=1974&auto=format&fit=crop" className="w-full h-full object-cover" alt="Marketing team" />
-            <div className="absolute inset-0 bg-primary-light/10 mix-blend-multiply"></div>
-          </div>
-        </div>
-      </section> */}
-
       {/* Integrations Section */}
-      <section className="py-24 px-6 md:px-10 max-w-[1440px] mx-auto">
+      <section ref={modelsSectionRef} className="py-24 px-6 md:px-10 max-w-[1440px] mx-auto">
         <div className="flex justify-between items-end mb-12">
           <div>
             <h2 className="text-slate-900 dark:text-white text-3xl font-display font-bold mb-2">Featured Models</h2>
-            <p className="text-slate-500 dark:text-slate-400">Vertical slicers with a TC plate are recommended for slicing meat, <br /> while for cold  cuts and sausages you can choose either gravity or vertical models.</p>
+            <p className="text-slate-500 dark:text-slate-400">Vertical slicers with a TC plate are recommended for slicing meat, <br /> while for cold cuts and sausages you can choose either gravity or vertical models.</p>
           </div>
           <button className="text-primary-light font-bold text-sm hover:underline">See all products</button>
         </div>
@@ -153,87 +127,29 @@ const WifiPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Ecosystem Section - Better Together */}
-      {/* <section className="py-24 px-6 md:px-10 max-w-[1440px] mx-auto">
-        <div className="bg-slate-900 rounded-[40px] overflow-hidden p-10 md:p-20 relative">
-          <div className="grid lg:grid-cols-2 gap-16 items-center relative z-10">
-            <div className="space-y-8">
-              <div className="inline-flex px-4 py-1.5 rounded-full bg-white/10 text-white text-[10px] font-bold uppercase tracking-widest border border-white/10">
-                Maximum industrial precision
-              </div>
-              <h2 className="text-4xl md:text-5xl font-display font-bold text-white leading-tight">Perfect Cuts.</h2>
-              <p className="text-slate-400 text-lg leading-relaxed">
-                Power is just the beginning. Optimize your production by combining our  <span className="text-white font-bold">High-Speed ​​Slicers </span> with  <span className="text-white font-bold">Automated Weighing Systems.</span>
-              </p>
-              <ul className="space-y-4">
-                <li className="flex items-center gap-3 text-sm text-slate-300">
-                  <span className="material-symbols-outlined text-primary-light">check_circle</span>
-                  Millimeter-precise adjustment for uniform cuts in each cycle.
-                </li>
-                <li className="flex items-center gap-3 text-sm text-slate-300">
-                  <span className="material-symbols-outlined text-primary-light">check_circle</span>
-                  Long-lasting surgical steel blades.
-                </li>
-              </ul>
-              <button className="h-12 px-8 bg-white text-slate-900 font-bold rounded-lg hover:bg-slate-100 transition-colors">
-                View Machine Catalog
-              </button>
-            </div>
-
-            <div className="relative">
-              <div className="aspect-square md:aspect-video rounded-3xl bg-gradient-to-br from-blue-600 to-indigo-900 p-8 md:p-12 flex items-center justify-center relative overflow-hidden">
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white/10 to-transparent"></div>
-
-                <div className="flex items-center justify-between w-full max-w-sm relative">
-                  <div className="flex flex-col items-center gap-3 z-10">
-                    <div className="size-16 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center border border-white/20">
-                      <span className="material-symbols-outlined text-white text-3xl">wifi</span>
-                    </div>
-                    <span className="text-[10px] font-bold text-white/60 tracking-widest uppercase">WI-FI</span>
-                  </div>
-
-                  <div className="h-px bg-white/20 flex-grow mx-4 relative">
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-2 rounded-full bg-white animate-pulse"></div>
-                  </div>
-
-                  <div className="flex flex-col items-center gap-3 z-10">
-                    <div className="size-20 rounded-full bg-primary-light flex items-center justify-center border-4 border-white/20 shadow-2xl">
-                      <span className="material-symbols-outlined text-white text-4xl">hub</span>
-                    </div>
-                    <span className="text-[10px] font-bold text-white tracking-widest uppercase">EAGLE CORE</span>
-                  </div>
-
-                  <div className="h-px bg-white/20 flex-grow mx-4 relative">
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-2 rounded-full bg-white animate-pulse delay-150"></div>
-                  </div>
-
-                  <div className="flex flex-col gap-4 z-10">
-                    <div className="size-12 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center border border-white/20">
-                      <span className="material-symbols-outlined text-white text-xl">smart_display</span>
-                    </div>
-                    <div className="size-12 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center border border-white/20">
-                      <span className="material-symbols-outlined text-white text-xl">sell</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> */}
-
       {/* Final CTA Section */}
       <section className="py-24 bg-white dark:bg-slate-900 text-center">
         <div className="max-w-3xl mx-auto px-6">
           <h2 className="text-3xl md:text-4xl font-display font-bold text-slate-900 dark:text-white mb-4">Ready to transform your guest experience?</h2>
           <p className="text-slate-500 dark:text-slate-400 mb-12">Join thousands of businesses using Eagle Business Technology to grow smarter.</p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <button className="h-14 px-10 bg-primary-light text-white font-bold rounded-xl shadow-xl shadow-blue-500/20 hover:bg-blue-700 transition-all">
+
+            <a
+              href="https://outlook.office365.com/book/EagleBusiness@eaglebst.com/?ismsaljsauthenabled=true"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-white text-primary-light hover:bg-slate-50 px-10 py-4 rounded-lg font-bold transition-all shadow-xl shadow-black/10 flex items-center justify-center h-14 px-10 bg-primary-light text-white font-bold rounded-xl shadow-xl shadow-blue-500/20 hover:bg-blue-700 transition-all"
+            >
               Get a Quote
-            </button>
-            <button className="h-14 px-10 bg-white dark:bg-slate-800 text-slate-900 dark:text-white border border-slate-200 dark:border-slate-700 font-bold rounded-xl hover:bg-slate-50 transition-all">
+            </a>
+
+            <a
+              href="https://eagle-business-technology-wilber.vercel.app/#contact"
+              className="bg-transparent border-2 border-white hover:bg-white/10 px-10 py-4 rounded-lg font-bold transition-all flex items-center justify-center h-14 px-10 bg-white dark:bg-slate-800 text-slate-900 dark:text-white border border-slate-200 dark:border-slate-700 font-bold rounded-xl hover:bg-slate-50 transition-all"
+            >
               Contact Support
-            </button>
+            </a>
+
           </div>
         </div>
       </section>

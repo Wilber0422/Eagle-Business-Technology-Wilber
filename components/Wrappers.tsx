@@ -328,7 +328,6 @@ const WrappersPage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      {/* CTA Section */}
       <section className="py-24 bg-primary-light">
         <div className="max-w-[1440px] mx-auto px-6 md:px-10 text-center text-white">
           <h2 className="text-4xl md:text-5xl font-display font-bold mb-6">Ready to Optimize Your Line?</h2>

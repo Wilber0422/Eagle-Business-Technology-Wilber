@@ -89,10 +89,10 @@ const ContactPage: React.FC = () => {
               <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6">
                 If you are an existing Eagle Business Technology client looking for support, please request support here.
               </p>
-              <a 
-                href="https://www.zoho.com/es-xl/assist/join/" 
-                target="_blank" 
-                rel="noopener noreferrer" 
+              <a
+                href="https://www.zoho.com/es-xl/assist/join/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-sm font-bold text-primary hover:gap-3 transition-all"
               >
                 Request Support <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
@@ -109,7 +109,7 @@ const ContactPage: React.FC = () => {
                 </div>
                 <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">Message Sent!</h3>
                 <p className="text-slate-500">Thank you for reaching out. We will get back to you shortly.</p>
-                <button 
+                <button
                   onClick={() => setSubmitted(false)}
                   className="mt-8 text-primary font-bold hover:underline"
                 >
@@ -121,49 +121,49 @@ const ContactPage: React.FC = () => {
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <label className="text-xs font-bold text-slate-400 uppercase tracking-widest ml-1">Full Name</label>
-                    <input 
+                    <input
                       required
-                      type="text" 
+                      type="text"
                       placeholder="John Doe"
                       className="w-full h-14 px-6 bg-slate-50 dark:bg-slate-800 border-none rounded-xl focus:ring-2 focus:ring-primary transition-all dark:text-white"
                       value={formData.name}
-                      onChange={(e) => setFormData({...formData, name: e.target.value})}
+                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     />
                   </div>
                   <div className="space-y-2">
                     <label className="text-xs font-bold text-slate-400 uppercase tracking-widest ml-1">Email Address</label>
-                    <input 
+                    <input
                       required
-                      type="email" 
+                      type="email"
                       placeholder="john@example.com"
                       className="w-full h-14 px-6 bg-slate-50 dark:bg-slate-800 border-none rounded-xl focus:ring-2 focus:ring-primary transition-all dark:text-white"
                       value={formData.email}
-                      onChange={(e) => setFormData({...formData, email: e.target.value})}
+                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     />
                   </div>
                 </div>
                 <div className="space-y-2">
                   <label className="text-xs font-bold text-slate-400 uppercase tracking-widest ml-1">Subject</label>
-                  <input 
+                  <input
                     required
-                    type="text" 
+                    type="text"
                     placeholder="Inquiry about POS Systems"
                     className="w-full h-14 px-6 bg-slate-50 dark:bg-slate-800 border-none rounded-xl focus:ring-2 focus:ring-primary transition-all dark:text-white"
                     value={formData.subject}
-                    onChange={(e) => setFormData({...formData, subject: e.target.value})}
+                    onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
                   />
                 </div>
                 <div className="space-y-2">
                   <label className="text-xs font-bold text-slate-400 uppercase tracking-widest ml-1">Your Message</label>
-                  <textarea 
+                  <textarea
                     required
                     placeholder="Tell us how we can help your business..."
                     className="w-full h-40 p-6 bg-slate-50 dark:bg-slate-800 border-none rounded-xl focus:ring-2 focus:ring-primary transition-all resize-none dark:text-white"
                     value={formData.message}
-                    onChange={(e) => setFormData({...formData, message: e.target.value})}
+                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   />
                 </div>
-                <button 
+                <button
                   type="submit"
                   className="w-full h-14 bg-primary text-white font-bold rounded-xl shadow-xl shadow-primary/20 hover:bg-primary-dark transition-all flex items-center justify-center gap-3"
                 >
@@ -185,10 +185,10 @@ const ContactPage: React.FC = () => {
               <span className="material-symbols-outlined">location_on</span>
             </div>
             <h5 className="font-bold text-slate-900 dark:text-white">Our Headquarters</h5>
-            <p className="text-xs text-slate-500">Miramar, Florida, USA</p>
-            <a 
-              href="https://maps.google.com/?q=3190+South+State+Road+7+Suite+5+Miramar+FL+33023" 
-              target="_blank" 
+            <p className="text-xs text-slate-500">3190 S State Road 7, Suite 5 Miramar, Florida 33023</p>
+            <a
+              href="https://maps.google.com/?q=3190+South+State+Road+7+Suite+5+Miramar+FL+33023"
+              target="_blank"
               rel="noopener noreferrer"
               className="mt-4 text-[10px] font-black uppercase tracking-widest text-primary hover:underline"
             >

@@ -1,7 +1,14 @@
-
-import React from 'react';
+import React, { useRef } from 'react';
 
 const SignagePage: React.FC = () => {
+  // Referencia para la sección de Hardware
+  const hardwareSectionRef = useRef<HTMLDivElement>(null);
+
+  // Función para realizar el scroll suave
+  const scrollToHardware = () => {
+    hardwareSectionRef.current?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <div className="bg-white dark:bg-slate-950 min-h-screen">
       {/* Hero Section */}
@@ -23,18 +30,15 @@ const SignagePage: React.FC = () => {
             A centralized solution that allows companies to manage purchasing, inventory, logistics, and sales analytics from a unified system, creating a solid foundation for growth.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <button className="flex items-center justify-center rounded-lg h-12 px-8 bg-primary-light text-white text-base font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-500/20 hover:-translate-y-0.5">
-              Start Your Project
-            </button>
-            <button className="flex items-center justify-center rounded-lg h-12 px-8 bg-white/10 backdrop-blur-md border border-white/20 text-white text-base font-bold hover:bg-white/20 transition-colors">
+            <button onClick={scrollToHardware} className="flex items-center justify-center rounded-lg h-12 px-8 bg-primary-light text-white text-base font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-500/20 hover:-translate-y-0.5">
               View Hardware
             </button>
           </div>
         </div>
       </section>
 
-      {/* Versatile Hardware Technologies */}
-      <section className="py-24 px-6 md:px-10 max-w-[1440px] mx-auto text-center">
+      {/* Versatile Hardware Technologies - Se añade la referencia ref */}
+      <section ref={hardwareSectionRef} className="py-24 px-6 md:px-10 max-w-[1440px] mx-auto text-center">
         <div className="max-w-3xl mx-auto mb-16">
           <h2 className="text-slate-900 dark:text-white text-3xl md:text-4xl font-display font-bold mb-4">Versatile Hardware Technologies</h2>
           <p className="text-slate-500 dark:text-slate-400">From massive video walls to intimate projection mapping, we have the hardware to match your vision.</p>
@@ -107,10 +111,6 @@ const SignagePage: React.FC = () => {
                   </li>
                 ))}
               </ul>
-
-              <button className="flex items-center justify-center rounded-lg h-12 px-8 bg-primary-light text-white text-base font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-500/20">
-                Explore Software
-              </button>
             </div>
 
             <div className="relative">
@@ -136,7 +136,7 @@ const SignagePage: React.FC = () => {
           <div className="grid lg:grid-cols-2 gap-20 items-center">
             <div className="relative">
               <div className="aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl relative group">
-                <img src="" className="w-full h-full object-cover" alt="Retail Interaction" />
+                <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop" className="w-full h-full object-cover" alt="Retail Interaction" />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 to-transparent"></div>
 
                 <div className="absolute bottom-8 left-8 flex items-center gap-4 bg-white/10 backdrop-blur-xl border border-white/20 p-4 rounded-2xl text-white">
@@ -212,12 +212,21 @@ const SignagePage: React.FC = () => {
           <h2 className="text-4xl md:text-5xl font-display font-bold mb-6">Ready to Digitalize Your Business?</h2>
           <p className="text-xl text-white/80 max-w-2xl mx-auto mb-12">Get in touch with our expert team to design a custom digital signage solution that fits your space and budget.</p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <button className="bg-white text-primary-light hover:bg-slate-50 px-10 py-4 rounded-lg font-bold transition-all shadow-xl shadow-black/10">
+
+            <a
+              href="https://outlook.office365.com/book/EagleBusiness@eaglebst.com/?ismsaljsauthenabled=true"
+              className="bg-white text-primary-light hover:bg-slate-50 px-10 py-4 rounded-lg font-bold transition-all shadow-xl shadow-black/10"
+            >
               Schedule Consultation
-            </button>
-            <button className="bg-transparent text-white border-2 border-white hover:bg-white/10 px-10 py-4 rounded-lg font-bold transition-all">
-              Contact Sales
-            </button>
+            </a>
+
+            <a
+              href="https://eagle-business-technology-wilber.vercel.app/#contact"
+              className="bg-transparent text-white border-2 border-white hover:bg-white/10 px-10 py-4 rounded-lg font-bold transition-all"
+            >
+              <span className="material-symbols-outlined text-sm">call</span> Contact Sales
+            </a>
+
           </div>
         </div>
       </section>

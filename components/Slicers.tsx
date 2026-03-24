@@ -1,7 +1,14 @@
-
-import React from 'react';
+import React, { useRef } from 'react';
 
 const SlicersPage: React.FC = () => {
+  // Referencia para la sección Eagle slicers solutions
+  const eagleSolutionsRef = useRef<HTMLDivElement>(null);
+
+  // Función para manejar el scroll suave
+  const scrollToSolutions = () => {
+    eagleSolutionsRef.current?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <div className="bg-white dark:bg-slate-950 min-h-screen">
       {/* Hero Section */}
@@ -19,11 +26,12 @@ const SlicersPage: React.FC = () => {
                 Line Kolossal is the top of the range among commercial meat slicers produced by Manconi and it perfectly expresses the dualism tradition-innovation, which is necessary to be always contemporary: the strength coming from a long experience and the ability to look forward.
               </p>
               <div className="flex flex-wrap gap-4 pt-4">
-                <button className="flex items-center justify-center rounded-lg h-12 px-8 bg-primary-light text-white text-base font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-500/20 hover:-translate-y-0.5">
-                  Request Consultation <span className="material-symbols-outlined ml-2 text-sm">arrow_forward</span>
-                </button>
-                <button className="flex items-center justify-center rounded-lg h-12 px-8 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white text-base font-bold hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors shadow-sm">
-                  View Demo
+                {/* Botón con función de scroll añadida */}
+                <button
+                  onClick={scrollToSolutions}
+                  className="flex items-center justify-center rounded-lg h-12 px-8 bg-primary-light text-white text-base font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-500/20 hover:-translate-y-0.5"
+                >
+                  Explore Models <span className="material-symbols-outlined ml-2 text-sm">arrow_forward</span>
                 </button>
               </div>
             </div>
@@ -137,8 +145,8 @@ const SlicersPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Featured Models */}
-      <section className="py-24 bg-slate-50 dark:bg-slate-900/50">
+      {/* Featured Models - AÑADIDA LA REF AQUÍ */}
+      <section ref={eagleSolutionsRef} className="py-24 bg-slate-50 dark:bg-slate-900/50">
         <div className="max-w-[1440px] mx-auto px-6 md:px-10">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-display font-bold text-slate-900 dark:text-white mb-4">Eagle slicers solutions</h2>
@@ -261,10 +269,6 @@ const SlicersPage: React.FC = () => {
                       </div>
                     ))}
                   </div>
-
-                  {/* <button className="w-full py-3 bg-white dark:bg-slate-800 border border-primary-light text-primary-light text-sm font-bold rounded-lg hover:bg-primary-light hover:text-white transition-all">
-                    View Specs
-                  </button> */}
                 </div>
               </div>
             ))}
@@ -273,16 +277,19 @@ const SlicersPage: React.FC = () => {
       </section>
 
       {/* Ready to Upgrade Section */}
-      <section className="py-24 text-center px-6">
-        <h2 className="text-3xl md:text-4xl font-display font-bold text-slate-900 dark:text-white mb-6">Ready to upgrade your slicing capabilities?</h2>
-        <p className="text-slate-500 dark:text-slate-400 mb-12 max-w-2xl mx-auto">Contact our specialists today to find the perfect Kolossal model for your business needs.</p>
-        <div className="flex flex-col sm:flex-row justify-center gap-4">
-          <button className="h-14 px-10 bg-primary-light text-white font-bold rounded-xl shadow-xl shadow-blue-500/20 hover:bg-blue-700 transition-all flex items-center justify-center gap-2">
-            <span className="material-symbols-outlined">call</span> Contact Sales
-          </button>
-          <button className="h-14 px-10 bg-white dark:bg-slate-800 text-slate-900 dark:text-white border border-slate-200 dark:border-slate-700 font-bold rounded-xl hover:bg-slate-50 transition-all flex items-center justify-center gap-2">
-            <span className="material-symbols-outlined">download</span> Download Full Catalog
-          </button>
+      <section className="py-24 bg-slate-900 relative overflow-hidden">
+        <div className="absolute top-0 left-0 w-full h-full opacity-10 bg-grid-pattern bg-[size:3rem_3rem]"></div>
+        <div className="max-w-[1440px] mx-auto px-6 md:px-10 text-center text-white relative z-10">
+          <h2 className="text-4xl md:text-5xl font-display font-bold mb-6">Ready to upgrade your slicing capabilities?</h2>
+          <p className="text-xl text-slate-400 max-w-2xl mx-auto mb-12">Contact our specialists today to find the perfect Kolossal model for your business needs.</p>
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <a
+              href="https://eagle-business-technology-wilber.vercel.app/#contact"
+              className="inline-flex items-center justify-center bg-primary-light text-white hover:bg-blue-700 px-10 py-4 rounded-lg font-bold transition-all shadow-xl shadow-blue-500/20 hover:-translate-y-0.5"
+            >
+              Contact Sale
+            </a>
+          </div>
         </div>
       </section>
     </div>

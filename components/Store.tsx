@@ -1,7 +1,16 @@
-
-import React from 'react';
+import React, { useRef } from 'react';
 
 const VoicePage: React.FC = () => {
+  // Referencias para el scroll
+  const digitalSignageRef = useRef<HTMLDivElement>(null);
+  const eagleVoiceRef = useRef<HTMLDivElement>(null);
+  const wifiMarketingRef = useRef<HTMLDivElement>(null);
+
+  // Función de scroll suave
+  const scrollToSection = (ref: React.RefObject<HTMLDivElement>) => {
+    ref.current?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <div className="bg-white dark:bg-slate-950 min-h-screen">
       {/* Hero Section */}
@@ -12,14 +21,31 @@ const VoicePage: React.FC = () => {
               The right solution <br /> for your business
             </h1>
             <p className="text-slate-500 dark:text-slate-400 text-lg font-normal leading-relaxed max-w-xl">
-              Eagle Business Technology arises from the need of a pro-vider of complex solutions presented in a sensible way and a reasonable price, with the intention of providing cor-rect solution to this need in 2016 a group of professionals meet in different areas with
+              Eagle Business Technology arises from the need of a provider of complex solutions presented in a sensible way and a reasonable price, with the intention of providing correct solution to this need in 2016 a group of professionals meet in different areas with
             </p>
             <div className="flex flex-wrap gap-4 pt-4">
-              <button className="flex items-center justify-center rounded-lg h-12 px-8 bg-primary-light text-white text-base font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-500/20 hover:-translate-y-0.5">
-                Get a Consultation
+              {/* Botón 1: Digital Signage */}
+              <button
+                onClick={() => scrollToSection(digitalSignageRef)}
+                className="flex items-center justify-center rounded-lg h-12 px-8 bg-primary-light text-white text-base font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-500/20 hover:-translate-y-0.5"
+              >
+                Digital Signage
               </button>
-              <button className="flex items-center justify-center rounded-lg h-12 px-8 bg-blue-50 dark:bg-slate-900 text-primary-light dark:text-blue-400 text-base font-bold hover:bg-blue-100 dark:hover:bg-slate-800 transition-colors">
-                View Hardware
+
+              {/* Botón 2: Eagle Voice */}
+              <button
+                onClick={() => scrollToSection(eagleVoiceRef)}
+                className="flex items-center justify-center rounded-lg h-12 px-8 bg-blue-50 dark:bg-slate-900 text-primary-light dark:text-blue-400 text-base font-bold hover:bg-blue-100 dark:hover:bg-slate-800 transition-colors"
+              >
+                Eagle voice
+              </button>
+
+              {/* Botón 3: WiFi Marketing (Nuevo Azul Cian/Teal) */}
+              <button
+                onClick={() => scrollToSection(wifiMarketingRef)}
+                className="flex items-center justify-center rounded-lg h-12 px-8 bg-cyan-50 dark:bg-cyan-950/30 text-cyan-600 dark:text-cyan-400 text-base font-bold hover:bg-cyan-100 dark:hover:bg-cyan-900/40 transition-colors border border-cyan-100/50 dark:border-cyan-800/30"
+              >
+                WiFi Marketing
               </button>
             </div>
           </div>
@@ -59,16 +85,15 @@ const VoicePage: React.FC = () => {
         </div>
       </section>
 
-      {/* Hosted PBX Platform */}
-      <section className="py-24 px-6 md:px-10 max-w-[1440px] mx-auto">
+      {/* Digital Signage Section */}
+      <section ref={digitalSignageRef} className="py-24 px-6 md:px-10 max-w-[1440px] mx-auto">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="space-y-6">
             <div className="w-10 h-10 bg-blue-50 dark:bg-blue-900/20 rounded-lg flex items-center justify-center text-primary-light">
               <span className="material-symbols-outlined">settings_input_component</span>
             </div>
             <h2 className="text-3xl md:text-4xl font-display font-bold text-slate-900 dark:text-white">Eagle Digital Signage</h2>
-            <p className="text-slate-600 dark:text-slate-400 font-bold text-sm">Digital signage is a creative and versatile way to
-              increase messaging and engage customers and guests within your business.</p>
+            <p className="text-slate-600 dark:text-slate-400 font-bold text-sm">Digital signage is a creative and versatile way to increase messaging and engage customers and guests within your business.</p>
             <p className="text-slate-500 dark:text-slate-400 leading-relaxed">
               Digital signage is a creative and versatile way to increase messaging and engage customers and guests within your business. Digital signage, sometimes called electronic signage, refers to display technologies like LED walls (or video walls), projection and LCD monitors to vividly display webpages, social media stream and news, videos, directions, restaurant menus, retail special sales, marketing messages or digital images.
             </p>
@@ -93,8 +118,8 @@ const VoicePage: React.FC = () => {
         </div>
       </section>
 
-      {/* CloudPhone Mobility */}
-      <section className="py-24 bg-slate-50 dark:bg-slate-900/50">
+      {/* Eagle Voice Section */}
+      <section ref={eagleVoiceRef} className="py-24 bg-slate-50 dark:bg-slate-900/50">
         <div className="max-w-[1440px] mx-auto px-6 md:px-10">
           <div className="grid lg:grid-cols-2 gap-20 items-center">
             <div className="order-2 lg:order-1 relative">
@@ -129,11 +154,11 @@ const VoicePage: React.FC = () => {
         </div>
       </section>
 
-      {/* Hotel Phone Systems */}
-      <section className="py-24 px-6 md:px-10 max-w-[1440px] mx-auto">
+      {/* WiFi Marketing Section */}
+      <section ref={wifiMarketingRef} className="py-24 px-6 md:px-10 max-w-[1440px] mx-auto">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="space-y-6">
-            <div className="w-10 h-10 bg-blue-50 dark:bg-blue-900/20 rounded-lg flex items-center justify-center text-primary-light">
+            <div className="w-10 h-10 bg-cyan-50 dark:bg-cyan-900/20 rounded-lg flex items-center justify-center text-cyan-600">
               <span className="material-symbols-outlined">hotel</span>
             </div>
             <h2 className="text-3xl md:text-4xl font-display font-bold text-slate-900 dark:text-white">WiFi Marketing</h2>
@@ -143,14 +168,12 @@ const VoicePage: React.FC = () => {
             </p>
             <ul className="space-y-4 pt-4">
               {[
-                {
-                  icon: 'alarm', text: 'Delight your guests with a perfect WiFi experience'
-                },
+                { icon: 'alarm', text: 'Delight your guests with a perfect WiFi experience' },
                 { icon: 'cleaning_services', text: 'Tap into your most powerful source of marketing data' },
                 { icon: 'receipt_long', text: 'Get more repeat visits with personalised messaging' }
               ].map((item, i) => (
                 <li key={i} className="flex items-center gap-3 text-sm text-slate-700 dark:text-slate-300">
-                  <span className="material-symbols-outlined text-primary-light text-xl">{item.icon}</span>
+                  <span className="material-symbols-outlined text-cyan-600 text-xl">{item.icon}</span>
                   {item.text}
                 </li>
               ))}
@@ -158,13 +181,12 @@ const VoicePage: React.FC = () => {
           </div>
           <div className="relative">
             <div className="rounded-3xl overflow-hidden shadow-2xl">
-              <img src="/wifi-m.png" className="w-full" alt="Hotel Reception" />
+              <img src="/wifi-m.png" className="w-full" alt="WiFi Marketing" />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Management & Monitoring Tools */}
       <section className="py-24 bg-slate-50 dark:bg-slate-950">
         <div className="max-w-[1440px] mx-auto px-6 md:px-10 text-center">
           <h2 className="text-3xl md:text-4xl font-display font-bold text-slate-900 dark:text-white mb-4">A great business comes from the great idea</h2>
@@ -190,51 +212,24 @@ const VoicePage: React.FC = () => {
         </div>
       </section>
 
-      {/* Eaglebst UC Series */}
-      {/* <section className="py-24 px-6 md:px-10 max-w-[1440px] mx-auto">
-        <div className="flex justify-between items-end mb-12">
-          <div>
-            <h2 className="text-3xl font-display font-bold text-slate-900 dark:text-white mb-2">Eaglebst UC Series</h2>
-            <p className="text-slate-500">Premium HD IP Phones designed for modern business.</p>
-          </div>
-          <button className="text-primary-light font-bold text-sm flex items-center gap-1 hover:gap-2 transition-all">
-            View all models <span className="material-symbols-outlined text-sm">arrow_forward</span>
-          </button>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {[
-            { title: 'Eagle UC-900', desc: 'Entry-level Gigabit IP Phone with color screen. Perfect for general office use.', tags: ['HD Voice', '2 Lines'], img: 'https://images.unsplash.com/photo-1534536281715-e28d76689b4d?q=80&w=2070&auto=format&fit=crop' },
-            { title: 'Eagle UC-2000', desc: 'Executive phone with large touch screen and built-in Bluetooth/Wi-Fi.', tags: ['Touch Screen', '16 Lines'], img: 'https://images.unsplash.com/photo-1520923179270-e0344d2d48c8?q=80&w=2071&auto=format&fit=crop' },
-            { title: 'Eagle Conference', desc: 'Premium conference phone with 360-degree pickup for meeting rooms.', tags: ['360° Audio', 'Android OS'], img: 'https://images.unsplash.com/photo-1505373877841-8d25f7d46678?q=80&w=2012&auto=format&fit=crop' }
-          ].map((item, idx) => (
-            <div key={idx} className="bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-100 dark:border-slate-800 shadow-sm">
-              <div className="aspect-[4/3] bg-slate-50 dark:bg-slate-800 p-6 flex items-center justify-center">
-                <img src={item.img} alt={item.title} className="max-h-full object-contain mix-blend-multiply dark:mix-blend-normal rounded-lg shadow-sm" />
-              </div>
-              <div className="p-8 text-center">
-                <h4 className="text-xl font-display font-bold text-slate-900 dark:text-white mb-2">{item.title}</h4>
-                <p className="text-xs text-slate-500 mb-6 leading-relaxed">{item.desc}</p>
-                <div className="flex justify-center gap-2">
-                  {item.tags.map(tag => (
-                    <span key={tag} className="px-3 py-1 bg-slate-50 dark:bg-slate-800 rounded-full text-[10px] font-bold text-slate-400">{tag}</span>
-                  ))}
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section> */}
-
       {/* Final CTA */}
       <section className="py-24 bg-slate-950 text-center relative overflow-hidden">
         <div className="max-w-[1440px] mx-auto px-6 md:px-10 relative z-10">
-          <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-6">Ready to upgrade your communication infrastructure?</h2>
-          <p className="text-slate-400 text-lg mb-12 max-w-2xl mx-auto">Scalable from 2 to 2,000 agents. Get a custom quote tailored to your business needs today.</p>
+          <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-6">
+            Ready to upgrade your communication infrastructure?
+          </h2>
+          <p className="text-slate-400 text-lg mb-12 max-w-2xl mx-auto">
+            Scalable from 2 to 2,000 agents. Get a custom quote tailored to your business needs today.
+          </p>
           <div className="flex flex-col items-center gap-6">
-            <button className="bg-primary-light text-white hover:bg-blue-700 px-12 py-4 rounded-lg font-bold transition-all shadow-xl shadow-blue-500/20">
+            <a
+              href="https://outlook.office365.com/book/EagleBusiness@eaglebst.com/?ismsaljsauthenabled=true"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center bg-primary-light text-white hover:bg-blue-700 px-12 py-4 rounded-lg font-bold transition-all shadow-xl shadow-blue-500/20 hover:-translate-y-0.5"
+            >
               Request Quote
-            </button>
+            </a>
             <p className="text-slate-500 text-xs">No credit card required for consultation.</p>
           </div>
         </div>

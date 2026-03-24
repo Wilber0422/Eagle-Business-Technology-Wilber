@@ -311,12 +311,21 @@ const EslPage: React.FC = () => {
           <h2 className="text-4xl md:text-5xl font-display font-bold mb-6">Ready to modernize your store?</h2>
           <p className="text-xl text-slate-400 max-w-2xl mx-auto mb-12">Join thousands of retailers who have switched to Eagle ESL for better efficiency and customer experience.</p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <button className="bg-primary-light text-white hover:bg-blue-700 px-10 py-4 rounded-lg font-bold transition-all shadow-xl shadow-blue-500/20">
+
+            <a
+              href="https://outlook.office365.com/book/EagleBusiness@eaglebst.com/?ismsaljsauthenabled=true"
+              className="inline-flex items-center justify-center bg-primary-light text-white hover:bg-blue-700 px-10 py-4 rounded-lg font-bold transition-all shadow-xl shadow-blue-500/20 hover:-translate-y-0.5"
+            >
               Request Quote
-            </button>
-            <button className="bg-transparent text-white border border-white/20 hover:bg-white/10 px-10 py-4 rounded-lg font-bold transition-all">
-              Contact Support
-            </button>
+            </a>
+
+            <a
+              href="https://eagle-business-technology-wilber.vercel.app/#contact"
+              className="inline-flex items-center justify-center bg-white dark:bg-slate-900 text-slate-900 dark:text-white border border-slate-200 dark:border-slate-800 px-10 py-4 rounded-lg font-bold hover:bg-slate-50 transition-all shadow-sm gap-2"
+            >
+              <span className="material-symbols-outlined text-sm">call</span> Contact Us
+            </a>
+
           </div>
         </div>
       </section>

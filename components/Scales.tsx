@@ -17,6 +17,14 @@ const ScalesPage: React.FC = () => {
   const [filter, setFilter] = useState<string>('Retail');
   const [typeFilter, setTypeFilter] = useState<string>('All');
 
+  // Función para el scroll suave hacia la sección de productos
+  const scrollToProducts = () => {
+    const section = document.getElementById('product-grid-section');
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   // Base de datos de productos
   const allScales: Product[] = [
     {
@@ -83,7 +91,10 @@ const ScalesPage: React.FC = () => {
               Integrate your scales directly with your PC-based POS system! With the advanced PC capabilities of BRAND scales, you can elevate and optimize your business productivity and revenue. The scales below offer fast and accurate label printing and precise weight measurements.
             </p>
             <div className="flex flex-wrap gap-4 pt-4">
-              <button className="flex items-center justify-center rounded-lg h-12 px-8 bg-primary-light text-white text-base font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-500/20 hover:-translate-y-0.5">
+              <button
+                onClick={scrollToProducts}
+                className="flex items-center justify-center rounded-lg h-12 px-8 bg-primary-light text-white text-base font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-500/20 hover:-translate-y-0.5"
+              >
                 Explore Models
               </button>
             </div>
@@ -145,8 +156,8 @@ const ScalesPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Built for Your Industry (Main Filter) */}
-      <section className="py-24 px-6 md:px-10 max-w-[1440px] mx-auto">
+      {/* Built for Your Industry (Main Filter) - Added ID for Scroll */}
+      <section id="product-grid-section" className="py-24 px-6 md:px-10 max-w-[1440px] mx-auto">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
           <div className="flex flex-col gap-2">
             <span className="text-primary-light font-bold text-xs uppercase tracking-widest">Scales Solutions</span>
@@ -192,14 +203,12 @@ const ScalesPage: React.FC = () => {
       </section>
 
       {/* Final CTA */}
-      {/* Final CTA con Enlace Directo */}
       <section className="py-24 bg-white dark:bg-slate-950 border-t border-slate-100 dark:border-slate-800">
         <div className="max-w-[1440px] mx-auto px-6 md:px-10 text-center">
           <h2 className="text-4xl md:text-5xl font-display font-bold text-slate-900 dark:text-white mb-6">Ready to Upgrade Your Business?</h2>
           <p className="text-slate-500 dark:text-slate-400 text-lg max-w-2xl mx-auto mb-12">Every business is unique. Contact our sales team for a free consultation or demonstration to find the best fit for your business model.</p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
 
-            {/* OPCIÓN CON A HREF: Apunta al ID 'contact' de tu página principal */}
             <a
               href="https://eagle-business-technology-wilber.vercel.app/#contact"
               className="inline-flex items-center justify-center bg-primary-light text-white hover:bg-blue-700 px-10 py-4 rounded-lg font-bold transition-all shadow-xl shadow-blue-500/20 hover:-translate-y-0.5"
@@ -207,7 +216,6 @@ const ScalesPage: React.FC = () => {
               Get Free Consultation
             </a>
 
-            {/* Botón de Llamada Directa */}
             <a
               href="tel:9544001777"
               className="inline-flex items-center justify-center bg-white dark:bg-slate-900 text-slate-900 dark:text-white border border-slate-200 dark:border-slate-800 px-10 py-4 rounded-lg font-bold hover:bg-slate-50 transition-all shadow-sm gap-2"
