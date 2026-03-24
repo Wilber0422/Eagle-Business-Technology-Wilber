@@ -1,9 +1,16 @@
-
 import React, { useState } from 'react';
 import { Page } from '../types';
 
 const WrappersPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'automatic' | 'manual'>('automatic');
+
+  // Función para realizar el scroll suave hacia la sección de modelos
+  const scrollToModels = () => {
+    const section = document.getElementById('modelos-section');
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   return (
     <div className="bg-white dark:bg-slate-950 min-h-screen">
@@ -22,11 +29,12 @@ const WrappersPage: React.FC = () => {
                 Integrated Weighing, Labeling & Packaging. Streamline your food processing operations with Eagle’s advanced wrapper solutions designed for speed and precision.
               </p>
               <div className="flex flex-wrap gap-4 pt-4">
-                <button className="flex items-center justify-center rounded-lg h-12 px-8 bg-primary-light text-white text-base font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-500/20 hover:-translate-y-0.5">
+                {/* Botón con el evento onClick añadido */}
+                <button
+                  onClick={scrollToModels}
+                  className="flex items-center justify-center rounded-lg h-12 px-8 bg-primary-light text-white text-base font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-500/20 hover:-translate-y-0.5"
+                >
                   Explore Models
-                </button>
-                <button className="flex items-center justify-center rounded-lg h-12 px-8 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white text-base font-bold hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors shadow-sm">
-                  View Specs
                 </button>
               </div>
             </div>
@@ -75,7 +83,7 @@ const WrappersPage: React.FC = () => {
       </section>
 
       {/* Our Wrapper Models */}
-      <section className="py-24 bg-slate-50 dark:bg-slate-900/50">
+      <section id="modelos-section" className="py-24 bg-slate-50 dark:bg-slate-900/50">
         <div className="max-w-[1440px] mx-auto px-6 md:px-10">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
             <div className="max-w-xl">
@@ -181,7 +189,7 @@ const WrappersPage: React.FC = () => {
                 {
                   id: Page.HandWrapper,
                   title: 'Hand Wrapper',
-                  img: 'https://eaglebst.com/wp-content/uploads/2022/12/Hand-Wrapper.png', // Placeholder for Hand Wrapper
+                  img: 'https://eaglebst.com/wp-content/uploads/2022/12/Hand-Wrapper.png',
                   desc: 'A Hand Wrapper tabletop weigh-seal-label system that improves productivity and operational efficiency of sales counters.',
                   features: ['Tabletop Design', 'Integrated Labeling', 'Efficient Workflow']
                 }
@@ -320,17 +328,33 @@ const WrappersPage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
+      {/* CTA Section */}
       <section className="py-24 bg-primary-light">
         <div className="max-w-[1440px] mx-auto px-6 md:px-10 text-center text-white">
           <h2 className="text-4xl md:text-5xl font-display font-bold mb-6">Ready to Optimize Your Line?</h2>
-          <p className="text-xl text-white/80 max-w-2xl mx-auto mb-12">Get a free consultation with our packaging engineers. We'll calculate your potential savings and recommend the perfect model for your volume.</p>
+          <p className="text-xl text-white/80 max-w-2xl mx-auto mb-12">
+            Get a free consultation with our packaging engineers. We'll calculate your potential savings and recommend the perfect model for your volume.
+          </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <button className="bg-white text-primary-light hover:bg-slate-50 px-10 py-4 rounded-lg font-bold transition-all shadow-xl shadow-black/10">
+
+            {/* Botón: Request a Quote (Abre en pestaña nueva por ser link externo) */}
+            <a
+              href="https://outlook.office365.com/book/EagleBusiness@eaglebst.com/?ismsaljsauthenabled=true"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-white text-primary-light hover:bg-slate-50 px-10 py-4 rounded-lg font-bold transition-all shadow-xl shadow-black/10 flex items-center justify-center"
+            >
               Request a Quote
-            </button>
-            <button className="bg-transparent text-white border-2 border-white hover:bg-white/10 px-10 py-4 rounded-lg font-bold transition-all">
+            </a>
+
+            {/* Botón: Contact Sales (Ir a sección interna del sitio) */}
+            <a
+              href="https://eagle-business-technology-wilber.vercel.app/#contact"
+              className="bg-transparent text-white border-2 border-white hover:bg-white/10 px-10 py-4 rounded-lg font-bold transition-all flex items-center justify-center"
+            >
               Contact Sales
-            </button>
+            </a>
+
           </div>
         </div>
       </section>

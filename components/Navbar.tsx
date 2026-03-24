@@ -13,6 +13,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
 
   const navigate = (page: Page) => {
     window.location.hash = page;
+    onNavigate(page);
     setIsMenuOpen(false);
   };
 
