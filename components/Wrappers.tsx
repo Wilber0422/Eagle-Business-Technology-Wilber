@@ -30,12 +30,12 @@ const WrappersPage: React.FC = () => {
               </p>
               <div className="flex flex-wrap gap-4 pt-4">
                 {/* Botón con el evento onClick añadido */}
-                <button
+                {/* <button
                   onClick={scrollToModels}
                   className="flex items-center justify-center rounded-lg h-12 px-8 bg-primary-light text-white text-base font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-500/20 hover:-translate-y-0.5"
                 >
                   Explore Models
-                </button>
+                </button> */}
               </div>
             </div>
             <div className="relative">
@@ -45,13 +45,13 @@ const WrappersPage: React.FC = () => {
                   className="w-full h-full object-contain"
                   alt="Wrapper AW-5600ATII"
                 />
-                <div className="absolute bottom-4 left-4 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md px-4 py-3 rounded-xl border border-slate-100 dark:border-slate-700 flex items-center gap-3 shadow-lg">
+                {/* <div className="absolute bottom-4 left-4 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md px-4 py-3 rounded-xl border border-slate-100 dark:border-slate-700 flex items-center gap-3 shadow-lg">
                   <span className="material-symbols-outlined text-green-500">verified</span>
                   <div>
                     <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">High Speed</p>
                     <p className="text-xs font-bold text-slate-900 dark:text-white">Up to 35 ppm</p>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
