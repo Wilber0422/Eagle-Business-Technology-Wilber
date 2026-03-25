@@ -19,9 +19,9 @@ const WrappersPage: React.FC = () => {
         <div className="px-6 md:px-10 lg:px-20 max-w-[1440px] mx-auto relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div className="flex flex-col gap-6 text-left">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900/30 w-fit">
+              {/* <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900/30 w-fit">
                 <span className="text-primary-light font-bold text-[10px] uppercase tracking-wider">New Generation Wrappers</span>
-              </div>
+              </div> */}
               <h1 className="text-slate-900 dark:text-white font-display text-5xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight">
                 Efficiency,<br /><span className="text-primary-light">Wrapped.</span>
               </h1>
@@ -245,12 +245,11 @@ const WrappersPage: React.FC = () => {
           <h2 className="text-slate-900 dark:text-white text-3xl md:text-4xl font-display font-bold mb-4">Industry Applications</h2>
           <p className="text-slate-500 dark:text-slate-400">Specialized settings for every department ensure your product is preserved perfectly.</p>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {[
             { title: 'Fresh Meats', icon: 'restaurant', img: 'https://media.istockphoto.com/id/1212824120/photo/assortment-of-meat-and-seafood.jpg?s=612x612&w=0&k=20&c=U_wNgPDs2CeWuOPEj0Hts1btABGM3gL4ftjficNvJZM=' },
             { title: 'Fruits & Veg', icon: 'nutrition', img: 'https://images.unsplash.com/photo-1610348725531-843dff563e2c?q=80&w=2070&auto=format&fit=crop' },
-            { title: 'Fish & Seafood', icon: 'set_meal', img: 'https://nutritionsource.hsph.harvard.edu/wp-content/uploads/2024/11/AdobeStock_368767489.jpeg' },
-            { title: 'Cheeses', icon: 'lunch_dining', img: 'https://mcd-landings-q-static.appmcdonalds.com/uploads-quality/featured_Tile_Mobile_ad909f4648.jpg' }
+            { title: 'Fish & Seafood', icon: 'set_meal', img: 'https://nutritionsource.hsph.harvard.edu/wp-content/uploads/2024/11/AdobeStock_368767489.jpeg' }
           ].map((app, idx) => (
             <div key={idx} className="relative h-[400px] rounded-2xl overflow-hidden group shadow-lg cursor-pointer">
               <img src={app.img} alt={app.title} className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
@@ -265,7 +264,7 @@ const WrappersPage: React.FC = () => {
       </section>
 
       {/* Engineered for Precision */}
-      <section className="py-24 bg-slate-50 dark:bg-slate-950 border-y border-slate-100 dark:border-slate-800 overflow-hidden">
+      {/* <section className="py-24 bg-slate-50 dark:bg-slate-950 border-y border-slate-100 dark:border-slate-800 overflow-hidden">
         <div className="max-w-[1440px] mx-auto px-6 md:px-10">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="flex flex-col gap-8">
@@ -325,7 +324,7 @@ const WrappersPage: React.FC = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Section */}
       <section className="py-24 bg-primary-light">

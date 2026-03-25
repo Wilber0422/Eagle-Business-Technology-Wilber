@@ -59,10 +59,10 @@ const LandingPage: React.FC<LandingPageProps> = ({ onNavigate }) => {
         <div className="px-6 md:px-10 lg:px-20 max-w-[1440px] mx-auto relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div className="flex flex-col gap-6 text-left">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm w-fit">
+              {/* <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm w-fit">
                 <span className="flex h-2 w-2 rounded-full bg-secondary"></span>
                 <span className="text-slate-600 dark:text-slate-400 font-bold text-xs uppercase tracking-wide">Eagle Business Technology</span>
-              </div>
+              </div> */}
               <h1 className="text-slate-900 dark:text-white font-display text-4xl md:text-4xl lg:text-5xl font-bold leading-[1.05] tracking-tight">
                 Leading Provider of <span className="text-primary-light bg-clip-text bg-gradient-to-r from-primary to-secondary">Business Technologies</span>
               </h1>
@@ -70,16 +70,16 @@ const LandingPage: React.FC<LandingPageProps> = ({ onNavigate }) => {
                 Eagle Business Technology provides a flexible platform to promote your products and get them in front of your customers for purchase.
               </p>
               <div className="flex flex-wrap gap-4 pt-4">
-                <button onClick={() => onNavigate(Page.About)} className="flex items-center justify-center gap-2 rounded-full h-12 px-8 bg-primary-light text-white text-base font-semibold hover:bg-primary-dark transition-all shadow-xl shadow-primary/20 hover:-translate-y-1">
+                {/* <button onClick={() => onNavigate(Page.About)} className="flex items-center justify-center gap-2 rounded-full h-12 px-8 bg-primary-light text-white text-base font-semibold hover:bg-primary-dark transition-all shadow-xl shadow-primary/20 hover:-translate-y-1">
                   Explore More Solutions
-                </button>
+                </button> */}
               </div>
             </div>
             <div className="relative lg:h-full flex items-center justify-center">
               <div className="absolute w-[110%] h-[110%] bg-gradient-to-br from-primary/10 to-secondary/10 blur-[80px] rounded-full -z-10"></div>
               <div className="relative w-full rounded-2xl overflow-hidden shadow-2xl shadow-slate-900/10 border-4 border-white dark:border-slate-800 bg-white dark:bg-slate-900">
                 <div className="aspect-[4/3] bg-cover bg-center transition-transform duration-700 hover:scale-105" style={{ backgroundImage: "url('https://eaglebst.com/wp-content/uploads/2023/01/lamp-post-new.jpeg')" }}></div>
-                <div className="absolute bottom-6 right-6 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md p-4 rounded-xl shadow-lg border border-slate-100 dark:border-slate-800 flex items-center gap-4">
+                {/* <div className="absolute bottom-6 right-6 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md p-4 rounded-xl shadow-lg border border-slate-100 dark:border-slate-800 flex items-center gap-4">
                   <div className="h-12 w-12 bg-green-50 dark:bg-green-900/20 rounded-full flex items-center justify-center text-green-600">
                     <span className="material-symbols-outlined text-2xl">trending_up</span>
                   </div>
@@ -87,7 +87,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ onNavigate }) => {
                     <p className="text-xs text-slate-500 uppercase font-bold tracking-wider">Performance</p>
                     <p className="text-lg font-bold text-slate-900 dark:text-white">+35% Efficiency</p>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
