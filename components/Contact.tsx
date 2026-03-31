@@ -72,10 +72,13 @@ const ContactPage: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="font-bold text-slate-900 dark:text-white mb-1">Visit Us</h4>
-                  <p className="text-slate-500 text-sm leading-relaxed">
-                    3190 South State Road 7 Suite 5<br />
-                    Miramar FL 33023
-                  </p>
+                  <a
+                    href="https://maps.google.com/?q=3190+South+State+Road+7+Suite+5+Miramar+FL+33023"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-slate-500 text-sm hover:text-primary transition-colors"
+                  >3190 South State Road 7 Suite 5<br />
+                    Miramar FL 33023</a>
                 </div>
               </div>
             </div>

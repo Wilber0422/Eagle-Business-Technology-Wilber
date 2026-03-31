@@ -16,10 +16,6 @@ const WifiPage: React.FC = () => {
         <div className="px-6 md:px-10 lg:px-20 max-w-[1440px] mx-auto relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div className="flex flex-col gap-6 text-left">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-900/30 w-fit">
-                <span className="material-symbols-outlined text-primary-light text-sm">campaign</span>
-                <span className="text-primary-light font-bold text-[10px] uppercase tracking-wider">Top of the Range</span>
-              </div>
               <h1 className="text-slate-900 dark:text-white font-display text-5xl md:text-6xl lg:text-6xl font-bold leading-tight tracking-tight">
                 Culinary Excellence Redefined: <span className="text-primary-light">Premium Food Equipment.</span>
               </h1>
@@ -27,18 +23,17 @@ const WifiPage: React.FC = () => {
                 Discover the gold standard in professional machinery with our curated selection. From gear-driven precision to superior hygiene, we provide perfectly balanced solutions for the modern food industry.
               </p>
               <div className="flex flex-wrap gap-4 pt-4">
-                <button
+                {/* <button
                   onClick={scrollToModels}
                   className="flex items-center justify-center rounded-lg h-12 px-8 bg-primary-light text-white text-base font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-500/20 hover:-translate-y-0.5"
                 >
                   Explore Models <span className="material-symbols-outlined ml-2 text-sm">arrow_forward</span>
-                </button>
+                </button> */}
 
-                {/* Botón de Descarga Actualizado */}
                 <a
                   href="/brochure.pdf"
                   download="brochure.pdf"
-                  className="flex items-center justify-center rounded-lg h-12 px-8 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white text-base font-bold hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors shadow-sm"
+                  className="flex items-center justify-center rounded-lg h-12 px-8 bg-primary-light text-white text-base font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-500/20 hover:-translate-y-0.5"
                 >
                   Download Brochure
                 </a>
@@ -99,31 +94,100 @@ const WifiPage: React.FC = () => {
       </section>
 
       {/* Integrations Section */}
-      <section ref={modelsSectionRef} className="py-24 px-6 md:px-10 max-w-[1440px] mx-auto">
-        <div className="flex justify-between items-end mb-12">
-          <div>
-            <h2 className="text-slate-900 dark:text-white text-3xl font-display font-bold mb-2">Featured Models</h2>
-            <p className="text-slate-500 dark:text-slate-400">Vertical slicers with a TC plate are recommended for slicing meat, <br /> while for cold cuts and sausages you can choose either gravity or vertical models.</p>
+      <section id="modelos-section" className="py-24 bg-slate-50 dark:bg-slate-900/50">
+        <div className="max-w-[1440px] mx-auto px-6 md:px-10">
+          {/* Cabecera del Diseño */}
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
+            <div className="max-w-xl">
+              <h2 className="text-slate-900 dark:text-white text-3xl md:text-4xl font-display font-bold mb-4">
+                Featured Models
+              </h2>
+              <p className="text-slate-500 dark:text-slate-400">
+                Vertical slicers with a TC plate are recommended for slicing meat,
+                while for cold cuts and sausages you can choose either gravity or vertical models.
+              </p>
+            </div>
           </div>
-          <button className="text-primary-light font-bold text-sm hover:underline">See all products</button>
-        </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {[
-            { title: 'Chicken Master', img: '/chicken-master.jpeg', icon: 'storefront' },
-            { title: 'Chicken Master 20', img: '/chicken-master-20.jpeg', icon: 'medication' },
-            { title: 'Formula Grill', img: '/formula-grill.png', icon: 'inventory' },
-            { title: 'Kebab VE2', img: '/kebabve2.jpeg', icon: 'devices' }
-          ].map((app, idx) => (
-            <div key={idx} className="relative h-[360px] rounded-2xl overflow-hidden group shadow-lg cursor-pointer">
-              <img src={app.img} alt={app.title} className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/20 to-transparent"></div>
-              <div className="absolute bottom-6 left-6 text-white">
-                <span className="material-symbols-outlined text-primary-light mb-2">{app.icon}</span>
-                <h3 className="text-xl font-bold font-display">{app.title}</h3>
+          {/* Grid de Tarjetas */}
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+            {[
+              {
+                title: 'Chicken Master',
+                img: '/chicken-master.jpeg',
+                desc: 'Descripcion del Producto 1.',
+                features: ['Caracteristica 1', 'Caracteristica 2']
+              },
+              {
+                title: 'Chicken Master 20',
+                img: '/chicken-master-20.jpeg',
+                desc: 'Descripcion del Producto 2.',
+                features: ['Caracteristica 1', 'Caracteristica 2']
+              },
+              {
+                title: 'Formula Grill',
+                img: '/formula-grill.png',
+                desc: 'Descripcion del Producto 3.',
+                features: ['Caracteristica 1', 'Caracteristica 2']
+              },
+              {
+                title: 'Kebab VE2',
+                img: '/kebabve2.jpeg',
+                desc: 'Descripcion del Producto 4.',
+                features: ['Caracteristica 1', 'Caracteristica 2']
+              }
+            ].map((model, idx) => (
+              <div
+                key={idx}
+                className="bg-white dark:bg-slate-900 rounded-2xl overflow-hidden shadow-sm border border-slate-100 dark:border-slate-800 flex flex-col group transition-all"
+              >
+                {/* Contenedor de Imagen */}
+                <div className="aspect-[4/3] bg-slate-50 dark:bg-slate-800 relative overflow-hidden">
+                  <img
+                    src={model.img}
+                    alt={model.title}
+                    className="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-700"
+                  />
+                </div>
+
+                {/* Cuerpo de la Tarjeta */}
+                <div className="p-8 flex flex-col flex-grow">
+                  <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-3 font-display">
+                    {model.title}
+                  </h3>
+                  <p className="text-slate-500 dark:text-slate-400 text-sm mb-6 leading-relaxed">
+                    {model.desc}
+                  </p>
+
+                  {/* Lista de Características */}
+                  <ul className="space-y-3 mb-8">
+                    {model.features.map((f, i) => (
+                      <li key={i} className="flex items-center gap-3 text-xs text-slate-600 dark:text-slate-300">
+                        <span className="text-blue-600 font-bold">✓</span>
+                        {f}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Pie de Sección / Contacto */}
+          <div className="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-100 dark:border-slate-800 shadow-sm flex flex-col md:flex-row items-center justify-between gap-6">
+            <div className="flex items-center gap-4">
+              <div className="w-12 h-12 bg-slate-50 dark:bg-slate-800 rounded-full flex items-center justify-center text-slate-400">
+                <span>ⓘ</span>
+              </div>
+              <div>
+                <h4 className="font-bold text-slate-900 dark:text-white">Titulo footer de Tarjetas</h4>
+                <p className="text-sm text-slate-500">Decripcion footer de Tarjetas.</p>
               </div>
             </div>
-          ))}
+            <button className="px-6 py-2 border border-slate-200 dark:border-slate-800 rounded-lg text-sm font-bold text-slate-600 dark:text-white hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+              titulo boton
+            </button>
+          </div>
         </div>
       </section>
 

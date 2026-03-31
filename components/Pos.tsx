@@ -5,8 +5,8 @@ import React from 'react';
 interface PosProduct {
   id: number;
   name: string;
-  mainCat: 'Retail' | 'Dining' | 'Service';
-  type: 'Quantic' | 'Mobile POS' | 'Self-Service' | 'Kiosk' | 'Accessories';
+  mainCat: 'Retail' | 'Quantic';
+  type: 'Retail' | 'Quantic';
   img: string;
   desc: string;
   icon: string;
@@ -22,6 +22,7 @@ const PosPage: React.FC<PosPageProps> = ({ onNavigate, Page }) => {
   // Estados para el doble filtrado
   const [filter, setFilter] = useState<string>('Retail');
   const [typeFilter, setTypeFilter] = useState<string>('All');
+  const productTypes = ['Retail', 'Quantic',];
 
   // Referencia para el scroll
   const solutionsRef = useRef<HTMLDivElement>(null);
@@ -39,13 +40,13 @@ const PosPage: React.FC<PosPageProps> = ({ onNavigate, Page }) => {
       features: ["Inventory Management", "Customer Loyalty"]
     },
     {
-      id: 2, name: "Quantic Restaurant", mainCat: "Dining", type: "Quantic",
+      id: 2, name: "Quantic Restaurant", mainCat: "Quantic", type: "Quantic",
       icon: "restaurant", img: "https://eaglebst.com/wp-content/uploads/2024/06/Arte-foto-Restaurant-06.png",
       desc: "Comprehensive management software designed to optimize operational efficiency and improve the customer experience.",
       features: ["Dynamic Table Management", "Analysis and Reports"]
     },
     {
-      id: 3, name: "Quantic Food Truck", mainCat: "Dining", type: "Mobile POS",
+      id: 3, name: "Quantic Food Truck", mainCat: "Quantic", type: "Quantic",
       icon: "local_shipping", img: "https://eaglebst.com/wp-content/uploads/2024/06/Fotos-Food-Truck-16.png",
       desc: "Comprehensive point-of-sale solution designed to streamline service in fast food and mobile environments.",
       features: ["Order Management", "Inventory"]
@@ -59,9 +60,6 @@ const PosPage: React.FC<PosPageProps> = ({ onNavigate, Page }) => {
     return matchMain && matchType;
   });
 
-  // Generamos los tipos de hardware disponibles dinámicamente según la industria seleccionada
-  const hardwareTypes = ['All', ...Array.from(new Set(allPos.filter(i => i.mainCat === filter).map(i => i.type)))];
-
   return (
     <div className="bg-white dark:bg-slate-950 min-h-screen">
       {/* Hero Section */}
@@ -74,15 +72,6 @@ const PosPage: React.FC<PosPageProps> = ({ onNavigate, Page }) => {
             <p className="text-slate-500 dark:text-slate-400 text-lg font-normal leading-relaxed max-w-xl">
               Utilize one of Eagle Business Technology’s Point-of-Sale solutions to streamline operations at your business. We offer a range of POS solutions to address any number of your business needs.
             </p>
-            <div className="flex flex-wrap gap-4 pt-4">
-              <button
-                onClick={scrollToSolutions}
-                className="flex items-center justify-center rounded-lg h-12 px-8 bg-primary-light text-white text-base font-bold hover:bg-blue-700 transition-all shadow-xl shadow-blue-500/20 hover:-translate-y-0.5"
-              >
-                Explore Models
-              </button>
-              {/* Botón que envía abajo */}
-            </div>
           </div>
           <div className="lg:w-1/2 w-full">
             <div className="relative w-full aspect-[16/10] rounded-3xl shadow-2xl overflow-hidden bg-slate-100 dark:bg-slate-900">
@@ -92,6 +81,7 @@ const PosPage: React.FC<PosPageProps> = ({ onNavigate, Page }) => {
         </div>
       </section>
 
+      {/* Características Secundarias */}
       <section className="py-24 bg-slate-50 dark:bg-slate-900/50">
         <div className="max-w-[1440px] mx-auto px-6 md:px-10">
           <div className="text-center max-w-3xl mx-auto mb-16">
@@ -117,28 +107,27 @@ const PosPage: React.FC<PosPageProps> = ({ onNavigate, Page }) => {
         </div>
       </section>
 
-      {/* Hardware Categories (Secondary Filter) */}
+      {/* Hardware Categories Spacer */}
       <section className="py-20 px-6 md:px-10 border-b border-slate-100 dark:border-slate-800">
         <div className="max-w-[1440px] mx-auto text-center">
-          <h2 className="text-slate-900 dark:text-white text-2xl font-bold font-display mb-8">Hardware Categories</h2>
-          <div className="flex flex-wrap justify-center gap-4">
-            {hardwareTypes.map(type => (
-              <button
+          <div className="text-center mb-12">
+            <h2 className="text-slate-900 dark:text-white text-2xl font-bold font-display mb-8">Hardware Categories</h2>
+            <p className="text-slate-400 text-sm mt-2">Our scales do not operate in isolation. We offer complete integration with ERP systems and management software using industrial protocols.</p>
+          </div>
+          <div className="flex flex-wrap justify-center gap-4 md:gap-8">
+            {productTypes.map(type => (
+              <div
                 key={type}
-                onClick={() => setTypeFilter(type)}
-                className={`transition-all px-6 py-2 rounded-full text-sm font-bold ${typeFilter === type
-                  ? 'bg-primary-light text-white shadow-md scale-105'
-                  : 'text-slate-400 hover:text-slate-900 dark:hover:text-white'
-                  }`}
+                className="px-4 py-2 rounded-full text-sm font-bold text-slate-400 border border-slate-100 dark:border-slate-800"
               >
                 {type}
-              </button>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Industry Solutions (Main Filter) - REFERENCIA DE SCROLL AQUI */}
+      {/* Industry Solutions (Main Filter) */}
       <section ref={solutionsRef} className="py-24 px-6 md:px-10 max-w-[1440px] mx-auto">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
           <div className="flex flex-col gap-2">
@@ -146,12 +135,11 @@ const PosPage: React.FC<PosPageProps> = ({ onNavigate, Page }) => {
             <h2 className="text-slate-900 dark:text-white text-3xl md:text-4xl font-display font-bold">Built for Your Industry</h2>
           </div>
           <div className="flex p-1 bg-slate-100 dark:bg-slate-800 rounded-lg w-fit">
-            {['Retail', 'Dining', 'Service'].map((cat) => (
+            {['Retail', 'Quantic'].map((cat) => (
               <button
                 key={cat}
                 onClick={() => { setFilter(cat); setTypeFilter('All'); scrollToSolutions(); }}
-                className={`px-4 py-1.5 text-xs font-bold rounded-md transition-all ${filter === cat ? 'bg-white dark:bg-slate-700 text-primary-light shadow-sm' : 'text-slate-500 hover:text-slate-700'
-                  }`}
+                className={`px-4 py-1.5 text-xs font-bold rounded-md transition-all ${filter === cat ? 'bg-white dark:bg-slate-700 text-primary-light shadow-sm' : 'text-slate-500 hover:text-slate-700'}`}
               >
                 {cat}
               </button>
@@ -159,22 +147,48 @@ const PosPage: React.FC<PosPageProps> = ({ onNavigate, Page }) => {
           </div>
         </div>
 
-        {/* Dynamic Product Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 min-h-[400px]">
+        {/* Product Grid - Estilo "Wrapper" */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 min-h-[400px]">
           {filteredPos.length > 0 ? (
             filteredPos.map((item) => (
-              <div key={item.id} className="relative h-[450px] rounded-2xl overflow-hidden group shadow-lg animate-in fade-in zoom-in duration-300">
-                <img src={item.img} className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt={item.name} />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent"></div>
-                <div className="absolute bottom-0 left-0 p-8 text-white w-full">
-                  <span className="material-symbols-outlined mb-4 p-2 bg-white/20 backdrop-blur-md rounded-lg">{item.icon}</span>
-                  <div className="text-[10px] uppercase font-bold tracking-widest text-primary-light mb-1">{item.type}</div>
-                  <h3 className="text-2xl font-display font-bold mb-3">{item.name}</h3>
-                  <p className="text-slate-200 text-sm mb-4 leading-relaxed line-clamp-2">{item.desc}</p>
-                  <ul className="text-xs space-y-2 opacity-80">
+              <div
+                key={item.id}
+                className="bg-white dark:bg-slate-900 rounded-2xl overflow-hidden shadow-sm border border-slate-100 dark:border-slate-800 flex flex-col group animate-in fade-in zoom-in duration-300"
+              >
+                {/* Imagen con fondo gris (como Wrappers) */}
+                <div className="aspect-[4/3] bg-slate-50 dark:bg-slate-800 relative overflow-hidden">
+                  <img
+                    src={item.img}
+                    alt={item.name}
+                    className="w-full h-full object-contain p-8 group-hover:scale-105 transition-transform duration-700"
+                  />
+                  <div className="absolute top-4 right-4 bg-primary-light text-white text-[10px] font-bold px-2 py-1 rounded">
+                    {item.type}
+                  </div>
+                </div>
+
+                {/* Contenido de la tarjeta */}
+                <div className="p-8 flex flex-col flex-grow">
+                  <div className="flex items-center gap-3 mb-3">
+                    <span className="material-symbols-outlined text-primary-light text-xl">
+                      {item.icon}
+                    </span>
+                    <h3 className="text-xl font-bold text-slate-900 dark:text-white font-display">
+                      {item.name}
+                    </h3>
+                  </div>
+
+                  <p className="text-slate-500 dark:text-slate-400 text-sm mb-6 leading-relaxed">
+                    {item.desc}
+                  </p>
+
+                  {/* Lista de Features con Check Circle */}
+                  <ul className="space-y-3 mb-8">
                     {item.features.map((feat, i) => (
-                      <li key={i} className="flex items-center gap-2">
-                        <span className="material-symbols-outlined text-[14px] text-green-400">check_circle</span>
+                      <li key={i} className="flex items-center gap-3 text-xs text-slate-600 dark:text-slate-300">
+                        <span className="material-symbols-outlined text-[16px] text-primary-light">
+                          check_circle
+                        </span>
                         {feat}
                       </li>
                     ))}
@@ -198,21 +212,18 @@ const PosPage: React.FC<PosPageProps> = ({ onNavigate, Page }) => {
           <h2 className="text-4xl md:text-5xl font-display font-bold text-slate-900 dark:text-white mb-6">Ready to Upgrade Your Business?</h2>
           <p className="text-slate-500 dark:text-slate-400 text-lg max-w-2xl mx-auto mb-12">Every business is unique. Contact our sales team for a free consultation or demonstration to find the best fit for your business model.</p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-
             <a
               href="https://eagle-business-technology-wilber.vercel.app/#contact"
               className="inline-flex items-center justify-center bg-primary-light text-white hover:bg-blue-700 px-10 py-4 rounded-lg font-bold transition-all shadow-xl shadow-blue-500/20 hover:-translate-y-0.5"
             >
               Get Free Consultation
             </a>
-
             <a
               href="tel:9544001777"
               className="inline-flex items-center justify-center bg-white dark:bg-slate-900 text-slate-900 dark:text-white border border-slate-200 dark:border-slate-800 px-10 py-4 rounded-lg font-bold hover:bg-slate-50 transition-all shadow-sm gap-2"
             >
               <span className="material-symbols-outlined text-sm">call</span> Call (954)-400-1777
             </a>
-
           </div>
         </div>
       </section>

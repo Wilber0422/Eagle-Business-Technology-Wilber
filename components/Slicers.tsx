@@ -27,12 +27,12 @@ const SlicersPage: React.FC = () => {
               </p>
               <div className="flex flex-wrap gap-4 pt-4">
                 {/* Botón con función de scroll añadida */}
-                <button
+                {/* <button
                   onClick={scrollToSolutions}
                   className="flex items-center justify-center rounded-lg h-12 px-8 bg-primary-light text-white text-base font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-500/20 hover:-translate-y-0.5"
                 >
                   Explore Models <span className="material-symbols-outlined ml-2 text-sm">arrow_forward</span>
-                </button>
+                </button> */}
               </div>
             </div>
             <div className="relative">
@@ -146,132 +146,129 @@ const SlicersPage: React.FC = () => {
       </section>
 
       {/* Featured Models - AÑADIDA LA REF AQUÍ */}
-      <section ref={eagleSolutionsRef} className="py-24 bg-slate-50 dark:bg-slate-900/50">
+      <section id="modelos-section" className="py-24 bg-slate-50 dark:bg-slate-900/50">
         <div className="max-w-[1440px] mx-auto px-6 md:px-10">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-slate-900 dark:text-white mb-4">Eagle slicers solutions</h2>
+          {/* Cabecera del Diseño */}
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
+            <div className="max-w-xl">
+              <h2 className="text-slate-900 dark:text-white text-3xl md:text-4xl font-display font-bold mb-4">
+                Eagle slicers solutions
+              </h2>
+              <p className="text-slate-500 dark:text-slate-400">
+                Descripcion
+              </p>
+            </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* Grid de Tarjetas */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             {[
               {
                 title: 'Bizerba GSP H',
-                subtitle: 'Manual gravity slicer with Ceraclean® coating for smooth gliding and maximum hygiene.',
                 img: '/bizerba-gsp.jpeg',
-                specs: {
-                  'Certified ': 'Dirt-repellent surface, easy deep cleaning.',
-                  'Total Security': 'Automatic stop when guard opens.',
-                  'Precision Cutting': 'Precise adjustment for perfect slices.'
-                }
+                desc: 'Manual gravity slicer with Ceraclean® coating for smooth gliding and maximum hygiene.',
+                features: ['Dirt-repellent surface, easy deep cleaning.', 'Automatic stop when guard opens.', 'Precise adjustment for perfect slices.']
               },
               {
-                tag: 'Chop cutter',
                 title: 'Bizerba Manual gravity slicer GSP H',
-                subtitle: 'Premium range manual gravity slicer that sets global standards in ergonomics, hygiene and safety for cutting various products.',
                 img: '/bizerba-gsp-h.jpeg',
-                specs: {
-                  'Ergonomic Design': 'Inclined carriage facilitates effortless slicing.',
-                  'Simplified Hygiene': 'Drainage system enables quick cleaning.',
-                  'Safety and Versatility': 'Motor and safety status indicator.'
-                }
+                desc: 'Premium range manual gravity slicer that sets global standards in ergonomics, hygiene and safety for cutting various products.',
+                features: ['Inclined carriage facilitates effortless slicing.', 'Drainage system enables quick cleaning.', 'Motor and safety status indicator.']
               },
               {
                 title: 'Bizerba Professional meat tenderizer',
-                subtitle: 'Professional high-performance equipment designed to transform difficult cuts into tender, high-value commercial products with total precision.',
                 img: '/bizerba-professional.png',
-                specs: {
-                  'Functional Duality:': 'Switchable attachments for uniform strips.',
-                  'Hygiene and Durability': 'Durable, easy-clean stainless steel construction.',
-                  'Product Optimization': 'Enhanced texture, faster marinating, cooking.'
-                }
+                desc: 'Professional high-performance equipment designed to transform difficult cuts into tender, high-value commercial products with total precision.',
+                features: ['Switchable attachments for uniform strips.', 'Durable, easy-clean stainless steel construction.', 'Enhanced texture, faster marinating, cooking.']
               },
               {
                 title: 'Bizerba VSP Manual',
-                subtitle: 'Premium vertical slicer designed for retail and food service environments that demand high performance, rigorous hygiene and superior precision.',
                 img: '/bizerba-vsp-us.jpeg',
-                specs: {
-                  'Emotion Technology': 'Intelligent drive saves energy, noise.',
-                  'Hygiene and Maintenance': 'Tool-free disassembly, dishwasher-safe design.',
-                  'SmarterSlicing': 'Intelligent assistance ensures operator safety.'
-                }
+                desc: 'Premium vertical slicer designed for retail and food service environments that demand high performance, rigorous hygiene and superior precision.',
+                features: ['Intelligent drive saves energy, noise.', 'Tool-free disassembly, dishwasher-safe design.', 'Intelligent assistance ensures operator safety.']
               },
               {
                 title: 'Icone 700',
-                subtitle: 'High-performance chop slicers designed for intensive use, capable of processing bone-in meats, sausages, and fish with total precision.',
                 img: '/icone-700.png',
-                specs: {
-                  'Hydraulic Advance System': 'Reliable power in cold, humid.',
-                  'Customizable Cut': 'Adjustable thickness, versatile feeding options.',
-                  'Hygiene and Durability': '304 stainless, high-pressure, automatic return.'
-                }
+                desc: 'High-performance chop slicers designed for intensive use, capable of processing bone-in meats, sausages, and fish with total precision.',
+                features: ['Reliable power in cold, humid.', 'Adjustable thickness, versatile feeding options.', '304 stainless, high-pressure, automatic return.']
               },
               {
                 title: 'Idrochef 316 touch',
-                subtitle: 'Professional immersion circulator for sous vide cooking that guarantees absolute thermal precision and high-quality culinary results.',
                 img: '/Idrochef-316-touch.jpeg',
-                specs: {
-                  'Precision Control': '3.5-inch touchscreen, precise temperature control.',
-                  'Great Operational Capacity': 'High-volume cooking, 70-liter capacity.',
-                  'Smart Management': 'Wi-Fi control, cloud data traceability.'
-                }
+                desc: 'Professional immersion circulator for sous vide cooking that guarantees absolute thermal precision and high-quality culinary results.',
+                features: ['3.5-inch touchscreen, precise temperature control.', 'High-volume cooking, 70-liter capacity.', 'Wi-Fi control, cloud data traceability.']
               },
               {
                 title: 'PHX 60',
-                subtitle: 'High-performance vertical hydraulic sausage stuffers, manufactured entirely in stainless steel to guarantee durability and maximum hygiene.',
                 img: '/phx-60.png',
-                specs: {
-                  'Precision and Control': 'Flexible speed, automatic mass decompression.',
-                  'Robust Construction': '100% stainless, IP65, closed hydraulic.',
-                  'Operational Efficiency': 'Mobile with quick piston return.'
-                }
+                desc: 'High-performance vertical hydraulic sausage stuffers, manufactured entirely in stainless steel to guarantee durability and maximum hygiene.',
+                features: ['Flexible speed, automatic mass decompression.', '100% stainless, IP65, closed hydraulic.', 'Mobile with quick piston return.']
               },
               {
                 title: 'SX 350',
-                subtitle: 'Professional band saws made entirely of stainless steel, designed to offer precise cuts and maximum hygiene in demanding environments.',
                 img: '/sx-350.png',
-                specs: {
-                  'High Rigidity Construction': 'Thick 18/10 stainless, stable, durable.',
-                  'Simplified Maintenance': 'Automatic tensioners, mobile cart, deep cleaning.',
-                  'Protection and Security': 'IP65 protection, water-resistant electricals.'
-                }
+                desc: 'Professional band saws made entirely of stainless steel, designed to offer precise cuts and maximum hygiene in demanding environments.',
+                features: ['Thick 18/10 stainless, stable, durable.', 'Automatic tensioners, mobile cart, deep cleaning.', 'IP65 protection, water-resistant electricals.']
               },
               {
                 title: 'SX-400',
-                subtitle: 'High-end industrial band saw, designed to offer maximum safety and superior performance in cutting meats and frozen products.',
                 img: '/sx-400.png',
-                specs: {
-                  'Ergonomic and Robust Design': '304 stainless, sliding table, precise handling.',
-                  'Efficient Maintenance': 'Tilting table, automatic tensioners, quick cleaning.',
-                  'Industrial Protection': 'Fully sealed, water-resistant electrical components.'
-                }
+                desc: 'High-end industrial band saw, designed to offer maximum safety and superior performance in cutting meats and frozen products.',
+                features: ['304 stainless, sliding table, precise handling.', 'Tilting table, automatic tensioners, quick cleaning.', 'Fully sealed, water-resistant electrical components.']
               }
-            ].map((model, idx) => (
-              <div key={idx} className="bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-100 dark:border-slate-800 flex flex-col group">
-                <div className="aspect-square bg-slate-50 dark:bg-slate-800 p-8 flex items-center justify-center relative">
-                  {model.tag && (
-                    <div className="absolute top-4 left-4 bg-primary text-white text-[10px] font-bold px-3 py-1 rounded">
-                      {model.tag}
-                    </div>
-                  )}
-                  <img src={model.img} alt={model.title} className="w-full h-full object-contain mix-blend-multiply dark:mix-blend-normal group-hover:scale-105 transition-transform duration-700" />
-                </div>
-                <div className="p-8 flex flex-col flex-grow">
-                  <div className="mb-6">
-                    <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-1 font-display">{model.title}</h3>
-                    <p className="text-xs text-slate-500 dark:text-slate-400 font-medium">{model.subtitle}</p>
-                  </div>
 
-                  <div className="space-y-3 mb-8">
-                    {Object.entries(model.specs).map(([label, val]) => (
-                      <div key={label} className="flex justify-between items-center text-xs border-b border-slate-50 dark:border-slate-800 pb-2">
-                        <span className="text-slate-400">{label}</span>
-                        <span className="font-bold text-slate-700 dark:text-slate-300">{val}</span>
-                      </div>
+            ].map((model, idx) => (
+              <div
+                key={idx}
+                className="bg-white dark:bg-slate-900 rounded-2xl overflow-hidden shadow-sm border border-slate-100 dark:border-slate-800 flex flex-col group transition-all"
+              >
+                {/* Contenedor de Imagen */}
+                <div className="aspect-[4/3] bg-slate-50 dark:bg-slate-800 relative overflow-hidden">
+                  <img
+                    src={model.img}
+                    alt={model.title}
+                    className="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-700"
+                  />
+                </div>
+
+                {/* Cuerpo de la Tarjeta */}
+                <div className="p-8 flex flex-col flex-grow">
+                  <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-3 font-display">
+                    {model.title}
+                  </h3>
+                  <p className="text-slate-500 dark:text-slate-400 text-sm mb-6 leading-relaxed">
+                    {model.desc}
+                  </p>
+
+                  {/* Lista de Características */}
+                  <ul className="space-y-3 mb-8">
+                    {model.features.map((f, i) => (
+                      <li key={i} className="flex items-center gap-3 text-xs text-slate-600 dark:text-slate-300">
+                        <span className="text-blue-600 font-bold">✓</span>
+                        {f}
+                      </li>
                     ))}
-                  </div>
+                  </ul>
                 </div>
               </div>
             ))}
+          </div>
+
+          {/* Pie de Sección / Contacto */}
+          <div className="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-100 dark:border-slate-800 shadow-sm flex flex-col md:flex-row items-center justify-between gap-6">
+            <div className="flex items-center gap-4">
+              <div className="w-12 h-12 bg-slate-50 dark:bg-slate-800 rounded-full flex items-center justify-center text-slate-400">
+                <span>ⓘ</span>
+              </div>
+              <div>
+                <h4 className="font-bold text-slate-900 dark:text-white">Titulo footer de Tarjetas</h4>
+                <p className="text-sm text-slate-500">Decripcion footer de Tarjetas.</p>
+              </div>
+            </div>
+            <button className="px-6 py-2 border border-slate-200 dark:border-slate-800 rounded-lg text-sm font-bold text-slate-600 dark:text-white hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+              titulo boton
+            </button>
           </div>
         </div>
       </section>
