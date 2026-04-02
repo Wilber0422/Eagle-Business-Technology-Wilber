@@ -1,12 +1,14 @@
-import { useState, useRef } from 'react';
+'use client';
+
+import { useState, useRef, useEffect } from 'react';
 import React from 'react';
 
 // Interfaces para tipado de TypeScript
 interface PosProduct {
   id: number;
   name: string;
-  mainCat: 'Retail' | 'Quantic';
-  type: 'Retail' | 'Quantic';
+  mainCat: 'Retail' | 'Hospitality';
+  type: 'Retail' | 'Hospitality';
   img: string;
   desc: string;
   icon: string;
@@ -22,7 +24,23 @@ const PosPage: React.FC<PosPageProps> = ({ onNavigate, Page }) => {
   // Estados para el doble filtrado
   const [filter, setFilter] = useState<string>('Retail');
   const [typeFilter, setTypeFilter] = useState<string>('All');
-  const productTypes = ['Retail', 'Quantic',];
+  const productTypes = ['Retail', 'Hospitality',];
+
+  // --- LÓGICA DEL CARRUSEL DE LA VALLA (BILLBOARD) ---
+  const [billboardIndex, setBillboardIndex] = useState(0);
+  const billboardSlides = [
+    "/bg-pos.jpg",
+    "https://eaglebst.com/wp-content/uploads/2024/06/Arte-foto-Restaurant-06.png",
+    "https://eaglebst.com/wp-content/uploads/2024/06/Fotos-Food-Truck-16.png",
+    "https://eaglebst.com/wp-content/uploads/2023/03/digital-scales-b-11.jpg"
+  ];
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setBillboardIndex((prev) => (prev === billboardSlides.length - 1 ? 0 : prev + 1));
+    }, 5000);
+    return () => clearInterval(timer);
+  }, [billboardSlides.length]);
 
   // Referencia para el scroll
   const solutionsRef = useRef<HTMLDivElement>(null);
@@ -34,20 +52,50 @@ const PosPage: React.FC<PosPageProps> = ({ onNavigate, Page }) => {
   // Base de datos de soluciones POS
   const allPos: PosProduct[] = [
     {
-      id: 1, name: "Quantic Retail", mainCat: "Retail", type: "Quantic",
+      id: 1, name: "Retail", mainCat: "Retail", type: "Retail",
       icon: "shopping_bag", img: "/quantic-retail.png",
       desc: "Robust point-of-sale platform designed to optimize business operations and provide total control of retail stores.",
       features: ["Inventory Management", "Customer Loyalty"]
     },
     {
-      id: 2, name: "Quantic Restaurant", mainCat: "Quantic", type: "Quantic",
+      id: 2, name: "Grocery", mainCat: "Retail", type: "Retail",
+      icon: "shopping_bag", img: "/quantic-grocery.png",
+      desc: "Robust point-of-sale platform designed to optimize business operations and provide total control of retail stores.",
+      features: ["Inventory Management", "Customer Loyalty"]
+    },
+    {
+      id: 3, name: " Liquor Store", mainCat: "Retail", type: "Retail",
+      icon: "shopping_bag", img: "/quantic-liquor.png",
+      desc: "Robust point-of-sale platform designed to optimize business operations and provide total control of retail stores.",
+      features: ["Inventory Management", "Customer Loyalty"]
+    },
+    {
+      id: 4, name: "SIM ", mainCat: "Retail", type: "Retail",
+      icon: "shopping_bag", img: "/quantic-sim.png",
+      desc: "Robust point-of-sale platform designed to optimize business operations and provide total control of retail stores.",
+      features: ["Inventory Management", "Customer Loyalty"]
+    },
+    {
+      id: 5, name: "Quanty", mainCat: "Retail", type: "Retail",
+      icon: "shopping_bag", img: "/quantic-quantic-retaeil.png",
+      desc: "Robust point-of-sale platform designed to optimize business operations and provide total control of retail stores.",
+      features: ["Inventory Management", "Customer Loyalty"]
+    },
+    {
+      id: 6, name: "Quantic Restaurant", mainCat: "Hospitality", type: "Hospitality",
       icon: "restaurant", img: "https://eaglebst.com/wp-content/uploads/2024/06/Arte-foto-Restaurant-06.png",
       desc: "Comprehensive management software designed to optimize operational efficiency and improve the customer experience.",
       features: ["Dynamic Table Management", "Analysis and Reports"]
     },
     {
-      id: 3, name: "Quantic Food Truck", mainCat: "Quantic", type: "Quantic",
+      id: 7, name: "Quantic Food Truck", mainCat: "Hospitality", type: "Hospitality",
       icon: "local_shipping", img: "https://eaglebst.com/wp-content/uploads/2024/06/Fotos-Food-Truck-16.png",
+      desc: "Comprehensive point-of-sale solution designed to streamline service in fast food and mobile environments.",
+      features: ["Order Management", "Inventory"]
+    },
+    {
+      id: 8, name: "Quantic Order Kiosk", mainCat: "Hospitality", type: "Hospitality",
+      icon: "local_shipping", img: "/quantic-kiosk.png",
       desc: "Comprehensive point-of-sale solution designed to streamline service in fast food and mobile environments.",
       features: ["Order Management", "Inventory"]
     }
@@ -62,21 +110,80 @@ const PosPage: React.FC<PosPageProps> = ({ onNavigate, Page }) => {
 
   return (
     <div className="bg-white dark:bg-slate-950 min-h-screen">
-      {/* Hero Section */}
-      <section className="relative px-6 py-16 md:px-10 md:py-24 max-w-[1440px] mx-auto overflow-hidden">
-        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
-          <div className="flex flex-col gap-6 lg:w-1/2">
-            <h1 className="text-slate-900 dark:text-white text-5xl md:text-6xl font-display font-bold leading-tight tracking-tight">
-              More Than Just a Register. <span className="text-primary-light">The Heart of Your Business.</span>
-            </h1>
-            <p className="text-slate-500 dark:text-slate-400 text-lg font-normal leading-relaxed max-w-xl">
-              Utilize one of Eagle Business Technology’s Point-of-Sale solutions to streamline operations at your business. We offer a range of POS solutions to address any number of your business needs.
-            </p>
-          </div>
-          <div className="lg:w-1/2 w-full">
-            <div className="relative w-full aspect-[16/10] rounded-3xl shadow-2xl overflow-hidden bg-slate-100 dark:bg-slate-900">
-              <img src="/bg-pos.jpg" alt="POS Terminal" className="w-full h-full object-cover" />
+      {/* Estilos para la Valla Publicitaria */}
+      <style jsx global>{`
+        .billboard-container {
+          position: relative;
+          width: 100%;
+          max-width: 650px;
+          filter: drop-shadow(0 50px 30px rgb(0 0 0 / 0.2));
+        }
+        .billboard-mockup {
+          width: 100%;
+          height: auto;
+          display: block;
+          position: relative;
+          z-index: 9;
+          pointer-events: none;
+        }
+        .billboard-content-area {
+          position: absolute;
+          top: 23.5%;
+          left: 12.5%;
+          width: 75.2%;
+          height: 42.2%;
+          z-index: 10;
+          overflow: hidden;
+          transform: skewY(-4.2deg) rotateX(2deg);
+          background: #000;
+        }
+      `}</style>
+
+      {/* Hero Section con Billboard */}
+      <section className="relative w-full pt-8 pb-6 lg:pt-2 lg:pb-3 overflow-hidden bg-slate-50 dark:bg-slate-950">
+        <div className="absolute inset-0 bg-grid-pattern [mask-image:linear-gradient(to_bottom,white,transparent)] bg-[size:2rem_2rem] opacity-40 dark:opacity-10"></div>
+        <div className="px-6 md:px-10 lg:px-20 max-w-[1440px] mx-auto relative z-10">
+          <div className="grid lg:grid-cols-2 gap-8 items-center">
+
+            {/* Texto Izquierda */}
+            <div className="flex flex-col gap-6 text-left">
+              <h1 className="text-slate-900 dark:text-white text-5xl md:text-6xl font-display font-bold leading-[1.1] tracking-tight">
+                More Than Just a Register. <span className="text-primary-light bg-clip-text bg-gradient-to-r from-primary to-secondary"> The Heart of Your Business. </span>
+              </h1>
+              <p className="text-slate-500 dark:text-slate-400 text-lg md:text-xl font-normal leading-relaxed max-w-xl">
+                Utilize one of Eagle Business Technology’s Point-of-Sale solutions to streamline operations at your business. We offer a range of POS solutions to address any number of your business needs.
+              </p>
             </div>
+
+            {/* Billboard Derecha */}
+            <div className="relative flex items-center justify-center">
+              <div className="absolute w-[120%] h-[120%] bg-gradient-to-br from-primary/10 to-secondary/10 blur-[100px] rounded-full -z-10"></div>
+
+              <div className="billboard-container translate-y-4">
+                <img
+                  src="/cartel-luminoso-realista.png"
+                  alt="Billboard Mockup"
+                  className="billboard-mockup"
+                />
+
+                <div className="billboard-content-area">
+                  {billboardSlides.map((slide, index) => (
+                    <div
+                      key={index}
+                      className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${index === billboardIndex ? "opacity-100" : "opacity-0"}`}
+                    >
+                      <img
+                        src={slide}
+                        alt="POS Content"
+                        className="w-full h-full object-cover"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
@@ -108,26 +215,26 @@ const PosPage: React.FC<PosPageProps> = ({ onNavigate, Page }) => {
       </section>
 
       {/* Hardware Categories Spacer */}
-      <section className="py-20 px-6 md:px-10 border-b border-slate-100 dark:border-slate-800">
-        <div className="max-w-[1440px] mx-auto text-center">
-          <div className="text-center mb-12">
-            <h2 className="text-slate-900 dark:text-white text-2xl font-bold font-display mb-8">Hardware Categories</h2>
-            <p className="text-slate-400 text-sm mt-2">Our scales do not operate in isolation. We offer complete integration with ERP systems and management software using industrial protocols.</p>
+      {/* <section className="py-20 px-6 md:px-10 border-b border-slate-100 dark:border-slate-800">
+          <div className="max-w-[1440px] mx-auto text-center">
+            <div className="text-center mb-12">
+              <h2 className="text-slate-900 dark:text-white text-2xl font-bold font-display mb-8">Hardware Categories</h2>
+              <p className="text-slate-400 text-sm mt-2">Our scales do not operate in isolation. We offer complete integration with ERP systems and management software using industrial protocols.</p>
+            </div>
+            <div className="flex flex-wrap justify-center gap-4 md:gap-8">
+              {productTypes.map(type => (
+                <div
+                  key={type}
+                  className="px-4 py-2 rounded-full text-sm font-bold text-slate-400 border border-slate-100 dark:border-slate-800"
+                >
+                  {type}
+                </div>
+              ))}
+            </div>
           </div>
-          <div className="flex flex-wrap justify-center gap-4 md:gap-8">
-            {productTypes.map(type => (
-              <div
-                key={type}
-                className="px-4 py-2 rounded-full text-sm font-bold text-slate-400 border border-slate-100 dark:border-slate-800"
-              >
-                {type}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+        </section> */}
 
-      {/* Industry Solutions (Main Filter) */}
+      {/* Industry Solutions */}
       <section ref={solutionsRef} className="py-24 px-6 md:px-10 max-w-[1440px] mx-auto">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
           <div className="flex flex-col gap-2">
@@ -135,7 +242,7 @@ const PosPage: React.FC<PosPageProps> = ({ onNavigate, Page }) => {
             <h2 className="text-slate-900 dark:text-white text-3xl md:text-4xl font-display font-bold">Built for Your Industry</h2>
           </div>
           <div className="flex p-1 bg-slate-100 dark:bg-slate-800 rounded-lg w-fit">
-            {['Retail', 'Quantic'].map((cat) => (
+            {['Retail', 'Hospitality'].map((cat) => (
               <button
                 key={cat}
                 onClick={() => { setFilter(cat); setTypeFilter('All'); scrollToSolutions(); }}
@@ -147,15 +254,14 @@ const PosPage: React.FC<PosPageProps> = ({ onNavigate, Page }) => {
           </div>
         </div>
 
-        {/* Product Grid - Estilo "Wrapper" */}
+        {/* Product Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 min-h-[400px]">
           {filteredPos.length > 0 ? (
             filteredPos.map((item) => (
               <div
                 key={item.id}
-                className="bg-white dark:bg-slate-900 rounded-2xl overflow-hidden shadow-sm border border-slate-100 dark:border-slate-800 flex flex-col group animate-in fade-in zoom-in duration-300"
+                className="bg-white dark:bg-slate-900 rounded-2xl overflow-hidden shadow-sm border border-slate-100 dark:border-slate-800 flex flex-col group animate-in fade-in zoom-in duration-300 hover:shadow-md transition-all cursor-pointer"
               >
-                {/* Imagen con fondo gris (como Wrappers) */}
                 <div className="aspect-[4/3] bg-slate-50 dark:bg-slate-800 relative overflow-hidden">
                   <img
                     src={item.img}
@@ -167,7 +273,6 @@ const PosPage: React.FC<PosPageProps> = ({ onNavigate, Page }) => {
                   </div>
                 </div>
 
-                {/* Contenido de la tarjeta */}
                 <div className="p-8 flex flex-col flex-grow">
                   <div className="flex items-center gap-3 mb-3">
                     <span className="material-symbols-outlined text-primary-light text-xl">
@@ -182,7 +287,6 @@ const PosPage: React.FC<PosPageProps> = ({ onNavigate, Page }) => {
                     {item.desc}
                   </p>
 
-                  {/* Lista de Features con Check Circle */}
                   <ul className="space-y-3 mb-8">
                     {item.features.map((feat, i) => (
                       <li key={i} className="flex items-center gap-3 text-xs text-slate-600 dark:text-slate-300">
@@ -193,6 +297,11 @@ const PosPage: React.FC<PosPageProps> = ({ onNavigate, Page }) => {
                       </li>
                     ))}
                   </ul>
+
+                  <button className="mt-auto flex items-center gap-2 text-primary-light font-bold text-sm hover:gap-3 transition-all">
+                    View Full Specs
+                    <span className="material-symbols-outlined text-sm">arrow_forward</span>
+                  </button>
                 </div>
               </div>
             ))

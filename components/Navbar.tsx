@@ -23,8 +23,8 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
     { id: Page.Pos, title: 'POS', icon: '/icono-pos.png', color: 'text-blue-500', bg: 'bg-blue-50 dark:bg-blue-900/20', desc: 'Fast, reliable, and intuitive Point of Sale systems designed for efficiency.' },
     { id: Page.PosSIM, title: 'SIM POS', icon: '/icono-pos.png', color: 'text-emerald-500', bg: 'bg-emerald-50 dark:bg-emerald-900/20', desc: 'Automated price updates and inventory management directly at the shelf.' },
     { id: Page.Business, title: 'Business software solutions', icon: '/icono-business.png', color: 'text-amber-500', bg: 'bg-amber-50 dark:bg-amber-900/20', desc: 'Dynamic communication screens to engage customers and modernize layout.' },
-    { id: Page.Food, title: 'Food Equipment', icon: '/icono-food.png', color: 'text-sky-500', bg: 'bg-sky-50 dark:bg-sky-900/20', desc: 'Turn guest Wi-Fi into a powerful marketing tool to drive loyalty.' },
-    { id: Page.Slicers, title: 'Slicers', icon: '/icono-slicers.png', color: 'text-slate-600', bg: 'bg-slate-100 dark:bg-slate-800', desc: 'High-performance commercial slicers that offer safety and precisio.' },
+    { id: Page.Kitchen, title: 'Kitchen Equipment', icon: '/icono-food.png', color: 'text-sky-500', bg: 'bg-sky-50 dark:bg-sky-900/20', desc: 'Turn guest Wi-Fi into a powerful marketing tool to drive loyalty.' },
+    { id: Page.Food, title: 'Food Equipment', icon: '/icono-slicers.png', color: 'text-slate-600', bg: 'bg-slate-100 dark:bg-slate-800', desc: 'High-performance commercial slicers that offer safety and precisio.' },
     { id: Page.Store, title: 'Store Solutions', icon: '/icono-store.png', color: 'text-indigo-500', bg: 'bg-indigo-50 dark:bg-indigo-900/20', desc: 'Enterprise-grade PBX and communication tools for seamless operations.' }
   ];
 

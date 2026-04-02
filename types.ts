@@ -6,8 +6,7 @@ export enum Page {
   PosSIM = 'possim',
   Store = 'store',
   Business = 'business',
-  Food = 'food',
-  Slicers = 'slicers',
+  Food = 'Food',
   // AiStudio = 'ai-studio',
   Terms = 'erms',
   About = 'about',
@@ -18,7 +17,8 @@ export enum Page {
   Linea470 = 'linea470',
   Scales = 'scales',
   Sg2 = 'Sg2',
-  Ishidawm = 'Ishidawm'
+  Ishidawm = 'Ishidawm',
+  Kitchen = "Kitchen"
 }
 
 export enum ImageSize {

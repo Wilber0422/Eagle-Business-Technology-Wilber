@@ -187,6 +187,43 @@ const VoicePage: React.FC = () => {
         </div>
       </section>
 
+      <section ref={eagleVoiceRef} className="py-24 bg-slate-50 dark:bg-slate-900/50">
+        <div className="max-w-[1440px] mx-auto px-6 md:px-10">
+          <div className="grid lg:grid-cols-2 gap-20 items-center">
+            <div className="order-2 lg:order-1 relative">
+              <div className="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl">
+                <img src="/esl.png" className="w-full h-full object-cover" alt="CloudPhone" />
+              </div>
+            </div>
+            <div className="order-1 lg:order-2 space-y-8">
+              <div className="w-10 h-10 bg-blue-50 dark:bg-blue-900/20 rounded-lg flex items-center justify-center text-primary-light">
+                <span className="material-symbols-outlined">smartphone</span>
+              </div>
+              <h2 className="text-3xl md:text-4xl font-display font-bold text-slate-900 dark:text-white">ESL</h2>
+              <p className="text-slate-600 dark:text-slate-400 font-bold text-sm">Update shelf edge prices instantly in all aisles and departments, eliminating the manual exchange of paper labels.</p>
+              <p className="text-slate-500 dark:text-slate-400 leading-relaxed">
+                Our ESLs are used in industries such as food retail, mobile shops, point-of-sale, home appliances, pharmacy, warehouse, industry, and room signage.
+              </p>
+              <div className="grid sm:grid-cols-2 gap-4">
+                {[
+                  {
+                    icon: 'swap_horiz', title: 'Eagle ESL Solution Highlights', desc: 'Full centralized control and accuracy.'
+                  },
+                  { icon: 'contacts', title: 'How ESL Work? ', desc: ' The display modules use electronic paper or liquid crystal paper to display information on a screen.' },
+                  { icon: 'mic', title: 'Taking the pain out of pricing with digital labels', desc: 'Eagle Electronic Shelf Labels (ESLs) can have an immediate impact on store operations and profitability.' }
+                ].map((f, i) => (
+                  <div key={i} className="bg-white dark:bg-slate-900 p-4 rounded-xl border border-slate-100 dark:border-slate-800 shadow-sm">
+                    <span className="material-symbols-outlined text-primary-light text-xl mb-2">{f.icon}</span>
+                    <h4 className="font-bold text-sm text-slate-900 dark:text-white">{f.title}</h4>
+                    <p className="text-[11px] text-slate-400 mt-1">{f.desc}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="py-24 bg-slate-50 dark:bg-slate-950">
         <div className="max-w-[1440px] mx-auto px-6 md:px-10 text-center">
           <h2 className="text-3xl md:text-4xl font-display font-bold text-slate-900 dark:text-white mb-4">A great business comes from the great idea</h2>

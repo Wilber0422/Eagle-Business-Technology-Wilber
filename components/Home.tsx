@@ -198,8 +198,8 @@ const LandingPage: React.FC<LandingPageProps> = ({ onNavigate }) => {
               { id: Page.Pos, title: 'POS', icon: '/icono-pos.png', desc: 'Fast, reliable, and intuitive Point of Sale systems designed for efficiency.' },
               { id: Page.PosSIM, title: 'SIM POS', icon: '/icono-pos.png', desc: 'Automated price updates and inventory management directly at the shelf.' },
               { id: Page.Business, title: 'Business software solutions', icon: '/icono-business.png', desc: 'Dynamic communication screens to engage customers and modernize layout.' },
-              { id: Page.Food, title: 'Food Equipment', icon: '/icono-food.png', desc: 'Turn guest Wi-Fi into a powerful marketing tool to drive loyalty.' },
-              { id: Page.Slicers, title: 'Slicers', icon: '/icono-slicers.png', desc: 'High-performance commercial slicers that offer safety and precisio.' },
+              { id: Page.Kitchen, title: 'Kitchen Equipment', icon: '/icono-food.png', desc: 'Turn guest Wi-Fi into a powerful marketing tool to drive loyalty.' },
+              { id: Page.Food, title: 'Food Equipment', icon: '/icono-slicers.png', desc: 'High-performance commercial slicers that offer safety and precisio.' },
               { id: Page.Store, title: 'Store Solutions', icon: '/icono-store.png', desc: 'Enterprise-grade PBX and communication tools for seamless operations.' }
             ].map((sol) => (
               <div

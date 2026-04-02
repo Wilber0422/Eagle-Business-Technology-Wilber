@@ -1,10 +1,27 @@
-import React, { useState } from 'react';
+'use client';
+
+import React, { useState, useEffect } from 'react';
 import { Page } from '../types';
 
 const WrappersPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'automatic' | 'manual'>('automatic');
 
-  // Función para realizar el scroll suave hacia la sección de modelos
+  // --- LÓGICA DEL CARRUSEL DE LA VALLA ---
+  const [billboardIndex, setBillboardIndex] = useState(0);
+  const billboardSlides = [
+    "https://eaglebst.com/wp-content/uploads/2023/03/Wrapper-34.jpg",
+    "https://eaglebst.com/wp-content/uploads/2022/12/AW-Ai-Pop.png",
+    "https://www.digisystem.com/es/products/PRD00348/product_file/file/aw5600-2_WP02_01.png",
+    "https://eaglebst.com/wp-content/uploads/2022/12/Hand-Wrapper.png"
+  ];
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setBillboardIndex((prev) => (prev === billboardSlides.length - 1 ? 0 : prev + 1));
+    }, 5000);
+    return () => clearInterval(timer);
+  }, [billboardSlides.length]);
+
   const scrollToModels = () => {
     const section = document.getElementById('modelos-section');
     if (section) {
@@ -14,46 +31,84 @@ const WrappersPage: React.FC = () => {
 
   return (
     <div className="bg-white dark:bg-slate-950 min-h-screen">
-      {/* Hero Section */}
-      <section className="relative w-full pt-16 pb-20 lg:pt-24 lg:pb-32 overflow-hidden bg-slate-50 dark:bg-slate-900/20">
+      {/* Estilos para la Valla Publicitaria */}
+      <style jsx global>{`
+        .billboard-container {
+          position: relative;
+          width: 100%;
+          max-width: 650px;
+          filter: drop-shadow(0 50px 30px rgb(0 0 0 / 0.2));
+        }
+        .billboard-mockup {
+          width: 100%;
+          height: auto;
+          display: block;
+          position: relative;
+          z-index: 9;
+          pointer-events: none;
+        }
+        .billboard-content-area {
+          position: absolute;
+          top: 23.5%;
+          left: 12.5%;
+          width: 75.2%;
+          height: 42.2%;
+          z-index: 10;
+          overflow: hidden;
+          transform: skewY(-4.2deg) rotateX(2deg);
+          background: #000;
+        }
+      `}</style>
+
+      {/* Hero Section - ESPACIADO REDUCIDO (pt-8 pb-12) */}
+      <section className="relative w-full pt-8 pb-6 lg:pt-2 lg:pb-3 overflow-hidden bg-slate-50 dark:bg-slate-950">
+        <div className="absolute inset-0 bg-grid-pattern [mask-image:linear-gradient(to_bottom,white,transparent)] bg-[size:2rem_2rem] opacity-40 dark:opacity-10"></div>
         <div className="px-6 md:px-10 lg:px-20 max-w-[1440px] mx-auto relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-            <div className="flex flex-col gap-6 text-left">
-              {/* <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900/30 w-fit">
-                <span className="text-primary-light font-bold text-[10px] uppercase tracking-wider">New Generation Wrappers</span>
-              </div> */}
-              <h1 className="text-slate-900 dark:text-white font-display text-5xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight">
-                Efficiency,<br /><span className="text-primary-light">Wrapped.</span>
+          <div className="grid lg:grid-cols-2 gap-8 items-center">
+
+            {/* Texto Izquierda */}
+            <div className="flex flex-col gap-4 text-left">
+              <h1 className="text-slate-900 dark:text-white font-display text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight">
+                Efficiency,                <br />
+                <span className="text-primary-light bg-clip-text bg-gradient-to-r from-primary to-secondary">
+                  Wrapped.
+                </span>
               </h1>
-              <p className="text-slate-500 dark:text-slate-400 text-lg md:text-xl font-normal leading-relaxed max-w-xl">
+              <p className="text-slate-600 dark:text-slate-400 text-lg md:text-xl font-normal leading-relaxed max-w-xl">
                 Integrated Weighing, Labeling & Packaging. Streamline your food processing operations with Eagle’s advanced wrapper solutions designed for speed and precision.
               </p>
-              <div className="flex flex-wrap gap-4 pt-4">
-                {/* Botón con el evento onClick añadido */}
-                {/* <button
-                  onClick={scrollToModels}
-                  className="flex items-center justify-center rounded-lg h-12 px-8 bg-primary-light text-white text-base font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-500/20 hover:-translate-y-0.5"
-                >
-                  Explore Models
-                </button> */}
-              </div>
             </div>
-            <div className="relative">
-              <div className="relative w-full aspect-[1.2/1] rounded-3xl overflow-hidden shadow-2xl bg-white dark:bg-slate-800 flex items-center justify-center p-12">
+
+            {/* Mockup Derecha */}
+            <div className="relative flex items-center justify-center">
+              <div className="absolute w-[120%] h-[120%] bg-gradient-to-br from-primary/10 to-secondary/10 blur-[100px] rounded-full -z-10"></div>
+
+              <div className="billboard-container translate-y-4">
                 <img
-                  src="https://eaglebst.com/wp-content/uploads/2023/03/Wrapper-34.jpg"
-                  className="w-full h-full object-contain"
-                  alt="Wrapper AW-5600ATII"
+                  src="/cartel-luminoso-realista.png"
+                  alt="Billboard Mockup"
+                  className="billboard-mockup"
                 />
-                {/* <div className="absolute bottom-4 left-4 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md px-4 py-3 rounded-xl border border-slate-100 dark:border-slate-700 flex items-center gap-3 shadow-lg">
-                  <span className="material-symbols-outlined text-green-500">verified</span>
-                  <div>
-                    <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">High Speed</p>
-                    <p className="text-xs font-bold text-slate-900 dark:text-white">Up to 35 ppm</p>
-                  </div>
-                </div> */}
+
+                <div className="billboard-content-area">
+                  {billboardSlides.map((slide, index) => (
+                    <div
+                      key={index}
+                      className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${index === billboardIndex ? "opacity-100" : "opacity-0"
+                        }`}
+                    >
+                      <img
+                        src={slide}
+                        alt="Content"
+                        className="w-full h-full object-cover"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
+
           </div>
         </div>
       </section>
@@ -263,69 +318,6 @@ const WrappersPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Engineered for Precision */}
-      {/* <section className="py-24 bg-slate-50 dark:bg-slate-950 border-y border-slate-100 dark:border-slate-800 overflow-hidden">
-        <div className="max-w-[1440px] mx-auto px-6 md:px-10">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div className="flex flex-col gap-8">
-              <div>
-                <span className="text-primary-light font-bold text-xs uppercase tracking-widest block mb-2">Technical Excellence</span>
-                <h2 className="text-slate-900 dark:text-white text-3xl md:text-5xl font-display font-bold leading-tight">Engineered for Precision</h2>
-                <p className="text-slate-500 dark:text-slate-400 mt-4 text-lg">Our machines are packed with proprietary sensors and mechanics designed to save you money and headaches.</p>
-              </div>
-
-              <div className="space-y-8">
-                {[
-                  { icon: 'straighten', title: 'Load Height Sensors', desc: 'Automatically detects the height of the product tray, adjusting the wrapping arm in real-time. This prevents crushing of delicate items.' },
-                  { icon: 'layers', title: 'Film Pre-Stretch Technology', desc: 'Our patented roller system stretches the film by up to 50% before application, drastically reducing film consumption.' },
-                  { icon: 'layers', title: 'Linerless Labeling', desc: 'Eliminate label backing waste. Our systems support variable length linerless labels for more information on the pack.' }
-                ].map((tech, idx) => (
-                  <div key={idx} className="flex gap-6">
-                    <div className="w-10 h-10 shrink-0 bg-blue-50 dark:bg-blue-900/20 rounded-xl flex items-center justify-center text-primary-light">
-                      <span className="material-symbols-outlined text-xl">{tech.icon}</span>
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-slate-900 dark:text-white mb-2 font-display">{tech.title}</h4>
-                      <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">{tech.desc}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="relative group">
-              <div className="absolute -inset-4 bg-primary-light/10 blur-3xl rounded-full opacity-50 group-hover:opacity-100 transition-opacity"></div>
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-slate-200 dark:border-slate-800">
-                <img src="https://www.methodsmachine.com/wp-content/uploads/Medical-Machining.jpeg" className="w-full h-full object-cover" alt="Technical detail" />
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 p-6 bg-slate-900/80 backdrop-blur-lg rounded-2xl border border-white/20 text-white shadow-2xl">
-                  <div className="flex justify-between items-center mb-4">
-                    <span className="text-[10px] font-bold tracking-widest text-slate-400">SYSTEM STATUS</span>
-                    <span className="flex h-2 w-2 rounded-full bg-green-500 animate-pulse"></span>
-                  </div>
-                  <div className="space-y-3">
-                    <div className="flex justify-between text-xs">
-                      <span className="text-slate-400">Film Tension</span>
-                      <span className="font-bold text-primary-light">Optimal</span>
-                    </div>
-                    <div className="flex justify-between text-xs">
-                      <span className="text-slate-400">Sensor Calib</span>
-                      <span className="font-bold">100%</span>
-                    </div>
-                    <div className="h-1 w-full bg-slate-700 rounded-full overflow-hidden">
-                      <div className="h-full bg-primary-light w-[88%]"></div>
-                    </div>
-                    <div className="flex justify-between text-xs">
-                      <span className="text-slate-400">Efficiency Rate</span>
-                      <span className="font-bold text-green-400">98.5%</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> */}
-
       {/* CTA Section */}
       <section className="py-24 bg-primary-light">
         <div className="max-w-[1440px] mx-auto px-6 md:px-10 text-center text-white">
@@ -334,8 +326,6 @@ const WrappersPage: React.FC = () => {
             Get a free consultation with our packaging engineers. We'll calculate your potential savings and recommend the perfect model for your volume.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-
-            {/* Botón: Request a Quote (Abre en pestaña nueva por ser link externo) */}
             <a
               href="https://outlook.office365.com/book/EagleBusiness@eaglebst.com/?ismsaljsauthenabled=true"
               target="_blank"
@@ -344,15 +334,12 @@ const WrappersPage: React.FC = () => {
             >
               Request a Quote
             </a>
-
-            {/* Botón: Contact Sales (Ir a sección interna del sitio) */}
             <a
               href="https://eagle-business-technology-wilber.vercel.app/#contact"
               className="bg-transparent text-white border-2 border-white hover:bg-white/10 px-10 py-4 rounded-lg font-bold transition-all flex items-center justify-center"
             >
               Contact Sales
             </a>
-
           </div>
         </div>
       </section>

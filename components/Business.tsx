@@ -29,16 +29,16 @@ const SignagePage: React.FC = () => {
           <p className="text-slate-200 text-lg md:text-xl font-normal leading-relaxed max-w-2xl mx-auto mb-10">
             A centralized solution that allows companies to manage purchasing, inventory, logistics, and sales analytics from a unified system, creating a solid foundation for growth.
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
+          {/* <div className="flex flex-wrap justify-center gap-4">
             <button onClick={scrollToHardware} className="flex items-center justify-center rounded-lg h-12 px-8 bg-primary-light text-white text-base font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-500/20 hover:-translate-y-0.5">
               View Hardware
             </button>
-          </div>
+          </div> */}
         </div>
       </section>
 
       {/* Versatile Hardware Technologies - Se añade la referencia ref */}
-      <section ref={hardwareSectionRef} className="py-24 px-6 md:px-10 max-w-[1440px] mx-auto text-center">
+      {/* <section ref={hardwareSectionRef} className="py-24 px-6 md:px-10 max-w-[1440px] mx-auto text-center">
         <div className="max-w-3xl mx-auto mb-16">
           <h2 className="text-slate-900 dark:text-white text-3xl md:text-4xl font-display font-bold mb-4">Versatile Hardware Technologies</h2>
           <p className="text-slate-500 dark:text-slate-400">From massive video walls to intimate projection mapping, we have the hardware to match your vision.</p>
@@ -79,7 +79,7 @@ const SignagePage: React.FC = () => {
             </div>
           ))}
         </div>
-      </section>
+      </section> */}
 
       {/* Content Management Made Simple */}
       <section className="py-24 bg-slate-50 dark:bg-slate-900/50">
