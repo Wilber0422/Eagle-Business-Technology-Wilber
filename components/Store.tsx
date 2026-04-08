@@ -150,7 +150,7 @@ const VoicePage: React.FC = () => {
       <section ref={eagleVoiceRef} className="py-24 bg-slate-50 dark:bg-slate-900/50">
         <div className="max-w-[1440px] mx-auto px-6 md:px-10">
           <div className="grid lg:grid-cols-2 gap-20 items-center">
-            {/* Contenedor de la Imagen - Modificado para ver imagen completa */}
+            {/* Contenedor de la Imagen - Modificado para  imagen completa */}
             <div className="order-2 lg:order-1 relative">
               <div className="aspect-[5/5] rounded-3xl overflow-hidden shadow-2xl bg-white dark:bg-slate-800 flex items-center justify-center p-4">
                 <img
