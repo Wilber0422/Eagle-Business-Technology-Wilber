@@ -152,7 +152,7 @@ const VoicePage: React.FC = () => {
           <div className="grid lg:grid-cols-2 gap-20 items-center">
             {/* Contenedor de la Imagen - Modificado para  imagen completa */}
             <div className="order-2 lg:order-1 relative">
-              <div className="aspect-[5/5] rounded-3xl overflow-hidden shadow-2xl bg-white dark:bg-slate-800 flex items-center justify-center p-4">
+              <div className="aspect-[5/5] rounded-3xl overflow-hidden dark:bg-slate-800 flex items-center justify-center p-4">
                 <img
                   src="/voice.png"
                   className="w-full h-full object-contain" // Cambiado de object-cover a object-contain
@@ -228,7 +228,7 @@ const VoicePage: React.FC = () => {
 
             {/* Contenedor de Imagen Ajustado */}
             <div className="order-2 lg:order-1 relative">
-              <div className="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl bg-white dark:bg-slate-800 flex items-center justify-center p-4">
+              <div className="aspect-[4/5] rounded-3xl overflow-hidden dark:bg-slate-800 flex items-center justify-center p-4">
                 <img
                   src="/esl.png"
                   className="w-full h-full object-contain" // Cambiado de object-cover a object-contain
