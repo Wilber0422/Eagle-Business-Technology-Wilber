@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 
 const EslPage: React.FC = () => {
@@ -5,54 +7,56 @@ const EslPage: React.FC = () => {
     <div className="bg-white dark:bg-slate-950 min-h-screen">
 
       {/* SECCIÓN MODIFICADA: SIM POS for Grocery (Estilo Imagen Adjunta) */}
-      <section className="relative w-full overflow-hidden bg-[#0055b8]">
+      <section className="relative w-full overflow-hidden bg-[#004a99]">
         {/* Capa de imagen de fondo con efecto azul industrial */}
         <div className="absolute inset-0 z-0">
           <img
             src="/bg-sim.jpg"
-            className="w-full h-full object-cover opacity-20 mix-blend-overlay"
+            className="w-full h-full object-cover opacity-30 mix-blend-overlay"
             alt="Fondo industrial"
           />
+          {/* Overlay gradiente para asegurar legibilidad a la izquierda */}
+          <div className="absolute inset-0 bg-[#004a99]/40 "></div>
         </div>
 
-        <div className="px-6 md:px-10 lg:px-20 max-w-[1440px] mx-auto relative z-10 py-20 lg:py-32">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-24 items-center">
+        <div className="px-6 md:px-10 lg:px-20 max-w-[1440px] mx-auto relative z-10 py-16 lg:py-24">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
 
             {/* Columna de Texto */}
             <div className="flex flex-col gap-6 text-left text-white">
               <div className="flex flex-col gap-2">
-                <span className="text-xs font-bold uppercase tracking-[0.3em] opacity-70">SIM POS</span>
+                <span className="text-xs font-bold uppercase tracking-[0.3em] opacity-80">SIM POS</span>
                 <h1 className="font-display text-4xl md:text-6xl font-bold leading-[1.1] tracking-tight">
-                  SIM POS for <span className="text-white">Grocery.</span>
+                  SIM POS for <span className="text-white">Grocery</span>
                 </h1>
               </div>
 
-              <p className="text-blue-50 text-lg font-medium leading-relaxed max-w-xl opacity-90">
-                Integrated Weighing, Labeling & Packaging. Streamline your food processing operations with Eagle's advanced wrapper solutions designed for speed and precision.
+              <p className="text-blue-50 text-lg font-normal leading-relaxed max-w-xl opacity-90">
+                A modern POS system that connects payment, inventory, pricing, and store operations, designed specifically for independent supermarkets, butcher shops, and specialty stores.
               </p>
 
               <ul className="mt-4 space-y-4">
                 {[
                   'Fast Checkout at Multiple Registers',
-                  'Scale Integration:',
+                  'Scale Integration',
                   'Real-Time Inventory Management',
                   'Promotions Control'
                 ].map((text, i) => (
-                  <li key={i} className="flex items-start gap-3 text-sm font-bold">
-                    <span className="material-symbols-outlined text-white">check_circle</span>
-                    <span className="pt-0.5">{text}</span>
+                  <li key={i} className="flex items-center gap-3 text-sm font-semibold">
+                    <span className="material-symbols-outlined text-white/80 text-lg">check_circle</span>
+                    <span>{text}</span>
                   </li>
                 ))}
               </ul>
             </div>
 
-            {/* Columna de Imagen (Hardware resaltado en blanco) */}
-            <div className="relative flex justify-center lg:justify-end">
-              <div className="bg-white p-6 md:p-4 rounded-[40px] shadow-2xl max-w-xl w-full transform hover:scale-[1.02] transition-transform duration-500">
+            {/* Columna de Imagen - Sin borde blanco, estilo flotante */}
+            <div className="relative flex justify-center lg:justify-end items-center">
+              <div className="relative w-full max-w-lg lg:max-w-none">
                 <img
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAoPes31RlN3MxwTvDsheTfe-fw4d53xhlGFvjhIENsAANz8dSWhOkxGq5H67jI3HMWX7kAkAXQlvxHBMl6YovcIoM8o4fRE4SOWNjt6tp2a-DX2gz9TV52Qfk6xQcMobougEiFyaLp1UHh3XJs9Wk0tvBLEQj718FBSof911uK1YuIBgp8RluJvTrZ7RlCVuTvOmWZF9Gyf2qPkNC3s6GperfBB0m8IjJVsCViyB-_4-7gVBOvtlnRr18XX24kJFX61PNtD05Yuec"
-                  className="w-full h-auto object-contain rounded-2xl"
-                  alt="Eagle Hardware Solution"
+                  src="/esl-simpos.png" // Asegúrate de que esta imagen sea un PNG transparente (la de la etiqueta ESL)
+                  className=" h-auto object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.3)] rounded-3xl"
+                  alt="Electronic Shelf Label"
                 />
               </div>
             </div>
@@ -78,7 +82,7 @@ const EslPage: React.FC = () => {
             ].map((item, idx) => (
               <div key={idx} className="relative z-10 flex flex-col items-center gap-6 group">
                 <div className="w-20 h-20 bg-white dark:bg-slate-800 rounded-full flex items-center justify-center shadow-xl border-4 border-slate-50 dark:border-slate-700 group-hover:scale-110 transition-transform">
-                  <span className="material-symbols-outlined text-4xl text-primary-light">{item.icon}</span>
+                  <span className="material-symbols-outlined text-4xl text-blue-500">{item.icon}</span>
                 </div>
                 <div>
                   <h4 className="font-bold text-slate-900 dark:text-white mb-2 font-display">{item.step}. {item.title}</h4>
@@ -90,7 +94,7 @@ const EslPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Liquor Store Section (Variación del Hero) */}
+      {/* Liquor Store Section */}
       <section className="relative w-full py-24 bg-white dark:bg-slate-950">
         <div className="px-6 md:px-10 lg:px-20 max-w-[1440px] mx-auto relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
@@ -105,10 +109,10 @@ const EslPage: React.FC = () => {
             </div>
             <div className="flex flex-col gap-6 text-left order-1 lg:order-2">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-900/20 w-fit">
-                <span className="text-primary-light font-bold text-[10px] uppercase tracking-wider">SIM POS</span>
+                <span className="text-blue-600 font-bold text-[10px] uppercase tracking-wider">SIM POS</span>
               </div>
               <h2 className="text-slate-900 dark:text-white font-display text-5xl font-bold leading-tight">
-                SIM POS for <span className="text-primary-light">Liquor Store</span>
+                SIM POS for <span className="text-blue-500">Liquor Store</span>
               </h2>
               <p className="text-slate-500 dark:text-slate-400 text-lg leading-relaxed">
                 Helping liquor stores operate faster at the counter, control bottle and case inventories, and manage prices consistently.
@@ -141,7 +145,7 @@ const EslPage: React.FC = () => {
                 "Detailed reports by category, cashier, and shift.",
                 "Counter-ready commercial-grade hardware."
               ].map((text, idx) => (
-                <div key={idx} className="flex flex-col border-l-4 border-primary-light pl-6">
+                <div key={idx} className="flex flex-col border-l-4 border-blue-500 pl-6">
                   <span className="text-xs font-bold text-slate-400 uppercase tracking-widest leading-relaxed">{text}</span>
                 </div>
               ))}
@@ -154,9 +158,9 @@ const EslPage: React.FC = () => {
       <section className="py-24 bg-slate-900 relative overflow-hidden">
         <div className="max-w-[1440px] mx-auto px-6 md:px-10 text-center text-white relative z-10">
           <h2 className="text-4xl md:text-5xl font-display font-bold mb-6">Ready to modernize your store?</h2>
-          <p className="text-xl text-slate-400 max-w-2xl mx-auto mb-12">Join thousands of retailers who have switched to Eagle ESL for better efficiency and customer experience.</p>
+          <p className="text-xl text-slate-400 max-w-2xl mx-auto mb-12">Join thousands of retailers who have switched to Eagle technology for better efficiency.</p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <a href="#" className="inline-flex items-center justify-center bg-primary-light text-white px-10 py-4 rounded-lg font-bold transition-all shadow-xl shadow-blue-500/20 hover:-translate-y-0.5">
+            <a href="#" className="inline-flex items-center justify-center bg-blue-500 text-white px-10 py-4 rounded-lg font-bold transition-all shadow-xl shadow-blue-500/20 hover:-translate-y-0.5">
               Request Quote
             </a>
             <a href="#" className="inline-flex items-center justify-center bg-white text-slate-900 px-10 py-4 rounded-lg font-bold hover:bg-slate-50 transition-all shadow-sm gap-2">

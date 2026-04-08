@@ -37,7 +37,7 @@ const WrappersPage: React.FC = () => {
           content: '';
           position: absolute;
           inset: 0;
-          background: linear-gradient(to right, rgba(0, 89, 160, 0.95), rgba(0, 89, 160, 0.8));
+          background: linear-gradient(to right, rgba(0, 89, 160, 0.8), rgba(0, 89, 160, 0.8));
           z-index: 1;
         }
         .machine-card {

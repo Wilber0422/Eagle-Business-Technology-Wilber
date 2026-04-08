@@ -86,7 +86,7 @@ const ScalesPage: React.FC = () => {
 
   return (
     <div className="bg-white dark:bg-slate-950 min-h-screen">
-      {/* Estilos para la Valla Publicitaria */}
+      {/* Estilos para la Valla Publicitaria (Se mantienen igual) */}
       <style jsx global>{`
         .billboard-container {
           position: relative;
@@ -115,36 +115,36 @@ const ScalesPage: React.FC = () => {
         }
       `}</style>
 
-      {/* Hero Section */}
-      <section className="relative w-full pt-20 pb-16 lg:pt-24 lg:pb-20 overflow-hidden bg-slate-50 dark:bg-slate-950">
-        <div className="absolute inset-0 bg-grid-pattern [mask-image:linear-gradient(to_bottom,white,transparent)] bg-[size:2rem_2rem] opacity-30 dark:opacity-5"></div>
+      {/* Hero Section Completamente Blanco y SIN patrón de fondo */}
+      <section className="relative w-full pt-20 pb-16 lg:pt-32 lg:pb-32 overflow-hidden bg-white">
+
+        {/* Eliminados todos los fondos azules, degradados oscuros y el patrón de rejilla adjunto */}
 
         <div className="px-6 md:px-10 lg:px-20 max-w-[1440px] mx-auto relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
-            {/* Columna Texto (Izquierda) */}
-            <div className="flex flex-col gap-5 text-left max-w-2xl">
-              <h1 className="text-slate-900 dark:text-white font-display text-5xl md:text-6xl font-extrabold leading-[1.15] tracking-tight">
+            {/* Columna Texto (Izquierda) - Restaurados colores originales */}
+            <div className="flex flex-col gap-6 text-left max-w-2xl text-slate-900">
+              <h1 className="font-display text-5xl md:text-6xl font-extrabold leading-[1.15] tracking-tight">
                 Industrial Weighing <br />
                 <span className="text-primary-light">
                   Scales and Systems Integration.
                 </span>
               </h1>
-              <p className="text-slate-600 dark:text-slate-400 text-lg md:text-xl font-normal leading-relaxed">
+              <p className="text-slate-600 text-lg md:text-xl font-normal leading-relaxed max-w-xl">
                 Integrate your scales directly with your PC-based POS system! With the advanced PC capabilities of BRAND scales, you can elevate and optimize your business productivity and revenue. The scales below offer fast and accurate label printing and precise weight measurements.
               </p>
             </div>
 
-            {/* Columna Imagen (Derecha) - DISEÑO LIMPIO SEGÚN IMAGEN CON BORDES REDONDEADOS EN IMAGEN */}
+            {/* Columna Imagen (Derecha) - Solo Imagen con sombra suave */}
             <div className="relative flex items-center justify-center lg:justify-end">
-              <div className="absolute w-[110%] h-[110%] bg-gradient-to-br from-primary/5 to-secondary/5 blur-[90px] rounded-full -z-10 opacity-60"></div>
 
-              {/* Tarjeta contenedora de la imagen */}
-              <div className="bg-white dark:bg-slate-900 p-6 md:p-10 rounded-[40px] shadow-2xl shadow-slate-200/60 dark:shadow-black/20 border border-slate-100 dark:border-slate-800 w-full max-w-[620px]">
+              <div className="relative w-full max-w-[620px]">
                 <img
-                  src="https://eaglebst.com/wp-content/uploads/2023/03/digital-scales-b-11.jpg" // URL de la imagen de la balanza
+                  src="https://eaglebst.com/wp-content/uploads/2023/03/digital-scales-b-11.jpg"
                   alt="Industrial Weighing Scale"
-                  className="w-full h-auto object-contain rounded-3xl" // Aplicado rounded-3xl aquí
+                  // Mantenemos rounded-[40px] y aplicamos sombra suave para fondo blanco
+                  className="w-full h-auto object-contain rounded-[40px] shadow-[0_25px_60px_rgba(0,0,0,0.1)]"
                 />
               </div>
             </div>
@@ -152,7 +152,7 @@ const ScalesPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Características */}
+      {/* Características (Se mantiene idéntico) */}
       <section className="py-24 bg-slate-50 dark:bg-slate-900/50">
         <div className="max-w-[1440px] mx-auto px-6 md:px-10">
           <div className="text-center max-w-3xl mx-auto mb-16">
@@ -178,7 +178,7 @@ const ScalesPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Categories Section */}
+      {/* Categories Section (Se mantiene idéntico) */}
       <section className="py-20 px-6 md:px-10 border-b border-slate-100 dark:border-slate-800">
         <div className="max-w-[1440px] mx-auto text-center">
           <h2 className="text-slate-900 dark:text-white text-2xl font-bold font-display mb-8">Product Categories</h2>
@@ -192,7 +192,7 @@ const ScalesPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Industry Solutions (Grid Actualizado con estilo Wrapper) */}
+      {/* Industry Solutions (Grid Actualizado con estilo Wrapper) (Se mantiene idéntico) */}
       <section id="product-grid-section" className="py-24 px-6 md:px-10 max-w-[1440px] mx-auto">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
           <div className="flex flex-col gap-2">
@@ -256,7 +256,7 @@ const ScalesPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Final CTA */}
+      {/* Final CTA (Se mantiene idéntico) */}
       <section className="py-24 bg-white dark:bg-slate-950 border-t border-slate-100 dark:border-slate-800">
         <div className="max-w-[1440px] mx-auto px-6 md:px-10 text-center">
           <h2 className="text-4xl md:text-5xl font-display font-bold text-slate-900 dark:text-white mb-6">Ready to Upgrade Your Business?</h2>
