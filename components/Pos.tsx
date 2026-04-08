@@ -26,7 +26,8 @@ const PosPage: React.FC<PosPageProps> = ({ onNavigate, Page }) => {
   const [typeFilter, setTypeFilter] = useState<string>('All');
   const productTypes = ['Retail', 'Hospitality',];
 
-  // --- LÓGICA DEL CARRUSEL DE LA VALLA (BILLBOARD) ---
+  // Mantenemos la lógica de estado por si se usa en otras secciones, 
+  // aunque ya no se renderice en el Hero.
   const [billboardIndex, setBillboardIndex] = useState(0);
   const billboardSlides = [
     "/bg-pos.jpg",
@@ -42,14 +43,12 @@ const PosPage: React.FC<PosPageProps> = ({ onNavigate, Page }) => {
     return () => clearInterval(timer);
   }, [billboardSlides.length]);
 
-  // Referencia para el scroll
   const solutionsRef = useRef<HTMLDivElement>(null);
 
   const scrollToSolutions = () => {
     solutionsRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
 
-  // Base de datos de soluciones POS
   const allPos: PosProduct[] = [
     {
       id: 1, name: "Retail", mainCat: "Retail", type: "Retail",
@@ -101,7 +100,6 @@ const PosPage: React.FC<PosPageProps> = ({ onNavigate, Page }) => {
     }
   ];
 
-  // Lógica de filtrado combinada
   const filteredPos = allPos.filter(item => {
     const matchMain = item.mainCat === filter;
     const matchType = typeFilter === 'All' || item.type === typeFilter;
@@ -110,85 +108,43 @@ const PosPage: React.FC<PosPageProps> = ({ onNavigate, Page }) => {
 
   return (
     <div className="bg-white dark:bg-slate-950 min-h-screen">
-      {/* Estilos para la Valla Publicitaria */}
-      <style jsx global>{`
-        .billboard-container {
-          position: relative;
-          width: 100%;
-          max-width: 650px;
-          filter: drop-shadow(0 50px 30px rgb(0 0 0 / 0.2));
-        }
-        .billboard-mockup {
-          width: 100%;
-          height: auto;
-          display: block;
-          position: relative;
-          z-index: 9;
-          pointer-events: none;
-        }
-        .billboard-content-area {
-          position: absolute;
-          top: 23.5%;
-          left: 12.5%;
-          width: 75.2%;
-          height: 42.2%;
-          z-index: 10;
-          overflow: hidden;
-          transform: skewY(-4.2deg) rotateX(2deg);
-          background: #000;
-        }
-      `}</style>
 
-      {/* Hero Section con Billboard */}
-      <section className="relative w-full pt-8 pb-6 lg:pt-2 lg:pb-3 overflow-hidden bg-slate-50 dark:bg-slate-950">
-        <div className="absolute inset-0 bg-grid-pattern [mask-image:linear-gradient(to_bottom,white,transparent)] bg-[size:2rem_2rem] opacity-40 dark:opacity-10"></div>
+      {/* Hero Section Modificado según la Imagen */}
+      <section className="relative w-full pt-20 pb-16 lg:pt-24 lg:pb-20 overflow-hidden bg-slate-50 dark:bg-slate-950">
+        <div className="absolute inset-0 bg-grid-pattern [mask-image:linear-gradient(to_bottom,white,transparent)] bg-[size:2rem_2rem] opacity-30 dark:opacity-5"></div>
+
         <div className="px-6 md:px-10 lg:px-20 max-w-[1440px] mx-auto relative z-10">
-          <div className="grid lg:grid-cols-2 gap-8 items-center">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
-            {/* Texto Izquierda */}
-            <div className="flex flex-col gap-6 text-left">
-              <h1 className="text-slate-900 dark:text-white text-5xl md:text-6xl font-display font-bold leading-[1.1] tracking-tight">
-                More Than Just a Register. <span className="text-primary-light bg-clip-text bg-gradient-to-r from-primary to-secondary"> The Heart of Your Business. </span>
+            {/* Columna Texto (Izquierda) */}
+            <div className="flex flex-col gap-6 text-left max-w-2xl">
+              <h1 className="text-slate-900 dark:text-white font-display text-5xl md:text-6xl font-extrabold leading-[1.15] tracking-tight">
+                More Than Just a Register. <span className="text-primary-light bg-clip-text bg-gradient-to-r from-primary to-secondary"> The Heart of Your Business.
+                </span>
               </h1>
-              <p className="text-slate-500 dark:text-slate-400 text-lg md:text-xl font-normal leading-relaxed max-w-xl">
+              <p className="text-slate-600 dark:text-slate-400 text-lg md:text-xl font-normal leading-relaxed">
                 Utilize one of Eagle Business Technology’s Point-of-Sale solutions to streamline operations at your business. We offer a range of POS solutions to address any number of your business needs.
               </p>
             </div>
 
-            {/* Billboard Derecha */}
-            <div className="relative flex items-center justify-center">
-              <div className="absolute w-[120%] h-[120%] bg-gradient-to-br from-primary/10 to-secondary/10 blur-[100px] rounded-full -z-10"></div>
+            {/* Columna Imagen (Derecha) - Inspirada en image_b07339.jpg */}
+            <div className="relative flex items-center justify-center lg:justify-end">
+              <div className="absolute w-[110%] h-[110%] bg-gradient-to-br from-primary/5 to-secondary/5 blur-[90px] rounded-full -z-10 opacity-60"></div>
 
-              <div className="billboard-container translate-y-4">
+              {/* Tarjeta con Bordes Redondeados según la referencia */}
+              <div className="bg-white dark:bg-slate-900 p-6 md:p-8 rounded-[40px] shadow-2xl shadow-slate-200/60 dark:shadow-black/20 border border-slate-100 dark:border-slate-800 w-full max-w-[620px]">
                 <img
-                  src="/cartel-luminoso-realista.png"
-                  alt="Billboard Mockup"
-                  className="billboard-mockup"
+                  src="https://eaglebst.com/wp-content/uploads/2024/06/Arte-foto-Restaurant-06.png"
+                  alt="POS Solution Display"
+                  className="w-full h-auto object-contain rounded-3xl"
                 />
-
-                <div className="billboard-content-area">
-                  {billboardSlides.map((slide, index) => (
-                    <div
-                      key={index}
-                      className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${index === billboardIndex ? "opacity-100" : "opacity-0"}`}
-                    >
-                      <img
-                        src={slide}
-                        alt="POS Content"
-                        className="w-full h-full object-cover"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-                    </div>
-                  ))}
-                </div>
               </div>
             </div>
-
           </div>
         </div>
       </section>
 
-      {/* Características Secundarias */}
+      {/* Características Secundarias - IDÉNTICO */}
       <section className="py-24 bg-slate-50 dark:bg-slate-900/50">
         <div className="max-w-[1440px] mx-auto px-6 md:px-10">
           <div className="text-center max-w-3xl mx-auto mb-16">
@@ -214,27 +170,7 @@ const PosPage: React.FC<PosPageProps> = ({ onNavigate, Page }) => {
         </div>
       </section>
 
-      {/* Hardware Categories Spacer */}
-      {/* <section className="py-20 px-6 md:px-10 border-b border-slate-100 dark:border-slate-800">
-          <div className="max-w-[1440px] mx-auto text-center">
-            <div className="text-center mb-12">
-              <h2 className="text-slate-900 dark:text-white text-2xl font-bold font-display mb-8">Hardware Categories</h2>
-              <p className="text-slate-400 text-sm mt-2">Our scales do not operate in isolation. We offer complete integration with ERP systems and management software using industrial protocols.</p>
-            </div>
-            <div className="flex flex-wrap justify-center gap-4 md:gap-8">
-              {productTypes.map(type => (
-                <div
-                  key={type}
-                  className="px-4 py-2 rounded-full text-sm font-bold text-slate-400 border border-slate-100 dark:border-slate-800"
-                >
-                  {type}
-                </div>
-              ))}
-            </div>
-          </div>
-        </section> */}
-
-      {/* Industry Solutions */}
+      {/* Industry Solutions - IDÉNTICO */}
       <section ref={solutionsRef} className="py-24 px-6 md:px-10 max-w-[1440px] mx-auto">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
           <div className="flex flex-col gap-2">
@@ -254,7 +190,7 @@ const PosPage: React.FC<PosPageProps> = ({ onNavigate, Page }) => {
           </div>
         </div>
 
-        {/* Product Grid */}
+        {/* Product Grid - IDÉNTICO */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 min-h-[400px]">
           {filteredPos.length > 0 ? (
             filteredPos.map((item) => (
@@ -315,7 +251,7 @@ const PosPage: React.FC<PosPageProps> = ({ onNavigate, Page }) => {
         </div>
       </section>
 
-      {/* Final CTA */}
+      {/* Final CTA - IDÉNTICO */}
       <section className="py-24 bg-white dark:bg-slate-950 border-t border-slate-100 dark:border-slate-800">
         <div className="max-w-[1440px] mx-auto px-6 md:px-10 text-center">
           <h2 className="text-4xl md:text-5xl font-display font-bold text-slate-900 dark:text-white mb-6">Ready to Upgrade Your Business?</h2>

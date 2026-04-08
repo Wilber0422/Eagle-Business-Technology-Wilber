@@ -13,55 +13,83 @@ const VoicePage: React.FC = () => {
 
   return (
     <div className="bg-white dark:bg-slate-950 min-h-screen">
-      {/* Hero Section */}
-      <section className="relative px-6 py-16 md:px-10 md:py-24 max-w-[1440px] mx-auto overflow-hidden">
-        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
-          <div className="flex flex-col gap-6 lg:w-1/2">
-            <h1 className="text-slate-900 dark:text-white text-5xl md:text-6xl font-display font-bold leading-tight tracking-tight">
-              The right solution <br /> for your business
-            </h1>
-            <p className="text-slate-500 dark:text-slate-400 text-lg font-normal leading-relaxed max-w-xl">
-              Eagle Business Technology arises from the need of a provider of complex solutions presented in a sensible way and a reasonable price, with the intention of providing correct solution to this need in 2016 a group of professionals meet in different areas with
-            </p>
-            <div className="flex flex-wrap gap-4 pt-4">
-              {/* Botón 1: Digital Signage */}
-              <button
-                onClick={() => scrollToSection(digitalSignageRef)}
-                className="flex items-center justify-center rounded-lg h-12 px-8 bg-primary-light text-white text-base font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-500/20 hover:-translate-y-0.5"
-              >
-                Digital Signage
-              </button>
 
-              {/* Botón 2: Eagle Voice */}
-              <button
-                onClick={() => scrollToSection(eagleVoiceRef)}
-                className="flex items-center justify-center rounded-lg h-12 px-8 bg-blue-50 dark:bg-slate-900 text-primary-light dark:text-blue-400 text-base font-bold hover:bg-blue-100 dark:hover:bg-slate-800 transition-colors"
-              >
-                Eagle voice
-              </button>
+      {/* ========================================================= */}
+      {/* HERO SECTION MODIFICADO SEGÚN IMAGEN ADJUNTA */}
+      {/* ========================================================= */}
+      <section className="relative w-full bg-[#004797] dark:bg-slate-950 overflow-hidden">
+        {/* Imagen de fondo con superposición azul */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src="/bg-store.jpg"
+            alt="Background Team"
+            className="w-full h-full object-cover opacity-100"
+          />
+          <div className="absolute inset-0 bg-[#004797]/90 dark:bg-slate-950/95"></div>
+        </div>
 
-              {/* Botón 3: WiFi Marketing (Nuevo Azul Cian/Teal) */}
-              <button
-                onClick={() => scrollToSection(wifiMarketingRef)}
-                className="flex items-center justify-center rounded-lg h-12 px-8 bg-cyan-50 dark:bg-cyan-950/30 text-cyan-600 dark:text-cyan-400 text-base font-bold hover:bg-cyan-100 dark:hover:bg-cyan-900/40 transition-colors border border-cyan-100/50 dark:border-cyan-800/30"
-              >
-                WiFi Marketing
-              </button>
+        <div className="relative px-6 py-20 md:px-10 md:py-32 max-w-[1440px] mx-auto z-10">
+          <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+
+            {/* Columna de Texto (Izquierda) */}
+            <div className="lg:col-span-7 flex flex-col gap-6 text-left">
+              <h1 className="text-white text-5xl md:text-6xl font-display font-bold leading-tight tracking-tight">
+                The right solution <br /> for your business
+              </h1>
+              <p className="text-blue-100/90 dark:text-slate-400 text-lg font-normal leading-relaxed max-w-2xl">
+                Eagle Business Technology arises from the need of a provider of complex solutions presented in a sensible way and a reasonable price, with the intention of providing correct solution to this need in 2016 a group of professionals meet in different areas with
+              </p>
+
+              {/* Botones de Acción */}
+              <div className="flex flex-wrap gap-4 pt-6">
+                {/* Botón 1: Digital Signage (Estilo Sólido Azul Claro) */}
+                <button
+                  onClick={() => scrollToSection(digitalSignageRef)}
+                  className="flex items-center justify-center rounded-lg h-12 px-8 bg-[#6ca0dc] text-white text-base font-bold hover:bg-blue-400 transition-all shadow-lg shadow-black/10 hover:-translate-y-0.5"
+                >
+                  Digital Signage
+                </button>
+
+                {/* Botón 2: Eagle Voice (Estilo Sólido Blanco) */}
+                <button
+                  onClick={() => scrollToSection(eagleVoiceRef)}
+                  className="flex items-center justify-center rounded-lg h-12 px-8 bg-white text-[#004797] text-base font-bold hover:bg-blue-50 transition-colors shadow-lg shadow-black/10"
+                >
+                  Eagle voice
+                </button>
+
+                {/* Botón 3: WiFi Marketing (Estilo Sólido Blanco) */}
+                <button
+                  onClick={() => scrollToSection(wifiMarketingRef)}
+                  className="flex items-center justify-center rounded-lg h-12 px-8 bg-white text-[#004797] text-base font-bold hover:bg-blue-50 transition-colors shadow-lg shadow-black/10"
+                >
+                  WiFi Marketing
+                </button>
+              </div>
             </div>
-          </div>
-          <div className="lg:w-1/2 w-full">
-            <div className="relative w-full aspect-[16/10] rounded-3xl shadow-2xl overflow-hidden bg-slate-100 dark:bg-slate-900">
-              <img
-                src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=2070&auto=format&fit=crop"
-                alt="Boardroom"
-                className="w-full h-full object-cover"
-              />
+
+            {/* Columna de Imagen Flotante (Derecha) */}
+            <div className="lg:col-span-5 w-full flex justify-center lg:justify-end">
+              <div className="relative w-full max-w-[500px] aspect-[14/10] rounded-[30px] shadow-2xl overflow-hidden border-4 border-white/10 group">
+                <img
+                  src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=2070&auto=format&fit=crop"
+                  alt="Boardroom Meeting"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                {/* Superposición sutil en la imagen flotante */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+              </div>
             </div>
+
           </div>
         </div>
       </section>
+      {/* ========================================================= */}
+      {/* FIN DEL HERO SECTION MODIFICADO */}
+      {/* ========================================================= */}
 
-      {/* Stats Strip */}
+
+      {/* Stats Strip - EL RESTO PERMANECE IGUAL */}
       <section className="py-12 bg-slate-50 dark:bg-slate-900/50 border-y border-slate-100 dark:border-slate-800">
         <div className="max-w-[1440px] mx-auto px-6 md:px-10">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
@@ -111,7 +139,7 @@ const VoicePage: React.FC = () => {
             </ul>
           </div>
           <div className="relative">
-            <div className="rounded-2xl overflow-hidden shadow-2xl border border-slate-200 dark:border-slate-800 bg-slate-900 p-2">
+            <div className="rounded-2xl overflow-hidden shadow-2xl bg-slate-900 ">
               <img src="/digital-signage.jpeg" className="rounded-xl" alt="Dashboard" />
             </div>
           </div>
@@ -181,20 +209,28 @@ const VoicePage: React.FC = () => {
           </div>
           <div className="relative">
             <div className="rounded-3xl overflow-hidden shadow-2xl">
-              <img src="/wifi-m.png" className="w-full" alt="WiFi Marketing" />
+              <img src="/bg.wifi.jpg" className="w-full" alt="WiFi Marketing" />
             </div>
           </div>
         </div>
       </section>
 
-      <section ref={eagleVoiceRef} className="py-24 bg-slate-50 dark:bg-slate-900/50">
+      {/* ESL Section - Reutilizando referencia o creando nueva si es necesario */}
+      <section className="py-24 bg-slate-50 dark:bg-slate-900/50">
         <div className="max-w-[1440px] mx-auto px-6 md:px-10">
           <div className="grid lg:grid-cols-2 gap-20 items-center">
+
+            {/* Contenedor de Imagen Ajustado */}
             <div className="order-2 lg:order-1 relative">
-              <div className="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl">
-                <img src="/esl.png" className="w-full h-full object-cover" alt="CloudPhone" />
+              <div className="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl bg-white dark:bg-slate-800 flex items-center justify-center p-4">
+                <img
+                  src="/esl.png"
+                  className="w-full h-full object-contain" // Cambiado de object-cover a object-contain
+                  alt="ESL Solution"
+                />
               </div>
             </div>
+
             <div className="order-1 lg:order-2 space-y-8">
               <div className="w-10 h-10 bg-blue-50 dark:bg-blue-900/20 rounded-lg flex items-center justify-center text-primary-light">
                 <span className="material-symbols-outlined">smartphone</span>
@@ -204,6 +240,7 @@ const VoicePage: React.FC = () => {
               <p className="text-slate-500 dark:text-slate-400 leading-relaxed">
                 Our ESLs are used in industries such as food retail, mobile shops, point-of-sale, home appliances, pharmacy, warehouse, industry, and room signage.
               </p>
+
               <div className="grid sm:grid-cols-2 gap-4">
                 {[
                   {
@@ -224,6 +261,7 @@ const VoicePage: React.FC = () => {
         </div>
       </section>
 
+      {/* Tools Grid Section */}
       <section className="py-24 bg-slate-50 dark:bg-slate-950">
         <div className="max-w-[1440px] mx-auto px-6 md:px-10 text-center">
           <h2 className="text-3xl md:text-4xl font-display font-bold text-slate-900 dark:text-white mb-4">A great business comes from the great idea</h2>

@@ -22,87 +22,78 @@ const WrappersPage: React.FC = () => {
     return () => clearInterval(timer);
   }, [billboardSlides.length]);
 
-  const scrollToModels = () => {
-    const section = document.getElementById('modelos-section');
-    if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
     <div className="bg-white dark:bg-slate-950 min-h-screen">
-      {/* Estilos para la Valla Publicitaria */}
+      {/* Estilos para el Hero Tipo Imagen Adjunta */}
       <style jsx global>{`
-        .billboard-container {
+        .hero-custom-bg {
           position: relative;
-          width: 100%;
-          max-width: 650px;
-          filter: drop-shadow(0 50px 30px rgb(0 0 0 / 0.2));
+          background-image: url('/bg.wrapper.jpg');
+          background-size: cover;
+          background-position: center;
+          min-height: 550px;
         }
-        .billboard-mockup {
-          width: 100%;
-          height: auto;
-          display: block;
-          position: relative;
-          z-index: 9;
-          pointer-events: none;
-        }
-        .billboard-content-area {
+        .hero-custom-bg::before {
+          content: '';
           position: absolute;
-          top: 23.5%;
-          left: 12.5%;
-          width: 75.2%;
-          height: 42.2%;
+          inset: 0;
+          background: linear-gradient(to right, rgba(0, 89, 160, 0.95), rgba(0, 89, 160, 0.8));
+          z-index: 1;
+        }
+        .machine-card {
+          position: relative;
           z-index: 10;
+          background: white;
+          padding: 12px;
+          border-radius: 30px;
+          box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+          width: 100%;
+          max-width: 580px;
+        }
+        .machine-inner-frame {
+          border: 6px solid #f1f5f9;
+          border-radius: 22px;
           overflow: hidden;
-          transform: skewY(-4.2deg) rotateX(2deg);
-          background: #000;
+          background: white;
+          aspect-ratio: 16/10;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: relative;
         }
       `}</style>
 
-      {/* Hero Section - ESPACIADO REDUCIDO (pt-8 pb-12) */}
-      <section className="relative w-full pt-8 pb-6 lg:pt-2 lg:pb-3 overflow-hidden bg-slate-50 dark:bg-slate-950">
-        <div className="absolute inset-0 bg-grid-pattern [mask-image:linear-gradient(to_bottom,white,transparent)] bg-[size:2rem_2rem] opacity-40 dark:opacity-10"></div>
-        <div className="px-6 md:px-10 lg:px-20 max-w-[1440px] mx-auto relative z-10">
-          <div className="grid lg:grid-cols-2 gap-8 items-center">
+      {/* Hero Section Rediseñado */}
+      <section className="hero-custom-bg flex items-center overflow-hidden">
+        <div className="px-6 md:px-10 lg:px-20 max-w-[1440px] mx-auto relative z-10 w-full py-16">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
 
             {/* Texto Izquierda */}
-            <div className="flex flex-col gap-4 text-left">
-              <h1 className="text-slate-900 dark:text-white font-display text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight">
-                Efficiency,                <br />
-                <span className="text-primary-light bg-clip-text bg-gradient-to-r from-primary to-secondary">
-                  Wrapped.
-                </span>
+            <div className="flex flex-col gap-6 text-left text-white">
+              <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight">
+                Efficiency,<br />
+                Wrapped.
               </h1>
-              <p className="text-slate-600 dark:text-slate-400 text-lg md:text-xl font-normal leading-relaxed max-w-xl">
+              <p className="text-white/90 text-lg md:text-xl font-normal leading-relaxed max-w-xl">
                 Integrated Weighing, Labeling & Packaging. Streamline your food processing operations with Eagle’s advanced wrapper solutions designed for speed and precision.
               </p>
             </div>
 
-            {/* Mockup Derecha */}
+            {/* Imagen Derecha (Carrusel en marco blanco) */}
             <div className="relative flex items-center justify-center">
-              <div className="absolute w-[120%] h-[120%] bg-gradient-to-br from-primary/10 to-secondary/10 blur-[100px] rounded-full -z-10"></div>
-
-              <div className="billboard-container translate-y-4">
-                <img
-                  src="/cartel-luminoso-realista.png"
-                  alt="Billboard Mockup"
-                  className="billboard-mockup"
-                />
-
-                <div className="billboard-content-area">
+              <div className="machine-card">
+                <div className="machine-inner-frame">
                   {billboardSlides.map((slide, index) => (
                     <div
                       key={index}
-                      className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${index === billboardIndex ? "opacity-100" : "opacity-0"
+                      className={`absolute inset-0 transition-opacity duration-1000 ease-in-out flex items-center justify-center p-8 ${index === billboardIndex ? "opacity-100" : "opacity-0"
                         }`}
                     >
                       <img
                         src={slide}
-                        alt="Content"
-                        className="w-full h-full object-cover"
+                        alt="Machine Model"
+                        className="max-w-full max-h-full object-contain"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                     </div>
                   ))}
                 </div>
@@ -148,13 +139,13 @@ const WrappersPage: React.FC = () => {
             <div className="flex p-1 bg-white dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700 shadow-sm">
               <button
                 onClick={() => setActiveTab('automatic')}
-                className={`px-6 py-2 text-xs font-bold rounded-md transition-all ${activeTab === 'automatic' ? 'bg-primary-light text-white shadow-md' : 'text-slate-500'}`}
+                className={`px-6 py-2 text-xs font-bold rounded-md transition-all ${activeTab === 'automatic' ? 'bg-[#0059a0] text-white shadow-md' : 'text-slate-500'}`}
               >
                 Automatic Systems
               </button>
               <button
                 onClick={() => setActiveTab('manual')}
-                className={`px-6 py-2 text-xs font-bold rounded-md transition-all ${activeTab === 'manual' ? 'bg-primary-light text-white shadow-md' : 'text-slate-500'}`}
+                className={`px-6 py-2 text-xs font-bold rounded-md transition-all ${activeTab === 'manual' ? 'bg-[#0059a0] text-white shadow-md' : 'text-slate-500'}`}
               >
                 Manual Wrappers
               </button>
@@ -162,134 +153,45 @@ const WrappersPage: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            {activeTab === 'automatic' ? (
-              [
-                {
-                  tag: 'AI Powered',
-                  id: Page.AWAiPop,
-                  title: 'AW-Ai-Pop Ishida',
-                  img: 'https://eaglebst.com/wp-content/uploads/2022/12/AW-Ai-Pop.png',
-                  desc: 'The WM-AI-P revolutionizes workflow by integrating an intelligent printer capable of automatically applying promotional secondary labels.',
-                  features: ['Automatic double labeling', 'Precision Robotic Applicator']
-                },
-                {
-                  tag: 'Best Seller',
-                  id: Page.AW5600,
-                  title: 'AW-5600 AT POP',
-                  img: 'https://www.digisystem.com/es/products/PRD00348/product_file/file/aw5600-2_WP02_01.png',
-                  desc: 'The AW-5600AT is a weighing, packaging, and labeling solution designed to maximize efficiency in confined spaces thanks to its small footprint design.',
-                  features: ['Integrated Multi-Labeling System', 'Intelligent Process Control']
-                },
-                {
-                  id: Page.HandWrapper,
-                  title: 'Hand Wrapper',
-                  img: 'https://eaglebst.com/wp-content/uploads/2022/12/Hand-Wrapper.png',
-                  desc: 'Flexibility is supreme in the latest generation of DIGI’s integrated semi-automatic weigh-wrap-labelers.',
-                  features: ['Irregular Shapes', 'Pick-Pack System']
-                },
-                {
-                  id: Page.Linea470,
-                  title: 'Linea 470 H50',
-                  img: '/linea-470-h50.jpg',
-                  desc: 'This component is a precision profile designed for linear transport and guidance systems, manufactured to high-strength industrial standards.',
-                  features: ['High Precision Geometry', 'Versatile Design']
-                },
-                {
-                  id: Page.Sg2,
-                  title: 'SG2',
-                  img: '/sg2.jpeg',
-                  desc: 'This component is a technical sliding guide designed for linear conveyor systems, specifically optimized to provide low-friction support.',
-                  features: ['Optimized Sliding Profile', 'Heavy Duty Construction']
-                },
-                {
-                  id: Page.Ishidawm,
-                  title: 'Ishida WM Micro',
-                  img: '/wm-micro.png',
-                  desc: 'The WM-MICRO is a fully automatic, all-in-one solution that integrates weighing, packing, and labeling into an extremely compact design.',
-                  features: ['Ultra Compact Design', 'Intuitive Interface']
-                }
-              ].map((model, idx) => (
-                <div
-                  key={idx}
-                  onClick={() => model.id ? window.location.hash = model.id : null}
-                  className={`bg-white dark:bg-slate-900 rounded-2xl overflow-hidden shadow-sm border border-slate-100 dark:border-slate-800 flex flex-col group ${model.id ? 'cursor-pointer hover:shadow-md' : ''}`}
-                >
-                  <div className="aspect-[4/3] bg-slate-50 dark:bg-slate-800 relative overflow-hidden">
-                    <img src={model.img} alt={model.title} className="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-700" />
-                    {model.tag && (
-                      <div className="absolute top-4 right-4 bg-primary-light text-white text-[10px] font-bold px-2 py-1 rounded">
-                        {model.tag}
-                      </div>
-                    )}
-                  </div>
-                  <div className="p-8 flex flex-col flex-grow">
-                    <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-3 font-display">{model.title}</h3>
-                    <p className="text-slate-500 dark:text-slate-400 text-sm mb-6 leading-relaxed">{model.desc}</p>
-                    <ul className="space-y-3 mb-8">
-                      {model.features.map((f, i) => (
-                        <li key={i} className="flex items-center gap-3 text-xs text-slate-600 dark:text-slate-300">
-                          <span className="material-symbols-outlined text-[16px] text-primary-light">check_circle</span>
-                          {f}
-                        </li>
-                      ))}
-                    </ul>
-                    <button className="mt-auto flex items-center gap-2 text-primary-light font-bold text-sm hover:gap-3 transition-all">
-                      View Full Specs <span className="material-symbols-outlined text-sm">arrow_forward</span>
-                    </button>
-                  </div>
+            {(activeTab === 'automatic' ? [
+              { id: Page.AWAiPop, title: 'AW-Ai-Pop Ishida', img: 'https://eaglebst.com/wp-content/uploads/2022/12/AW-Ai-Pop.png', desc: 'Revolutionizes workflow by integrating an intelligent printer for promotional labels.', features: ['Automatic double labeling', 'Robotic Applicator'], tag: 'AI Powered' },
+              { id: Page.AW5600, title: 'AW-5600 AT POP', img: 'https://www.digisystem.com/es/products/PRD00348/product_file/file/aw5600-2_WP02_01.png', desc: 'Designed to maximize efficiency in confined spaces with a small footprint.', features: ['Multi-Labeling System', 'Intelligent Control'], tag: 'Best Seller' },
+              { id: Page.Ishidawm, title: 'Ishida WM Micro', img: '/wm-micro.png', desc: 'Extremely compact all-in-one solution for weighing, packing, and labeling.', features: ['Ultra Compact Design', 'Intuitive Interface'] },
+              { id: Page.Linea470, title: 'Linea 470 H50', img: '/linea-470-h50.jpg', desc: 'Precision profile designed for linear transport and industrial guidance.', features: ['High Precision Geometry', 'Versatile Design'] },
+              { id: Page.Sg2, title: 'SG2', img: '/sg2.jpeg', desc: 'Technical sliding guide optimized for low-friction support in conveyors.', features: ['Optimized Sliding Profile', 'Heavy Duty'] }
+            ] : [
+              { id: Page.HandWrapper, title: 'Hand Wrapper', img: 'https://eaglebst.com/wp-content/uploads/2022/12/Hand-Wrapper.png', desc: 'Tabletop weigh-seal-label system that improves sales counter productivity.', features: ['Tabletop Design', 'Integrated Labeling', 'Efficient Workflow'] }
+            ]).map((model, idx) => (
+              <div
+                key={idx}
+                onClick={() => model.id ? window.location.hash = model.id : null}
+                className="bg-white dark:bg-slate-900 rounded-2xl overflow-hidden shadow-sm border border-slate-100 dark:border-slate-800 flex flex-col group cursor-pointer hover:shadow-md transition-all"
+              >
+                <div className="aspect-[4/3] bg-slate-50 dark:bg-slate-800 relative overflow-hidden">
+                  <img src={model.img} alt={model.title} className="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-700" />
+                  {model.tag && (
+                    <div className="absolute top-4 right-4 bg-[#0059a0] text-white text-[10px] font-bold px-2 py-1 rounded">
+                      {model.tag}
+                    </div>
+                  )}
                 </div>
-              ))
-            ) : (
-              [
-                {
-                  id: Page.HandWrapper,
-                  title: 'Hand Wrapper',
-                  img: 'https://eaglebst.com/wp-content/uploads/2022/12/Hand-Wrapper.png',
-                  desc: 'A Hand Wrapper tabletop weigh-seal-label system that improves productivity and operational efficiency of sales counters.',
-                  features: ['Tabletop Design', 'Integrated Labeling', 'Efficient Workflow']
-                }
-              ].map((model, idx) => (
-                <div
-                  key={idx}
-                  onClick={() => model.id ? window.location.hash = model.id : null}
-                  className={`bg-white dark:bg-slate-900 rounded-2xl overflow-hidden shadow-sm border border-slate-100 dark:border-slate-800 flex flex-col group ${model.id ? 'cursor-pointer hover:shadow-md' : ''}`}
-                >
-                  <div className="aspect-[4/3] bg-slate-50 dark:bg-slate-800 relative overflow-hidden">
-                    <img src={model.img} alt={model.title} className="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-700" />
-                  </div>
-                  <div className="p-8 flex flex-col flex-grow">
-                    <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-3 font-display">{model.title}</h3>
-                    <p className="text-slate-500 dark:text-slate-400 text-sm mb-6 leading-relaxed">{model.desc}</p>
-                    <ul className="space-y-3 mb-8">
-                      {model.features.map((f, i) => (
-                        <li key={i} className="flex items-center gap-3 text-xs text-slate-600 dark:text-slate-300">
-                          <span className="material-symbols-outlined text-[16px] text-primary-light">check_circle</span>
-                          {f}
-                        </li>
-                      ))}
-                    </ul>
-                    <button className="mt-auto flex items-center gap-2 text-primary-light font-bold text-sm hover:gap-3 transition-all">
-                      View Full Specs <span className="material-symbols-outlined text-sm">arrow_forward</span>
-                    </button>
-                  </div>
+                <div className="p-8 flex flex-col flex-grow">
+                  <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-3 font-display">{model.title}</h3>
+                  <p className="text-slate-500 dark:text-slate-400 text-sm mb-6 leading-relaxed">{model.desc}</p>
+                  <ul className="space-y-3 mb-8">
+                    {model.features.map((f, i) => (
+                      <li key={i} className="flex items-center gap-3 text-xs text-slate-600 dark:text-slate-300">
+                        <span className="material-symbols-outlined text-[16px] text-[#0059a0]">check_circle</span>
+                        {f}
+                      </li>
+                    ))}
+                  </ul>
+                  <button className="mt-auto flex items-center gap-2 text-[#0059a0] font-bold text-sm hover:gap-3 transition-all">
+                    View Full Specs <span className="material-symbols-outlined text-sm">arrow_forward</span>
+                  </button>
                 </div>
-              ))
-            )}
-          </div>
-
-          <div className="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-100 dark:border-slate-800 shadow-sm flex flex-col md:flex-row items-center justify-between gap-6">
-            <div className="flex items-center gap-4">
-              <div className="w-12 h-12 bg-slate-50 dark:bg-slate-800 rounded-full flex items-center justify-center text-slate-400">
-                <span className="material-symbols-outlined">front_hand</span>
               </div>
-              <div>
-                <h4 className="font-bold text-slate-900 dark:text-white">Looking for custom packaging?</h4>
-                <p className="text-sm text-slate-500">We offer tailored solutions for specialty stores and unique product shapes.</p>
-              </div>
-            </div>
-            <button onClick={() => window.location.hash = Page.Contact} className="px-6 py-2 border border-slate-200 dark:border-slate-800 rounded-lg text-sm font-bold text-slate-600 dark:text-white hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
-              Contact an Expert
-            </button>
+            ))}
           </div>
         </div>
       </section>
@@ -310,7 +212,7 @@ const WrappersPage: React.FC = () => {
               <img src={app.img} alt={app.title} className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent"></div>
               <div className="absolute bottom-8 left-8 text-left text-white">
-                <span className="material-symbols-outlined mb-2 text-primary-light">{app.icon}</span>
+                <span className="material-symbols-outlined mb-2 text-white">{app.icon}</span>
                 <h3 className="text-xl font-bold font-display">{app.title}</h3>
               </div>
             </div>
@@ -319,25 +221,17 @@ const WrappersPage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-primary-light">
+      <section className="py-24 bg-[#0059a0]">
         <div className="max-w-[1440px] mx-auto px-6 md:px-10 text-center text-white">
           <h2 className="text-4xl md:text-5xl font-display font-bold mb-6">Ready to Optimize Your Line?</h2>
           <p className="text-xl text-white/80 max-w-2xl mx-auto mb-12">
             Get a free consultation with our packaging engineers. We'll calculate your potential savings and recommend the perfect model for your volume.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <a
-              href="https://outlook.office365.com/book/EagleBusiness@eaglebst.com/?ismsaljsauthenabled=true"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-white text-primary-light hover:bg-slate-50 px-10 py-4 rounded-lg font-bold transition-all shadow-xl shadow-black/10 flex items-center justify-center"
-            >
+            <a href="#" className="bg-white text-[#0059a0] hover:bg-slate-50 px-10 py-4 rounded-lg font-bold transition-all shadow-xl flex items-center justify-center">
               Request a Quote
             </a>
-            <a
-              href="https://eagle-business-technology-wilber.vercel.app/#contact"
-              className="bg-transparent text-white border-2 border-white hover:bg-white/10 px-10 py-4 rounded-lg font-bold transition-all flex items-center justify-center"
-            >
+            <a href="#" className="bg-transparent text-white border-2 border-white hover:bg-white/10 px-10 py-4 rounded-lg font-bold transition-all flex items-center justify-center">
               Contact Sales
             </a>
           </div>
@@ -345,7 +239,7 @@ const WrappersPage: React.FC = () => {
       </section>
 
       <div className="py-6 text-center text-xs text-slate-400 dark:bg-slate-950 border-t border-slate-50 dark:border-slate-900">
-        © 2023 Eagle Business Technology. All rights reserved.
+        © 2026 Eagle Business Technology. All rights reserved.
       </div>
     </div>
   );

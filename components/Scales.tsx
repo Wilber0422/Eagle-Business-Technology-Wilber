@@ -116,37 +116,36 @@ const ScalesPage: React.FC = () => {
       `}</style>
 
       {/* Hero Section */}
-      <section className="relative w-full pt-8 pb-6 lg:pt-2 lg:pb-3 overflow-hidden bg-slate-50 dark:bg-slate-950">
-        <div className="absolute inset-0 bg-grid-pattern [mask-image:linear-gradient(to_bottom,white,transparent)] bg-[size:2rem_2rem] opacity-40 dark:opacity-10"></div>
+      <section className="relative w-full pt-20 pb-16 lg:pt-24 lg:pb-20 overflow-hidden bg-slate-50 dark:bg-slate-950">
+        <div className="absolute inset-0 bg-grid-pattern [mask-image:linear-gradient(to_bottom,white,transparent)] bg-[size:2rem_2rem] opacity-30 dark:opacity-5"></div>
+
         <div className="px-6 md:px-10 lg:px-20 max-w-[1440px] mx-auto relative z-10">
-          <div className="grid lg:grid-cols-2 gap-8 items-center">
-            <div className="flex flex-col gap-4 text-left">
-              <h1 className="text-slate-900 dark:text-white font-display text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+
+            {/* Columna Texto (Izquierda) */}
+            <div className="flex flex-col gap-5 text-left max-w-2xl">
+              <h1 className="text-slate-900 dark:text-white font-display text-5xl md:text-6xl font-extrabold leading-[1.15] tracking-tight">
                 Industrial Weighing <br />
-                <span className="text-primary-light bg-clip-text bg-gradient-to-r from-primary to-secondary">
+                <span className="text-primary-light">
                   Scales and Systems Integration.
                 </span>
               </h1>
-              <p className="text-slate-600 dark:text-slate-400 text-lg md:text-xl font-normal leading-relaxed max-w-xl">
+              <p className="text-slate-600 dark:text-slate-400 text-lg md:text-xl font-normal leading-relaxed">
                 Integrate your scales directly with your PC-based POS system! With the advanced PC capabilities of BRAND scales, you can elevate and optimize your business productivity and revenue. The scales below offer fast and accurate label printing and precise weight measurements.
               </p>
             </div>
 
-            <div className="relative flex items-center justify-center">
-              <div className="absolute w-[120%] h-[120%] bg-gradient-to-br from-primary/10 to-secondary/10 blur-[100px] rounded-full -z-10"></div>
-              <div className="billboard-container translate-y-4">
-                <img src="/cartel-luminoso-realista.png" alt="Billboard Mockup" className="billboard-mockup" />
-                <div className="billboard-content-area">
-                  {billboardSlides.map((slide, index) => (
-                    <div
-                      key={index}
-                      className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${index === billboardIndex ? "opacity-100" : "opacity-0"}`}
-                    >
-                      <img src={slide} alt="Content" className="w-full h-full object-cover" />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-                    </div>
-                  ))}
-                </div>
+            {/* Columna Imagen (Derecha) - DISEÑO LIMPIO SEGÚN IMAGEN CON BORDES REDONDEADOS EN IMAGEN */}
+            <div className="relative flex items-center justify-center lg:justify-end">
+              <div className="absolute w-[110%] h-[110%] bg-gradient-to-br from-primary/5 to-secondary/5 blur-[90px] rounded-full -z-10 opacity-60"></div>
+
+              {/* Tarjeta contenedora de la imagen */}
+              <div className="bg-white dark:bg-slate-900 p-6 md:p-10 rounded-[40px] shadow-2xl shadow-slate-200/60 dark:shadow-black/20 border border-slate-100 dark:border-slate-800 w-full max-w-[620px]">
+                <img
+                  src="https://eaglebst.com/wp-content/uploads/2023/03/digital-scales-b-11.jpg" // URL de la imagen de la balanza
+                  alt="Industrial Weighing Scale"
+                  className="w-full h-auto object-contain rounded-3xl" // Aplicado rounded-3xl aquí
+                />
               </div>
             </div>
           </div>
@@ -251,12 +250,6 @@ const ScalesPage: React.FC = () => {
                     Seamless POS Integration
                   </li>
                 </ul>
-
-                {/* Botón de especificaciones (estilo Wrapper) */}
-                {/* <button className="mt-auto flex items-center gap-2 text-primary-light font-bold text-sm hover:gap-3 transition-all">
-                  View Full Specs
-                  <span className="material-symbols-outlined text-sm">arrow_forward</span>
-                </button> */}
               </div>
             </div>
           ))}

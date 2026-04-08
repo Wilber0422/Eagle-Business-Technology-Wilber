@@ -1,62 +1,67 @@
-
 import React from 'react';
 
 const EslPage: React.FC = () => {
   return (
     <div className="bg-white dark:bg-slate-950 min-h-screen">
-      {/* Hero Section */}
-      <section className="relative w-full pt-16 pb-20 lg:pt-24 lg:pb-32 overflow-hidden bg-white dark:bg-slate-950">
-        <div className="px-6 md:px-10 lg:px-20 max-w-[1440px] mx-auto relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-            <div className="flex flex-col gap-6 text-left">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-900/20 w-fit">
-                <span className="text-primary-light font-bold text-[10px] uppercase tracking-wider">SIM POS</span>
+
+      {/* SECCIÓN MODIFICADA: SIM POS for Grocery (Estilo Imagen Adjunta) */}
+      <section className="relative w-full overflow-hidden bg-[#0055b8]">
+        {/* Capa de imagen de fondo con efecto azul industrial */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src="/bg-sim.jpg"
+            className="w-full h-full object-cover opacity-20 mix-blend-overlay"
+            alt="Fondo industrial"
+          />
+        </div>
+
+        <div className="px-6 md:px-10 lg:px-20 max-w-[1440px] mx-auto relative z-10 py-20 lg:py-32">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-24 items-center">
+
+            {/* Columna de Texto */}
+            <div className="flex flex-col gap-6 text-left text-white">
+              <div className="flex flex-col gap-2">
+                <span className="text-xs font-bold uppercase tracking-[0.3em] opacity-70">SIM POS</span>
+                <h1 className="font-display text-4xl md:text-6xl font-bold leading-[1.1] tracking-tight">
+                  SIM POS for <span className="text-white">Grocery.</span>
+                </h1>
               </div>
-              <h1 className="text-slate-900 dark:text-white font-display text-5xl md:text-6xl font-bold leading-tight tracking-tight">
-                SIM POS for <span className="text-primary-light">Grocery</span>
-              </h1>
-              <p className="text-slate-500 dark:text-slate-400 text-lg font-normal leading-relaxed max-w-xl">
-                A modern POS system that connects payment, inventory, pricing, and store operations, designed specifically for independent supermarkets, butcher shops, and specialty stores.
+
+              <p className="text-blue-50 text-lg font-medium leading-relaxed max-w-xl opacity-90">
+                Integrated Weighing, Labeling & Packaging. Streamline your food processing operations with Eagle's advanced wrapper solutions designed for speed and precision.
               </p>
-              <ul className="space-y-4">
+
+              <ul className="mt-4 space-y-4">
                 {[
-                  { icon: 'check_circle', text: 'Fast Checkout at Multiple Registers' },
-                  { icon: 'check_circle', text: 'Scale Integration:' },
-                  { icon: 'check_circle', text: 'Real-Time Inventory Management' },
-                  { icon: 'check_circle', text: 'Promotions Control' }
-                ].map((item, i) => (
-                  <li key={i} className="flex items-center gap-3 text-sm font-bold text-slate-700 dark:text-slate-300">
-                    <span className="material-symbols-outlined text-green-500">{item.icon}</span>
-                    {item.text}
+                  'Fast Checkout at Multiple Registers',
+                  'Scale Integration:',
+                  'Real-Time Inventory Management',
+                  'Promotions Control'
+                ].map((text, i) => (
+                  <li key={i} className="flex items-start gap-3 text-sm font-bold">
+                    <span className="material-symbols-outlined text-white">check_circle</span>
+                    <span className="pt-0.5">{text}</span>
                   </li>
                 ))}
               </ul>
-
             </div>
-            <div className="relative">
-              <div className="relative w-full aspect-[16/10] rounded-3xl overflow-hidden shadow-2xl border border-slate-100 dark:border-slate-800 bg-slate-900">
+
+            {/* Columna de Imagen (Hardware resaltado en blanco) */}
+            <div className="relative flex justify-center lg:justify-end">
+              <div className="bg-white p-6 md:p-4 rounded-[40px] shadow-2xl max-w-xl w-full transform hover:scale-[1.02] transition-transform duration-500">
                 <img
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAoPes31RlN3MxwTvDsheTfe-fw4d53xhlGFvjhIENsAANz8dSWhOkxGq5H67jI3HMWX7kAkAXQlvxHBMl6YovcIoM8o4fRE4SOWNjt6tp2a-DX2gz9TV52Qfk6xQcMobougEiFyaLp1UHh3XJs9Wk0tvBLEQj718FBSof911uK1YuIBgp8RluJvTrZ7RlCVuTvOmWZF9Gyf2qPkNC3s6GperfBB0m8IjJVsCViyB-_4-7gVBOvtlnRr18XX24kJFX61PNtD05Yuec"
-                  className="w-full h-full object-cover opacity-90"
-                  alt="ESL Close up"
+                  className="w-full h-auto object-contain rounded-2xl"
+                  alt="Eagle Hardware Solution"
                 />
-                <div className="absolute bottom-6 left-6 right-6 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md px-6 py-3 rounded-xl border border-white/20 flex items-center justify-center gap-4 shadow-xl">
-                  <div className="flex items-center gap-2">
-                    <span className="flex h-2 w-2 rounded-full bg-green-500"></span>
-                    <span className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Status: Connected</span>
-                  </div>
-                  <div className="w-px h-4 bg-slate-200 dark:bg-slate-700"></div>
-                  <div className="flex items-center gap-2">
-                    <span className="material-symbols-outlined text-sm text-primary-light">signal_cellular_alt</span>
-                    <span className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Signal: Strong</span>
-                  </div>
-                </div>
               </div>
             </div>
+
           </div>
         </div>
       </section>
 
+      {/* Available Packages Section */}
       <section className="py-24 bg-slate-50 dark:bg-slate-900/50">
         <div className="max-w-[1440px] mx-auto px-6 md:px-10 text-center">
           <div className="mb-20">
@@ -64,7 +69,6 @@ const EslPage: React.FC = () => {
           </div>
 
           <div className="flex flex-col md:flex-row items-center justify-between gap-12 max-w-5xl mx-auto relative">
-            {/* Steps line */}
             <div className="hidden md:block absolute top-1/2 left-0 w-full h-0.5 border-t-2 border-dashed border-slate-200 dark:border-slate-700 -translate-y-1/2 z-0"></div>
 
             {[
@@ -86,38 +90,28 @@ const EslPage: React.FC = () => {
         </div>
       </section>
 
-      <section className="relative w-full pt-16 pb-20 lg:pt-24 lg:pb-32 overflow-hidden bg-white dark:bg-slate-950">
+      {/* Liquor Store Section (Variación del Hero) */}
+      <section className="relative w-full py-24 bg-white dark:bg-slate-950">
         <div className="px-6 md:px-10 lg:px-20 max-w-[1440px] mx-auto relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-            <div className="relative">
+            <div className="relative order-2 lg:order-1">
               <div className="relative w-full aspect-[16/10] rounded-3xl overflow-hidden shadow-2xl border border-slate-100 dark:border-slate-800 bg-slate-900">
                 <img
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAoPes31RlN3MxwTvDsheTfe-fw4d53xhlGFvjhIENsAANz8dSWhOkxGq5H67jI3HMWX7kAkAXQlvxHBMl6YovcIoM8o4fRE4SOWNjt6tp2a-DX2gz9TV52Qfk6xQcMobougEiFyaLp1UHh3XJs9Wk0tvBLEQj718FBSof911uK1YuIBgp8RluJvTrZ7RlCVuTvOmWZF9Gyf2qPkNC3s6GperfBB0m8IjJVsCViyB-_4-7gVBOvtlnRr18XX24kJFX61PNtD05Yuec"
+                  src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?q=80&w=1000&auto=format&fit=crop"
                   className="w-full h-full object-cover opacity-90"
-                  alt="ESL Close up"
+                  alt="Liquor Store POS"
                 />
-                <div className="absolute bottom-6 left-6 right-6 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md px-6 py-3 rounded-xl border border-white/20 flex items-center justify-center gap-4 shadow-xl">
-                  <div className="flex items-center gap-2">
-                    <span className="flex h-2 w-2 rounded-full bg-green-500"></span>
-                    <span className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Status: Connected</span>
-                  </div>
-                  <div className="w-px h-4 bg-slate-200 dark:bg-slate-700"></div>
-                  <div className="flex items-center gap-2">
-                    <span className="material-symbols-outlined text-sm text-primary-light">signal_cellular_alt</span>
-                    <span className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Signal: Strong</span>
-                  </div>
-                </div>
               </div>
             </div>
-            <div className="flex flex-col gap-6 text-left">
+            <div className="flex flex-col gap-6 text-left order-1 lg:order-2">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-900/20 w-fit">
                 <span className="text-primary-light font-bold text-[10px] uppercase tracking-wider">SIM POS</span>
               </div>
-              <h1 className="text-slate-900 dark:text-white font-display text-5xl md:text-6xl font-bold leading-tight tracking-tight">
-                SIM POS for  <span className="text-primary-light">Liquor Store</span>
-              </h1>
-              <p className="text-slate-500 dark:text-slate-400 text-lg font-normal leading-relaxed max-w-xl">
-                Helping liquor stores operate faster at the counter, control bottle and case inventories, and manage prices consistently
+              <h2 className="text-slate-900 dark:text-white font-display text-5xl font-bold leading-tight">
+                SIM POS for <span className="text-primary-light">Liquor Store</span>
+              </h2>
+              <p className="text-slate-500 dark:text-slate-400 text-lg leading-relaxed">
+                Helping liquor stores operate faster at the counter, control bottle and case inventories, and manage prices consistently.
               </p>
               <ul className="space-y-4">
                 {[
@@ -131,207 +125,47 @@ const EslPage: React.FC = () => {
                   </li>
                 ))}
               </ul>
-
             </div>
           </div>
         </div>
       </section>
 
-      {/* Operational Impact Section */}
+      {/* Operational Impact */}
       <section className="py-12 px-6 md:px-10 max-w-[1440px] mx-auto">
         <div className="bg-slate-50 dark:bg-slate-900/50 rounded-3xl p-10 md:p-16 border border-slate-100 dark:border-slate-800">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-2xl md:text-3xl font-display font-bold text-slate-900 dark:text-white mb-2">Operational Advantages</h2>
-            </div>
+            <h2 className="text-2xl md:text-3xl font-display font-bold text-slate-900 dark:text-white">Operational Advantages</h2>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
-              <div className="flex flex-col border-l-4 border-primary-light pl-6">
-                <span className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1">Reduction of manual inventory errors and stock discrepancies.</span>
-              </div>
-              <div className="flex flex-col border-l-4 border-primary-light pl-6">
-                <span className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1">Detailed reports by category, cashier, and shift.</span>
-              </div>
-              <div className="flex flex-col border-l-4 border-primary-light pl-6">
-                <span className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1">Counter-ready commercial-grade hardware, including terminals, scanners, and cash drawers.</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* <section className="relative w-full pt-16 pb-20 lg:pt-24 lg:pb-32 overflow-hidden bg-white dark:bg-slate-950">
-        <div className="px-6 md:px-10 lg:px-20 max-w-[1440px] mx-auto relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-            <div className="flex flex-col gap-6 text-left">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-900/20 w-fit">
-                <span className="text-primary-light font-bold text-[10px] uppercase tracking-wider">SIM POS</span>
-              </div>
-              <h1 className="text-slate-900 dark:text-white font-display text-5xl md:text-6xl font-bold leading-tight tracking-tight">
-                ESL
-              </h1>
-              <p className="text-slate-500 dark:text-slate-400 text-lg font-normal leading-relaxed max-w-xl">
-                Update shelf edge prices instantly in all aisles and departments, eliminating the manual exchange of paper labels.
-              </p>
-              <ul className="space-y-4">
-                {[
-                  { icon: 'check_circle', text: 'Price Discrepancy' },
-                  { icon: 'check_circle', text: 'Labor Savings:' },
-                  { icon: 'check_circle', text: 'Multistore Consistency' }
-                ].map((item, i) => (
-                  <li key={i} className="flex items-center gap-3 text-sm font-bold text-slate-700 dark:text-slate-300">
-                    <span className="material-symbols-outlined text-green-500">{item.icon}</span>
-                    {item.text}
-                  </li>
-                ))}
-              </ul>
-
-            </div>
-            <div className="relative">
-              <div className="relative w-full aspect-[16/10] rounded-3xl overflow-hidden shadow-2xl border border-slate-100 dark:border-slate-800 bg-slate-900">
-                <img
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAoPes31RlN3MxwTvDsheTfe-fw4d53xhlGFvjhIENsAANz8dSWhOkxGq5H67jI3HMWX7kAkAXQlvxHBMl6YovcIoM8o4fRE4SOWNjt6tp2a-DX2gz9TV52Qfk6xQcMobougEiFyaLp1UHh3XJs9Wk0tvBLEQj718FBSof911uK1YuIBgp8RluJvTrZ7RlCVuTvOmWZF9Gyf2qPkNC3s6GperfBB0m8IjJVsCViyB-_4-7gVBOvtlnRr18XX24kJFX61PNtD05Yuec"
-                  className="w-full h-full object-cover opacity-90"
-                  alt="ESL Close up"
-                />
-                <div className="absolute bottom-6 left-6 right-6 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md px-6 py-3 rounded-xl border border-white/20 flex items-center justify-center gap-4 shadow-xl">
-                  <div className="flex items-center gap-2">
-                    <span className="flex h-2 w-2 rounded-full bg-green-500"></span>
-                    <span className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Status: Connected</span>
-                  </div>
-                  <div className="w-px h-4 bg-slate-200 dark:bg-slate-700"></div>
-                  <div className="flex items-center gap-2">
-                    <span className="material-symbols-outlined text-sm text-primary-light">signal_cellular_alt</span>
-                    <span className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Signal: Strong</span>
-                  </div>
+              {[
+                "Reduction of manual inventory errors and stock discrepancies.",
+                "Detailed reports by category, cashier, and shift.",
+                "Counter-ready commercial-grade hardware."
+              ].map((text, idx) => (
+                <div key={idx} className="flex flex-col border-l-4 border-primary-light pl-6">
+                  <span className="text-xs font-bold text-slate-400 uppercase tracking-widest leading-relaxed">{text}</span>
                 </div>
-              </div>
+              ))}
             </div>
           </div>
-        </div>
-      </section> */}
-
-      {/* Key Features Section */}
-      <section className="py-24 px-6 md:px-10 max-w-[1440px] mx-auto">
-        <div className="mb-16">
-          <h2 className="text-slate-900 dark:text-white text-3xl md:text-4xl font-display font-bold mb-4">High Impact Use Cases</h2>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {[
-            { icon: 'dashboard_customize', title: 'Agility in Temporary Offers', desc: 'Weekly promotions and flash deals.' },
-            { icon: 'battery_charging_full', title: 'Dynamic Product Optimization', desc: 'Fresh produce areas with frequent price changes.' },
-            { icon: 'integration_instructions', title: 'Visual Merchandising Strategy', desc: 'Digital displays for marketing and visual advertising.' },
-            { icon: 'wifi_tethering', title: 'Implementation Process', desc: 'Eagle provides support from the initial store survey and pilot aisle to full rollout and staff training.' }
-          ].map((item, idx) => (
-            <div key={idx} className="bg-white dark:bg-slate-900 p-8 rounded-2xl border border-slate-100 dark:border-slate-800 shadow-sm hover:shadow-md transition-all">
-              <div className="w-12 h-12 bg-blue-50 dark:bg-blue-900/20 rounded-xl flex items-center justify-center mb-6 text-primary-light">
-                <span className="material-symbols-outlined text-2xl">{item.icon}</span>
-              </div>
-              <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-3 font-display">{item.title}</h3>
-              <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">{item.desc}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Comparison Section */}
-      {/* <section className="py-24 px-6 md:px-10 max-w-[1440px] mx-auto">
-        <div className="bg-white dark:bg-slate-900 rounded-[32px] p-8 md:p-16 shadow-2xl shadow-slate-200/50 dark:shadow-none border border-slate-100 dark:border-slate-800 overflow-hidden">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-display font-bold text-slate-900 dark:text-white mb-6">Why upgrade from paper?</h2>
-              <p className="text-slate-500 dark:text-slate-400 text-lg mb-8 leading-relaxed">
-                Static paper labels are prone to errors, labor-intensive, and slow to react to market changes. Digital labels provide agility and precision.
-              </p>
-              <button className="flex items-center gap-2 text-primary-light font-bold hover:gap-4 transition-all">
-                Calculate your ROI <span className="material-symbols-outlined">arrow_forward</span>
-              </button>
-            </div>
-
-            <div className="rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700">
-              <table className="w-full text-left text-sm">
-                <thead className="bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white">
-                  <tr>
-                    <th className="px-6 py-4 font-bold">Feature</th>
-                    <th className="px-6 py-4 font-bold opacity-50">Traditional Paper</th>
-                    <th className="px-6 py-4 font-bold text-primary-light">Eagle ESL</th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-slate-100 dark:divide-slate-800">
-                  {[
-                    { f: 'High manual labor costs', old: 'Yes', new: 'Automated & Instant' },
-                    { f: 'Pricing errors common', old: 'Yes', new: '100% Accuracy' },
-                    { f: 'Single use waste', old: 'Yes', new: 'Reusable for 5+ Years' },
-                    { f: 'Static information', old: 'Limited', new: 'Multi-page content' }
-                  ].map((row, i) => (
-                    <tr key={i} className="dark:text-slate-300">
-                      <td className="px-6 py-4 font-medium text-slate-600 dark:text-slate-400">{row.f}</td>
-                      <td className="px-6 py-4">{row.old}</td>
-                      <td className="px-6 py-4 font-bold text-primary-light">{row.new}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-      </section> */}
-
-      {/* Diverse Applications */}
-      <section className="py-24 px-6 md:px-10 max-w-[1440px] mx-auto">
-        <div className="flex justify-between items-end mb-12">
-          <div>
-            <h2 className="text-slate-900 dark:text-white text-3xl font-display font-bold mb-2">Diverse Applications</h2>
-            <p className="text-slate-500 dark:text-slate-400">Beyond supermarkets: ESL technology transforming every sector.</p>
-          </div>
-          <button className="text-primary-light font-bold text-sm hover:underline">View All Industries</button>
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
-          {[
-            { title: 'Grocery', img: 'https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=1000&auto=format&fit=crop', icon: 'storefront' },
-            { title: 'Liquor', img: 'https://images.unsplash.com/photo-1586015555751-63bb77f4322a?q=80&w=1000&auto=format&fit=crop', icon: 'medication' }
-          ].map((app, idx) => (
-            <div key={idx} className="relative h-[360px] rounded-2xl overflow-hidden group shadow-lg cursor-pointer">
-              <img src={app.img} alt={app.title} className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/20 to-transparent"></div>
-              <div className="absolute bottom-6 left-6 text-white">
-                <span className="material-symbols-outlined text-primary-light mb-2">{app.icon}</span>
-                <h3 className="text-xl font-bold font-display">{app.title}</h3>
-              </div>
-            </div>
-          ))}
         </div>
       </section>
 
       {/* Final CTA */}
       <section className="py-24 bg-slate-900 relative overflow-hidden">
-        <div className="absolute top-0 left-0 w-full h-full opacity-10 bg-grid-pattern bg-[size:3rem_3rem]"></div>
         <div className="max-w-[1440px] mx-auto px-6 md:px-10 text-center text-white relative z-10">
           <h2 className="text-4xl md:text-5xl font-display font-bold mb-6">Ready to modernize your store?</h2>
           <p className="text-xl text-slate-400 max-w-2xl mx-auto mb-12">Join thousands of retailers who have switched to Eagle ESL for better efficiency and customer experience.</p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-
-            <a
-              href="https://outlook.office365.com/book/EagleBusiness@eaglebst.com/?ismsaljsauthenabled=true"
-              className="inline-flex items-center justify-center bg-primary-light text-white hover:bg-blue-700 px-10 py-4 rounded-lg font-bold transition-all shadow-xl shadow-blue-500/20 hover:-translate-y-0.5"
-            >
+            <a href="#" className="inline-flex items-center justify-center bg-primary-light text-white px-10 py-4 rounded-lg font-bold transition-all shadow-xl shadow-blue-500/20 hover:-translate-y-0.5">
               Request Quote
             </a>
-
-            <a
-              href="https://eagle-business-technology-wilber.vercel.app/#contact"
-              className="inline-flex items-center justify-center bg-white dark:bg-slate-900 text-slate-900 dark:text-white border border-slate-200 dark:border-slate-800 px-10 py-4 rounded-lg font-bold hover:bg-slate-50 transition-all shadow-sm gap-2"
-            >
+            <a href="#" className="inline-flex items-center justify-center bg-white text-slate-900 px-10 py-4 rounded-lg font-bold hover:bg-slate-50 transition-all shadow-sm gap-2">
               <span className="material-symbols-outlined text-sm">call</span> Contact Us
             </a>
-
           </div>
         </div>
       </section>
 
-      {/* <div className="py-8 text-center text-xs text-slate-500 dark:bg-slate-950 border-t border-slate-50 dark:border-slate-900">
-        © 2023 Eagle Business Technology. All rights reserved.
-      </div> */}
     </div>
   );
 };

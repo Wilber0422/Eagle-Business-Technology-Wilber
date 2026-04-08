@@ -6,7 +6,7 @@ const WifiPage: React.FC = () => {
   // Referencia para la sección de Featured Models
   const modelsSectionRef = useRef<HTMLDivElement>(null);
 
-  // --- LÓGICA DEL CARRUSEL DE LA VALLA (BILLBOARD) ---
+  // --- LÓGICA DEL CARRUSEL (Mantenida para las otras secciones si se requiere) ---
   const [billboardIndex, setBillboardIndex] = useState(0);
   const billboardSlides = [
     "https://nmgprod.s3.amazonaws.com/media/files/d1/b1/d1b1268a9f21f16238c819c2574946e8/cover_image_1692816609.jpeg.960x540_q85_crop_upscale.jpg",
@@ -22,93 +22,43 @@ const WifiPage: React.FC = () => {
     return () => clearInterval(timer);
   }, [billboardSlides.length]);
 
-  // Función para realizar el scroll suave
-  const scrollToModels = () => {
-    modelsSectionRef.current?.scrollIntoView({ behavior: 'smooth' });
-  };
-
   return (
     <div className="bg-slate-50 dark:bg-slate-950 min-h-screen">
-      {/* Estilos para la Valla Publicitaria (Identico a previas) */}
-      <style jsx global>{`
-        .billboard-container {
-          position: relative;
-          width: 100%;
-          max-width: 650px;
-          filter: drop-shadow(0 50px 30px rgb(0 0 0 / 0.2));
-        }
-        .billboard-mockup {
-          width: 100%;
-          height: auto;
-          display: block;
-          position: relative;
-          z-index: 9;
-          pointer-events: none;
-        }
-        .billboard-content-area {
-          position: absolute;
-          top: 23.5%;
-          left: 12.5%;
-          width: 75.2%;
-          height: 42.2%;
-          z-index: 10;
-          overflow: hidden;
-          transform: skewY(-4.2deg) rotateX(2deg);
-          background: #000;
-        }
-      `}</style>
 
-      {/* Hero Section - ESPACIADO REDUCIDO (pt-8 pb-12) */}
-      <section className="relative w-full pt-8 pb-6 lg:pt-2 lg:pb-3 overflow-hidden bg-slate-50 dark:bg-slate-950">
-        <div className="absolute inset-0 bg-grid-pattern [mask-image:linear-gradient(to_bottom,white,transparent)] bg-[size:2rem_2rem] opacity-40 dark:opacity-10"></div>
+      {/* HERO SECTION MODIFICADO (ESTILO IMAGEN ADJUNTA) */}
+      <section className="relative w-full pt-12 pb-12 lg:pt-20 lg:pb-20 overflow-hidden bg-slate-50 dark:bg-slate-950">
         <div className="px-6 md:px-10 lg:px-20 max-w-[1440px] mx-auto relative z-10">
-          <div className="grid lg:grid-cols-2 gap-8 items-center">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
 
             {/* Texto Izquierda */}
-            <div className="flex flex-col gap-4 text-left">
-              <h1 className="text-slate-900 dark:text-white font-display text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight">
-                Culinary Excellence Redefined: <span className="text-primary-light bg-clip-text bg-gradient-to-r from-primary to-secondary">
-                  Premium Food Equipment.
-                </span>
+            <div className="flex flex-col gap-6 text-left">
+              <h1 className="text-slate-900 dark:text-white font-display text-3xl md:text-4xl lg:text-6xl font-bold leading-[1.1] tracking-tight">
+                Culinary Excellence Redefined: <span className="text-blue-500">Premium Food Equipment.</span>
               </h1>
               <p className="text-slate-600 dark:text-slate-400 text-lg md:text-xl font-normal leading-relaxed max-w-xl">
                 Discover the gold standard in professional machinery with our curated selection. From gear-driven precision to superior hygiene, we provide perfectly balanced solutions for the modern food industry.
               </p>
             </div>
 
-            {/* Mockup Derecha */}
-            <div className="relative flex items-center justify-center">
-              <div className="absolute w-[120%] h-[120%] bg-gradient-to-br from-primary/10 to-secondary/10 blur-[100px] rounded-full -z-10"></div>
+            {/* Imagen Derecha (Contenedor Redondeado) */}
+            <div className="relative flex items-center justify-center lg:justify-end">
+              {/* Resplandor de fondo suave */}
+              <div className="absolute w-[80%] h-[80%] bg-blue-500/5 blur-[100px] rounded-full -z-10"></div>
 
-              <div className="billboard-container translate-y-4">
+              <div className="bg-white dark:bg-slate-900 rounded-[40px] md:rounded-[80px] p-8 md:p-16 shadow-2xl shadow-slate-200 dark:shadow-none border border-slate-100 dark:border-slate-800 w-full max-w-[550px] aspect-square flex items-center justify-center">
                 <img
-                  src="/cartel-luminoso-realista.png"
-                  alt="Billboard Mockup"
-                  className="billboard-mockup"
+                  src="/chicken-master.jpeg"
+                  alt="Chicken Master"
+                  className="w-full h-full object-contain"
                 />
-
-                <div className="billboard-content-area">
-                  {billboardSlides.map((slide, index) => (
-                    <div
-                      key={index}
-                      className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${index === billboardIndex ? "opacity-100" : "opacity-0"
-                        }`}
-                    >
-                      <img
-                        src={slide}
-                        alt="Content"
-                        className="w-full h-full object-cover"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-                    </div>
-                  ))}
-                </div>
               </div>
             </div>
 
           </div>
         </div>
       </section>
+
+      {/* --- EL RESTO DEL CÓDIGO PERMANECE IGUAL --- */}
 
       {/* How It Works */}
       <section className="py-24 bg-white dark:bg-slate-900/50">
@@ -205,11 +155,6 @@ const WifiPage: React.FC = () => {
                       </li>
                     ))}
                   </ul>
-
-                  {/* <button className="mt-auto flex items-center gap-2 text-primary-light font-bold text-sm hover:gap-3 transition-all">
-                    View Full Specs
-                    <span className="material-symbols-outlined text-sm">arrow_forward</span>
-                  </button> */}
                 </div>
               </div>
             ))}

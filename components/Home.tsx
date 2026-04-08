@@ -66,47 +66,73 @@ const LandingPage: React.FC<LandingPageProps> = ({ onNavigate }) => {
   }, []);
 
   return (
-    <div>
+    <div className="min-h-screen bg-white dark:bg-slate-950">
       <style jsx global>{`
         .billboard-container {
           position: relative;
           width: 100%;
-          max-width: 650px;
-          filter: drop-shadow(0 50px 30px rgb(0 0 0 / 0.2));
+          max-width: 1200px; /* Aumento significativo de tamaño */
+          z-index: 20;
+          margin-bottom: -45px; /* Empuja la valla hacia abajo para que toque la barra azul */
+          transform: translateY(10px); /* Ajuste fino de posición */
         }
         .billboard-mockup {
           width: 100%;
           height: auto;
           display: block;
           position: relative;
-          z-index: 9;
+          z-index: 0;
           pointer-events: none;
         }
         .billboard-content-area {
           position: absolute;
-          top: 23.5%;
-          left: 12.5%;
-          width: 75.2%;
-          height: 42.2%;
+          top: 15.5%;
+          left: 14.4%;
+          width: 69%;
+          height: 51%;
           z-index: 10;
           overflow: hidden;
-          transform: skewY(-4.2deg) rotateX(2deg);
           background: #000;
+        }
+        .background-watermark {
+          position: absolute;
+          left: -10%;
+          top: 70%;
+          transform: translateY(-50%);
+          width: 50%;
+          max-width: 650px;
+          opacity: 1;
+          z-index: 0;
+          pointer-events: none;
+        }
+        .blue-stripe-footer {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 45px;
+          background-color: #5cb7e5;
+          z-index: 30;
         }
       `}</style>
 
-      {/* Hero Section - ESPACIADO REDUCIDO (pt-8 pb-12) */}
-      <section className="relative w-full pt-8 pb-6 lg:pt-2 lg:pb-3 overflow-hidden bg-slate-50 dark:bg-slate-950">
-        <div className="absolute inset-0 bg-grid-pattern [mask-image:linear-gradient(to_bottom,white,transparent)] bg-[size:2rem_2rem] opacity-40 dark:opacity-10"></div>
-        <div className="px-6 md:px-10 lg:px-20 max-w-[1440px] mx-auto relative z-10">
-          <div className="grid lg:grid-cols-2 gap-8 items-center">
+      {/* Hero Section - Cambiado pb-16 a pb-0 para que la valla toque el fondo */}
+      <section className="relative w-full min-h-[85vh] flex items-center pt-4 pb-0 overflow-hidden bg-white dark:bg-slate-950">
 
-            {/* Texto Izquierda */}
-            <div className="flex flex-col gap-4 text-left">
+        <img
+          src="/icono.bg.png"
+          className="background-watermark"
+          alt="Background Logo"
+        />
+
+        <div className="px-6 md:px-10 lg:px-20 max-w-[1440px] mx-auto relative z-10 w-full">
+          {/* Cambiado a items-end para que la valla se apoye en el suelo */}
+          <div className="grid lg:grid-cols-2 gap-8 items-end">
+
+            {/* Texto Izquierda - Se le añade padding bottom para que no quede pegado al suelo */}
+            <div className="flex flex-col gap-4 text-left pb-24">
               <h1 className="text-slate-900 dark:text-white font-display text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight">
-                Leading Provider of <br />
-                <span className="text-primary-light bg-clip-text bg-gradient-to-r from-primary to-secondary">
-                  Business Technologies
+                Leading Provider of <span className="text-[#5cb7e5]"> Business Technologies
                 </span>
               </h1>
               <p className="text-slate-600 dark:text-slate-400 text-lg md:text-xl font-normal leading-relaxed max-w-xl">
@@ -114,14 +140,12 @@ const LandingPage: React.FC<LandingPageProps> = ({ onNavigate }) => {
               </p>
             </div>
 
-            {/* Mockup Derecha */}
-            <div className="relative flex items-center justify-center">
-              <div className="absolute w-[120%] h-[120%] bg-gradient-to-br from-primary/10 to-secondary/10 blur-[100px] rounded-full -z-10"></div>
-
-              <div className="billboard-container translate-y-4">
+            {/* Nueva Valla Derecha */}
+            <div className="relative flex items-end justify-center">
+              <div className="billboard-container">
                 <img
-                  src="/cartel-luminoso-realista.png"
-                  alt="Billboard Mockup"
+                  src="/Vallas.png"
+                  alt="Billboard Frame"
                   className="billboard-mockup"
                 />
 
@@ -137,7 +161,6 @@ const LandingPage: React.FC<LandingPageProps> = ({ onNavigate }) => {
                         alt="Content"
                         className="w-full h-full object-cover"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                     </div>
                   ))}
                 </div>
@@ -146,9 +169,11 @@ const LandingPage: React.FC<LandingPageProps> = ({ onNavigate }) => {
 
           </div>
         </div>
+
+        <div className="blue-stripe-footer"></div>
       </section>
 
-      {/* Resto de secciones (IDÉNTICAS) */}
+      {/* Resto de secciones (IDENTICAS) */}
       <section className="w-full bg-white dark:bg-slate-900 py-24 border-y border-slate-100 dark:border-slate-800">
         <div className="px-6 md:px-10 lg:px-20 max-w-[1440px] mx-auto">
           <div className="grid md:grid-cols-2 gap-8 lg:gap-16">
@@ -196,7 +221,6 @@ const LandingPage: React.FC<LandingPageProps> = ({ onNavigate }) => {
               { id: Page.Wrappers, title: 'Wrappers', icon: '/icono-wrappers.png', desc: 'Automated wrapping machinery to preserve freshness and improve presentation.' },
               { id: Page.Scales, title: 'Scales', icon: '/icono-scale.png', desc: 'Advanced AI solutions for loss prevention and customer flow analysis.' },
               { id: Page.Pos, title: 'POS', icon: '/icono-pos.png', desc: 'Fast, reliable, and intuitive Point of Sale systems designed for efficiency.' },
-              // { id: Page.PosSIM, title: 'SIM POS', icon: '/icono-pos.png', desc: 'Automated price updates and inventory management directly at the shelf.' },
               { id: Page.Business, title: 'Business software solutions', icon: '/icono-business.png', desc: 'Dynamic communication screens to engage customers and modernize layout.' },
               { id: Page.Kitchen, title: 'Kitchen Equipment', icon: '/icono-food.png', desc: 'Turn guest Wi-Fi into a powerful marketing tool to drive loyalty.' },
               { id: Page.Food, title: 'Food Equipment', icon: '/icono-slicers.png', desc: 'High-performance commercial slicers that offer safety and precisio.' },
@@ -207,7 +231,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ onNavigate }) => {
                 onClick={() => onNavigate(sol.id)}
                 className="group bg-white dark:bg-slate-900 rounded-2xl p-6 shadow-sm hover:shadow-xl hover:shadow-primary/5 border border-slate-100 dark:border-slate-800 transition-all duration-300 hover:-translate-y-1 cursor-pointer"
               >
-                <div className="w-12 h-12 bg-blue-50 dark:bg-blue-900/20 rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary transition-colors duration-300">
+                <div className="w-12 h-12 bg-blue-50 dark:bg-blue-900/20 rounded-lg flex items-center justify-center mb-6 group-hover:bg-[#5cb7e5] transition-colors duration-300">
                   <img src={sol.icon} alt={sol.title} className="w-7 h-7 object-contain group-hover:brightness-0 group-hover:invert transition-all duration-300" />
                 </div>
                 <h4 className="text-lg font-bold text-slate-900 dark:text-white mb-3 font-display">{sol.title}</h4>
@@ -219,11 +243,6 @@ const LandingPage: React.FC<LandingPageProps> = ({ onNavigate }) => {
       </section>
 
       <section className="w-full py-20 relative overflow-hidden bg-gradient-to-r from-[#5cb7e5] to-[#71c8f1] dark:from-[#214b63] dark:to-[#2b6a8a]">
-        <div className="absolute inset-0 opacity-10 pointer-events-none">
-          <svg className="absolute bottom-0 w-full h-auto" viewBox="0 0 1440 320" fill="white">
-            <path d="M0,224L48,213.3C96,203,192,181,288,181.3C384,181,480,203,576,224C672,245,768,267,864,250.7C960,235,1056,181,1152,165.3C1248,149,1344,171,1392,181.3L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
-          </svg>
-        </div>
         <div className="px-6 md:px-10 lg:px-20 max-w-[1440px] mx-auto text-center relative z-10">
           <h2 className="text-white font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-12 drop-shadow-sm">Our Customers</h2>
           <div className="relative group max-w-6xl mx-auto">
@@ -239,7 +258,6 @@ const LandingPage: React.FC<LandingPageProps> = ({ onNavigate }) => {
       </section>
 
       <section className="w-full bg-slate-900 py-24 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1557683316-973673baf926?q=80&w=2029&auto=format&fit=crop')] opacity-10 bg-cover bg-center mix-blend-overlay"></div>
         <div className="px-6 md:px-10 lg:px-20 max-w-[1440px] mx-auto text-center relative z-10 text-white">
           <h2 className="text-4xl md:text-5xl font-display font-bold mb-6 tracking-tight">Ready to modernize your retail business?</h2>
           <p className="text-xl text-slate-300 mb-12 max-w-2xl mx-auto font-light">Join the future of retail with Eagle Business Technology. Contact us today for a free consultation.</p>
