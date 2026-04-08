@@ -150,11 +150,17 @@ const VoicePage: React.FC = () => {
       <section ref={eagleVoiceRef} className="py-24 bg-slate-50 dark:bg-slate-900/50">
         <div className="max-w-[1440px] mx-auto px-6 md:px-10">
           <div className="grid lg:grid-cols-2 gap-20 items-center">
+            {/* Contenedor de la Imagen - Modificado para ver imagen completa */}
             <div className="order-2 lg:order-1 relative">
-              <div className="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl">
-                <img src="/voice.png" className="w-full h-full object-cover" alt="CloudPhone" />
+              <div className="aspect-[5/5] rounded-3xl overflow-hidden shadow-2xl bg-white dark:bg-slate-800 flex items-center justify-center p-4">
+                <img
+                  src="/voice.png"
+                  className="w-full h-full object-contain" // Cambiado de object-cover a object-contain
+                  alt="CloudPhone"
+                />
               </div>
             </div>
+
             <div className="order-1 lg:order-2 space-y-8">
               <div className="w-10 h-10 bg-blue-50 dark:bg-blue-900/20 rounded-lg flex items-center justify-center text-primary-light">
                 <span className="material-symbols-outlined">smartphone</span>

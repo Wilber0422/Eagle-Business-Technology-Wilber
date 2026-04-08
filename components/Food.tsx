@@ -1,10 +1,12 @@
+'use client';
+
 import React, { useRef, useState, useEffect } from 'react';
 
 const SlicersPage: React.FC = () => {
   // Referencia para la sección Eagle slicers solutions
   const eagleSolutionsRef = useRef<HTMLDivElement>(null);
 
-  // --- LÓGICA DEL BILLBOARD (AÑADIDA) ---
+  // --- LÓGICA DEL CARRUSEL ---
   const [billboardIndex, setBillboardIndex] = useState(0);
   const billboardSlides = [
     "/slicer.webp",
@@ -20,87 +22,54 @@ const SlicersPage: React.FC = () => {
     return () => clearInterval(timer);
   }, [billboardSlides.length]);
 
-  // Función para manejar el scroll suave
-  const scrollToSolutions = () => {
-    eagleSolutionsRef.current?.scrollIntoView({ behavior: 'smooth' });
-  };
-
   return (
     <div className="bg-white dark:bg-slate-950 min-h-screen">
-      {/* ESTILOS DEL BILLBOARD (AÑADIDOS) */}
-      <style jsx global>{`
-        .billboard-container {
-          position: relative;
-          width: 100%;
-          max-width: 650px;
-          filter: drop-shadow(0 50px 30px rgb(0 0 0 / 0.2));
-        }
-        .billboard-mockup {
-          width: 100%;
-          height: auto;
-          display: block;
-          position: relative;
-          z-index: 9;
-          pointer-events: none;
-        }
-        .billboard-content-area {
-          position: absolute;
-          top: 23.5%;
-          left: 12.5%;
-          width: 75.2%;
-          height: 42.2%;
-          z-index: 10;
-          overflow: hidden;
-          transform: skewY(-4.2deg) rotateX(2deg);
-          background: #000;
-        }
-      `}</style>
 
-      {/* Hero Section - ESPACIADO REDUCIDO (pt-8 pb-12) */}
-      <section className="relative w-full pt-8 pb-6 lg:pt-2 lg:pb-3 overflow-hidden bg-slate-50 dark:bg-slate-950">
-        <div className="absolute inset-0 bg-grid-pattern [mask-image:linear-gradient(to_bottom,white,transparent)] bg-[size:2rem_2rem] opacity-40 dark:opacity-10"></div>
-        <div className="px-6 md:px-10 lg:px-20 max-w-[1440px] mx-auto relative z-10">
-          <div className="grid lg:grid-cols-2 gap-8 items-center">
+      {/* HERO SECTION - MODIFICADO SEGÚN IMAGEN ADJUNTA MANTENIENDO EL CARRUSEL */}
+      <section className="relative w-full min-h-[550px] flex items-center overflow-hidden">
+        {/* Imagen de fondo con Overlay Azul */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src="/bg-food.jpg"
+            alt="Background"
+            className="w-full h-full object-cover"
+          />
+          {/* Capa azul semitransparente (Overlay) */}
+          <div className="absolute inset-0 bg-blue-900/80 mix-blend-multiply"></div>
+          <div className="absolute inset-0 bg-[#004a99]/50"></div>
+        </div>
+
+        <div className="px-6 md:px-10 lg:px-20 max-w-[1440px] mx-auto relative z-10 py-20">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
 
             {/* Texto Izquierda */}
-            <div className="flex flex-col gap-4 text-left">
-              <h1 className="text-slate-900 dark:text-white font-display text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight">
-                The performance of these cutters <span className="text-primary-light bg-clip-text bg-gradient-to-r from-primary to-secondary">
-                  is exceptional.
-                </span>
+            <div className="flex flex-col gap-6 text-left">
+              <h1 className="text-white font-display text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight">
+                The performance of these cutters <br />
+                <span className="text-blue-200">is exceptional.</span>
               </h1>
-              <p className="text-slate-600 dark:text-slate-400 text-lg md:text-xl font-normal leading-relaxed max-w-xl">
+              <p className="text-blue-50 text-lg md:text-xl font-normal leading-relaxed max-w-xl">
                 Line Kolossal is the top of the range among commercial meat slicers produced by Manconi and it perfectly expresses the dualism tradition-innovation, which is necessary to be always contemporary: the strength coming from a long experience and the ability to look forward.
               </p>
             </div>
 
-            {/* Mockup Derecha */}
-            <div className="relative flex items-center justify-center">
-              <div className="absolute w-[120%] h-[120%] bg-gradient-to-br from-primary/10 to-secondary/10 blur-[100px] rounded-full -z-10"></div>
-
-              <div className="billboard-container translate-y-4">
-                <img
-                  src="/cartel-luminoso-realista.png"
-                  alt="Billboard Mockup"
-                  className="billboard-mockup"
-                />
-
-                <div className="billboard-content-area">
-                  {billboardSlides.map((slide, index) => (
-                    <div
-                      key={index}
-                      className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${index === billboardIndex ? "opacity-100" : "opacity-0"
-                        }`}
-                    >
-                      <img
-                        src={slide}
-                        alt="Content"
-                        className="w-full h-full object-cover"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-                    </div>
-                  ))}
-                </div>
+            {/* Imagen Derecha - CARRUSEL ACTIVO CON BORDES REDONDEADOS */}
+            <div className="relative flex items-center justify-center lg:justify-end">
+              <div className="relative w-full max-w-[550px] aspect-[4/3] overflow-hidden rounded-[2.5rem] shadow-2xl border border-white/10">
+                {billboardSlides.map((slide, index) => (
+                  <div
+                    key={index}
+                    className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${index === billboardIndex ? "opacity-100" : "opacity-0"
+                      }`}
+                  >
+                    <img
+                      src={slide}
+                      alt="Slicer Model"
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                  </div>
+                ))}
               </div>
             </div>
 
@@ -205,10 +174,9 @@ const SlicersPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Featured Models - AÑADIDA LA REF AQUÍ */}
+      {/* Featured Models */}
       <section id="modelos-section" ref={eagleSolutionsRef} className="py-24 bg-slate-50 dark:bg-slate-900/50">
         <div className="max-w-[1440px] mx-auto px-6 md:px-10">
-          {/* Cabecera del Diseño */}
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
             <div className="max-w-xl">
               <h2 className="text-slate-900 dark:text-white text-3xl md:text-4xl font-display font-bold mb-4">
@@ -220,7 +188,6 @@ const SlicersPage: React.FC = () => {
             </div>
           </div>
 
-          {/* Grid de Tarjetas */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             {[
               {
@@ -253,12 +220,6 @@ const SlicersPage: React.FC = () => {
                 desc: 'High-performance chop slicers designed for intensive use, capable of processing bone-in meats, sausages, and fish with total precision.',
                 features: ['Reliable power in cold, humid.', 'Adjustable thickness, versatile feeding options.', '304 stainless, high-pressure, automatic return.']
               },
-              // {
-              //   title: 'Idrochef 316 touch',
-              //   img: '/Idrochef-316-touch.jpeg',
-              //   desc: 'Professional immersion circulator for sous vide cooking that guarantees absolute thermal precision and high-quality culinary results.',
-              //   features: ['3.5-inch touchscreen, precise temperature control.', 'High-volume cooking, 70-liter capacity.', 'Wi-Fi control, cloud data traceability.']
-              // },
               {
                 title: 'PHX 60',
                 img: '/phx-60.png',
@@ -282,7 +243,6 @@ const SlicersPage: React.FC = () => {
                 key={idx}
                 className="bg-white dark:bg-slate-900 rounded-2xl overflow-hidden shadow-sm border border-slate-100 dark:border-slate-800 flex flex-col group transition-all"
               >
-                {/* Contenedor de Imagen */}
                 <div className="aspect-[4/3] bg-slate-50 dark:bg-slate-800 relative overflow-hidden">
                   <img
                     src={model.img}
@@ -291,7 +251,6 @@ const SlicersPage: React.FC = () => {
                   />
                 </div>
 
-                {/* Cuerpo de la Tarjeta */}
                 <div className="p-8 flex flex-col flex-grow">
                   <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-3 font-display">
                     {model.title}
@@ -300,7 +259,6 @@ const SlicersPage: React.FC = () => {
                     {model.desc}
                   </p>
 
-                  {/* Lista de Características */}
                   <ul className="space-y-3 mb-8">
                     {model.features.map((f, i) => (
                       <li key={i} className="flex items-center gap-3 text-xs text-slate-600 dark:text-slate-300">
@@ -314,7 +272,6 @@ const SlicersPage: React.FC = () => {
             ))}
           </div>
 
-          {/* Pie de Sección / Contacto */}
           <div className="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-100 dark:border-slate-800 shadow-sm flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="flex items-center gap-4">
               <div className="w-12 h-12 bg-slate-50 dark:bg-slate-800 rounded-full flex items-center justify-center text-slate-400">
